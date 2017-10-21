@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
+	<link rel="stylesheet" href="css/slick.css" type="text/css">
+	<link rel="stylesheet" href="css/slick-theme.css" type="text/css">
 
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 768px)" href="css/layout-mobile.css">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
@@ -20,36 +22,37 @@
 </head>
 <body>
 	<div class="b b-block-header">
-		<!--<img class="header-back" src="i/header-back.jpg" height="679">-->
-		<div class="b-block">
-			<div class="b-header-block">
-				<div class="phone"><span class="icon-phone">+7 (903) 951-31-01</span></div>
-				<a href="#" class="request-call">Заказать звонок</a>
-				<div class="b-header-content">
-					<ul class="b-menu">
-						<li><a href="/timetable/">Расписание</a></li>
-						<li><a href="/residence/">Проживание</a></li>
-						<li><a href="/passage/">Проезд</a></li>
-						<li><a href="/about/">О нас</a></li>
-						<li><a href="/reviews/">Отзывы</a></li>
-						<li><a href="/photo/">Фото с туров</a></li>
-					</ul>
-					<div class="b-header-video">
-						<a href="#">
-							<div class="video-circle">
-								<div class="video-play"></div>
-							</div>
-						</a>
-						<p>Посмотреть видео<br>с наших туров</p>
+		<div class="header-back" style="background-image: url('i/header-back.jpg');">
+			<div class="b-block">
+				<div class="b-header-block" style="background-image: url('i/header-block.jpg');">
+					<div class="phone"><span class="icon-phone">+7 (903) 951-31-01</span></div>
+					<a href="#" class="request-call">Заказать звонок</a>
+					<div class="b-header-content">
+						<ul class="b-menu">
+							<li><a href="/timetable/">Расписание</a></li>
+							<li><a href="/residence/">Проживание</a></li>
+							<li><a href="/passage/">Проезд</a></li>
+							<li><a href="/about/">О нас</a></li>
+							<li><a href="/reviews/">Отзывы</a></li>
+							<li><a href="/photo/">Фото с туров</a></li>
+						</ul>
+						<div class="b-header-video">
+							<a href="#">
+								<div class="video-circle">
+									<div class="video-play"></div>
+								</div>
+							</a>
+							<p>Посмотреть видео<br>с наших туров</p>
+						</div>
+						<div class="b-logo-cont">
+							<a href="/" class="b-logo"></a>
+							<p class="b-logo-text">Автобусные туры в<br>Шерегеш из Томска</p>
+						</div>
 					</div>
-					<div class="b-logo-cont">
-						<a href="/" class="b-logo"></a>
-						<p class="b-logo-text">Автобусные туры в<br>Шерегеш из Томска</p>
+					<div class="b-header-buttons center-buttons">
+						<a href="#" class="b-btn b-btn-brown-header">Забронировать тур</a>
+						<a href="#" class="b-btn b-btn-white-header">Еду в первый раз</a>
 					</div>
-				</div>
-				<div class="b-header-buttons center-buttons">
-					<a href="#" class="b-btn b-btn-brown-header">Забронировать тур</a>
-					<a href="#" class="b-btn b-btn-white-header">Еду в первый раз</a>
 				</div>
 			</div>
 		</div>
@@ -171,9 +174,9 @@
 	<div class="b b-block-book-it">
 		<div class="b-wide-block">
 			<div class="b-block">
-				<h1 class="b-title">Совершенно не важно,</h1>
+				<h1 class="b-title b-title-first">Совершенно не важно,</h1>
 				<p>один ты или с компанией</p>
-				<h1 class="b-title"><span class="bold">GESH TOUR</span> - это туры для <span class="bold">всех!</span></h1>
+				<h1 class="b-title b-title-second"><span class="bold">GESH TOUR</span> - это туры для <span class="bold">всех!</span></h1>
 				<div class="center-buttons">
 					<a href="#" class="b-btn b-btn-orange">Забронировать тур</a>
 					<a href="#" class="b-btn b-btn-blue">Еду в первый раз</a>
@@ -181,6 +184,136 @@
 			</div>
 		</div>
 	</div>
+
+	<!--<div class="b b-block-video">
+		<div class="b-wide-block">
+			<div class="video-list">
+				<div class="video-item" style="background-image: url('i/video-back.jpg');">
+					<div class="b-block">
+						<h1 class="b-title white">Лучшее видео <span class="bold">GESH TOUR1111</span></h1>
+					</div>
+				</div>
+				<div class="video-item" style="background-image: url('i/video-back.jpg');">
+					<div class="b-block">
+						<h1 class="b-title white">Лучшее видео <span class="bold">GESH TOUR2222</span></h1>
+					</div>
+				</div>
+				<div class="video-item" style="background-image: url('i/video-back.jpg');">
+					<div class="b-block">
+						<h1 class="b-title white">Лучшее видео <span class="bold">GESH TOUR3333</span></h1>
+					</div>
+				</div>
+				<div class="video-item" style="background-image: url('i/video-back.jpg');">
+					<div class="b-block">
+						<h1 class="b-title white">Лучшее видео <span class="bold">GESH TOUR4444</span></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+
+	<div class="b b-block-reviews">
+		<div class="b-wide-block">
+			<div class="b-block">
+				<h1 class="b-title">Отзывы о турах <span class="bold">GESH TOUR</span></h1>
+				<div class="review-list">
+					<div class="review-item">
+						<div class="b-img-cont b-img-green">
+							<div class="b-img" style="background-image: url('i/rewiew-1.jpg');"></div>
+						</div>
+						<h2 class="b-title">Анастасия Сергеевна</h2>
+						<div class="icon-foto-mini">
+							<a href="#" class="foto-with-tour">Фотографии с тура</a>
+						</div>
+						<p>Всё было на уровне))) Обо всём своевременно информировали, досуг организовывали, с проблемами возникшими тут же разбирались))) Организаторами были Эля и Зорица, спасибо вам сахарочки;)))</p>
+					</div>
+					<div class="review-item">
+						<div class="b-img-cont b-img-orange">
+							<div class="b-img" style="background-image: url('i/rewiew-2.jpg');"></div>
+						</div>
+						<h2 class="b-title">Валентин Псковитин</h2>
+						<div class="icon-foto-mini">
+							<a href="#" class="foto-with-tour">Фотографии с тура</a>
+						</div>
+						<p>Я просто в шоке, было невероятно круто, до мурашек, наши гиды женя и зорица невероятные ребята, организовывали наш досуг лучше работы ведущий в нашем городе) конкурсы интересные) целуем ваши руки</p>
+					</div>
+					<div class="review-item">
+						<div class="b-img-cont b-img-green">
+							<div class="b-img" style="background-image: url('i/rewiew-1.jpg');"></div>
+						</div>
+						<h2 class="b-title">Елена Иванова</h2>
+						<div class="icon-foto-mini">
+							<a href="#" class="foto-with-tour">Фотографии с тура</a>
+						</div>
+						<p>Всё было на уровне))) Обо всём своевременно информировали, досуг организовывали, с проблемами возникшими тут же разбирались))) Организаторами были Эля и Зорица, спасибо вам сахарочки;)))</p>
+					</div>
+					<div class="review-item">
+						<div class="b-img-cont b-img-orange">
+							<div class="b-img" style="background-image: url('i/rewiew-2.jpg');"></div>
+						</div>
+						<h2 class="b-title">Евгений Петров</h2>
+						<div class="icon-foto-mini">
+							<a href="#" class="foto-with-tour">Фотографии с тура</a>
+						</div>
+						<p>Я просто в шоке, было невероятно круто, до мурашек, наши гиды женя и зорица невероятные ребята, организовывали наш досуг лучше работы ведущий в нашем городе) конкурсы интересные) целуем ваши руки</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="center-buttons">
+					<a href="#" class="b-btn b-btn-brown">Больше отзывов</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="b b-footer">
+		<div class="b-block">
+			<div class="b-footer-up">
+				<div class="b-footer-column b-footer-logo-cont">
+					<a href="/" class="b-footer-logo"></a>
+				</div>
+				<div class="b-footer-column b-footer-text">
+					<h2>GESH TOUR</h2>
+					<p>Gesh Tour занимается организацией автобусных туров в Шерегеш для активного отдыха на горнолыжных спусках</p>
+				</div>
+				<div class="b-footer-column">
+					<h2>Информация</h2>
+					<ul>
+						<li><a href="/timetable/">Расписание</a></li>
+						<li><a href="/residence/">Проживание</a></li>
+						<li><a href="/passage/">Проезд</a></li>
+					</ul>
+				</div>
+				<div class="b-footer-column">
+					<h2>О нас</h2>
+					<ul>
+						<li><a href="/about/">О команде</a></li>
+						<li><a href="/reviews/">Отзывы</a></li>
+						<li><a href="/photo/">Фото с туров</a></li>
+					</ul>
+				</div>
+				<div class="b-footer-column">
+					<div class="phone"><span class="icon-phone">+7 (903) 951-31-01</span></div>
+					<div class="b-social">
+						<a href="https://vk.com/" class="icon-vk" target="_blank"></a>
+						<a href="https://instagram.com/" class="icon-instagram" target="_blank"></a>
+						<a href="https://facebook.com/" class="icon-facebook" target="_blank"></a>
+						<a href="https://telegram.com/" class="icon-telegram" target="_blank"></a>
+					</div>
+					<p class="b-footer-address">г. Томск, пр. Кирова 58,<br>строение 26, офис 21, 2 этаж</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="b-footer-down">
+				<div>
+					<p class="left">Автобусные туры в Шерегеш из Томска «Gesh Tour» © 2017</p>
+					<div class="right">22</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>	
 	
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
@@ -216,6 +349,7 @@
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script>
+	<script type="text/javascript" src="js/slick.js"></script>
 	<script type="text/javascript" src="js/jssor.js"></script>
 	<script type="text/javascript" src="js/jssor.slider.js"></script>
 	<script type="text/javascript" src="js/TweenMax.min.js"></script>
@@ -228,6 +362,8 @@
 	<script type="text/javascript" src="js/KitAnimate.js"></script>
 	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
+	
 	<script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>

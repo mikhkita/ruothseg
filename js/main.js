@@ -40,6 +40,13 @@ $(document).ready(function(){
         }
     }
     $.fn.placeholder();
+
+    $('.video-list').slick();
+    $('.review-list').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+    });
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
