@@ -41,11 +41,24 @@ $(document).ready(function(){
     }
     $.fn.placeholder();
 
-    $('.video-list').slick();
+    $('.video-list').slick({
+        dots: true,
+        arrows: true,
+        speed: 800,
+        nextArrow: '<div class="b-block"><div class="arrow-right-white" aria-hidden="true"><img class="" src="i/arrow-right-white.png"></div></div>',
+        prevArrow: '<div class="b-block"><div class="arrow-left-white" aria-hidden="true"><img class="" src="i/arrow-left-white.png"></div></div>',
+        adaptiveHeight: true
+    });
+
     $('.review-list').slick({
+        dots: false,
+        arrows: true,
+        nextArrow: '<div class="arrow-right-dark" aria-hidden="true"><img class="" src="i/arrow-right-dark.png"></div>',
+        prevArrow: '<div class="arrow-left-dark" aria-hidden="true"><img class="" src="i/arrow-left-dark.png"></div>',
         infinite: true,
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        variableWidth: true
     });
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);

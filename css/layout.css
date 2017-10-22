@@ -156,12 +156,17 @@ input:-moz-placeholder {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.left{
-	float: left;
+.b-text {
+    text-align: left;
+    font-size: 18px;
+    line-height: 30px;
+	font-family: 'RobotoRegular', Arial;
+	color: #393939;
 }
-.right{
-	float: right;
-}
+
+	.b-text ul li{
+
+	}
 
 .b-btn{
 	border-radius: 100px;
@@ -318,6 +323,7 @@ h2.b-title{
 		}
 
 		.b-footer .icon-phone{
+			text-align: right;
 			display: block;
 			font-size: 20px;
 			letter-spacing: 0.56px;
@@ -390,6 +396,21 @@ h2.b-title{
 					border: 18px solid transparent;
 					border-left: 28px solid #744d4d;
 					margin: 23px 0 0 31px;
+				}
+				.b-block-video-cont .video-circle{
+					margin: 0 auto;
+					width: 130px;
+					height: 130px;
+					border: 5px solid #FFF;
+					border-radius: 50%;
+				}
+				.b-block-video-cont .video-play{
+					display: block;
+					width: 0;
+					height: 0;
+					border: 33px solid transparent;
+				    border-left: 50px solid #FFF;
+				    margin: 27px 0 0 40px;
 				}
 
 				.b-header-video p{
@@ -586,11 +607,15 @@ h2.b-title{
 .b-block-video{
 
 }
+	.b-block-video h1{
+		margin-bottom: 122px;
+	}
+
 	.video-list{
 		height: 650px;
 	}
 		.video-item{
-			height: 650px;
+			height: 650px !important;
 			background-position: 50% 50%;
 		    background-size: cover;
 		}
@@ -598,19 +623,52 @@ h2.b-title{
 				font-family: 'RobotoRegular';
 			}
 
+			.b-block-video-cont{
+				font-family: 'RobotoRegular';
+				font-size: 26px;
+				text-align: center;
+				line-height: 36px;
+				color: #FFF;
+			}
 
+				.b-block-video-cont .video-circle{
+					margin-bottom: 36px;
+				}
+
+	.b-block-video .slick-dots {
+	    bottom: 45px;
+	    width: auto;
+	    left: 0;
+   		right: 0;
+	}
+
+	.b-block-video .slick-dots li {
+	    margin-right: 15px;
+	}
+
+	.b-block-video .slick-dots li.slick-active button:before {
+	    opacity: 1;
+	    color: #fff;
+	}
+
+	.b-block-video .slick-dots li button:before {
+	    font-size: 18px;
+	    color: #fff;
+	    opacity: 0.7;
+	}
 
 .b-block-reviews{
 
 }
 	.review-list{
 		margin-bottom: 50px;
+		padding: 0 64px;
 	}
 		.review-item{
 			display: inline-block;
 			float: left;
-			width: 572px;
-			padding: 0 50px;
+			width: 512px;
+			padding: 0 34px;
 			text-align: center;
 		}
 			.review-item .b-img-cont{
@@ -678,16 +736,16 @@ h2.b-title{
 			font-family: 'RobotoBold';
 		}
 
-		.b-footer p{
+		.b-footer-up p{
 			line-height: 26px;
 		}
 
 		.b-footer-column{
 			display: inline-block;
 			float: left;
-			margin-right: 67px;
+			margin-right: 74px;
 		}
-		.b-footer .b-footer-column:last-child {
+		div.b-footer-column:last-child {
 		    margin-right: 0px;
 		    float: right;
 		    text-align: right;
@@ -708,13 +766,15 @@ h2.b-title{
 		}
 
 		.b-footer-text{
-			width: 263px;
+			width: 259px;
 		}
-
 			.b-footer ul li{
 				margin-bottom: 12px;
 				line-height: 26px;
 			}
+				.b-footer ul li a:hover{
+					border-bottom: 1px solid #FFF;
+				}
 
 		.b-footer .phone{
 			margin-bottom: 21px;
@@ -724,41 +784,115 @@ h2.b-title{
 			float: right;
 			margin-bottom: 14px;
 		}
+
 			.icon-vk:before{
 				content: "\e90b";
-			  	font-size: 40px;
-			  	background-color: #946262;
-			  	margin-right: 24px;
-			  	vertical-align: middle;
+			  	font-size: 14px;
+			  	color: #FFF;
+			  	line-height: 42px;
 			}
+				.b-social a.icon-vk:hover:before{
+					color: #946262;
+				}
 
 			.icon-instagram:before{
 				content: "\e909";
 			  	font-size: 20px;
 			  	color: #FFF;
-			  	margin-right: 36px;
-			  	vertical-align: middle;
+			  	line-height: 40px;
 			}
+				.b-social a.icon-instagram:hover:before{
+					color: #946262;
+				}
 
 			.icon-facebook:before{
 				content: "\e908";
 			  	font-size: 20px;
 			  	color: #FFF;
-			  	margin-right: 36px;
-			  	vertical-align: middle;
+			  	line-height: 40px;
 			}
+				.b-social a.icon-facebook:hover:before{
+					color: #946262;
+				}
 
 			.icon-telegram:before{
 				content: "\e90a";
 			  	font-size: 18px;
 			  	color: #FFF;
-			  	margin-right: 9px;
-			  	vertical-align: middle;
+			  	line-height: 40px;
 			}
+				.b-social a.icon-telegram:hover:before{
+					color: #946262;
+				}
+
 		.b-footer .b-footer-address{
 			text-align: right;
 			line-height: 26px;
 		}
+
+	.social-item{
+		margin-right: 20px;
+	}
+
+	.social-item:last-child{
+		margin-right: 0;
+	}
+
+	.b-social a{
+		display: block;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: transparent;
+		text-align: center;
+		font-size: 0px;
+	}
+
+	.b-social a:hover{
+		background-color: #FFF;
+	}
+
+	.b-redder-logo{
+		float: right;
+	    background-position: 50% 0%;
+	    background-repeat: no-repeat;
+	    background-image: url(../i/logo-redder.png);
+	    width: 80px;
+	    height: 14px;
+	    background-size: 80px;
+	}
+
+.arrow-left-dark{
+	position: absolute;
+    left: 0px;
+    top: 210px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow-right-dark{
+	position: absolute;
+    right: 0px;
+    top: 210px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow-left-white{
+	position: absolute;
+    left: 0px;
+    top: 287px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow-right-white{
+	position: absolute;
+    right: 0px;
+    top: -365px;
+    cursor: pointer;
+    z-index: 1;
+}
 
 /*-------------1234-------------*/
 
