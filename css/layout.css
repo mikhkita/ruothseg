@@ -238,6 +238,20 @@ input:-moz-placeholder {
 		
 	}
 
+.b-btn-transparent{
+	padding: 12px 38px;
+	font-family: 'RobotoMedium';
+	font-size: 14px;
+	border-radius: 100px;
+	border: 2px solid #FFF;
+	color: #FFF;
+	background-color: transparent;
+}
+	.b-btn-transparent:hover{
+		color: #4a4a4a;
+		background-color: #FFF;
+	}
+
 .b-1{
 	
 }
@@ -515,6 +529,7 @@ h2.b-title{
 		margin-bottom: 50px;
 	}
 		.tour-item{
+			position: relative;
 			display: inline-block;
 			width: calc(100%/2 - 15px);
 			height: 230px;
@@ -524,20 +539,86 @@ h2.b-title{
 			-moz-box-shadow:    0px 5px 16px 0px rgba(150,150,150, 0.6);
 			box-shadow:         0px 5px 16px 0px rgba(150,150,150, 0.6);
 		}
-			.tour-left{
-				float: left;
-				display: inline-block;
-				height: 230px;
-				width: 41%;
+
+			.tour-item-default, .tour-item-hover{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
 			}
-			.tour-right{
-				float: right;
-				display: inline-block;
-				height: 230px;
-				width: 58.8%;
-				background-position: 50% 50%;
-    			background-size: cover;
-			}
+
+				.tour-left{
+					float: left;
+					display: inline-block;
+					height: 230px;
+					width: 41%;
+				}
+				.tour-right{
+					position: relative;
+					float: right;
+					display: inline-block;
+					height: 230px;
+					width: 58.8%;
+					background-position: 50% 50%;
+	    			background-size: cover;
+				}
+
+				.tour-item-hover .tour-left{
+					padding: 32px 0;
+				}
+
+					.tour-item-hover .tour-date{
+						padding: 7px 68px;
+					}
+
+					.tour-item-hover .time-start,
+					.tour-item-hover .time-finish{
+						font-size: 18px;
+						font-family: 'RobotoLight';
+					}
+
+					.tour-item-hover .orgs-padding{
+						padding: 28px 57px;
+					}
+
+					.tour-right h3{
+						text-align: center;
+						font-family: 'RobotoBold';
+						font-size: 18px;
+						color: #FFF;
+						margin-bottom: 14px;
+					}
+
+					.orgs-mask{
+						background-color:rgba(0,0,0,.4);
+					    height: 100%;
+						width: 100%;
+					}
+
+					.orgs-block{
+						margin-bottom: 14px;
+					}
+
+						.orgs-item{
+							display: inline-block;
+							width: 105px;
+						}
+							.orgs-item-img{
+								margin: 0 auto;
+								width: 50px;
+							    display: block;
+							    height: 50px;
+							    border-radius: 100px;
+							    background-position: 50% 50%;
+							    background-repeat: no-repeat;
+							    background-size: 50px;
+							}
+
+							.orgs-item-name{
+								font-size: 14px;
+								color: #FFF;
+							}
+
 			.tour-item p{
 				text-align: center;
 			}
@@ -576,6 +657,10 @@ h2.b-title{
 			.tour-orgs{
 				display: inline-block;
 			}
+
+	.tour-hide{
+		opacity: 0;
+	}
 
 .b-block-book-it{
 

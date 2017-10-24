@@ -41,7 +41,7 @@ $(document).ready(function(){
     }
     $.fn.placeholder();
 
-    $('.video-list').slick({
+    $('.video-slider').slick({
         dots: true,
         arrows: true,
         speed: 800,
@@ -50,7 +50,7 @@ $(document).ready(function(){
         adaptiveHeight: true
     });
 
-    $('.review-list').slick({
+    $('.review-slider').slick({
         dots: false,
         arrows: true,
         nextArrow: '<div class="arrow-right-dark" aria-hidden="true"><img class="" src="i/arrow-right-dark.png"></div>',
@@ -59,6 +59,16 @@ $(document).ready(function(){
         slidesToShow: 2,
         slidesToScroll: 2,
         variableWidth: true
+    });
+
+    $('.tour-item').hover(
+        function(){
+          $('.tour-item-hover').removeClass("tour-hide");
+          $('.tour-item-default').addClass("hide");
+        },
+        function(){
+          $('.tour-item-hover').addClass("tour-hide");
+          $('.tour-item-default').removeClass("hide");
     });
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
