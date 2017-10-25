@@ -174,39 +174,38 @@ input:-moz-placeholder {
 }
 
 .b-btn-brown-header{
-	background-color: #574141;
-	opacity: 0.7;
+	background-color: rgba(87,65,65,0.7);
 	color: #ffffff;
-	padding: 20px 50px;
+	padding: 17px 52px;
+	/*letter-spacing: 0.5px;*/
 }
 	.b-btn-brown-header:hover{
-		
+		background-color: rgb(87,65,65);
 	}
 
 .b-btn-white-header{
-	background-color: #ffffff;
-	opacity: 0.8;
+	background-color: rgba(255,255,255,0.8);
 	color: #744d4d;
-	padding: 20px 62px;
+	padding: 17px 60px;
+	letter-spacing: 0.5px;
 }
 	.b-btn-white-header:hover{
-		
+		background-color: rgb(255,255,255);
 	}
 
-.b-btn-brown{
+.b-btn-brown-short{
 	background-image: linear-gradient(157deg, #ac8484 0%, #744d4d 100%);
 	padding: 12px 38px;
-	font-family: 'RobotoBold';
+	font-family: 'RobotoMedium';
 	font-size: 16px;
 	color: #FFF;
-	letter-spacing: 0.4px;
 }
 	.b-btn-white:hover{
 		
 	}
 
 .b-btn-orange{
-	padding: 12px 38px;
+	padding: 12px 50px;
 	font-family: 'RobotoBold';
 	font-size: 16px;
 	color: #FFF;
@@ -217,7 +216,7 @@ input:-moz-placeholder {
 	}
 
 .b-btn-blue{
-	padding: 12px 38px;
+	padding: 12px 56px;
 	font-family: 'RobotoBold';
 	font-size: 16px;
 	color: #FFF;
@@ -228,7 +227,7 @@ input:-moz-placeholder {
 	}
 
 .b-btn-brown{
-	padding: 12px 38px;
+	padding: 12px 58px;
 	font-family: 'RobotoBold';
 	font-size: 16px;
 	color: #FFF;
@@ -239,7 +238,7 @@ input:-moz-placeholder {
 	}
 
 .b-btn-transparent{
-	padding: 12px 38px;
+	padding: 9px 23px;
 	font-family: 'RobotoMedium';
 	font-size: 14px;
 	border-radius: 100px;
@@ -256,8 +255,12 @@ input:-moz-placeholder {
 	
 }
 
-.b-text .b-title,
-.b-title{
+.b-text h1.b-title,
+h1.b-title{
+	
+}
+
+h2.b-title{
 	text-align: center;
 	font-size: 36px !important;
 	font-family: "RobotoRegular", Arial;
@@ -267,11 +270,12 @@ input:-moz-placeholder {
 	color: #574141;
 }
 
-h2.b-title{
+h3.b-title{
 	font-size: 26px !important;
 	font-family: "RobotoBold", Arial;
 	padding-top: 0px;
-	margin-bottom: 10px;
+	margin-bottom: 16px;
+	line-height: 32px;
 	color: #393939;
 }
 
@@ -291,9 +295,17 @@ h2.b-title{
 	display: none;
 }
 
+.dashed{
+	border-bottom: 1px dashed #744d4d;
+}
+
+	.dashed:hover{
+		border-bottom: 0;
+	}
+
 /*-------------Главная-------------*/
 
-.b-block-header{
+.b-main-header{
 
 }
 
@@ -319,6 +331,13 @@ h2.b-title{
 			font-size: 26px;
 			font-family: 'RobotoBold';
 			color: #744d4d;
+			letter-spacing: 0.72px;
+		}
+
+		.icon-phone{
+		    display: inline-block;
+		    position: relative;
+		    margin-bottom: 6px;
 		}
 
 		.icon-phone:before{
@@ -345,12 +364,16 @@ h2.b-title{
 
 		.request-call{
 			font-size: 16px;
-			border-bottom: 1px dashed #744d4d;
+			letter-spacing: 0.44px;
+		}
+
+		.b-header .request-call{
+			float: right;
 		}
 
 		.b-header-content{
 			margin-top: 17px;
-			margin-bottom: 60px;
+			margin-bottom: 61px;
 		}
 
 		.b-header-content li, .b-header-content p{
@@ -359,17 +382,17 @@ h2.b-title{
 			color: #744d4d;
 		}
 
-			.b-menu{
+			.b-main-menu{
 				margin-top: 58px;
 				float: left;
 			}
-				.b-menu li{
-					margin-bottom: 20px;
+				.b-main-menu li{
+					margin-bottom: 17px;
 				}
-				.b-menu li:last-child{
+				.b-main-menu li:last-child{
 					margin-bottom: 0;
 				}
-					.b-menu li a{
+					.b-main-menu li a{
 						font-size: 22px;
 					}
 
@@ -382,6 +405,7 @@ h2.b-title{
 				    background-position: 50% 50%;
 				    background-repeat: no-repeat;
 				    background-image: url(../i/logo.png);
+				    background-size: 157px;
 				    width: 157px;
 				    height: 296px;
 				}
@@ -389,7 +413,7 @@ h2.b-title{
 					font-size: 14px;
 					letter-spacing: 0.39px;
 					line-height: 18px;
-					margin-top: 17px;
+					margin-top: 15px;
 					text-align: center;
 				}
 			.b-header-video{
@@ -405,11 +429,11 @@ h2.b-title{
 				}
 				.video-play{
 					display: block;
-					width: 0;
-					height: 0;
-					border: 18px solid transparent;
-					border-left: 28px solid #744d4d;
-					margin: 23px 0 0 31px;
+				    width: 0;
+				    height: 0;
+				    border: 16px solid transparent;
+				    border-left: 28px solid #744d4d;
+				    margin: 24px 0 0 31px;
 				}
 				.b-block-video-cont .video-circle{
 					margin: 0 auto;
@@ -420,17 +444,17 @@ h2.b-title{
 				}
 				.b-block-video-cont .video-play{
 					display: block;
-					width: 0;
-					height: 0;
-					border: 33px solid transparent;
-				    border-left: 50px solid #FFF;
-				    margin: 27px 0 0 40px;
+				    width: 0;
+				    height: 0;
+				    border: 27px solid transparent;
+				    border-left: 45px solid #FFF;
+				    margin: 34px 0 0 41px;
 				}
 
 				.b-header-video p{
 					text-align: center;
 					line-height: 24px;
-					margin-top: 20px;
+					margin-top: 19px;
 				}
 
 		.b-header-buttons{
@@ -445,11 +469,17 @@ h2.b-title{
 .b-block-advantages{
 
 }
+
+	.b-block-advantages .b-block{
+		width: 1056px;
+	}
+
 	.advantages-list li{
 		float: left;
 		display: inline-block;
 		width: 33.3%;
 		margin-bottom: 46px;
+		line-height: 32px;
 	}
 		.advantages-list li p{
 			width: 80%;
@@ -526,14 +556,14 @@ h2.b-title{
 	background-color: #f7f7f7;
 }
 	.tour-list{
-		margin-bottom: 50px;
+		margin-bottom: 41px;
 	}
 		.tour-item{
 			position: relative;
 			display: inline-block;
 			width: calc(100%/2 - 15px);
 			height: 230px;
-			margin-bottom: 24px;
+			margin-bottom: 17px;
 			background-color: #FFF;
 			-webkit-box-shadow: 0px 5px 16px 0px rgba(150,150,150, 0.6);
 			-moz-box-shadow:    0px 5px 16px 0px rgba(150,150,150, 0.6);
@@ -587,6 +617,10 @@ h2.b-title{
 						font-size: 18px;
 						color: #FFF;
 						margin-bottom: 14px;
+					}
+
+					.time-finish{
+						padding-top: 7px;
 					}
 
 					.orgs-mask{
@@ -666,7 +700,7 @@ h2.b-title{
 
 }
 
-	.b-block-book-it h1{
+	.b-block-book-it h2{
 		margin-bottom: 20px;
 	}
 
@@ -674,6 +708,7 @@ h2.b-title{
 		font-family: 'RobotoLight';
 		font-size: 26px;
 		text-align: center;
+		color: #574141;
 	}
 
 	.b-block-book-it .b-btn:first-child{
@@ -681,19 +716,24 @@ h2.b-title{
 	}
 
 	.b-block-book-it .b-title-first{
-		margin-bottom: 20px;
+		margin-bottom: 16px;
 	}
 
 	.b-block-book-it .b-title-second{
-		padding-top: 24px;
-		margin-bottom: 44px;
+		padding-top: 15px;
+		margin-bottom: 41px;
 	}
 
 .b-block-video{
 
 }
-	.b-block-video h1{
+	.b-block-video .b-title{
 		margin-bottom: 122px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 5;
 	}
 
 	.video-list{
@@ -717,14 +757,19 @@ h2.b-title{
 			}
 
 				.b-block-video-cont .video-circle{
+					margin-top: 226px;
 					margin-bottom: 36px;
 				}
 
 	.b-block-video .slick-dots {
-	    bottom: 45px;
+	    bottom: 41px;
 	    width: auto;
-	    left: 0;
-   		right: 0;
+	    left: 10px;
+	    right: 0;
+	}
+
+	.b-block-video .slick-dotted.slick-slider {
+	    margin-bottom: 0 !important;
 	}
 
 	.b-block-video .slick-dots li {
@@ -756,7 +801,7 @@ h2.b-title{
 			padding: 0 34px;
 			text-align: center;
 		}
-			.review-item .b-img-cont{
+			.b-img-cont{
 				padding: 6px;
 			    border-radius: 100px;
 			    width: 152px;
@@ -765,7 +810,7 @@ h2.b-title{
 		    	-webkit-box-shadow: 0px 6px 18px 0px rgba(170,170,170, 0.8);
 				-moz-box-shadow:    0px 6px 18px 0px rgba(170,170,170, 0.8);
 				box-shadow:         0px 6px 18px 0px rgba(170,170,170, 0.8);
-				margin-bottom: 30px;
+				margin-bottom: 18px;
 			} 
 				.b-img-cont.b-img-green{
 					background-image: linear-gradient(135deg, #ede923 0%, #34a53d 100%);
@@ -774,7 +819,7 @@ h2.b-title{
 					background-image: linear-gradient(135deg, #ffbd39 0%, #fc4d3f 100%);
 				}
 
-			.review-item .b-img{
+			.b-img{
 			    background-size: cover;
 			    width: 140px;
 			    height: 140px;
@@ -786,10 +831,6 @@ h2.b-title{
 			.icon-foto-mini{
 				margin-bottom: 21px;
 			}
-
-				.foto-with-tour{
-					border-bottom: 1px dashed #744d4d;
-				}
 
 			.icon-foto-mini:before{
 				content: "\e904";
@@ -807,7 +848,7 @@ h2.b-title{
     color: #FFF;
 }
 	.b-footer-up{
-		margin-bottom: 29px;
+		margin-bottom: 19px;
 	}
 		.b-footer p, .b-footer h2, .b-footer a, .b-footer span{
 			color: #FFF;
@@ -828,7 +869,7 @@ h2.b-title{
 		.b-footer-column{
 			display: inline-block;
 			float: left;
-			margin-right: 74px;
+			margin-right: 70px;
 		}
 		div.b-footer-column:last-child {
 		    margin-right: 0px;
@@ -839,6 +880,10 @@ h2.b-title{
 				text-transform: uppercase;
 				font-size: 20px;
 			}
+
+		.info-margin-right{
+			margin-right: 80px;
+		}
 
 		.b-footer-logo{
 			display: block;
@@ -862,7 +907,7 @@ h2.b-title{
 				}
 
 		.b-footer .phone{
-			margin-bottom: 21px;
+			margin-bottom: 18px;
 		}
 
 		.b-social{
@@ -916,7 +961,7 @@ h2.b-title{
 		}
 
 	.social-item{
-		margin-right: 20px;
+		margin-right: 15px;
 	}
 
 	.social-item:last-child{
@@ -947,43 +992,212 @@ h2.b-title{
 	    background-size: 80px;
 	}
 
-.arrow-left-dark{
+.b-video-arrows.icon-arrow-left{
 	position: absolute;
     left: 0px;
-    top: 210px;
+    top: 289px;
     cursor: pointer;
     z-index: 1;
 }
 
-.arrow-right-dark{
+	.b-video-arrows.icon-arrow-left:before{
+		content: "\e90d";
+		font-size: 75px;
+	}
+
+.b-video-arrows.icon-arrow-right{
 	position: absolute;
     right: 0px;
-    top: 210px;
+    top: -361px;
     cursor: pointer;
     z-index: 1;
 }
 
-.arrow-left-white{
+	.b-video-arrows.icon-arrow-right:before{
+		content: "\e90e";
+		font-size: 75px;
+	}
+
+.b-rewiews-arrows.icon-arrow-left{
 	position: absolute;
     left: 0px;
-    top: 287px;
+    top: 154px;
     cursor: pointer;
     z-index: 1;
 }
 
-.arrow-right-white{
+	.b-rewiews-arrows.icon-arrow-left:before{
+		content: "\e90d";
+		font-size: 75px;
+	}
+
+.b-rewiews-arrows.icon-arrow-right{
 	position: absolute;
     right: 0px;
-    top: -365px;
+    top: 154px;
     cursor: pointer;
     z-index: 1;
 }
 
-/*-------------1234-------------*/
+	.b-rewiews-arrows.icon-arrow-right:before{
+		content: "\e90e";
+		font-size: 75px;
+	}
+
+.b-video-arrows.icon-arrow-left:before,
+.b-video-arrows.icon-arrow-right:before{
+	color: #FFF;
+}
+
+.b-video-arrows.icon-arrow-left:hover:before,
+.b-video-arrows.icon-arrow-right:hover:before{
+	color: #ccc;
+}
+
+.b-rewiews-arrows.icon-arrow-left:before,
+.b-rewiews-arrows.icon-arrow-right:before{
+	color: #4a4a4a;
+}
+
+.b-rewiews-arrows.icon-arrow-left:hover:before,
+.b-rewiews-arrows.icon-arrow-right:hover:before{
+	color: #999;
+}
+
+/*-------------Header-------------*/
+
+.b-header{
+	background-color: #ccc;
+}
+	.b-header .b-block {
+	    text-align: center;
+	}
+
+	ul.b-breadcrumbs {
+	    display: inline-block;
+	}
+
+		ul.b-breadcrumbs li {
+		    float: left;
+		}
+
+		ul.b-breadcrumbs li:after {
+		    position: relative;
+		    content: "/";
+		    font-size: 12px;
+		    padding: 3px 0px;
+		    display: block;
+		    float: left;
+		    line-height: 16px;
+		    font-family: "RobotoRegular";
+		    color: #744d4d;
+		    margin-left: 8px;
+		    margin-right: 8px;
+		}
+
+		ul.b-breadcrumbs li:last-child:after {
+		    display: none;
+		}
+
+		ul.b-breadcrumbs a, ul.b-breadcrumbs span {
+		    padding: 3px 0px;
+		    font-size: 12px;
+		    display: block;
+		    float: left;
+		    line-height: 16px;
+		}
+
+	.b-header a {
+	    color: #744d4d;
+	}
+
+	h1, .b-main-title {
+	    text-align: center;
+	    font-size: 36px;
+	    line-height: 48px;
+	    color: #744d4d;
+	}
+
+	.b-content .b-block {
+	    padding: 32px 0px 64px;
+	}
+
+	.b-half-button {
+	    text-align: center;
+	    margin-top: -60px;
+	    margin-bottom: 28px;
+	    z-index: 20;
+	    position: relative;
+	}
+
+	.b-menu li {
+	    float: left;
+	    position: relative;
+	    padding: 0 15px;
+	}
+
+		.b-menu li a{
+		    text-transform: uppercase;
+		}
+
+		.b-menu li.active a{
+			border-bottom: 2px solid #744d4d;
+		}
+
+	.b-top-table {
+	    display: table;
+	    width: 100%;
+	}
+
+	.b-top-contacts{
+		float: right;
+	}
+
+	.table-cell{
+		display: table-cell;
+    	vertical-align: middle;
+	}
+
+/*-------------Отзывы-------------*/
+
+.b-review{
+	width: calc(100%/3 - 10px);
+}
+
+	.b-review .b-img-cont{
+		float: left;
+		display: inline-block;
+	}
+
+	.b-review-right{
+		float: left;
+		display: inline-block;
+		padding: 30px 0 0 15px;
+	}
+
+	.b-review-link{
+		position: relative;
+	}
+
+	.b-review-link:after {
+	    text-decoration: none;
+	    position: absolute;
+	    right: -20px;
+	    content: " →";
+	    top: -3px;
+	}
 
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
-	
+	.b-logo{
+	    background-image: url(../i/logo@2x.png);
+	}
+	.b-footer-logo{
+		background-image: url(../i/footer-logo@2x.png);
+	}
+	.b-redder-logo{
+	    background-image: url(../i/logo-redder@2x.png);
+	}
 }	
 @media screen and (max-width: 1250px){
 	

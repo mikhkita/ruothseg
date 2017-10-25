@@ -45,16 +45,16 @@ $(document).ready(function(){
         dots: true,
         arrows: true,
         speed: 800,
-        nextArrow: '<div class="b-block"><div class="arrow-right-white" aria-hidden="true"><img class="" src="i/arrow-right-white.png"></div></div>',
-        prevArrow: '<div class="b-block"><div class="arrow-left-white" aria-hidden="true"><img class="" src="i/arrow-left-white.png"></div></div>',
+        nextArrow: '<div class="b-block"><div class="icon-arrow-right b-video-arrows" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block"><div class="icon-arrow-left b-video-arrows" aria-hidden="true"></div></div>',
         adaptiveHeight: true
     });
 
     $('.review-slider').slick({
         dots: false,
         arrows: true,
-        nextArrow: '<div class="arrow-right-dark" aria-hidden="true"><img class="" src="i/arrow-right-dark.png"></div>',
-        prevArrow: '<div class="arrow-left-dark" aria-hidden="true"><img class="" src="i/arrow-left-dark.png"></div>',
+        nextArrow: '<div class="icon-arrow-right b-rewiews-arrows" aria-hidden="true"></div>',
+        prevArrow: '<div class="icon-arrow-left b-rewiews-arrows" aria-hidden="true"></div>',
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 2,
