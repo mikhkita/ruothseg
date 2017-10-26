@@ -570,6 +570,16 @@ h3.b-title{
 			box-shadow:         0px 5px 16px 0px rgba(150,150,150, 0.6);
 		}
 
+		.tour-item-hover,
+		.tour-item-default{
+			-webkit-transition: opacity 300ms ease-out;
+		   -moz-transition: opacity 300ms ease-out;
+			-ms-transition: opacity 300ms ease-out;
+			 -o-transition: opacity 300ms ease-out;
+				transition: opacity 300ms ease-out;
+
+		}
+
 			.tour-item-default, .tour-item-hover{
 				position: absolute;
 				top: 0;

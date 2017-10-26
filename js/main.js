@@ -64,11 +64,11 @@ $(document).ready(function(){
     $('.tour-item').hover(
         function(){
           $(this).children(".tour-item-hover").removeClass("tour-hide");
-          $(this).children(".tour-item-default").addClass("hide");
+          $(this).children(".tour-item-default").addClass("tour-hide");
         },
         function(){
           $(this).children(".tour-item-hover").addClass("tour-hide");
-          $(this).children(".tour-item-default").removeClass("hide");
+          $(this).children(".tour-item-default").removeClass("tour-hide");
     });
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
