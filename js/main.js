@@ -63,12 +63,12 @@ $(document).ready(function(){
 
     $('.tour-item').hover(
         function(){
-          $(this).children(".tour-item-hover").removeClass("tour-hide");
-          $(this).children(".tour-item-default").addClass("tour-hide");
+            $this = $(this).children(".tour-right");
+            $this.css("background-image", $this.attr("data-image-blur"));
         },
         function(){
-          $(this).children(".tour-item-hover").addClass("tour-hide");
-          $(this).children(".tour-item-default").removeClass("tour-hide");
+            $this = $(this).children(".tour-right");
+            $this.css("background-image", $this.attr("data-image"));
     });
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
