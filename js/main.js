@@ -61,6 +61,18 @@ $(document).ready(function(){
         variableWidth: true
     });
 
+    $('.b-tour-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: false,
+        arrows: true,
+        speed: 800,
+        nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows" aria-hidden="true"></div></div>',
+        variableWidth: true
+    });
+
     /*$('.tour-item').hover(
         function(){
             $this = $(this).children(".tour-right");
@@ -70,6 +82,57 @@ $(document).ready(function(){
             $this = $(this).children(".tour-right");
             $this.css("background-image", $this.attr("data-image"));
     });*/
+
+    var menuTimer = null;
+    $(".b-menu-cont .b-menu > li").hover(function(){
+        clearTimeout(menuTimer);
+        moveLine($(this));
+    }, function(){
+        clearTimeout(menuTimer);
+
+        menuTimer = setTimeout(checkMenu, 300);
+    });
+
+    function checkMenu(){
+        if( $(".b-menu-cont .b-menu > li.active").length ){
+            moveLine($(".b-menu-cont .b-menu > li.active"));
+        }else{
+            $(".b-menu-cont .b-line").removeClass("show");
+        }
+    }
+
+    function moveLine($el){
+        $(".b-menu-cont .b-line").addClass("show").css({
+            "left" : $el.position().left + parseInt($el.css("padding-left").replace(/\D+/g,"")),
+            "width" : $el.width()
+        });
+    }
+
+    $(".b-menu-cont .b-main-menu > li > a").hover(function(){
+        clearTimeout(menuTimer);
+        moveMainLine($(this));
+    }, function(){
+        clearTimeout(menuTimer);
+
+        menuTimer = setTimeout(checkMainMenu, 300);
+    });
+
+    function checkMainMenu(){
+        if( $(".b-menu-cont .b-main-menu > li.active").length ){
+            moveLine($(".b-menu-cont .b-main-menu > li.active"));
+        }else{
+            $(".b-menu-cont .b-line").removeClass("show");
+        }
+    }
+
+    function moveMainLine($el){
+        $(".b-menu-cont .b-line").addClass("show").css({
+            "top" : $el.position().top + parseInt($el.css("height").replace(/\D+/g,"")),
+            "width" : $el.width()
+        });
+    }
+
+    checkMenu();
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
