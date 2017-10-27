@@ -61,7 +61,7 @@ $(document).ready(function(){
         variableWidth: true
     });
 
-    $('.tour-item').hover(
+    /*$('.tour-item').hover(
         function(){
             $this = $(this).children(".tour-right");
             $this.css("background-image", $this.attr("data-image-blur"));
@@ -69,7 +69,7 @@ $(document).ready(function(){
         function(){
             $this = $(this).children(".tour-right");
             $this.css("background-image", $this.attr("data-image"));
-    });
+    });*/
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
