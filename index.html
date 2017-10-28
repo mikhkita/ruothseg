@@ -39,7 +39,7 @@
 								<li><a href="photo.html">Фото с туров</a></li>
 							</ul>
 						</div>
-						<a href="#">
+						<a href="#popup-video-header" class="fancy">
 							<div class="b-header-video">
 								<div class="video-circle">
 									<div class="video-play"></div>
@@ -47,12 +47,12 @@
 								<p>Посмотреть видео<br>с наших туров</p>
 							</div>
 						</a>
-						<a href="index.html">
-							<div class="b-logo-cont">
+						<div class="b-logo-cont">
+							<a href="index.html">
 								<div class="b-logo"></div>
 								<p class="b-logo-text">Автобусные туры в<br>Шерегеш из Томска</p>
-							</div>
-						</a>
+							</a>
+						</div>
 					</div>
 					<div class="b-header-buttons center-buttons">
 						<a href="#" class="b-btn b-btn-brown-header">Забронировать тур</a>
@@ -154,7 +154,7 @@
 							</div>
 						</div>
 						<div class="tour-right" style="background-image: url('i/tour-2.jpg');">
-							<div class="image-blur" style="background-image: url('i/tour-1-blur.jpg');"></div>
+							<div class="image-blur" style="background-image: url('i/tour-2-blur.jpg');"></div>
 							<div class="orgs-mask orgs-padding">
 								<h3>Организаторы</h3>
 								<div class="orgs-block">
@@ -189,7 +189,7 @@
 							</div>
 						</div>
 						<div class="tour-right" style="background-image: url('i/tour-3.jpg');">
-							<div class="image-blur" style="background-image: url('i/tour-1-blur.jpg');"></div>
+							<div class="image-blur" style="background-image: url('i/tour-3-blur.jpg');"></div>
 							<div class="orgs-mask orgs-padding">
 								<h3>Организаторы</h3>
 								<div class="orgs-block">
@@ -223,8 +223,8 @@
 								<div class="tour-orgs"></div>
 							</div>
 						</div>
-						<div class="tour-right" style="background-image: url('i/tour-1.jpg');">
-							<div class="image-blur" style="background-image: url('i/tour-1-blur.jpg');"></div>
+						<div class="tour-right" style="background-image: url('i/tour-4.jpg');">
+							<div class="image-blur" style="background-image: url('i/tour-4-blur.jpg');"></div>
 							<div class="orgs-mask orgs-padding">
 								<h3>Организаторы</h3>
 								<div class="orgs-block">
@@ -271,7 +271,7 @@
 		<div class="video-list video-slider">
 			<div class="video-item" style="background-image: url('i/video-back.jpg');">
 				<div class="b-block b-block-click">
-					<a href="#">
+					<a href="#popup-video-1" class="fancy">
 						<div class="b-block-video-cont">
 							<div class="video-circle">
 								<div class="video-play"></div>
@@ -283,7 +283,7 @@
 			</div>
 			<div class="video-item" style="background-image: url('i/video-back.jpg');">
 				<div class="b-block b-block-click">
-					<a href="#">
+					<a href="#popup-video-2" class="fancy">
 						<div class="b-block-video-cont">
 							<div class="video-circle">
 								<div class="video-play"></div>
@@ -295,7 +295,7 @@
 			</div>
 			<div class="video-item" style="background-image: url('i/video-back.jpg');">
 				<div class="b-block b-block-click">
-					<a href="#">
+					<a href="#popup-video-3" class="fancy">
 						<div class="b-block-video-cont">
 							<div class="video-circle">
 								<div class="video-play"></div>
@@ -307,7 +307,7 @@
 			</div>
 			<div class="video-item" style="background-image: url('i/video-back.jpg');">
 				<div class="b-block b-block-click">
-					<a href="#">
+					<a href="#popup-video-4" class="fancy">
 						<div class="b-block-video-cont">
 							<div class="video-circle">
 								<div class="video-play"></div>
@@ -467,6 +467,22 @@
 			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
 			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
 		</div>
+		<div id="popup-video-header">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
+		</div>
+
+		<div id="popup-video-1">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div id="popup-video-2">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div id="popup-video-3">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div id="popup-video-4">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
+		</div>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
@@ -484,7 +500,7 @@
 	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/slick.js"></script>
-	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/parallax.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>

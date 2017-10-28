@@ -96,9 +96,9 @@ $(document).ready(function(){
     });
 
     var menuTimer = null;
-    $(".b-menu-cont .b-menu > li").hover(function(){
+    $(".b-menu-cont .b-menu > li > a").hover(function(){
         clearTimeout(menuTimer);
-        moveLine($(this));
+        moveLine($(this).parent());
     }, function(){
         clearTimeout(menuTimer);
 
@@ -106,7 +106,7 @@ $(document).ready(function(){
     });
 
     function checkMenu(){
-        if( $(".b-menu-cont .b-menu > li.active").length ){
+        if( $(".b-menu-cont .b-menu > li.active > a").length ){
             moveLine($(".b-menu-cont .b-menu > li.active"));
         }else{
             $(".b-menu-cont .b-line").removeClass("show");

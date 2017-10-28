@@ -327,6 +327,12 @@ h3.b-title{
 		border-bottom: 1px dashed transparent;
 	}
 
+.parallax-slider{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 /*-------------Главная-------------*/
 
 .b-main-header{
@@ -424,10 +430,10 @@ h3.b-title{
 				    height: 2px;
 				    width: 0;
 				    background: #744d4d;
-				    transition: width 300ms ease-in-out;
-				    -webkit-transition: all 300ms ease-in-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-in-out; /** Firefox **/
-				    -o-transition: all 300ms ease-in-out; /** Opera **/
+				    transition: width 150ms ease-in-out;
+				    -webkit-transition: all 150ms ease-in-out; /** Chrome & Safari **/
+				    -moz-transition: all 150ms ease-in-out; /** Firefox **/
+				    -o-transition: all 150ms ease-in-out; /** Opera **/
 				    left: 0;
 				    bottom: 0;
 				}
@@ -1594,9 +1600,11 @@ h3.b-title{
 	}
 
 	.b-review p{
+		max-height: 130px;
 		font-size: 16px;
 	    line-height: 26px;
 	    margin-bottom: 8px;
+	    overflow: hidden;
 	}
 
 	.b-review .icon-foto-mini:before{
@@ -1649,6 +1657,10 @@ h3.b-title{
 			border-radius: 100px;
 			border: 2px solid #744d4d;
 		}
+
+	.month-cont{
+		display: inline-block;
+	}
 
 .b-content .tour-list {
     margin-bottom: 17px;
