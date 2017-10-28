@@ -233,7 +233,7 @@ input:-moz-placeholder {
 	}
 
 .b-btn-show-more{
-	padding-bottom: 3px;
+	display: inline-block;
 	border-bottom: 1px dashed #744d4d;
 	font-family: 'RobotoRegular';
 	font-size: 20px;
@@ -242,7 +242,27 @@ input:-moz-placeholder {
 }
 
 	.b-btn-show-more:hover{
-		border-bottom: 0;
+		border-bottom: 1px solid transparent;
+	}
+
+.b-btn-read-more{
+	position: relative;
+	border-bottom: 1px dashed #744d4d;
+	font-family: 'RobotoRegular';
+	font-size: 16px;
+	color: #744d4d;
+}
+
+	.b-btn-read-more:hover{
+		border-bottom: 1px solid transparent;
+	}
+
+	.b-btn-read-more:after{
+		text-decoration: none;
+	    position: absolute;
+	    right: -20px;
+	    content: " →";
+	    top: -3px;
 	}
 
 .b-1{
@@ -251,7 +271,7 @@ input:-moz-placeholder {
 
 h1.b-title{
 	text-align: center;
-	font-size: 36px !important;
+	font-size: 36px;
 	font-family: "RobotoBold", Arial;
 	padding-top: 14px;
 	padding-bottom: 89px;
@@ -261,7 +281,7 @@ h1.b-title{
 
 h2.b-title{
 	text-align: center;
-	font-size: 36px !important;
+	font-size: 36px;
 	font-family: "RobotoRegular", Arial;
 	padding-top: 55px;
 	margin-bottom: 50px;
@@ -270,7 +290,7 @@ h2.b-title{
 }
 
 h3.b-title{
-	font-size: 26px !important;
+	font-size: 26px;
 	font-family: "RobotoBold", Arial;
 	padding-top: 0px;
 	margin-bottom: 15px;
@@ -304,7 +324,7 @@ h3.b-title{
 }
 
 	.dashed:hover{
-		border-bottom: 0;
+		border-bottom: 1px dashed transparent;
 	}
 
 /*-------------Главная-------------*/
@@ -976,6 +996,16 @@ h3.b-title{
 				.b-img-cont.b-img-orange{
 					background-image: linear-gradient(135deg, #ffbd39 0%, #fc4d3f 100%);
 				}
+				.b-img-cont.b-img-blue{
+					background-image: linear-gradient(135deg, #1bedff 0%, #2a5da9 100%, #2e3192 100%);
+				}
+				.b-img-cont.b-img-purple{
+					background-image: linear-gradient(135deg, #a3a1ff 0%, #4543a2 100%);
+				}
+				.b-img-cont.b-img-red{
+					background-image: linear-gradient(135deg, #ffa9a9 0%, #dd2424 100%);
+				}
+
 
 			.b-img{
 			    background-size: cover;
@@ -1527,30 +1557,61 @@ h3.b-title{
 /*-------------Отзывы-------------*/
 
 .b-review{
+	display: inline-block;
 	width: calc(100%/3 - 10px);
+	margin-right: 10px;
+	margin-bottom: 41px;
 }
+
+.b-review:nth-child(3n){
+	margin-right: 0;
+}
+
+	.b-review h3.b-title{
+		font-size: 20px;
+		margin-bottom: 2px;
+	}
 
 	.b-review .b-img-cont{
 		float: left;
 		display: inline-block;
+	    width: 122px;
+	    height: 122px;
+	    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+	    -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+	    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+	    margin-bottom: 24px;
+	}
+
+	.b-review .b-img{
+		width: 110px;
+	    height: 110px;
+	}
+
+	.b-review .icon-foto-mini{
+		line-height: 22px;
+		font-size: 16px;
+	}
+
+	.b-review p{
+		font-size: 16px;
+	    line-height: 26px;
+	    margin-bottom: 8px;
+	}
+
+	.b-review .icon-foto-mini:before{
+		padding-top: 9px;
+		font-size: 15px;
 	}
 
 	.b-review-right{
 		float: left;
 		display: inline-block;
-		padding: 30px 0 0 15px;
+		padding: 27px 0 0 23px;
 	}
 
-	.b-review-link{
-		position: relative;
-	}
-
-	.b-review-link:after {
-	    text-decoration: none;
-	    position: absolute;
-	    right: -20px;
-	    content: " →";
-	    top: -3px;
+	.b-reviews-content .b-btn-show-more{
+		margin-bottom: 39px;
 	}
 
 /*-------------Расписание туров-------------*/

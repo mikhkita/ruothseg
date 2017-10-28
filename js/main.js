@@ -162,9 +162,12 @@ $(document).ready(function(){
         });
     }
 
-    $('.foto-grid').isotope({
-        itemSelector: '.grid-item',
-    });
+    if($('.foto-grid').length){
+        $('.foto-grid').isotope({
+            itemSelector: '.grid-item',
+        }); 
+    }
+    
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
