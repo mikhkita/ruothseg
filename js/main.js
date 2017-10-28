@@ -1,3 +1,8 @@
+var isDesktop = false,
+    isTablet = false,
+    isSmallTablet = false,
+    isMobile = false;
+
 $(document).ready(function(){	
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
@@ -10,6 +15,18 @@ $(document).ready(function(){
         } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
+        }
+
+        isDesktop = isTablet = isSmallTablet = isMobile = false;
+
+        if( myWidth > 1152 ){
+            isDesktop = true;
+        }else if( myWidth > 999 ){
+            isTablet = true;
+        }else if( myWidth > 767 ){
+            isSmallTablet = true;
+        }else{
+            isMobile = true;
         }
     }
     $(window).resize(resize);
@@ -132,7 +149,27 @@ $(document).ready(function(){
         });
     }
 
-    checkMenu();
+    if($('.b-menu-cont .b-menu').length){
+        checkMenu();
+
+        var $window = $(window), 
+            $target = $(".b-top"),
+            $h = $target.offset().top; // Определяем координаты .b-top
+        $window.on('scroll', function() {
+            // Как далеко вниз прокрутили страницу
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
+            if (scrollTop > $h) {
+                $target.addClass("b-top-fixed");
+            }else{     
+                $target.removeClass("b-top-fixed");
+            }
+        });
+    }
+
+    $('.grid').isotope({
+        itemSelector: '.grid-item',
+    });
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {

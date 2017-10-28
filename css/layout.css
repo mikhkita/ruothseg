@@ -1261,8 +1261,23 @@ h3.b-title{
 }
 
 	.b-top{
-		padding-top: 34px;
-		margin-bottom: 16px;
+		position: absolute;
+		top: 22px;
+		padding-top: 12px;
+	    padding-bottom: 4px;
+	}
+
+	.b-top-fixed {
+	    background-color: rgba(210,210,210,0.8);
+	    position: fixed;
+	    z-index: 90;
+	    width: 100%;
+	    top: 0px;
+	    left: 0px;
+	}
+
+	.b-header-wrap{
+		padding-top: 123px;
 	}
 
 	.b-small-logo-cont{
@@ -1389,9 +1404,10 @@ h3.b-title{
 		ul.b-breadcrumbs li {
 		    float: left;
 		}
-			ul.b-breadcrumbs li a{
+			ul.b-breadcrumbs li a, ul.b-breadcrumbs li span{
 				font-family: "RobotoRegular";
 			    font-size: 16px;
+			    color: #744d4d;
 			}
 
 		ul.b-breadcrumbs li:after {
@@ -1526,6 +1542,12 @@ h3.b-title{
 
 .b-content .tour-list {
     margin-bottom: 17px;
+}
+
+/*-------------Фотогорафии с туров-------------*/
+
+.grid-item{
+	width: 33%;
 }
 
 
