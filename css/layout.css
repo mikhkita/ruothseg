@@ -1,16 +1,6 @@
 @charset "utf-8";
 
 @font-face {
-	font-family: 'PTSans-Bold';
-	src: url('../fonts/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/PTSans-Bold.woff') format('woff'),
-		 url('../fonts/PTSans-Bold.ttf')  format('truetype'),
-		 url('../fonts/PTSans-Bold.svg#PTSans-Bold') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
 	font-family: 'icomoon';
 	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),  
 		 url('../fonts/icomoon.woff') format('woff'),
@@ -403,15 +393,33 @@ h3.b-title{
 					margin-bottom: 0;
 				}
 					.b-main-menu li a{
+						position: relative;
 						font-size: 22px;
 					}
+
+				.b-main-menu li a:before{
+					display: block;
+				    position: absolute;
+				    content: "";
+				    height: 2px;
+				    width: 0;
+				    background: #744d4d;
+				    transition: width 300ms ease-in-out;
+				    -webkit-transition: all 300ms ease-in-out; /** Chrome & Safari **/
+				    -moz-transition: all 300ms ease-in-out; /** Firefox **/
+				    -o-transition: all 300ms ease-in-out; /** Opera **/
+				    left: 0;
+				    bottom: 0;
+				}
+				.b-main-menu li:hover a:before{
+					width: 100%;
+				}
 
 			.b-logo-cont{
 				width: 157px;
 				margin: 0 auto;
 			}
 				.b-logo{
-					display: block;
 				    background-position: 50% 50%;
 				    background-repeat: no-repeat;
 				    background-image: url(../i/logo.png);
@@ -575,9 +583,9 @@ h3.b-title{
 			height: 230px;
 			margin-bottom: 15px;
 			background-color: #FFF;
-			-webkit-box-shadow: 0px 5px 16px 0px rgba(150,150,150, 0.6);
-			-moz-box-shadow:    0px 5px 16px 0px rgba(150,150,150, 0.6);
-			box-shadow:         0px 5px 16px 0px rgba(150,150,150, 0.6);
+			-webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+			-moz-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
 		}
 
 			.tour-left{
@@ -757,7 +765,7 @@ h3.b-title{
 						    border-radius: 100px;
 						    background-position: 50% 50%;
 						    background-repeat: no-repeat;
-						    background-size: 50px;
+						    background-size: cover;
 						}
 
 						.orgs-item-name{
@@ -1202,31 +1210,49 @@ h3.b-title{
 	}
 
 .b-tour-arrows.icon-arrow-left{
+    width: 42px;
+	height: 42px;
+	text-align: center;
+	border-radius: 100px;
 	position: absolute;
-    left: -23px;
-    top: 12px;
+    left: -48px;
+    top: 6px;
     cursor: pointer;
     z-index: 1;
+    border: 2px solid transparent;
 }
 
 	.b-tour-arrows.icon-arrow-left:before{
-		content: "\e90d";
-		font-size: 16px;
-		font-weight: 700;
+		display: inline-block;
+		padding-top: 12px;
+		content: "\e90c";
+		font-size: 14px;
 	}
 
 .b-tour-arrows.icon-arrow-right{
+	width: 42px;
+	height: 42px;
+	text-align: center;
+	border-radius: 100px;
 	position: absolute;
-    right: -20px;
-    top: -45px;
+    right: -33px;
+    top: -48px;
     cursor: pointer;
     z-index: 1;
+    border: 2px solid transparent;
 }
 
 	.b-tour-arrows.icon-arrow-right:before{
-		content: "\e90e";
-		font-size: 16px;
-		font-weight: 700;
+		display: inline-block;
+		padding-top: 13px;
+		padding-left: 4px;
+		content: "\e90f";
+		font-size: 14px;
+	}
+
+	.b-tour-arrows.icon-arrow-right:hover,
+	.b-tour-arrows.icon-arrow-left:hover{
+		border: 2px solid #744d4d;
 	}
 
 .b-video-arrows.icon-arrow-left:before,
@@ -1240,17 +1266,18 @@ h3.b-title{
 }
 
 .b-rewiews-arrows.icon-arrow-left:before,
-.b-rewiews-arrows.icon-arrow-right:before,
-.b-tour-arrows.icon-arrow-left:before,
-.b-tour-arrows.icon-arrow-right:before{
+.b-rewiews-arrows.icon-arrow-right:before{
 	color: rgba(74,74,74,0.5);
 }
 
 .b-rewiews-arrows.icon-arrow-left:hover:before,
-.b-rewiews-arrows.icon-arrow-right:hover:before,
+.b-rewiews-arrows.icon-arrow-right:hover:before{
+	color: rgba(74,74,74,1);
+}
+
 .b-tour-arrows.icon-arrow-left:before,
 .b-tour-arrows.icon-arrow-right:before{
-	color: rgba(74,74,74,1);
+	color: #744d4d;
 }
 
 /*-------------Header-------------*/
@@ -1258,22 +1285,32 @@ h3.b-title{
 .b-header{
 	background-position: 50% 50%;
     background-repeat: no-repeat;
+    height: 270px;
 }
 
 	.b-top{
 		position: absolute;
-		top: 22px;
-		padding-top: 12px;
+		top: 20px;
+		padding-top: 14px;
 	    padding-bottom: 4px;
+	    background-color: rgba(255,255,255,0);
+	    transition: none;
+	    -webkit-transition: none; /** Chrome & Safari **/
+	    -moz-transition: none; /** Firefox **/
+	    -o-transition: none; /** Opera **/
 	}
 
 	.b-top-fixed {
-	    background-color: rgba(210,210,210,0.8);
+	    background-color: rgba(255,255,255,0.8);
 	    position: fixed;
 	    z-index: 90;
 	    width: 100%;
 	    top: 0px;
 	    left: 0px;
+	    transition: background-color 300ms ease-in-out;
+	    -webkit-transition: background-color 300ms ease-in-out; /** Chrome & Safari **/
+	    -moz-transition: background-color 300ms ease-in-out; /** Firefox **/
+	    -o-transition: background-color 300ms ease-in-out; /** Opera **/
 	}
 
 	.b-header-wrap{
@@ -1288,7 +1325,6 @@ h3.b-title{
 	}
 
 		.b-logo-small{
-			display: block;
 			background-position: 50% 50%;
 		    background-repeat: no-repeat;
 		    background-image: url(../i/small-logo.png);
@@ -1323,6 +1359,10 @@ h3.b-title{
 
 		.b-content .b-block {
 		    padding: 27px 0px 74px;
+		}
+
+		.b-content.b-tour-content .b-block {
+		    padding: 27px 0px 33px;
 		}
 
 	.b-half-button {
@@ -1429,11 +1469,19 @@ h3.b-title{
 		}
 
 		ul.b-breadcrumbs a, ul.b-breadcrumbs span {
-		    padding: 3px 0px;
+		    padding: 2px 0px;
 		    font-size: 12px;
 		    display: block;
 		    float: left;
 		    line-height: 16px;
+		}
+
+		ul.b-breadcrumbs .nav-underline{
+			border-bottom: 1px solid #744d4d;
+		}
+
+		ul.b-breadcrumbs .nav-underline:hover{
+			border-bottom: 1px solid transparent;
 		}
 
 	.b-top-table {
@@ -1453,7 +1501,7 @@ h3.b-title{
 	}
 
 	.b-header .phone{
-		line-height: 27px;
+		line-height: 25px;
 		font-size: 22px;
 		letter-spacing: 0.61px;
 	}
@@ -1508,36 +1556,37 @@ h3.b-title{
 /*-------------Расписание туров-------------*/
 
 .b-tour{
-	width: 738px;
+	width: 750px;
 	margin: 0 auto;
 	margin-bottom: 40px;
 }
 
 .b-block-tour{
 	position: relative;
-	width: 738px;
+	width: 750px;
 	margin: 0 auto;
 }
 
-	ul.b-tour li{
+	.b-tour a{
 		display: inline-block;
-		padding: 10px 30px;
-		margin: 0 8px;
+		color: #393939;;
+		font-family: 'RobotoRegular';
+		font-size: 20px;
+		border: 2px solid transparent;
+		display: inline-block;
+		padding: 9px 30px 11px;
+		margin: 0 6px;
 	}
 
-		ul.b-tour li.active{
+		.b-tour a.active{
 			border-radius: 100px;
-			border: 2px solid #744d4d;	
+			border: 2px solid #744d4d;
+			color: #613b3c;
 		}
 
-			ul.b-tour li.active a{
-				color: #613b3c;
-			}
-
-		ul.b-tour li a{
-			color: #393939;;
-			font-family: 'RobotoRegular';
-			font-size: 20px;
+		.b-tour a:hover{
+			border-radius: 100px;
+			border: 2px solid #744d4d;
 		}
 
 .b-content .tour-list {
@@ -1546,9 +1595,14 @@ h3.b-title{
 
 /*-------------Фотогорафии с туров-------------*/
 
-.grid-item{
-	width: 33%;
+.foto-grid{
+	margin-top: 50px;
+	margin-bottom: 40px;
 }
+
+	.grid-item{
+		width: 33%;
+	}
 
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {

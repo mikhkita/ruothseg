@@ -61,9 +61,11 @@ $(document).ready(function(){
     $('.video-slider').slick({
         dots: true,
         arrows: true,
-        speed: 800,
         nextArrow: '<div class="b-block"><div class="icon-arrow-right b-video-arrows" aria-hidden="true"></div></div>',
         prevArrow: '<div class="b-block"><div class="icon-arrow-left b-video-arrows" aria-hidden="true"></div></div>',
+        speed: 800,
+        autoplay: true,
+        autoplaySpeed: 3000,
         adaptiveHeight: true
     });
 
@@ -75,6 +77,9 @@ $(document).ready(function(){
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 2,
+        speed: 600,
+        autoplay: true,
+        autoplaySpeed: 3000,
         variableWidth: true
     });
 
@@ -84,21 +89,11 @@ $(document).ready(function(){
         dots: false,
         infinite: false,
         arrows: true,
-        speed: 800,
+        speed: 600,
         nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
         prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows" aria-hidden="true"></div></div>',
         variableWidth: true
     });
-
-    /*$('.tour-item').hover(
-        function(){
-            $this = $(this).children(".tour-right");
-            $this.css("background-image", $this.attr("data-image-blur"));
-        },
-        function(){
-            $this = $(this).children(".tour-right");
-            $this.css("background-image", $this.attr("data-image"));
-    });*/
 
     var menuTimer = null;
     $(".b-menu-cont .b-menu > li").hover(function(){
@@ -125,7 +120,7 @@ $(document).ready(function(){
         });
     }
 
-    $(".b-menu-cont .b-main-menu > li > a").hover(function(){
+    /*$(".b-menu-cont .b-main-menu > li > a").hover(function(){
         clearTimeout(menuTimer);
         moveMainLine($(this));
     }, function(){
@@ -147,7 +142,7 @@ $(document).ready(function(){
             "top" : $el.position().top + parseInt($el.css("height").replace(/\D+/g,"")),
             "width" : $el.width()
         });
-    }
+    }*/
 
     if($('.b-menu-cont .b-menu').length){
         checkMenu();
@@ -167,7 +162,7 @@ $(document).ready(function(){
         });
     }
 
-    $('.grid').isotope({
+    $('.foto-grid').isotope({
         itemSelector: '.grid-item',
     });
     

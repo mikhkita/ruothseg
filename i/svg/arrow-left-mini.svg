@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="14px" viewBox="0 0 9 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Расписание-туров" transform="translate(-1178.000000, -372.000000)" fill-rule="nonzero" fill="#744D4D">
+            <g id="Третий-экран" transform="translate(224.000000, 351.000000)">
+                <g id="Навигация" transform="translate(208.000000, 0.000000)">
+                    <g id="right-arrow" transform="translate(728.000000, 7.000000)">
+                        <path d="M25.7974684,20.2468354 L19.9050633,14.3544304 C19.6835443,14.1329114 19.3734177,14 19.1075949,14 C18.8417722,14 18.5759494,14.1329114 18.3544304,14.3544304 C17.9113924,14.7974684 17.9113924,15.4177215 18.3544304,15.8607595 L23.4936709,21 L18.3544304,26.1392405 C17.9113924,26.5822785 17.9113924,27.2025316 18.3544304,27.6455696 C18.7974684,28.0886076 19.4620253,28.0886076 19.9050633,27.6455696 L25.7974684,21.7531646 C26.0189873,21.5316456 26.1075949,21.2658228 26.1075949,21 C26.1075949,20.6898734 26.0189873,20.4683544 25.7974684,20.2468354 Z" id="Shape" transform="translate(22.064873, 20.988924) scale(-1, 1) translate(-22.064873, -20.988924) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
