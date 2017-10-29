@@ -1564,8 +1564,8 @@ h3.b-title{
 
 .b-review{
 	display: inline-block;
-	width: calc(100%/3 - 10px);
-	margin-right: 10px;
+	width: calc(100%/3 - 17px);
+	margin-right: 20px;
 	margin-bottom: 41px;
 }
 
@@ -1608,7 +1608,7 @@ h3.b-title{
 	}
 
 	.b-review .icon-foto-mini:before{
-		padding-top: 9px;
+		padding-top: 5px;
 		font-size: 15px;
 	}
 
@@ -1651,7 +1651,7 @@ h3.b-title{
 		.b-tour a.active{
 			border-radius: 100px;
 			border: 2px solid #744d4d;
-			color: #613b3c;
+			color: #744d4d;
 		}
 
 		.b-tour a:hover{
@@ -1677,6 +1677,19 @@ h3.b-title{
 	.grid-item{
 		width: 33%;
 	}
+
+.no-load-block{
+	padding-top: 175px;
+	height: 400px;
+}
+
+.foto-preload{
+	margin: 0 auto;
+	height: 50px;
+	width: 50px;
+	background-color: #ccc;
+	border-radius: 100px;
+}
 
 .foto-hidden{
 	display: none;

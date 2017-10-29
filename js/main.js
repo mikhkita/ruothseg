@@ -155,11 +155,36 @@ $(document).ready(function(){
         });
     }
 
-    if($('.foto-grid').length){
+    var fotoCount = 10,
+        fotoLoaded = 0;
+    $('.grid-item').each(function(){
+        var src = $(this).children().attr("data-image");
+        var img = new Image();
+        img.src = src;
+        img.this = $(this).children();
+        img.onload = function(){
+            img.this.attr("src", src);
+            console.log(img.this);
+            fotoLoaded++;
+            if(fotoLoaded >= fotoCount){
+                //показать изображения
+                $('.foto-grid').isotope({
+                    itemSelector: '.grid-item',
+                }); 
+                $('.no-load-block').addClass('hide');
+                $('.foto-grid').removeClass('hide');
+
+
+            }
+        }
+
+    });
+
+    /*if($('.foto-grid').length){
         $('.foto-grid').isotope({
             itemSelector: '.grid-item',
         }); 
-    }
+    }*/
     
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
