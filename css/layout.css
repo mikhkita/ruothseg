@@ -331,6 +331,9 @@ h3.b-title{
 	position: absolute;
 	top: 0;
 	left: 0;
+	-webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    filter: blur(10px);
 }
 
 /*-------------Главная-------------*/
@@ -514,32 +517,33 @@ h3.b-title{
 
 }
 
-	.b-block-advantages .b-block{
+	.advantages-list{
 		width: 1056px;
-	}
-
-	.advantages-list li{
-		float: left;
-		display: inline-block;
-		width: 33.3%;
-		margin-bottom: 46px;
-		line-height: 32px;
-	}
-		.advantages-list li p{
-			width: 80%;
-			margin: 0 auto;
-			text-align: center;
-			font-size: 22px;
-			color: #4a4a4a;
-		}
-
-	.advantage-item{
-		width: 140px;
-		height: 140px;
-		border-radius: 50%;
 		margin: 0 auto;
-		margin-bottom: 20px;
 	}
+
+		.advantages-list li{
+			float: left;
+			display: inline-block;
+			width: 33.3%;
+			margin-bottom: 46px;
+			line-height: 32px;
+		}
+			.advantages-list li p{
+				width: 80%;
+				margin: 0 auto;
+				text-align: center;
+				font-size: 22px;
+				color: #4a4a4a;
+			}
+
+		.advantage-item{
+			width: 140px;
+			height: 140px;
+			border-radius: 50%;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
 
 	.b-block-advantages [class^="icon-"]:before, 
 	.b-block-advantages [class*=" icon-"]:before{
@@ -1251,7 +1255,7 @@ h3.b-title{
 	text-align: center;
 	border-radius: 100px;
 	position: absolute;
-    left: -48px;
+    left: -44px;
     top: 6px;
     cursor: pointer;
     z-index: 1;
@@ -1271,7 +1275,7 @@ h3.b-title{
 	text-align: center;
 	border-radius: 100px;
 	position: absolute;
-    right: -33px;
+    right: -47px;
     top: -48px;
     cursor: pointer;
     z-index: 1;
@@ -1625,7 +1629,7 @@ h3.b-title{
 /*-------------Расписание туров-------------*/
 
 .b-tour{
-	width: 750px;
+	width: 726px;
 	margin: 0 auto;
 	margin-bottom: 40px;
 	text-align: center;
@@ -1633,35 +1637,40 @@ h3.b-title{
 
 .b-block-tour{
 	position: relative;
-	width: 750px;
+	width: 726px;
 	margin: 0 auto;
 }
 
-	.b-tour a{
+	.b-tour li{
 		display: inline-block;
-		color: #393939;;
-		font-family: 'RobotoRegular';
-		font-size: 20px;
+		width: 130px !important;
+		margin: 0 8px;
 		border: 2px solid transparent;
-		display: inline-block;
-		padding: 9px 30px 11px;
-		margin: 0 6px;
 	}
-
-		.b-tour a.active{
+		.b-tour li.active{
 			border-radius: 100px;
 			border: 2px solid #744d4d;
 			color: #744d4d;
 		}
 
-		.b-tour a:hover{
+			.b-tour li.active a{
+				color: #744d4d;
+			}
+
+		.b-tour li:hover{
 			border-radius: 100px;
 			border: 2px solid #744d4d;
 		}
 
-	.month-cont{
-		display: inline-block;
-	}
+		.b-tour li a{
+			display: inline-block;
+			color: #393939;;
+			font-family: 'RobotoRegular';
+			font-size: 20px;
+			border: 2px solid transparent;
+			display: inline-block;
+			padding: 7px 0 9px 0;
+		}
 
 .b-content .tour-list {
     margin-bottom: 17px;
@@ -1670,6 +1679,7 @@ h3.b-title{
 /*-------------Фотогорафии с туров-------------*/
 
 .foto-grid{
+	position: relative;
 	margin-top: 50px;
 	margin-bottom: 40px;
 }
@@ -1678,9 +1688,20 @@ h3.b-title{
 		width: 33%;
 	}
 
+.b-foto-block{
+	position: relative;
+	min-height: 400px;
+	width: 100%;
+}
+
 .no-load-block{
+	position: absolute;
+	top: 0;
+	left: 0;
 	padding-top: 175px;
 	height: 400px;
+	width: 100%;
+	z-index: 2;
 }
 
 .foto-preload{
@@ -1693,6 +1714,22 @@ h3.b-title{
 
 .foto-hidden{
 	display: none;
+}
+
+.foto-hide{
+	opacity: 0;
+	transition: opacity 1300ms ease-out;
+    -webkit-transition: opacity 1300ms ease-out; /** Chrome & Safari **/
+    -moz-transition: opacity 1300ms ease-out; /** Firefox **/
+    -o-transition: opacity 1300ms ease-out; /** Opera **/
+}
+
+.foto-show{
+	opacity: 1;
+	transition: opacity 1300ms ease-out;
+    -webkit-transition: opacity 1300ms ease-out; /** Chrome & Safari **/
+    -moz-transition: opacity 1300ms ease-out; /** Firefox **/
+    -o-transition: opacity 1300ms ease-out; /** Opera **/
 }
 
 

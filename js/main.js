@@ -155,30 +155,58 @@ $(document).ready(function(){
         });
     }
 
+
     var fotoCount = 10,
         fotoLoaded = 0;
-    $('.grid-item').each(function(){
+    //загрузить первые *fotoCount* элементов
+    $('.grid-item').slice(0, fotoCount).each(function(){
         var src = $(this).children().attr("data-image");
         var img = new Image();
         img.src = src;
         img.this = $(this).children();
         img.onload = function(){
             img.this.attr("src", src);
-            console.log(img.this);
+            img.this.parent().addClass("loaded");
             fotoLoaded++;
             if(fotoLoaded >= fotoCount){
-                //показать изображения
-                $('.foto-grid').isotope({
-                    itemSelector: '.grid-item',
-                }); 
-                $('.no-load-block').addClass('hide');
-                $('.foto-grid').removeClass('hide');
-
-
+                //показать первые *fotoCount* элементов
+                showStartFoto();
+                //Грузить остальные
+                showNextFoto();
             }
         }
 
     });
+
+    function showStartFoto(){
+        $('.foto-grid').isotope({
+            itemSelector: '.grid-item.loaded',
+        }); 
+        $('.no-load-block').addClass('foto-hide').removeClass('foto-show');
+        $('.foto-grid').removeClass('foto-hide').addClass('foto-show');
+        $('.loaded').each(function(){
+            /*setTimeout(function(){
+              console.log("!!");
+            }, 5000);*/
+            $(this).removeClass('foto-hide').addClass('foto-show');
+        });
+    }
+
+    function showNextFoto(){
+        $('.grid-item.foto-hide').each(function(){
+            var src = $(this).children().attr("data-image");
+            var img = new Image();
+            img.src = src;
+            img.this = $(this).children();
+            img.onload = function(){
+                img.this.attr("src", src);
+                img.this.parent().addClass("loaded");
+                fotoLoaded++;
+                img.this.parent().removeClass('foto-hide').addClass('foto-show');
+                $('.foto-grid').isotope( 'appended', img.this.parent() );
+            }
+        });
+    }
 
     /*if($('.foto-grid').length){
         $('.foto-grid').isotope({
