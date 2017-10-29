@@ -276,7 +276,7 @@ h1.b-title{
 	padding-top: 14px;
 	padding-bottom: 89px;
 	line-height: 14px;
-	color: #603b3c;
+	color: #744d4d;
 }
 
 h2.b-title{
@@ -430,10 +430,10 @@ h3.b-title{
 				    height: 2px;
 				    width: 0;
 				    background: #744d4d;
-				    transition: width 150ms ease-in-out;
-				    -webkit-transition: all 150ms ease-in-out; /** Chrome & Safari **/
-				    -moz-transition: all 150ms ease-in-out; /** Firefox **/
-				    -o-transition: all 150ms ease-in-out; /** Opera **/
+				    transition: width 150ms ease-out;
+				    -webkit-transition: all 150ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: all 150ms ease-out; /** Firefox **/
+				    -o-transition: all 150ms ease-out; /** Opera **/
 				    left: 0;
 				    bottom: 0;
 				}
@@ -628,10 +628,10 @@ h3.b-title{
 					left: 0;
 					width: 100%;
 					height: 100%;
-					transition: all 300ms ease-in-out;
-				    -webkit-transition: all 300ms ease-in-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-in-out; /** Firefox **/
-				    -o-transition: all 300ms ease-in-out; /** Opera **/
+					transition: all 300ms ease-out;
+				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: all 300ms ease-out; /** Firefox **/
+				    -o-transition: all 300ms ease-out; /** Opera **/
 				}
 
 					.tour-date{
@@ -639,10 +639,10 @@ h3.b-title{
 						top: 56px;
 						left: 0;
 						right: 0;
-						transition: opacity 300ms ease-in-out;
-					    -webkit-transition: opacity 300ms ease-in-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-in-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-in-out; /** Opera **/
+						transition: opacity 300ms ease-out;
+					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
+					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
+					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 					.time-start{
@@ -651,10 +651,10 @@ h3.b-title{
 						left: 0;
 						right: 0;
 						opacity: 0;
-						transition: opacity 300ms ease-in-out;
-					    -webkit-transition: opacity 300ms ease-in-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-in-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-in-out; /** Opera **/
+						transition: opacity 300ms ease-out;
+					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
+					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
+					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 					.time-finish{
@@ -663,10 +663,10 @@ h3.b-title{
 						left: 0;
 						right: 0;
 						opacity: 0;
-						transition: opacity 300ms ease-in-out;
-					    -webkit-transition: opacity 300ms ease-in-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-in-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-in-out; /** Opera **/
+						transition: opacity 300ms ease-out;
+					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
+					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
+					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 					.weekday-or-weekend{
@@ -675,10 +675,10 @@ h3.b-title{
 						left: 0;
 						right: 0;
 						opacity: 1;
-						transition: opacity 300ms ease-in-out;
-					    -webkit-transition: opacity 300ms ease-in-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-in-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-in-out; /** Opera **/
+						transition: opacity 300ms ease-out;
+					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
+					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
+					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 			.tour-item:hover .tour-left-content{
@@ -734,10 +734,10 @@ h3.b-title{
 					height: 100%;
 					width: 100%;
 					opacity: 0;
-					transition: all 300ms ease-in-out;
-				    -webkit-transition: all 300ms ease-in-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-in-out; /** Firefox **/
-				    -o-transition: all 300ms ease-in-out; /** Opera **/
+					transition: all 300ms ease-out;
+				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: all 300ms ease-out; /** Firefox **/
+				    -o-transition: all 300ms ease-out; /** Opera **/
 				}
 
 				.orgs-mask{
@@ -748,10 +748,10 @@ h3.b-title{
 				    height: 100%;
 					width: 100%;
 					opacity: 0;
-					transition: all 300ms ease-in-out;
-				    -webkit-transition: all 300ms ease-in-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-in-out; /** Firefox **/
-				    -o-transition: all 300ms ease-in-out; /** Opera **/
+					transition: all 300ms ease-out;
+				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: all 300ms ease-out; /** Firefox **/
+				    -o-transition: all 300ms ease-out; /** Opera **/
 				}
 
 				.tour-right h3{
@@ -761,10 +761,10 @@ h3.b-title{
 					font-size: 18px;
 					color: #FFF;
 					margin-bottom: 28px;
-					transition: all 300ms ease-in-out;
-				    -webkit-transition: all 300ms ease-in-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-in-out; /** Firefox **/
-				    -o-transition: all 300ms ease-in-out; /** Opera **/
+					transition: all 300ms ease-out;
+				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: all 300ms ease-out; /** Firefox **/
+				    -o-transition: all 300ms ease-out; /** Opera **/
 				    transition-delay: 200ms;
 				}
 
@@ -772,10 +772,10 @@ h3.b-title{
 					text-align: center;
 					opacity: 0;
 					margin-bottom: 23px;
-					transition: all 300ms ease-in-out;
-				    -webkit-transition: all 300ms ease-in-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-in-out; /** Firefox **/
-				    -o-transition: all 300ms ease-in-out; /** Opera **/
+					transition: all 300ms ease-out;
+				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: all 300ms ease-out; /** Firefox **/
+				    -o-transition: all 300ms ease-out; /** Opera **/
 				    transition-delay: 200ms;
 				}
 
@@ -801,10 +801,10 @@ h3.b-title{
 
 				.tour-right .center-buttons{
 					opacity: 0;
-					transition: all 300ms ease-in-out;
-				    -webkit-transition: all 300ms ease-in-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-in-out; /** Firefox **/
-				    -o-transition: all 300ms ease-in-out; /** Opera **/
+					transition: all 300ms ease-out;
+				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: all 300ms ease-out; /** Firefox **/
+				    -o-transition: all 300ms ease-out; /** Opera **/
 				    transition-delay: 200ms;
 				}
 
@@ -1032,7 +1032,7 @@ h3.b-title{
 			}
 
 			.icon-foto-mini:before{
-				padding-top: 8px;
+				padding-top: 6px;
 			    display: inline-block;
 			    content: "\e904";
 			    font-size: 18px;
@@ -1343,10 +1343,10 @@ h3.b-title{
 	    width: 100%;
 	    top: 0px;
 	    left: 0px;
-	    transition: background-color 300ms ease-in-out;
-	    -webkit-transition: background-color 300ms ease-in-out; /** Chrome & Safari **/
-	    -moz-transition: background-color 300ms ease-in-out; /** Firefox **/
-	    -o-transition: background-color 300ms ease-in-out; /** Opera **/
+	    transition: background-color 300ms ease-out;
+	    -webkit-transition: background-color 300ms ease-out; /** Chrome & Safari **/
+	    -moz-transition: background-color 300ms ease-out; /** Firefox **/
+	    -o-transition: background-color 300ms ease-out; /** Opera **/
 	}
 
 	.b-header-wrap{
@@ -1628,6 +1628,7 @@ h3.b-title{
 	width: 750px;
 	margin: 0 auto;
 	margin-bottom: 40px;
+	text-align: center;
 }
 
 .b-block-tour{
@@ -1676,6 +1677,10 @@ h3.b-title{
 	.grid-item{
 		width: 33%;
 	}
+
+.foto-hidden{
+	display: none;
+}
 
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {

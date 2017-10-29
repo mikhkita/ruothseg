@@ -91,8 +91,25 @@ $(document).ready(function(){
         arrows: true,
         speed: 600,
         nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
-        prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows" aria-hidden="true"></div></div>',
-        variableWidth: true
+        prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows hide" aria-hidden="true"></div></div>',
+    });
+
+    $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        //console.log(nextSlide, currentSlide, slick.slideCount);
+        //если виден первый элемент, то скрыть левую стрелку
+        if(currentSlide === 0){
+            console.log("<-");
+            $('.icon-arrow-left').addClass("hide");
+        }else{
+            $('.icon-arrow-left').removeClass("hide");
+        }
+        //если виден последний элемент, то скрыть правую стрелку
+        if(slick.slideCount - currentSlide === 5){
+            console.log("->");
+            $('.icon-arrow-right').addClass("hide");
+        }else{
+            $('.icon-arrow-right').removeClass("hide");
+        }
     });
 
     var menuTimer = null;
@@ -119,30 +136,6 @@ $(document).ready(function(){
             "width" : $el.width()
         });
     }
-
-    /*$(".b-menu-cont .b-main-menu > li > a").hover(function(){
-        clearTimeout(menuTimer);
-        moveMainLine($(this));
-    }, function(){
-        clearTimeout(menuTimer);
-
-        menuTimer = setTimeout(checkMainMenu, 300);
-    });
-
-    function checkMainMenu(){
-        if( $(".b-menu-cont .b-main-menu > li.active").length ){
-            moveLine($(".b-menu-cont .b-main-menu > li.active"));
-        }else{
-            $(".b-menu-cont .b-line").removeClass("show");
-        }
-    }
-
-    function moveMainLine($el){
-        $(".b-menu-cont .b-line").addClass("show").css({
-            "top" : $el.position().top + parseInt($el.css("height").replace(/\D+/g,"")),
-            "width" : $el.width()
-        });
-    }*/
 
     if($('.b-menu-cont .b-menu').length){
         checkMenu();
