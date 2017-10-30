@@ -1707,7 +1707,7 @@ h3.b-title{
 	width: 100%;
 }
 
-.no-load-block{
+.preload-block{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1716,7 +1716,7 @@ h3.b-title{
 	width: 100%;
 }
 
-.foto-preload{
+.preloader{
 	margin: 0 auto;
 	height: 50px;
 	width: 50px;

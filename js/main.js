@@ -209,7 +209,7 @@ $(document).ready(function(){
                 //показать первые *fotoCount* элементов
                 showStartFoto();
                 //Грузить остальные
-                //showNextFoto();
+                showNextFoto();
             }
         }
 
@@ -220,20 +220,21 @@ $(document).ready(function(){
         $grid = $('.foto-grid').isotope({
             itemSelector: '.grid-item.loaded',
         });
-        $('.no-load-block').addClass('foto-hide').removeClass('foto-show');
+        $('.preload-block').addClass('foto-hide').removeClass('foto-show');
         //$('.foto-grid').removeClass('foto-hide').addClass('foto-show');
         $('.loaded').each(function(){
             var el = this;
             setTimeout(function(){
                 $(el).removeClass('foto-hide').addClass('foto-show');
-                console.log($(el));
+                console.log("showStartFoto");
             }, 500 * delay);
             delay++;
         });
     }
 
     function showNextFoto(){
-        $('.grid-item.foto-hide').each(function(){
+        setTimeout(function(){
+            $('.grid-item.foto-hide').each(function(){
             if( isRetina || isMobile || isSmallTablet ){
                 src = $(this).children().attr("data-retina-image");
             }else{
@@ -247,9 +248,13 @@ $(document).ready(function(){
                 this.child.parent().addClass("loaded");
                 fotoLoaded++;
                 this.child.parent().removeClass('foto-hide').addClass('foto-show');
+                console.log("showNextFoto");
                 $grid.isotope( 'appended', this.child.parent() );
             }
         });
+        }, 5000);
+
+        
     }
 
      $("body").on("click", ".ajax-more", function(){
@@ -282,6 +287,13 @@ $(document).ready(function(){
 
         return false;
     });
+
+    $('.b-header').parallax({
+        imageSrc: 'i/header-back.jpg',
+        speed: 0.5,
+    });
+
+    $('.wrapper').append($('.parallax-mirror'));
 
     /*if($('.foto-grid').length){
         $('.foto-grid').isotope({
