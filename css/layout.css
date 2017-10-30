@@ -1089,7 +1089,7 @@ h3.b-title{
 				font-size: 20px;
 			}
 
-		.info-margin-right{
+		.b-footer-column:nth-child(3){
 			margin-right: 83px;
 		}
 
@@ -1396,17 +1396,19 @@ h3.b-title{
 	    color: #744d4d;
 	}
 
-	.b-content{
+.b-content{
+	background-color: #FFF;
+	padding-bottom: 20px;
+	box-sizing: content-box;
+}
 
+	.b-content .b-block {
+	    padding: 27px 0px 74px;
 	}
 
-		.b-content .b-block {
-		    padding: 27px 0px 74px;
-		}
-
-		.b-content.b-tour-content .b-block {
-		    padding: 27px 0px 33px;
-		}
+	.b-content.b-tour-content .b-block {
+	    padding: 27px 0px 33px;
+	}
 
 	.b-half-button {
 	    text-align: center;
@@ -1571,7 +1573,7 @@ h3.b-title{
 
 .showMenuActive{
     overflow: hidden;
-    background: #fafafa;
+    background: #f1f4f3;
 }
 
 /*-------------Отзывы-------------*/
@@ -1653,7 +1655,7 @@ h3.b-title{
 
 	.b-tour li{
 		display: inline-block;
-		width: 130px !important;
+		/*width: 130px !important;*/
 		margin: 0 8px;
 		border: 2px solid transparent;
 	}

@@ -71,6 +71,17 @@ input.error{
 	
 }
 
+/*---------------------------*/
+
+.b-main-header{
+
+}
+	.b-header-video{
+		width: 35%;
+		margin: 125px 0 0 0;
+	}
+
+
 .b-block-advantages{
 
 }
@@ -78,3 +89,181 @@ input.error{
 	.advantages-list{
 		width: 100%;
 	}
+
+		.advantages-list li p{
+			font-size: 18px;
+			line-height: 26px;
+		}
+
+.b-content .orgs-padding, .orgs-padding {
+    padding: 14px 8px;
+}
+
+.review-item{
+	font-size: 16px;
+}
+
+	.icon-foto-mini {
+	    margin-bottom: 16px;
+	}
+
+		.icon-foto-mini:before{
+			font-size: 16px;
+			padding-top: 8px;
+		}
+
+	.review-item h3.b-title{
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+
+.b-tour-content{
+
+	}
+		.b-tour-content .orgs-padding{
+			padding: 5px 8px;
+		}
+
+		.b-tour-content .tour-right h3{
+			margin-bottom: 22px;
+		}
+
+		.b-tour-content .orgs-block{
+			margin-bottom: 10px;
+		}
+		.b-tour-content .tour-price{
+			display: block;
+			float: none;
+		}
+		.b-tour-content .tour-price + .b-btn-transparent{
+		    float: none;
+		}
+
+.b-review{
+	width: calc(100%/2 - 17px);
+	margin-right: 28px;
+}
+
+.b-review:nth-child(3n) {
+    margin-right: 28px;
+}
+
+.b-review:nth-child(2n) {
+    margin-right: 0;
+}
+
+.b-footer .b-footer-column{
+    margin-right: 38px;
+}
+
+div.b-footer-column:last-child{
+	margin-right: 0;
+}
+
+@media screen and (max-width: 1024px){
+	.b-footer .b-footer-column:nth-child(2){
+	    display: none;
+	}
+
+	.b-footer .b-footer-column{
+	    margin-right: 63px;
+	}
+}
+
+@media screen and (max-width: 900px){
+
+	.b-header-buttons{
+		margin: 0 50px;
+	}
+
+		.b-header-buttons .b-btn:first-child {
+		    margin-right: 0;
+		    margin-bottom: 10px;
+		}
+
+	.advantages-list li p{
+		width: 90%;
+	}
+
+	.orgs-padding {
+	    padding: 4px 10px;
+	}
+
+	.orgs-item {
+	    width: 80px;
+	}
+
+	.weekday-or-weekend{
+		font-size: 18px;
+	}
+
+	.time-start, .time-finish {
+	    font-size: 16px;
+	}
+
+	.date-start, .date-finish {
+	    font-size: 32px;
+	}
+
+	.time-start {
+	    top: 6px;
+	}
+
+	.tour-date {
+	    top: 46px;
+	}
+
+	.weekday-or-weekend {
+	    top: 146px;
+	}
+
+	.time-finish {
+	    top: 138px;
+	}
+
+	.tour-item, .tour-left, .tour-right{
+	    height: 210px;
+	}
+
+	.b-tour-content{
+
+	}
+		.b-tour-content .orgs-padding{
+			padding: 0 8px;
+		}
+
+		.b-tour-content .tour-right h3{
+			line-height: 22px;
+			margin-bottom: 23px;
+		}
+
+		.b-tour-content .orgs-block{
+			margin-bottom: 7px;
+		}
+		.b-tour-content .tour-price{
+			display: block;
+			float: none;
+		}
+		.b-tour-content .tour-price + .b-btn-transparent{
+			margin-top: 4px;
+		    display: block;
+		    float: none;
+		}
+
+	.b-tour, .b-block-tour{
+	    width: 400px;
+	}
+
+	.b-review {
+	    margin-right: 18px;
+	}
+
+	.b-footer-column:nth-child(4){
+	    margin-right: 0;
+	}
+
+}
+
+@media screen and (max-width: 800px){
+
+}

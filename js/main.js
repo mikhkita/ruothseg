@@ -30,6 +30,7 @@ $(document).ready(function(){
         }else{
             isMobile = true;
         }
+        console.log(myHeight);
     }
     $(window).resize(resize);
     resize();
@@ -94,7 +95,15 @@ $(document).ready(function(){
         speed: 600,
         autoplay: true,
         autoplaySpeed: 3000,
-        variableWidth: true
+        responsive: [
+            {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
     });
 
     $('.b-tour-slider').slick({
@@ -106,10 +115,19 @@ $(document).ready(function(){
         speed: 600,
         nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
         prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows hide" aria-hidden="true"></div></div>',
+        responsive: [
+            {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+              }
+            }
+        ]
     });
 
     $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        //console.log(nextSlide, currentSlide, slick.slideCount);
+        console.log(slick.slideCount, currentSlide);
         //если виден первый элемент, то скрыть левую стрелку
         if(currentSlide === 0){
             console.log("<-");
@@ -118,10 +136,11 @@ $(document).ready(function(){
             $('.icon-arrow-left').removeClass("hide");
         }
         //если виден последний элемент, то скрыть правую стрелку
-        if(slick.slideCount - currentSlide === 5){
-            console.log("->");
+        if(slick.slideCount - currentSlide === $('.slick-slide.slick-active').length){
+            console.log("->hide");
             $('.icon-arrow-right').addClass("hide");
         }else{
+            console.log("->show");
             $('.icon-arrow-right').removeClass("hide");
         }
     });
@@ -232,6 +251,37 @@ $(document).ready(function(){
             }
         });
     }
+
+     $("body").on("click", ".ajax-more", function(){
+        console.log("click");
+        $.ajax({
+            type: 'post',
+            url: $(this).attr("href"),
+            success: function(html){
+                var $html = $(html);
+
+                $(".scroll-to").removeClass("scroll-to");
+                $html.find(".b-review").eq(0).addClass("scroll-to");
+
+                console.log($(".b-reviews").find(".b-btn-show-more"));
+                $(".b-reviews").find(".b-btn-show-more").remove();
+                $(".b-reviews").append($html.html());
+
+                $("body, html").animate({
+                    scrollTop : $(".b-review.scroll-to").offset().top - 86 - 16
+                }, 300);
+                //History.replaceState(null , null, $html.attr("data-url"));
+            },
+            error: function(){
+                alert("Ошибка запроса");
+            },
+            complete: function(){
+                
+            }
+        });
+
+        return false;
+    });
 
     /*if($('.foto-grid').length){
         $('.foto-grid').isotope({
