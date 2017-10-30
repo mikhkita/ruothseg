@@ -331,9 +331,6 @@ h3.b-title{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    filter: blur(10px);
 }
 
 /*-------------Главная-------------*/
@@ -454,7 +451,7 @@ h3.b-title{
 				    background-image: url(../i/logo.png);
 				    background-size: 157px;
 				    width: 157px;
-				    height: 293px;
+				    height: 294px;
 				}
 				.b-logo-text{
 					font-size: 14px;
@@ -702,6 +699,7 @@ h3.b-title{
 				}
 
 			.tour-right{
+				overflow: hidden;
 				position: relative;
 				float: right;
 				display: inline-block;
@@ -732,16 +730,21 @@ h3.b-title{
 				/***Анимация правого блока***/
 
 				.image-blur{
+					background-position: 50% 50%;
+					background-size: cover;
 					position: absolute;
 					top: 0;
 					left: 0;
 					height: 100%;
 					width: 100%;
 					opacity: 0;
-					transition: all 300ms ease-out;
-				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-out; /** Firefox **/
-				    -o-transition: all 300ms ease-out; /** Opera **/
+					-webkit-filter: blur(5px);
+				    -moz-filter: blur(5px);
+				    filter: blur(5px);
+					transition: opacity 300ms ease-out;
+				    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: opacity 300ms ease-out; /** Firefox **/
+				    -o-transition: opacity 300ms ease-out; /** Opera **/
 				}
 
 				.orgs-mask{
@@ -1564,6 +1567,13 @@ h3.b-title{
 		text-align: center;
 	}
 
+/*-------------Стили для мобильного меню-------------*/
+
+.showMenuActive{
+    overflow: hidden;
+    background: #fafafa;
+}
+
 /*-------------Отзывы-------------*/
 
 .b-review{
@@ -1686,6 +1696,7 @@ h3.b-title{
 
 	.grid-item{
 		width: 33%;
+		display: inline-block;
 	}
 
 .b-foto-block{
@@ -1701,7 +1712,6 @@ h3.b-title{
 	padding-top: 175px;
 	height: 400px;
 	width: 100%;
-	z-index: 2;
 }
 
 .foto-preload{
@@ -1718,20 +1728,7 @@ h3.b-title{
 
 .foto-hide{
 	opacity: 0;
-	transition: opacity 1300ms ease-out;
-    -webkit-transition: opacity 1300ms ease-out; /** Chrome & Safari **/
-    -moz-transition: opacity 1300ms ease-out; /** Firefox **/
-    -o-transition: opacity 1300ms ease-out; /** Opera **/
 }
-
-.foto-show{
-	opacity: 1;
-	transition: opacity 1300ms ease-out;
-    -webkit-transition: opacity 1300ms ease-out; /** Chrome & Safari **/
-    -moz-transition: opacity 1300ms ease-out; /** Firefox **/
-    -o-transition: opacity 1300ms ease-out; /** Opera **/
-}
-
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	.b-logo{
@@ -1747,7 +1744,7 @@ h3.b-title{
 	    background-image: url(../i/logo-redder@2x.png);
 	}
 }	
-@media screen and (max-width: 1250px){
+@media screen and (max-width: 1152px){
 	
 }
 @media screen and (max-width: 1020px){
