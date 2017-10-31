@@ -5,11 +5,14 @@ body {
 	position: relative;
 }
 body {
-	min-width: 750px;
+	min-width: 600px;
 	text-align: center;
-	font-size: 30px;
-	/*overflow-x: hidden;*/
+	font-size: 18px;
+    line-height: 30px;
+	font-family: 'RobotoRegular', Arial;
+	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
+	color: #393939;
 }
 a{
 	text-decoration: none;
@@ -25,10 +28,6 @@ label.error{
 }
 input.error{
 	border-bottom: 1px solid #ff8686 !important;
-}
-.popUpTexture {
-    width: 141px;
-    height: 141px;
 }
 .ps-lines{
 
@@ -63,10 +62,157 @@ input.error{
 .b{
 	position: relative;
 }
-.b-wide-block{
-	position: relative;
-	max-width: 750px;
+.b-block{
 	width: 100%;
-	min-width: 750px;
-	margin: 0px auto;
+	max-width: calc(100% - 48px);
+	margin: 0 auto;
+}
+.b-wide-block{
+	
+}
+
+/*---------------------------*/
+
+.b-main-header{
+
+}
+	.b-header-video{
+		width: 35%;
+		margin: 125px 0 0 0;
+	}
+
+
+.b-block-advantages{
+
+}
+
+	.advantages-list{
+		width: 100%;
+	}
+
+		.advantages-list li p{
+			font-size: 18px;
+			line-height: 26px;
+		}
+
+.b-review{
+	width: calc(100%/2 - 17px);
+	margin-right: 28px;
+}
+
+.b-review:nth-child(3n) {
+    margin-right: 28px;
+}
+
+.b-review:nth-child(2n) {
+    margin-right: 0;
+}
+
+.b-footer .b-footer-column{
+    margin-right: 38px;
+}
+
+div.b-footer-column:last-child{
+	margin-right: 0;
+}
+
+.grid-item{
+	width: 100%;
+}
+
+.b-header-buttons{
+	margin: 0 50px;
+}
+
+	.b-header-buttons .b-btn:first-child {
+	    margin-right: 0;
+	    margin-bottom: 10px;
+	}
+
+.advantages-list li p{
+	width: 80%;
+}
+
+
+
+.b-tour, .b-block-tour{
+    width: 400px;
+}
+
+.b-review {
+    margin-right: 18px;
+}
+
+.b-footer-column:nth-child(4){
+    margin-right: 0;
+}
+
+.advantages-list li{
+	float: none;
+	width: calc(50% - 10px);
+}
+
+	.advantages-list li:nth-last-child(-n+3){
+		margin-bottom: 46px;
+	}
+
+	.advantages-list li:nth-last-child(-n+2) {
+	    margin-bottom: 0;
+	}
+
+.tour-item {
+	display: block;
+    width: 100%;
+}
+
+.b-footer-column:nth-child(2),
+.b-footer-column:nth-child(3),
+.b-footer-column:nth-child(4){
+    display: none;
+}
+
+.b-redder-logo{
+	top: auto;
+	bottom: 7px;
+	right: 0;
+}
+
+.develop-block{
+	float: none !important;
+	display: block;
+}
+
+
+.center-buttons{
+	margin: 0 50px;
+}
+
+.tour-right .center-buttons{
+	margin: 0 10px;
+}
+
+.b-block-book-it .b-btn:first-child{
+	margin-right: 0;
+	margin-bottom: 15px;
+}
+
+.b-btn-transparent{
+	min-width: 0;
+	padding: 7px 14px;
+}
+
+.b-review {
+    width: calc(100% - 17px);
+}
+
+.orgs-padding {
+    padding: 14px 14px;
+}
+
+.review-item{
+	padding: 0 10px;
+}
+
+@media screen and (max-width: 600px){
+
 }

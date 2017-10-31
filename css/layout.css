@@ -307,10 +307,6 @@ h3.b-title{
 	padding-bottom: 70px;
 }
 
-.no-margin-bottom{
-	margin-bottom: 0 !important;
-}
-
 .center-buttons{
 	text-align: center;
 }
@@ -451,7 +447,7 @@ h3.b-title{
 				    background-image: url(../i/logo.png);
 				    background-size: 157px;
 				    width: 157px;
-				    height: 294px;
+				    height: 295px;
 				}
 				.b-logo-text{
 					font-size: 14px;
@@ -525,6 +521,10 @@ h3.b-title{
 			width: 33.3%;
 			margin-bottom: 46px;
 			line-height: 32px;
+		}
+
+		.advantages-list li:nth-last-child(-n+3){
+			margin-bottom: 0;
 		}
 			.advantages-list li p{
 				width: 80%;
@@ -1056,7 +1056,7 @@ h3.b-title{
     color: #FFF;
 }
 	.b-footer-up{
-		margin-bottom: 23px;
+		margin-bottom: 39px;
 	}
 		.b-footer p, .b-footer h2, .b-footer a, .b-footer span{
 			color: #FFF;
@@ -1098,9 +1098,9 @@ h3.b-title{
 		    background-position: 50% 50%;
 		    background-repeat: no-repeat;
 		    background-image: url(../i/footer-logo.png);
-		    background-size: 80px;
-		    width: 80px;
-			height: 151px;
+		    background-size: 82px;
+		    width: 82px;
+			height: 154px;
 		}
 
 		.b-footer-text{
@@ -1190,8 +1190,18 @@ h3.b-title{
 		background-color: #FFF;
 	}
 
+	.b-footer-down{
+		position: relative;
+	}
+
+	.b-footer-down p, .develop-block{
+		display: inline-block;
+	}
+
 	.b-redder-logo{
-		float: right;
+	    position: absolute;
+	    top: -15px;
+	    right: 0;
 	    background-position: 50% 0%;
 	    background-repeat: no-repeat;
 	    background-image: url(../i/logo-redder.png);
@@ -1323,6 +1333,11 @@ h3.b-title{
 	color: #744d4d;
 }
 
+.b-popup-foto{
+	width: 90%;
+	text-align: center;
+}
+
 /*-------------Header-------------*/
 
 .b-header{
@@ -1332,6 +1347,7 @@ h3.b-title{
 }
 
 	.b-top{
+		width: 100%;
 		position: absolute;
 		top: 20px;
 		padding-top: 14px;
@@ -1396,9 +1412,9 @@ h3.b-title{
 	    color: #744d4d;
 	}
 
-.b-content{
+.b-content, .b-content-main{
 	background-color: #FFF;
-	padding-bottom: 20px;
+	/*padding-bottom: 20px;*/
 	box-sizing: content-box;
 }
 
@@ -1692,8 +1708,18 @@ h3.b-title{
 
 .foto-grid{
 	position: relative;
-	margin-top: 50px;
-	margin-bottom: 40px;
+	margin-top: 90px;
+}
+
+.foto-grid-transform{
+	transform: translate(0,-40px);
+    -webkit-transform: translate(0,-40px); /** Chrome & Safari **/
+    -o-transform: translate(0,-40px); /** Opera **/
+    -moz-transform: translate(0,-40px); /** Firefox **/
+    transition: transform 700ms ease-out;
+    -webkit-transition: transform 700ms ease-out; /** Chrome & Safari **/
+    -moz-transition: transform 700ms ease-out; /** Firefox **/
+    -o-transition: transform 700ms ease-out; /** Opera **/
 }
 
 	.grid-item{
@@ -1724,12 +1750,26 @@ h3.b-title{
 	border-radius: 100px;
 }
 
+.preload-block-static{
+	position: static;
+	padding-top: 40px;
+	height: auto;
+}
+
 .foto-hidden{
 	display: none;
 }
 
 .foto-hide{
 	opacity: 0;
+}
+
+.foto-show{
+	opacity: 1;
+	transition: opacity 700ms ease-out;
+    -webkit-transition: opacity 700ms ease-out; /** Chrome & Safari **/
+    -moz-transition: opacity 700ms ease-out; /** Firefox **/
+    -o-transition: opacity 700ms ease-out; /** Opera **/
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
