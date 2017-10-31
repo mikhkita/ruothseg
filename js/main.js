@@ -294,7 +294,7 @@ $(document).ready(function(){
 
         return false;
     });
-     
+
     $('.b-header').parallax({
         imageSrc: $('.b-header').attr("data-img"),
         speed: 0.5,
