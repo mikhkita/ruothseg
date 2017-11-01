@@ -332,17 +332,29 @@ h3.b-title{
 /*-------------Главная-------------*/
 
 .b-main-header{
+
 }
 
 .header-back{
+	max-width: 1960px;
+	margin: 0 auto;
+	background-image: url(../i/header-main-back.jpg);
+	background-attachment: fixed;
 	position: relative;
 	margin: 0 auto 70px auto;
 	height: 679px;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.header-back.compress-header{
+	height: 593px;
 }
 
 	.b-header-block{
+		background-image: url(../i/header-main-back-blur.jpg);
+		background-attachment: fixed;
 		position: absolute;
 		top: 60px;
 		left: 0;
@@ -350,7 +362,20 @@ h3.b-title{
 		padding: 59px 74px 74px 74px;
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
+		background-size: cover;
 	}
+
+	.b-header-block.compress-header{
+		padding: 30px 74px 74px 74px;
+	}
+
+	.b-header-content.compress-header{
+	    margin-top: -10px;
+	    margin-bottom: 30px;
+	}
+		.burger-menu{
+			display: none;
+		}
 
 		.phone{
 			font-size: 26px;
@@ -1335,6 +1360,69 @@ h3.b-title{
 .b-popup-foto{
 	width: 90%;
 	text-align: center;
+}
+
+
+.typed-cursor{
+  opacity: 1;
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+          animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink{
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes typedjsBlink{
+  0% { opacity: 1; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1; }
+}
+
+.typed-fade-out{
+  opacity: 0;
+  transition: opacity .25s;
+  -webkit-animation: 0;
+          animation: 0;
+}
+
+.type-wrap{
+	text-align: center;
+}
+
+#typed-show{
+	display: inline-block;
+}
+
+.typed-cursor{
+	font-size: 26px;
+}
+
+.review-item-text{
+	-webkit-transition: transform 600ms ease-out, opacity 600ms ease-in;
+    -moz-transition: transform 600ms ease-out, opacity 600ms ease-in;
+    -ms-transition: transform 600ms ease-out, opacity 600ms ease-in;
+    -o-transition: transform 600ms ease-out, opacity 600ms ease-in;
+    transition: transform 600ms ease-out, opacity 600ms ease-in;
+    -webkit-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
+    -o-transform: scale(0.2);
+    transform: scale(0.2);
+    opacity: 0;
+    -webkit-transform-origin: 20% -18px;
+    -moz-transform-origin: 20% -18px;
+    -o-transform-origin: 20% -18px;
+    -ms-transform-origin: 20% -18px;
+    transform-origin: 20% -18px;
+}
+
+.slick-active .review-item-text {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
 }
 
 /*-------------Header-------------*/

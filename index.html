@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
 	<link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+	<link rel="stylesheet" href="css/component.css" type="text/css">
 
 	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1199px)" href="css/layout-tablet.css">
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css">
@@ -23,10 +24,18 @@
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 </head>
 <body>
+
+	<div id="perspective" class="perspective effect-moveleft">
+		<div class="container">
+			<div class="wrapper content-wrap">
+
 	<div class="b b-main-header">
-		<div class="header-back" data-parallax="scroll" data-image-src="i/header-main-back.jpg" data-speed="0.5">
+		<div class="header-back">
 			<div class="b-block">
-				<div class="b-header-block" data-parallax="scroll" data-image-src="i/header-block.jpg" data-z-index="-99" data-speed="0.5">
+				<div class="b-header-block">
+					<a href="#" id="showMenu">
+						<div class="burger-menu icon-burger-menu">Меню</div>
+					</a>
 					<div class="phone"><span class="icon-phone">+7 (903) 951-31-01</span></div>
 					<a href="#" class="request-call dashed">Заказать звонок</a>
 					<div class="b-header-content">
@@ -67,34 +76,34 @@
 
 	<div class="clearfix"></div>
 	<div class="b-content-main">
-		<div class="b b-block-advantages">
+		<div class="b b-block-advantages" data-offset="200">
 			<div class="b-wide-block">
 				<div class="b-block">
 					<h2 class="b-title">Почему стоит ехать вместе с <b>GESH TOUR?</b></h2>
 					<ul class="advantages-list">
 						<li>
-							<div class="advantage-item icon-orgs"></div>
-							<p>Сопровождение тура организатором</p>
+							<div class="advantage-item icon-orgs anim fadeInScale" data-anim="fadeInScale" data-delay="0" data-cont=".b-block-advantages"></div>
+							<p class="anim fadeIn" data-anim="fadeIn" data-delay="0" data-cont=".b-block-advantages">Сопровождение тура организатором</p>
 						</li>
 						<li>
-							<div class="advantage-item icon-eqiup"></div>
-							<p>Скидки на прокат оборудования</p>
+							<div class="advantage-item icon-eqiup anim fadeInScale" data-anim="fadeInScale" data-delay="100" data-cont=".b-block-advantages"></div>
+							<p class="anim fadeIn" data-anim="fadeIn" data-delay="100" data-cont=".b-block-advantages">Скидки на прокат оборудования</p>
 						</li>
 						<li>
-							<div class="advantage-item icon-lift"></div>
-							<p>Бесплатные подъемники на протяжении всего тура</p>
+							<div class="advantage-item icon-lift anim fadeInScale" data-anim="fadeInScale" data-delay="200" data-cont=".b-block-advantages"></div>
+							<p class="anim fadeIn" data-anim="fadeIn" data-delay="200" data-cont=".b-block-advantages">Бесплатные подъемники на протяжении всего тура</p>
 						</li>
 						<li>
-							<div class="advantage-item icon-bus"></div>
-							<p>Комфортабельные<br>автобусы</p>
+							<div class="advantage-item icon-bus anim fadeInScale" data-anim="fadeInScale" data-delay="300" data-cont=".b-block-advantages"></div>
+							<p class="anim fadeIn" data-anim="fadeIn" data-delay="300" data-cont=".b-block-advantages">Комфортабельные<br>автобусы</p>
 						</li>
 						<li>
-							<div class="advantage-item icon-foto"></div>
-							<p>Фотоотчет<br>с каждого тура</p>
+							<div class="advantage-item icon-foto anim fadeInScale" data-anim="fadeInScale" data-delay="400" data-cont=".b-block-advantages"></div>
+							<p class="anim fadeIn" data-anim="fadeIn" data-delay="400" data-cont=".b-block-advantages">Фотоотчет<br>с каждого тура</p>
 						</li>
 						<li>
-							<div class="advantage-item icon-boy"></div>
-							<p>Нас выбрали<br>более 6000 человек</p>
+							<div class="advantage-item icon-boy anim fadeInScale" data-anim="fadeInScale" data-delay="500" data-cont=".b-block-advantages"></div>
+							<p class="anim fadeIn" data-anim="fadeIn" data-delay="500" data-cont=".b-block-advantages">Нас выбрали<br>более 6000 человек</p>
 						</li>
 					</ul>
 					<div class="clearfix"></div>
@@ -259,7 +268,14 @@
 			<div class="b-wide-block">
 				<div class="b-block">
 					<h2 class="b-title b-title-first">Совершенно не важно,</h2>
-					<p>один ты или с компанией</p>
+					<div class="type-wrap">
+					    <div id="typed-strings" style="display: none;">
+					      <p>один ты или с компанией</p>
+					      <p>с компанией ты или один</p>
+					      <p>ты один или с компанией?</p>
+					    </div>
+					    <p id="typed-show" style="white-space:pre;"></p>
+					</div>
 					<h2 class="b-title b-title-second"><b>GESH TOUR</b> - это туры для <b>всех!</b></h2>
 					<div class="center-buttons">
 						<a href="#" class="b-btn b-btn-orange">Забронировать тур</a>
@@ -328,33 +344,38 @@
 				<div class="b-block">
 					<h2 class="b-title">Отзывы о турах <b>GESH TOUR</b></h2>
 					<div class="review-list review-slider">
-						<div class="review-item">
+						<div class="review-item" data-id="1">
 							<div class="b-img-cont b-img-green">
 								<div class="b-img" style="background-image: url('i/review-1.jpg');"></div>
 							</div>
 							<h3 class="b-title">Анастасия Сергеевна</h3>
 							<div class="icon-foto-mini">
-								<a href="#popup-review-1" class="fancy-img foto-with-tour dashed">Фотографии с тура</a>
+								<a href="#" class="foto-with-tour dashed">Фотографии с тура</a>
+								<!--<a class="fancybox" href="http://fancyapps.com/fancybox/demo/1_b.jpg"><img src="http://fancyapps.com/fancybox/demo/1_s.jpg" alt=""/></a>
+								<a class="fancybox" data-fancybox="gallery" href="#">Фотографии с тура</a>
+								<div style="display: none;">
+								    <a data-fancybox="gallery" href="i/foto-6.jpg">
+								    	<img src="i/foto-6.jpg"/>
+								    </a>
+								   	<a data-fancybox="gallery" href="i/foto-7.jpg">
+								    	<img src="i/foto-7.jpg"/>
+								    </a>
+								    <a data-fancybox="gallery" href="i/foto-8.jpg">
+								    	<img src="i/foto-8.jpg"/>
+								    </a>
+								</div>-->
 							</div>
-							<p>Всё было на уровне))) Обо всём своевременно информировали, досуг организовывали, с проблемами возникшими тут же разбирались))) Организаторами были Эля и Зорица, спасибо вам сахарочки;)))</p>
-							<div style="display: none;">
-								<div class="b-popup-foto" id="popup-review-1">
-								    <img src="i/foto-5.jpg"/>
-								    <img src="i/foto-6.jpg"/>
-								    <img src="i/foto-7.jpg"/>
-								    <img src="i/foto-8.jpg"/>
-								</div>
-							</div>
+							<p class="review-item-text">Всё было на уровне))) Обо всём своевременно информировали, досуг организовывали, с проблемами возникшими тут же разбирались))) Организаторами были Эля и Зорица, спасибо вам сахарочки;)))</p>
 						</div>
-						<div class="review-item">
+						<div class="review-item" data-id="2">
 							<div class="b-img-cont b-img-orange">
 								<div class="b-img" style="background-image: url('i/review-2.jpg');"></div>
 							</div>
 							<h3 class="b-title">Валентин Псковитин</h3>
 							<div class="icon-foto-mini">
-								<a href="#popup-review-2" class="fancy-img foto-with-tour dashed">Фотографии с тура</a>
+								<a href="#" class="foto-with-tour dashed">Фотографии с тура</a>
 							</div>
-							<p>Я просто в шоке, было невероятно круто, до мурашек, наши гиды женя и зорица невероятные ребята, организовывали наш досуг лучше работы ведущий в нашем городе) конкурсы интересные) целуем ваши руки</p>
+							<p class="review-item-text">Я просто в шоке, было невероятно круто, до мурашек, наши гиды женя и зорица невероятные ребята, организовывали наш досуг лучше работы ведущий в нашем городе) конкурсы интересные) целуем ваши руки</p>
 							<div style="display: none;">
 								<div class="b-popup-foto" id="popup-review-2">
 								    <img src="i/foto-1.jpg"/>
@@ -364,7 +385,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="review-item">
+						<div class="review-item" data-id="3">
 							<div class="b-img-cont b-img-green">
 								<div class="b-img" style="background-image: url('i/review-1.jpg');"></div>
 							</div>
@@ -372,9 +393,9 @@
 							<div class="icon-foto-mini">
 								<a href="photo.html" class="foto-with-tour dashed">Фотографии с тура</a>
 							</div>
-							<p>Всё было на уровне))) Обо всём своевременно информировали, досуг организовывали, с проблемами возникшими тут же разбирались))) Организаторами были Эля и Зорица, спасибо вам сахарочки;)))</p>
+							<p class="review-item-text">Всё было на уровне))) Обо всём своевременно информировали, досуг организовывали, с проблемами возникшими тут же разбирались))) Организаторами были Эля и Зорица, спасибо вам сахарочки;)))</p>
 						</div>
-						<div class="review-item">
+						<div class="review-item" data-id="4">
 							<div class="b-img-cont b-img-orange">
 								<div class="b-img" style="background-image: url('i/review-2.jpg');"></div>
 							</div>
@@ -382,7 +403,7 @@
 							<div class="icon-foto-mini">
 								<a href="photo.html" class="foto-with-tour dashed">Фотографии с тура</a>
 							</div>
-							<p>Я просто в шоке, было невероятно круто, до мурашек, наши гиды женя и зорица невероятные ребята, организовывали наш досуг лучше работы ведущий в нашем городе) конкурсы интересные) целуем ваши руки</p>
+							<p class="review-item-text">Я просто в шоке, было невероятно круто, до мурашек, наши гиды женя и зорица невероятные ребята, организовывали наш досуг лучше работы ведущий в нашем городе) конкурсы интересные) целуем ваши руки</p>
 						</div>
 					</div>
 					<div class="clearfix"></div>
@@ -450,6 +471,20 @@
 			</div>
 		</div>
 	</div>
+
+			</div>
+		</div>
+		<!--Мобильное меню-->
+		<nav class="outer-nav right vertical">
+			<a href="index.html">Главная</a>
+			<a href="tours.html">Расписание</a>
+			<a href="residence.html">Проживание</a>
+			<a href="passage.html">Проезд</a>
+			<a href="about.html">О команде</a>
+			<a href="reviews.html">Отзывы</a>
+			<a href="photo.html">Фото с туров</a>
+		</nav>
+	</div>
 	
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
@@ -515,6 +550,10 @@
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/slick.js"></script>
 	<script type="text/javascript" src="js/parallax.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.25376.js"></script>
+	<script type="text/javascript" src="js/classie.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/typed.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>

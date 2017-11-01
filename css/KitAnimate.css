@@ -8,6 +8,34 @@
 	   	 -o-transition: all 800ms ease-out;
 			transition: all 800ms ease-out;
 }
+.fadeInScale{
+	-webkit-transition: -webkit-transform 500ms ease-out, opacity 500ms ease-out;
+	   -moz-transition: transform 500ms ease-out, opacity 500ms ease-out;
+	    -ms-transition: -ms-transform 500ms ease-out, opacity 500ms ease-out;
+	   	 -o-transition: -o-transform 500ms ease-out, opacity 500ms ease-out;
+			transition: transform 500ms ease-out, opacity 500ms ease-out;
+}
+.fadeInScale{
+	opacity: 0;
+	-webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+	-webkit-transform: scale(0.3);
+	   -moz-transform: scale(0.3);
+	    -ms-transform: scale(0.3);
+	   	 -o-transform: scale(0.3);
+			transform: scale(0.3);
+}
+	.fadeInScale-show{
+		opacity: 1;
+		-webkit-transform: scale(1);
+		   -moz-transform: scale(1);
+		    -ms-transform: scale(1);
+		   	 -o-transform: scale(1);
+				transform: scale(1);
+	}
 
 .fadeRight{
 	-webkit-transform: translateX(100px);
@@ -84,8 +112,6 @@
 	    		transform: scale(1);
 	    opacity: 1;
 	}
-
-
 /*Кастомные анимации*/
 .procAnim-1 .b-proc-high,
 .procAnim-2 .b-proc-high,

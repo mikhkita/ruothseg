@@ -76,11 +76,62 @@ input.error{
 .b-main-header{
 
 }
-	.b-header-video{
-		width: 35%;
-		margin: 125px 0 0 0;
+
+	.b-main-header .b-block{
+		max-width: 100%;
+		width: 100%;
 	}
 
+		.b-header-block{
+			position: static;
+			padding: 31px 24px 40px;
+		}
+
+	.b-header-video{
+		display: none;
+	}
+	.b-header-content .b-menu-cont{
+		display: none;
+	}
+
+	.burger-menu{
+		display: block;
+		float: right;
+		padding-top: 12px;
+		color: #744d4d;
+
+		font-family: 'RobotoMedium';
+		font-size: 22px;
+		line-height: 32px;
+	}
+
+		.icon-burger-menu:before{
+			display: inline-block;
+		    content: "\e910";
+		    font-size: 22px;
+		    color: #744d4d;
+		    margin-right: 16px;
+		    padding-bottom: 5px;
+		    vertical-align: middle;
+		}
+
+	.phone{
+		font-size: 18px;
+		letter-spacing: 0;
+	}
+
+	.icon-phone{
+		margin-bottom: 0;
+	}
+
+		.icon-phone:before {
+		    font-size: 16px;
+		}
+
+	.request-call {
+	    font-size: 14px;
+	    letter-spacing: 0;
+	}
 
 .b-block-advantages{
 
