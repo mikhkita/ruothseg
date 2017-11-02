@@ -21,18 +21,16 @@ $(document).ready(function(){
 
         isDesktop = isTablet = isSmallTablet = isMobile = false;
 
-        if( myWidth > 1152 ){
+        if( myWidth > 1151 ){
             isDesktop = true;
-        }else if( myWidth > 999 ){
-            isTablet = true;
         }else if( myWidth > 767 ){
-            isSmallTablet = true;
+            isTablet = true;
         }else{
             isMobile = true;
         }
 
         //сжатие отступов в хедере
-        if(myHeight < 670){
+        if(myHeight < 670 && !isMobile){
             $('.header-back').addClass("compress-header");
             $('.b-header-block').addClass("compress-header");
             $('.b-header-content').addClass("compress-header");
@@ -40,6 +38,36 @@ $(document).ready(function(){
             $('.header-back').removeClass("compress-header");
             $('.b-header-block').removeClass("compress-header");
             $('.b-header-content').removeClass("compress-header");
+        }
+
+        if(isMobile){
+            if(!$('.advantages-slider').hasClass("slider-on")){
+                $('.advantages-slider').not('.slick-initialized').slick({
+                    dots: false,
+                    arrows: true,
+                    nextArrow: '<div class="icon-arrow-right b-advantages-arrows" aria-hidden="true"></div>',
+                    prevArrow: '<div class="icon-arrow-left b-advantages-arrows" aria-hidden="true"></div>',
+                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    speed: 600,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    responsive: [
+                        {
+                          breakpoint: 620,
+                          settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                          }
+                        }
+                    ]
+                }).addClass("slider-on");
+            }
+        }else{
+            if($('.advantages-slider').hasClass("slider-on")){
+                $('.advantages-slider').slick('unslick').removeClass("slider-on");
+            }
         }
     }
 
@@ -84,6 +112,13 @@ $(document).ready(function(){
         return false;
     }
 
+    //пропустить анимацию b-block-advantages на мобиле
+    if(isMobile){
+        $('.advantage-item').each(function(){
+            $(this).addClass("fadeIn-show");
+        });
+    }
+
     $('.video-slider').slick({
         dots: true,
         arrows: true,
@@ -92,7 +127,15 @@ $(document).ready(function(){
         speed: 800,
         autoplay: true,
         autoplaySpeed: 3000,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                dots: false,
+              }
+            }
+        ]
     });
 
     $('.review-slider').slick({
@@ -104,8 +147,8 @@ $(document).ready(function(){
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 600,
-        //autoplay: true,
-        //autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [
             {
               breakpoint: 900,
@@ -322,6 +365,31 @@ $(document).ready(function(){
         backDelay: 3000,
         fadeOut: true,
         loop: true
+    });
+
+     $("a.fancybox").click(function() {
+        $this = $(this);
+        var photos  = new Array();
+
+        $(".fancy-gallery a").each(function(){
+
+            href = $(this).attr("href");
+            photos.push({'href': href});    
+
+        });
+
+        $this.fancybox(photos , 
+            {   'transitionIn' : 'elastic', 
+                'easingIn' : 'easeOutBack', 
+                'transitionOut' : 'elastic', 
+                'easingOut' : 'easeInBack', 
+                'opacity' : false, 
+                'titleShow' : true, 
+                'titlePosition' : 'over',
+                'type'              : 'image',          
+                'titleFromAlt' : true 
+            }
+        );
     });
 
     /*$('.b-header').parallax({

@@ -307,9 +307,14 @@ h3.b-title{
 	padding-bottom: 70px;
 }
 
-.center-buttons{
+.b-center-block{
 	text-align: center;
+	margin: 0 auto;
 }
+
+	.position-buttons{
+		display: inline-block;
+	}
 
 .hide{
 	display: none;
@@ -526,7 +531,7 @@ h3.b-title{
 			font-family: 'RobotoBold';
 		}
 
-			.b-header-buttons .b-btn:first-child{
+			.b-header-buttons .position-buttons:first-child{
 				margin-right: 30px;
 			}
 
@@ -927,11 +932,11 @@ h3.b-title{
 	}
 
 	.b-block-book-it .b-title-first{
-		margin-bottom: 14px;
+		margin-bottom: 16px;
 	}
 
 	.b-block-book-it .b-title-second{
-		padding-top: 15px;
+		padding-top: 12px;
 		margin-bottom: 41px;
 	}
 
@@ -954,11 +959,37 @@ h3.b-title{
 	.video-list{
 		height: 650px;
 	}
-		.video-item{
-			height: 650px !important;
-			background-position: 50% 50%;
-		    background-size: cover;
+		.video-list .video-item{
+			height: 650px;
+			position: relative;
 		}
+
+			@keyframes move-right{
+			   0% {
+			     -webkit-transform: translateX(0);
+			   }
+			   50% { 
+			     -webkit-transform: translateX(4%);
+			   }
+			   100% { 
+			     -webkit-transform: translateX(0);
+			   }
+			}
+
+			.video-back{
+				height: 650px !important;
+				width: 110%;
+				position: absolute;
+				top: 0;
+				left: -5%;
+				background-position: 50% 50%;
+			    background-size: cover;
+			    animation: move-right 20s ease-in-out infinite;
+				-moz-animation: move-right 20s ease-in-out infinite;
+				-webkit-animation: move-right 20s ease-in-out infinite;
+			 	-o-animation: move-right 20s ease-in-out infinite;
+			}
+
 			.video-item .b-title{
 				font-family: 'RobotoRegular';
 			}
@@ -1234,6 +1265,10 @@ h3.b-title{
 	    background-size: 80px;
 	}
 
+	.b-footer-mobile-menu{
+		display: none;
+	}
+
 .b-video-arrows.icon-arrow-left{
 	position: absolute;
     left: 0px;
@@ -1423,6 +1458,10 @@ h3.b-title{
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
+}
+
+.slick-active.video-item{
+	z-index: 5;
 }
 
 /*-------------Header-------------*/

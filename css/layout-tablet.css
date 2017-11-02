@@ -176,11 +176,19 @@ div.b-footer-column:last-child{
 
 @media screen and (max-width: 900px){
 
-	.b-header-buttons{
-		margin: 0 50px;
+	.position-buttons{
+	    display: block;
 	}
 
-		.b-header-buttons .b-btn:first-child {
+	.b-block-book-it .position-buttons{
+		display: inline-block;
+	}
+
+	.header-back, .header-back.compress-header{
+	    height: 680px;
+	}
+
+		.b-header-buttons .position-buttons:first-child {
 		    margin-right: 0;
 		    margin-bottom: 15px;
 		}
@@ -270,12 +278,9 @@ div.b-footer-column:last-child{
 
 @media screen and (max-width: 767px){
 
-	body {
-		min-width: 550px;
-	}
-
 	.advantages-list li{
 		float: none;
+		width: calc(50% - 10px);
 	}
 
 	.advantages-list li:nth-last-child(-n+3){
@@ -284,10 +289,6 @@ div.b-footer-column:last-child{
 
 	.advantages-list li:nth-last-child(-n+2) {
 	    margin-bottom: 0;
-	}
-
-	.advantages-list li {
-	    width: calc(50% - 10px);
 	}
 
 	.tour-item {
