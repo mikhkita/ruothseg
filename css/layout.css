@@ -1558,11 +1558,11 @@ h3.b-title{
 		text-align: center;
     	border-radius: 100px;
     	margin-right: 26px;
-    	margin-top: 12px;
+    	margin-top: 13px;
 	}
 
 		.b-btn-call.icon-phone:before{
-			line-height: 38px;
+			line-height: 36px;
 			margin-right: 0;
 		}
 
