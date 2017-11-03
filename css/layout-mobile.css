@@ -119,6 +119,14 @@ h3.b-title{
 	display: inline-block;
 }
 
+.b-top .b-block{
+	max-width: 100%;
+}
+
+.b-top.b-top-fixed .b-block{
+	max-width: calc(100% - 48px);
+}
+
 /*---------------------------*/
 
 .b-main-header{
@@ -166,23 +174,19 @@ h3.b-title{
 
 	.burger-menu{
 		display: block;
-		float: right;
-		padding-top: 14px;
-		color: #744d4d;
-		font-family: 'RobotoMedium';
-		font-size: 22px;
-		line-height: 32px;
 	}
 
-		.icon-burger-menu:before{
-			display: inline-block;
-		    content: "\e910";
-		    font-size: 22px;
-		    color: #744d4d;
-		    margin-right: 16px;
-		    padding-bottom: 5px;
-		    vertical-align: middle;
-		}
+	.b-header .b-menu-cont{
+		display: none;
+	}
+
+	.b-header .b-top-contacts{
+		display: none;
+	}
+
+	.b-small-logo-cont{
+		margin-right: 15px;
+	}
 
 	.phone{
 		font-size: 18px;

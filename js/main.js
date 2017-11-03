@@ -21,7 +21,7 @@ $(document).ready(function(){
 
         isDesktop = isTablet = isSmallTablet = isMobile = false;
 
-        if( myWidth > 1151 ){
+        if( myWidth > 1199 ){
             isDesktop = true;
         }else if( myWidth > 767 ){
             isTablet = true;
@@ -68,6 +68,10 @@ $(document).ready(function(){
             if($('.advantages-slider').hasClass("slick-initialized")){
                 $('.advantages-slider').slick('unslick');
             }
+        }
+
+        if($('.b-menu-cont .b-menu').length && !isMobile){
+            checkMenu();
         }
     }
 

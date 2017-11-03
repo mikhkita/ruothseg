@@ -382,6 +382,25 @@ h3.b-title{
 			display: none;
 		}
 
+		.burger-menu{
+			float: right;
+			padding-top: 14px;
+			color: #744d4d;
+			font-family: 'RobotoMedium';
+			font-size: 22px;
+			line-height: 32px;
+		}
+
+			.icon-burger-menu:before{
+				display: inline-block;
+			    content: "\e910";
+			    font-size: 22px;
+			    color: #744d4d;
+			    margin-right: 16px;
+			    padding-bottom: 5px;
+			    vertical-align: middle;
+			}
+
 		.phone{
 			font-size: 26px;
 			font-family: 'RobotoBold';
