@@ -116,12 +116,14 @@ $(document).ready(function(){
         return false;
     }
 
-    //пропустить анимацию b-block-advantages на мобиле
     if(isMobile){
+        //пропустить анимацию b-block-advantages на мобиле
         $('.advantage-item').each(function(){
             $(this).addClass("fadeIn-show");
         });
     }
+
+    new FastClick(document.body);
 
     $('.video-slider').slick({
         dots: true,
@@ -142,6 +144,10 @@ $(document).ready(function(){
         ]
     });
 
+    $('.review-slider').on('init', function(event, slick){
+        deleteGallery();
+    });
+
     $('.review-slider').slick({
         dots: false,
         arrows: true,
@@ -151,7 +157,7 @@ $(document).ready(function(){
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 600,
-        //autoplay: true,
+        autoplay: true,
         autoplaySpeed: 3000,
         responsive: [
             {
@@ -162,10 +168,6 @@ $(document).ready(function(){
               }
             }
         ]
-    });
-
-    $('.review-slider').on('init', function(event, slick){
-        deleteGallery();
     });
 
     $('.review-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
@@ -376,36 +378,11 @@ $(document).ready(function(){
 
     var typed = new Typed("#typed-show", {
         stringsElement: '#typed-strings',
-        typeSpeed: 80,
+        typeSpeed: 50,
         backSpeed: 50,
-        backDelay: 3000,
+        backDelay: 2500,
         fadeOut: true,
         loop: true
-    });
-
-     $("a.fancybox").click(function() {
-        $this = $(this);
-        var photos  = new Array();
-
-        $(".fancy-gallery a").each(function(){
-
-            href = $(this).attr("href");
-            photos.push({'href': href});    
-
-        });
-
-        $this.fancybox(photos , 
-            {   'transitionIn' : 'elastic', 
-                'easingIn' : 'easeOutBack', 
-                'transitionOut' : 'elastic', 
-                'easingOut' : 'easeInBack', 
-                'opacity' : false, 
-                'titleShow' : true, 
-                'titlePosition' : 'over',
-                'type'              : 'image',          
-                'titleFromAlt' : true 
-            }
-        );
     });
 
     /*$('.b-header').parallax({

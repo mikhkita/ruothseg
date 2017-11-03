@@ -127,6 +127,10 @@ h3.b-title{
 	max-width: calc(100% - 48px);
 }
 
+.b-block-advantages .slick-list{
+	overflow: visible;
+}
+
 /*---------------------------*/
 
 .b-main-header{
@@ -203,7 +207,7 @@ h3.b-title{
 	}
 
 		.icon-phone:before {
-		    font-size: 16px;
+		    font-size: 18px;
 		}
 
 	.request-call {
@@ -218,13 +222,9 @@ h3.b-title{
 .b-block-advantages{
 
 }
-	
-	.b-block-advantages .b-wide-block{
-		padding-bottom: 18px;
-	}
 
 	.advantages-list{
-		width: 90%;
+		width: 100%;
 	}
 
 		.advantages-list .slick-slide{
@@ -244,12 +244,12 @@ h3.b-title{
 			.advantages-list li p{
 				font-size: 20px;
 				line-height: 30px;
-				width: 90%;
+				width: 80%;
 			}
 
 .b-advantages-arrows.icon-arrow-left {
     position: absolute;
-    left: -18px;
+    left: 0;
     top: 86px;
     cursor: pointer;
     z-index: 1;
@@ -263,7 +263,7 @@ h3.b-title{
 
 .b-advantages-arrows.icon-arrow-right {
     position: absolute;
-    right: -18px;
+    right: 0;
     top: 86px;
     cursor: pointer;
     z-index: 1;
@@ -315,7 +315,7 @@ h3.b-title{
 		}
 			.tour-left-content{
 				text-align: center;
-				padding: 14px 10px;
+				padding: 14px 10px 14px 28px;
 				transition: none;
 			    -webkit-transition: none;
 			    -moz-transition: none;
@@ -565,6 +565,10 @@ h3.b-title{
 				top: 7px;
 			}
 
+		.b-footer .phone{
+			margin-bottom: 15px;
+		}
+
 .tour-right .position-buttons{
 	margin: 0 10px;
 }
@@ -621,6 +625,27 @@ h3.b-title{
 	.b-rewiews-arrows.icon-arrow-right:before{
 		font-size: 47px;
 	}
+
+.b-top.b-top-fixed{
+	padding-bottom: 9px;
+}
+
+.b-top-fixed .b-logo-small{
+	margin-top: 2px;
+	margin-bottom: 0;
+}
+
+	.b-top-fixed .b-small-logo-cont p{
+		display: none;
+	}
+
+.b-top-fixed .burger-menu{
+	margin-top: 2px;
+}
+
+.b-top-fixed .b-btn-call{
+	margin-top: 0;
+}
 
 @media screen and (max-width: 680px){
 
@@ -727,7 +752,7 @@ h3.b-title{
 
 		.b-footer .b-footer-address{
 			text-align: left;
-			margin-top: 10px;
+			margin-top: 9px;
 		}
 
 	.b-footer-mobile-menu{
@@ -772,4 +797,28 @@ h3.b-title{
 	.b-block-advantages .b-wide-block {
 	    padding-bottom: 48px;
 	}
+}
+
+@media screen and (max-width: 380px){
+
+	/*.b-small-logo-cont {
+		width: 118px;
+	    margin-right: 8px;
+	}
+	.b-logo-small {
+	    background-size: 118px;
+	    width: 118px;
+	    height: 33px;
+	}*/
+	.b-btn-call{
+		margin-right: 18px;
+	}
+	.icon-burger-menu:before{
+		margin-right: 8px;
+	}
+
+	.b-footer .b-footer-column{
+		margin-right: 14px;
+	}
+
 }
