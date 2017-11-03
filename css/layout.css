@@ -854,7 +854,7 @@ h3.b-title{
 							color: #FFF;
 						}
 
-				.tour-right .center-buttons{
+				.tour-right .position-buttons{
 					opacity: 0;
 					transition: all 300ms ease-out;
 				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
@@ -867,7 +867,7 @@ h3.b-title{
 				.tour-item:hover .orgs-mask,
 				.tour-item:hover .image-blur,
 				.tour-item:hover .orgs-block,
-				.tour-item:hover .tour-right .center-buttons{
+				.tour-item:hover .tour-right .position-buttons{
 					opacity: 1;
 				}
 
@@ -878,7 +878,7 @@ h3.b-title{
 				    -moz-transform: translate(0,14px); /** Firefox **/
 				}
 
-				.tour-item:hover .tour-right .center-buttons{
+				.tour-item:hover .tour-right .position-buttons{
 					transform: translate(0,-14px);
 				    -webkit-transform: translate(0,-14px); /** Chrome & Safari **/
 				    -o-transform: translate(0,-14px); /** Opera **/

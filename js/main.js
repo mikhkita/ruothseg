@@ -151,7 +151,7 @@ $(document).ready(function(){
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 600,
-        autoplay: true,
+        //autoplay: true,
         autoplaySpeed: 3000,
         responsive: [
             {
@@ -164,6 +164,10 @@ $(document).ready(function(){
         ]
     });
 
+    $('.review-slider').on('init', function(event, slick){
+        deleteGallery();
+    });
+
     $('.review-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         setTimeout(function(){
             $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active");
@@ -171,7 +175,15 @@ $(document).ready(function(){
             $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active");
             $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").next().addClass("slick-active");
         },10 );
+        deleteGallery();
     });
+
+    //Удалить галереи в копиях элементов
+    function deleteGallery(){
+        $('.slick-cloned').each(function(){
+            $(this).find(".fancy-gallary").attr("data-fancybox", "");
+        });
+    }
 
     $('.b-tour-slider').slick({
         slidesToShow: 5,
