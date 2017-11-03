@@ -241,8 +241,8 @@ h3.b-title{
 
 .b-advantages-arrows.icon-arrow-left {
     position: absolute;
-    left: -30px;
-    top: 80px;
+    left: -18px;
+    top: 86px;
     cursor: pointer;
     z-index: 1;
 }
@@ -255,8 +255,8 @@ h3.b-title{
 
 .b-advantages-arrows.icon-arrow-right {
     position: absolute;
-    right: -30px;
-    top: 80px;
+    right: -18px;
+    top: 86px;
     cursor: pointer;
     z-index: 1;
 }
@@ -398,12 +398,16 @@ h3.b-title{
 
 }		
 	.video-list {
-	    height: 387px !important;
+	    height: 387px;
 	}
 
-		.video-item{
-			 height: 387px !important;
+		.video-list .video-item{
+			 height: 387px;
 		}
+
+			.video-list .video-item .video-back{
+				height: 387px;
+			}
 
 	.b-block-video-cont{
 		font-size: 18px;
@@ -557,11 +561,6 @@ h3.b-title{
 	margin: 0 10px;
 }
 
-.b-block-book-it .b-btn:first-child{
-	margin-right: 20px;
-	margin-bottom: 0;
-}
-
 .b-btn-transparent{
 	min-width: 0;
 	padding: 7px 14px;
@@ -581,7 +580,7 @@ h3.b-title{
 
 .b-video-arrows.icon-arrow-left{
     left: 0;
-    top: 100px;
+    top: 187px;
 }
 
 	.b-video-arrows.icon-arrow-left:before{
@@ -590,7 +589,7 @@ h3.b-title{
 
 .b-video-arrows.icon-arrow-right{
     right: 0;
-    top: -100px;
+    top: -200px;
 }
 
 	.b-video-arrows.icon-arrow-right:before{
@@ -599,7 +598,7 @@ h3.b-title{
 
 .b-rewiews-arrows.icon-arrow-left{
     left: 0;
-    top: 154px;
+    top: 120px;
 }
 
 	.b-rewiews-arrows.icon-arrow-left:before{
@@ -608,7 +607,7 @@ h3.b-title{
 
 .b-rewiews-arrows.icon-arrow-right{
     right: 0;
-    top: 154px;
+    top: 120px;
 }
 
 	.b-rewiews-arrows.icon-arrow-right:before{
@@ -616,12 +615,72 @@ h3.b-title{
 	}
 
 @media screen and (max-width: 680px){
+
 	.tour-item {
 	    margin: 0 auto;
 	    display: block;
 	    width: 100%;
 	    margin-bottom: 15px;
 	}
+
+	.video-list {
+	    height: 262px;
+	}
+
+		.video-list .video-item{
+			 height: 262px;
+		}
+
+			.video-list .video-item .video-back{
+				height: 262px;
+			}
+
+	.b-block-video-cont{
+		font-size: 16px;
+		line-height: 26px;
+	}
+
+		.b-block-video-cont .video-circle {
+			margin-top: 98px;
+			margin-bottom: 15px;
+		    width: 60px;
+		    height: 60px;
+		    border: 3px solid #FFF;
+		}
+
+		.b-block-video-cont .video-play {
+		    border: 12px solid transparent;
+		    border-left: 20px solid #FFF;
+		    margin: 16px 0 0 20px;
+		}
+
+	.review-list{
+		padding: 0 10px;
+	}
+
+	/*Arrows*/
+
+	.b-video-arrows.icon-arrow-left {
+	    left: 0;
+	    top: 130px;
+	}
+
+	.b-video-arrows.icon-arrow-right {
+	    right: 0;
+	    top: -133px;
+	}
+
+	.b-rewiews-arrows.icon-arrow-left {
+	    left: 0;
+	    top: 54px;
+	}
+
+	.b-rewiews-arrows.icon-arrow-right {
+	    right: 0;
+	    top: 54px;
+	}
+
+	/*------*/
 
 	.b-footer .b-footer-column{
 		margin-right: 24px;
@@ -689,12 +748,20 @@ h3.b-title{
 
 @media screen and (max-width: 620px){
 
-	.b-block-book-it .b-btn:first-child{
-		margin-right: 0;
-		margin-bottom: 15px;
+	.b-header-buttons{
+		margin: 0;
 	}
 
 	.b-block-book-it .position-buttons{
 		display: block;
+	}
+
+	.b-block-book-it .position-buttons:first-child{
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+
+	.b-block-advantages .b-wide-block {
+	    padding-bottom: 48px;
 	}
 }

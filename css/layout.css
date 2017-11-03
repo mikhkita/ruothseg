@@ -927,7 +927,7 @@ h3.b-title{
 		color: #574141;
 	}
 
-	.b-block-book-it .b-btn:first-child{
+	.b-block-book-it .position-buttons:first-child{
 		margin-right: 24px;
 	}
 
@@ -976,8 +976,8 @@ h3.b-title{
 			   }
 			}
 
-			.video-back{
-				height: 650px !important;
+			.video-list .video-item .video-back{
+				height: 650px;
 				width: 110%;
 				position: absolute;
 				top: 0;

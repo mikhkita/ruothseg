@@ -41,7 +41,7 @@ $(document).ready(function(){
         }
 
         if(isMobile){
-            if(!$('.advantages-slider').hasClass("slider-on")){
+            if(!$('.advantages-slider').hasClass("slick-initialized")){
                 $('.advantages-slider').not('.slick-initialized').slick({
                     dots: false,
                     arrows: true,
@@ -65,8 +65,8 @@ $(document).ready(function(){
                 }).addClass("slider-on");
             }
         }else{
-            if($('.advantages-slider').hasClass("slider-on")){
-                $('.advantages-slider').slick('unslick').removeClass("slider-on");
+            if($('.advantages-slider').hasClass("slick-initialized")){
+                $('.advantages-slider').slick('unslick');
             }
         }
     }
