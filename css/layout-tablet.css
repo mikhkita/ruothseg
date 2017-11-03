@@ -95,7 +95,7 @@ input.error{
 	}
 
 	.b-small-logo-cont{
-		margin-right: 15px;
+		margin-right: 12px;
 	}
 
 .b-block-advantages{
@@ -183,6 +183,10 @@ div.b-footer-column:last-child{
 @media screen and (max-width: 1075px){
 
 	.burger-menu{
+		display: block;
+	}
+
+	.b-btn-call{
 		display: block;
 	}
 

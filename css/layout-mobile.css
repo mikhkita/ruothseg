@@ -176,6 +176,10 @@ h3.b-title{
 		display: block;
 	}
 
+	.b-btn-call{
+		display: block;
+	}
+
 	.b-header .b-menu-cont{
 		display: none;
 	}
@@ -185,7 +189,7 @@ h3.b-title{
 	}
 
 	.b-small-logo-cont{
-		margin-right: 15px;
+		margin-right: 12px;
 	}
 
 	.phone{
