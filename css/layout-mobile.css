@@ -147,8 +147,20 @@ h3.b-title{
 		width: 100%;
 	}
 
+	.b-table{
+		display: table;
+		height: calc(100% - 14px);
+		padding: 15px 0;
+		margin: 0 auto;
+	}
+
+	.b-table-cell{
+		display: table-cell;
+	    vertical-align: middle;
+	}
+
 	.b-header-content{
-		margin-top: 10px;
+		margin-top: 0;
 		margin-bottom: 20px;
 	}
 
@@ -244,7 +256,7 @@ h3.b-title{
 			.advantages-list li p{
 				font-size: 20px;
 				line-height: 30px;
-				width: 80%;
+				width: 85%;
 			}
 
 .b-advantages-arrows.icon-arrow-left {
@@ -314,8 +326,7 @@ h3.b-title{
 		    background-size: cover;
 		}
 			.tour-left-content{
-				text-align: center;
-				padding: 14px 10px 14px 28px;
+				padding: 15px 8px 14px 24px;
 				transition: none;
 			    -webkit-transition: none;
 			    -moz-transition: none;
@@ -326,7 +337,7 @@ h3.b-title{
 				    width: 12px;
 				    height: 2px;
 				    background-color: #4a4a4a;
-				    margin: 14px 3px 6px 3px;
+				    margin: 14px 2px 6px 2px;
 				}
 
 				.time-start, .time-finish{
@@ -336,7 +347,7 @@ h3.b-title{
 				.tour-date {
 				    display: inline-block;
 				    position: static;
-				    margin-right: 18px;
+				    margin-right: 15px;
 				    transition: none;
 				    -webkit-transition: none;
 				    -moz-transition: none;
@@ -440,9 +451,17 @@ h3.b-title{
 
 }
 
+	.b-block-reviews .b-block{
+		max-width: 100%;
+	}
+
 	.review-list{
+		padding: 0;
 		margin-bottom: 32px;
 	}
+		.review-item{
+			padding: 0 95px;
+		}
 
 		.b-img-cont{
 			width: 92px;
@@ -522,6 +541,10 @@ h3.b-title{
 		    display: none;
 		}
 
+		div.b-footer-column:nth-child(4){
+			margin-right: 18px;
+		}
+
 		.b-footer .b-footer-column ul li a{
 			font-size: 14px;
 		}
@@ -586,10 +609,6 @@ h3.b-title{
     padding: 14px 14px;
 }
 
-.review-item{
-	padding: 0 10px;
-}
-
 .b-video-arrows.icon-arrow-left{
     left: 0;
     top: 187px;
@@ -609,7 +628,7 @@ h3.b-title{
 	}
 
 .b-rewiews-arrows.icon-arrow-left{
-    left: 0;
+    left: 24px;
     top: 120px;
 }
 
@@ -618,7 +637,7 @@ h3.b-title{
 	}
 
 .b-rewiews-arrows.icon-arrow-right{
-    right: 0;
+    right: 24px;
     top: 120px;
 }
 
@@ -644,10 +663,15 @@ h3.b-title{
 }
 
 .b-top-fixed .b-btn-call{
-	margin-top: 0;
+	margin-top: 2px;
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 660px){
+
+	.tour-left-content{
+		text-align: center;
+		padding: 15px 10px 14px 10px;
+	}
 
 	.tour-item {
 	    margin: 0 auto;
@@ -691,6 +715,10 @@ h3.b-title{
 		padding: 0 10px;
 	}
 
+		.review-item{
+			padding: 0 30px;
+		}
+
 	/*Arrows*/
 
 	.b-video-arrows.icon-arrow-left {
@@ -704,12 +732,12 @@ h3.b-title{
 	}
 
 	.b-rewiews-arrows.icon-arrow-left {
-	    left: 0;
+	    left: 24px;
 	    top: 54px;
 	}
 
 	.b-rewiews-arrows.icon-arrow-right {
-	    right: 0;
+	    right: 24px;
 	    top: 54px;
 	}
 
