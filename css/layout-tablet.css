@@ -211,7 +211,7 @@ div.b-footer-column:last-child{
 
 @media screen and (max-width: 900px){
 
-	.b-header-buttons .position-buttons{
+	.b-header-buttons.position-buttons{
 	    display: block;
 	}
 

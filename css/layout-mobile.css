@@ -675,7 +675,7 @@ h3.b-title{
 	margin-top: 2px;
 }
 
-.b-top-fixed .b-btn-call{
+.b-top-fixed .b-mobile-call{
 	margin-top: 2px;
 }
 
@@ -891,7 +891,7 @@ h3.b-title{
 	    width: 118px;
 	    height: 33px;
 	}*/
-	.b-btn-call{
+	.b-mobile-call{
 		margin-right: 18px;
 	}
 	.icon-burger-menu:before{
