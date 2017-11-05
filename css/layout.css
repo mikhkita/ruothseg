@@ -315,6 +315,10 @@ h3.b-title{
 		display: inline-block;
 	}
 
+		.position-buttons:first-child{
+			margin-right: 24px;
+		}
+
 .hide{
 	display: none;
 }
@@ -326,6 +330,14 @@ h3.b-title{
 	.dashed:hover{
 		border-bottom: 1px dashed transparent;
 	}
+
+.b-about-text{
+	padding-bottom: 54px;
+}
+
+.center-text{
+	text-align: center;
+}
 
 .parallax-slider{
 	position: absolute;
@@ -854,6 +866,7 @@ h3.b-title{
 						}
 
 				.tour-right .position-buttons{
+					margin: 0;
 					opacity: 0;
 					transition: all 300ms ease-out;
 				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
@@ -894,6 +907,10 @@ h3.b-title{
 
 				.tour-right .tour-price + .b-btn-transparent{
 					float: right;
+				}
+
+				.b-content .tour-right .position-buttons{
+					display: block;
 				}
 
 		.tour-item p{
@@ -945,10 +962,6 @@ h3.b-title{
 		color: #574141;
 	}
 
-	.b-block-book-it .position-buttons:first-child{
-		margin-right: 24px;
-	}
-
 	.b-block-book-it .b-title-first{
 		margin-bottom: 16px;
 	}
@@ -980,6 +993,7 @@ h3.b-title{
 		.video-list .video-item{
 			height: 650px;
 			position: relative;
+			overflow: hidden;
 		}
 
 			@keyframes move-right{
@@ -1002,7 +1016,11 @@ h3.b-title{
 				left: -5%;
 				background-position: 50% 50%;
 			    background-size: cover;
-			    animation: move-right 20s ease-in-out infinite;
+			    overflow: hidden;
+			}
+
+			.video-list .video-item.slick-active .video-back{
+				animation: move-right 20s ease-in-out infinite;
 				-moz-animation: move-right 20s ease-in-out infinite;
 				-webkit-animation: move-right 20s ease-in-out infinite;
 			 	-o-animation: move-right 20s ease-in-out infinite;
@@ -1478,10 +1496,6 @@ h3.b-title{
     transform: scale(1);
 }
 
-.slick-active.video-item{
-	z-index: 5;
-}
-
 /*-------------Header-------------*/
 
 .b-header{
@@ -1878,7 +1892,7 @@ h3.b-title{
 
 .foto-grid{
 	position: relative;
-	margin-top: 90px;
+	margin-top: 40px;
 }
 
 .foto-grid-transform{

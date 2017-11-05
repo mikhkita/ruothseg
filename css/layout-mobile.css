@@ -111,11 +111,11 @@ h3.b-title{
     padding-bottom: 50px;
 }
 
-.position-buttons{
+.b-header-buttons .position-buttons{
     display: block;
 }
 
-.b-block-book-it .position-buttons{
+.position-buttons{
 	display: inline-block;
 }
 
@@ -131,7 +131,15 @@ h3.b-title{
 	overflow: visible;
 }
 
+.b-content .b-btn-brown-header{
+	padding: 18px 0;
+}
+
 /*---------------------------*/
+
+.b-content .b-block{
+	padding: 27px 0px 50px;
+}
 
 .b-main-header{
 
@@ -463,15 +471,23 @@ h3.b-title{
 			padding: 0 95px;
 		}
 
-		.b-img-cont{
+		.b-img-cont, .b-review .b-img-cont{
 			width: 92px;
 			height: 92px;
 			margin-bottom: 10px;
 		}
 
-		.b-img{
+		.b-img, .b-review .b-img{
 			width: 80px;
 			height: 80px;
+		}
+
+		.b-review-right{
+			padding: 14px 0 0 10px;
+		}
+
+		.b-review h3.b-title{
+			font-size: 18px;
 		}
 
 			.foto-with-tour{
@@ -489,17 +505,22 @@ h3.b-title{
 			.icon-foto-mini:before {
 			    padding-top: 8px;
 			    font-size: 14px;
+			    margin-right: 6px;
 			}
 
 	/*---Отзывы---*/
 
 	.b-review{
 		width: calc(100%/2 - 17px);
-		margin-right: 28px;
+		margin-right: 18px;
 	}
 
-	.b-review:nth-child(3n) {
-	    margin-right: 28px;
+		.b-review p{
+			font-size: 14px;
+		}
+
+	.b-review:nth-child(3n){
+		margin-right: 18px;
 	}
 
 	.b-review:nth-child(2n) {
@@ -523,10 +544,6 @@ h3.b-title{
 
 .b-tour, .b-block-tour{
     width: 400px;
-}
-
-.b-review {
-    margin-right: 18px;
 }
 
 .b-footer{
@@ -601,10 +618,6 @@ h3.b-title{
 	padding: 7px 14px;
 }
 
-.b-review {
-    width: calc(100% - 17px);
-}
-
 .orgs-padding {
     padding: 14px 14px;
 }
@@ -666,6 +679,16 @@ h3.b-title{
 	margin-top: 2px;
 }
 
+.b-half-button, .b-tour{
+	margin-bottom: 32px;
+}
+
+@media screen and (max-width: 665px){
+	.b-review {
+	    width: calc(100% - 17px);
+	}
+}
+
 @media screen and (max-width: 660px){
 
 	.tour-left-content{
@@ -677,7 +700,7 @@ h3.b-title{
 	    margin: 0 auto;
 	    display: block;
 	    width: 100%;
-	    margin-bottom: 15px;
+	    margin-bottom: 24px;
 	}
 
 	.video-list {
@@ -718,6 +741,10 @@ h3.b-title{
 		.review-item{
 			padding: 0 30px;
 		}
+	
+	.b-reviews-content .b-btn-show-more{
+		margin-bottom: 34px;
+	}
 
 	/*Arrows*/
 
@@ -813,11 +840,11 @@ h3.b-title{
 		margin: 0;
 	}
 
-	.b-block-book-it .position-buttons{
+	.position-buttons{
 		display: block;
 	}
 
-	.b-block-book-it .position-buttons:first-child{
+	.position-buttons:first-child{
 		margin-right: 0;
 		margin-bottom: 15px;
 	}
@@ -825,6 +852,32 @@ h3.b-title{
 	.b-block-advantages .b-wide-block {
 	    padding-bottom: 48px;
 	}
+}
+
+@media screen and (max-width: 550px){
+
+	.b-tour, .b-block-tour{
+		width: 245px;
+	}
+
+	.b-tour li{
+		margin: 0 12px;
+	}
+		.b-tour li a{
+			font-size: 14px;
+			padding: 3px 0 4px 0;
+		}
+
+	.b-tour-arrows.icon-arrow-left{
+		top: 0;
+		left: -48px;
+	}
+
+	.b-tour-arrows.icon-arrow-right{
+		top: -44px;
+		right: -46px;
+	}
+
 }
 
 @media screen and (max-width: 380px){

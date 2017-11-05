@@ -87,17 +87,6 @@ $(document).ready(function(){
         }
     }
 
-    /*
-    if($(".b-main-header").length){
-                 if(isMobile && myHeight < 680 && myHeight > 500){
-                    $('.screenHeight').css({"height" : myHeight});
-                    $(".b-main-header, .header-back, .b-header-block").addClass("screenHeight");
-                }else{
-                    $(".b-main-header, .header-back, .b-header-block").removeClass("screenHeight");
-                }
-            }
-    */
-
     $(window).resize(resize);
     resize();
 
@@ -231,6 +220,13 @@ $(document).ready(function(){
               breakpoint: 900,
               settings: {
                 slidesToShow: 3,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 550,
+              settings: {
+                slidesToShow: 2,
                 slidesToScroll: 1
               }
             }
