@@ -297,13 +297,15 @@ $(document).ready(function(){
         });
     }
 
-    $grid = $('.passage-grid').isotope({
-         percentPosition: true,
-        itemSelector: '.grid-item',
-        masonry: {
-            columnWidth: '.grid-item'
-        }
-    });
+    if($('.passage-grid').length){
+        $('.passage-grid').isotope({
+            //percentPosition: true,
+            itemSelector: '.grid-item',
+            masonry: {
+                columnWidth: '.grid-item'
+            }
+        });
+    }
 
     var fotoCount = 10,
         fotoLoaded = 0;
