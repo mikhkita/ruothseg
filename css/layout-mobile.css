@@ -127,10 +127,6 @@ h3.b-title{
 	max-width: calc(100% - 48px);
 }
 
-.b-block-advantages .slick-list{
-	overflow: visible;
-}
-
 .b-content .b-btn-brown-header{
 	padding: 18px 0;
 }
@@ -139,6 +135,10 @@ h3.b-title{
 
 .b-content .b-block{
 	padding: 27px 0px 50px;
+}
+
+.b-header, .header-back, .b-header-block{
+	background-attachment: scroll;
 }
 
 .b-main-header{
@@ -180,7 +180,7 @@ h3.b-title{
 	.b-header-video{
 		display: none;
 	}
-	.b-header-content .b-menu-cont{
+	.b-main-menu-cont{
 		display: none;
 	}
 
@@ -204,11 +204,11 @@ h3.b-title{
 		display: block;
 	}
 
-	.b-header .b-menu-cont{
+	.b-menu-cont{
 		display: none;
 	}
 
-	.b-header .b-top-contacts{
+	.b-top .b-top-contacts{
 		display: none;
 	}
 
@@ -244,7 +244,8 @@ h3.b-title{
 }
 
 	.advantages-list{
-		width: 100%;
+		margin-left: -24px;
+		width: calc(100% + 48px);
 	}
 
 		.advantages-list .slick-slide{
@@ -269,7 +270,7 @@ h3.b-title{
 
 .b-advantages-arrows.icon-arrow-left {
     position: absolute;
-    left: 0;
+    left: 24px;
     top: 86px;
     cursor: pointer;
     z-index: 1;
@@ -283,7 +284,7 @@ h3.b-title{
 
 .b-advantages-arrows.icon-arrow-right {
     position: absolute;
-    right: 0;
+    right: 24px;
     top: 86px;
     cursor: pointer;
     z-index: 1;
@@ -313,20 +314,14 @@ h3.b-title{
 	}
 
 		.tour-left {
-		    float: none;
-		    position: absolute;
-		    left: 0;
-		    bottom: 0;
+		    float: left;
 		    display: inline-block;
 		    height: 62px;
 		    width: 100%;
 		}
 
 		.tour-right {
-			float: none;
-		    position: absolute;
-		    left: 0;
-		    top: 0;
+			float: left;
 		    display: inline-block;
 		    height: 180px;
 		    width: 100%;
@@ -459,13 +454,11 @@ h3.b-title{
 
 }
 
-	.b-block-reviews .b-block{
-		max-width: 100%;
-	}
-
 	.review-list{
 		padding: 0;
+		margin-left: -24px;
 		margin-bottom: 32px;
+		width: calc(100% + 48px);
 	}
 		.review-item{
 			padding: 0 95px;
@@ -609,6 +602,8 @@ h3.b-title{
 			margin-bottom: 15px;
 		}
 
+
+
 .tour-right .position-buttons{
 	margin: 0 10px;
 }
@@ -733,14 +728,6 @@ h3.b-title{
 		    border-left: 20px solid #FFF;
 		    margin: 16px 0 0 20px;
 		}
-
-	.review-list{
-		padding: 0 10px;
-	}
-
-		.review-item{
-			padding: 0 30px;
-		}
 	
 	.b-reviews-content .b-btn-show-more{
 		margin-bottom: 34px;
@@ -771,7 +758,12 @@ h3.b-title{
 	/*------*/
 
 	.b-footer .b-footer-column{
-		margin-right: 24px;
+		width: calc(100%/2 - 6px);
+		margin-right: 0;
+	}
+
+	.b-footer .icon-phone{
+		text-align: left;
 	}
 
 	.b-redder-logo{
@@ -817,21 +809,18 @@ h3.b-title{
 
 		.mobile-column{
 			display: inline-block;
+			width: calc(100%/2 - 10px);
 		}
 
-			.mobile-column:first-child{
-				margin-right: 50px;
+			.mobile-column h2{
+				text-transform: uppercase;
+				font-size: 16px;
+				margin-bottom: 8px;
 			}
 
-		.mobile-column h2{
-			text-transform: uppercase;
-			font-size: 16px;
-			margin-bottom: 8px;
-		}
-
-		.mobile-column ul li a{
-			font-size: 14px;
-		}
+			.mobile-column ul li a{
+				font-size: 14px;
+			}
 }
 
 @media screen and (max-width: 620px){
@@ -851,6 +840,10 @@ h3.b-title{
 
 	.b-block-advantages .b-wide-block {
 	    padding-bottom: 48px;
+	}
+
+	.review-item{
+		padding: 0 30px;
 	}
 }
 
@@ -878,6 +871,14 @@ h3.b-title{
 		right: -46px;
 	}
 
+	.b-footer .b-footer-column{
+		width: auto;
+	}
+
+	.b-footer .b-footer-column.b-footer-logo-cont{
+		margin-right: 24px;
+	}
+
 }
 
 @media screen and (max-width: 380px){
@@ -898,8 +899,12 @@ h3.b-title{
 		margin-right: 8px;
 	}
 
+	.b-footer .b-block{
+		max-width: calc(100% - 44px);
+	}
+
 	.b-footer .b-footer-column{
-		margin-right: 14px;
+		margin-right: 20px;
 	}
 
 }

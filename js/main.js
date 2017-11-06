@@ -76,10 +76,29 @@ $(document).ready(function(){
                     ]
                 }).addClass("slider-on");
             }
+            $('div.tour-item').each(function() {
+                $this = $(this);
+                $tag = $('<a></a>');
+                $tag.addClass("tour-item");
+                $tag.attr("href", $this.attr("data-href"));
+                $tag.append($this.html());
+
+                $this.replaceWith($tag);
+            });
+
         }else{
             if($('.advantages-slider').hasClass("slick-initialized")){
                 $('.advantages-slider').slick('unslick');
             }
+            $('a.tour-item').each(function() {
+                $this = $(this);
+                $tag = $('<div></div>');
+                $tag.addClass("tour-item");
+                $tag.attr("data-href", $this.attr("href"));
+                $tag.append($this.html());
+
+                $this.replaceWith($tag);
+            });
         }
 
         if($('.b-menu-cont .b-menu').length && !isMobile){
@@ -171,8 +190,9 @@ $(document).ready(function(){
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 600,
-        autoplay: true,
+        //autoplay: true,
         autoplaySpeed: 3000,
+        adaptiveHeight: true,
         responsive: [
             {
               breakpoint: 900,
@@ -207,6 +227,10 @@ $(document).ready(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
         });
     }
+
+    /*$("[data-fancybox]").fancybox({
+        arrows : true, //Отображает кнопки навигации по краям экрана
+    });*/
 
     $('.b-tour-slider').slick({
         slidesToShow: 5,
