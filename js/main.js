@@ -5,6 +5,22 @@ $(document).ready(function(){
     isSmallTablet = false,
     isMobile = false,
     isRetina = retina();
+    var resizeHeight = 680,
+        minHeight = 600;
+
+    function resetHeader(){
+        $('.b-main-header').css({
+            "margin-bottom": "",
+            "height": "",
+        });
+        $('.header-back').css("height", "");
+        $('.b-header-block').css({
+            "top": "",
+            "padding": "",
+            "height": "",
+        });
+        $('.b-header-content').css("margin-bottom", "");
+    }
 
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
@@ -30,24 +46,60 @@ $(document).ready(function(){
         }
 
         //сжатие отступов в хедере
-        if(myHeight < 670 && !isMobile){
-            $('.header-back').addClass("compress-header");
-            $('.b-header-block').addClass("compress-header");
-            $('.b-header-content').addClass("compress-header");
-        }else{
-            $('.header-back').removeClass("compress-header");
-            $('.b-header-block').removeClass("compress-header");
-            $('.b-header-content').removeClass("compress-header");
+        if($(".b-main-header").length && !isMobile){
+
+            resetHeader();
+
+            if(myHeight <= resizeHeight && myHeight >= minHeight){
+                var topHeight = myHeight - resizeHeight + 60 > 30 ? myHeight - resizeHeight + 60 : 0;
+                $('.b-header-block').css("top", topHeight);
+                var blockHeight = myHeight > minHeight ? resizeHeight - topHeight : minHeight;
+                $('.header-back').css("height", myHeight);
+                //console.log(myHeight);
+                //console.log(resizeHeight);
+                if(topHeight === 0){
+                    var paddings = myHeight - resizeHeight + 100 > 40 ? myHeight - resizeHeight + 100 : 40;
+                    $('.b-header-block').css({
+                        "padding": paddings,
+                        "height": "100%",
+                    });
+                    $('.b-header-content').css("margin-bottom", 25);
+                    $('.b-main-header').css("margin-bottom", topHeight);
+                }
+                /*$('.header-back').addClass("compress-header");
+                $('.b-header-block').addClass("compress-header");
+                $('.b-header-content').addClass("compress-header");*/
+            }else if(myHeight > resizeHeight){
+                
+                //resetHeader();
+
+                /*$('.header-back').removeClass("compress-header");
+                $('.b-header-block').removeClass("compress-header");
+                $('.b-header-content').removeClass("compress-header");*/
+            }else if(myHeight < minHeight){
+                $('.b-header-block').css("top", 0);
+                $('.header-back').css("height", minHeight);
+                $('.b-header-block').css({
+                    "padding": 40,
+                    "height": "100%",
+                });
+                $('.b-header-content').css("margin-bottom", 25);
+                $('.b-main-header').css("margin-bottom", 0);  
+            }
         }
 
-        if($(".b-main-header").length){
-            if(isMobile && myHeight < 680 && myHeight > 500){
+        if($(".b-main-header").length && isMobile){
+            if(myHeight > 680){
+                $(".b-main-header, .header-back, .b-header-block").css({
+                    "height" : 680
+                });
+            }else if(myHeight <= 680 && myHeight >= 500){
                 $(".b-main-header, .header-back, .b-header-block").css({
                     "height" : myHeight
                 });
-            }else{
+            }else if(myHeight < 500){
                 $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : ""
+                    "height" : 500
                 });
             }
         }
@@ -303,10 +355,26 @@ $(document).ready(function(){
         });
     }
 
+    if($('.b-content-main').length){
+        var $window = $(window);
+
+        $window.on('scroll', function() {
+            var $targetMain = $(".b-content-main"),
+                $hMain = $targetMain.offset().top;
+            // Как далеко вниз прокрутили страницу
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
+            if (scrollTop > $hMain && isMobile) {
+                $('.b-top').removeClass("b-top-hide");
+            }else{     
+                $('.b-top').addClass("b-top-hide");
+            }
+        });
+    }
+
     if($('.b-menu-cont .b-menu').length){
         checkMenu();
-
-        var $window = $(window), 
+        var $window = $(window),
             $target = $(".b-top"),
             $h = $target.offset().top; // Определяем координаты .b-top
         $window.on('scroll', function() {

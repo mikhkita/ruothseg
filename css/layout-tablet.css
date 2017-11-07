@@ -223,10 +223,17 @@ div.b-footer-column:last-child{
 	    height: 680px;
 	}
 
-		.b-header-buttons .position-buttons:first-child {
-		    margin-right: 0;
-		    margin-bottom: 15px;
+		.b-header-buttons .position-buttons .b-btn{
+		    min-width: 280px;
 		}
+
+	.b-header-block{
+		padding: 35px 40px 40px 40px;
+	}
+
+	.b-main-header{
+		margin-bottom: 0;
+	}
 
 	.advantages-list li p{
 		width: 90%;

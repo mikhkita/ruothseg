@@ -348,7 +348,7 @@ h3.b-title{
 /*-------------Главная-------------*/
 
 .b-main-header{
-
+	margin-bottom: 70px;
 }
 
 .header-back{
@@ -357,10 +357,13 @@ h3.b-title{
 	background-image: url(../i/header-main-back.jpg);
 	background-attachment: fixed;
 	position: relative;
-	margin: 0 auto 70px auto;
 	height: 679px;
 	background-position: 50% 0;
 	background-repeat: no-repeat;
+}
+
+.header-back .b-block{
+	height: 100%;
 }
 
 .header-back.compress-header{
@@ -1505,7 +1508,6 @@ h3.b-title{
 	
 	.b-top-hide{
 		opacity: 0;
-		visibility: hidden;
 		transform: translate(0,-30px);
 	    -webkit-transform: translate(0,-30px); /** Chrome & Safari **/
 	    -o-transform: translate(0,-30px); /** Opera **/
@@ -1533,10 +1535,10 @@ h3.b-title{
 	    width: 100%;
 	    top: 0px;
 	    left: 0px;
-	    transition: background-color 300ms ease-out, transform 300ms ease-out;
-	    -webkit-transition: background-color 300ms ease-out, transform 300ms ease-out; /** Chrome & Safari **/
-	    -moz-transition: background-color 300ms ease-out, transform 300ms ease-out; /** Firefox **/
-	    -o-transition: background-color 300ms ease-out, transform 300ms ease-out; /** Opera **/
+	    transition: opacity 300ms ease-out, transform 300ms ease-out;
+	    -webkit-transition: opacity 300ms ease-out, transform 300ms ease-out; /** Chrome & Safari **/
+	    -moz-transition: opacity 300ms ease-out, transform 300ms ease-out; /** Firefox **/
+	    -o-transition: opacity 300ms ease-out, transform 300ms ease-out; /** Opera **/
 	}
 
 	.b-header-wrap{
