@@ -5,7 +5,7 @@ $(document).ready(function(){
     isSmallTablet = false,
     isMobile = false,
     isRetina = retina();
-    var resizeHeight = 680,
+    var resizeHeight = 744,
         minHeight = 600;
 
     function resetHeader(){
@@ -47,25 +47,30 @@ $(document).ready(function(){
 
         //сжатие отступов в хедере
         if($(".b-main-header").length && !isMobile){
+            console.log(myHeight);
 
             resetHeader();
 
             if(myHeight <= resizeHeight && myHeight >= minHeight){
+                var paddingBottom = 70;
                 var topHeight = myHeight - resizeHeight + 60 > 30 ? myHeight - resizeHeight + 60 : 0;
                 $('.b-header-block').css("top", topHeight);
-                var blockHeight = myHeight > minHeight ? resizeHeight - topHeight : minHeight;
-                $('.header-back').css("height", myHeight);
+
                 //console.log(myHeight);
                 //console.log(resizeHeight);
                 if(topHeight === 0){
-                    var paddings = myHeight - resizeHeight + 100 > 40 ? myHeight - resizeHeight + 100 : 40;
+                    paddingBottom = 0;
+                    paddings = myHeight/1.5 - resizeHeight/1.5 + 100 > 40 ? myHeight/1.5 - resizeHeight/1.5 + 100 : 40;
                     $('.b-header-block').css({
                         "padding": paddings,
                         "height": "100%",
                     });
-                    $('.b-header-content').css("margin-bottom", 25);
+                    $('.b-header-content').css("margin-bottom", paddings);
                     $('.b-main-header').css("margin-bottom", topHeight);
                 }
+
+                var blockHeight = myHeight > minHeight ? resizeHeight - topHeight : minHeight;
+                $('.header-back').css("height", myHeight - paddingBottom);
                 /*$('.header-back').addClass("compress-header");
                 $('.b-header-block').addClass("compress-header");
                 $('.b-header-content').addClass("compress-header");*/
