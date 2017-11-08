@@ -881,6 +881,12 @@ h3.b-title{
 
 }
 
+@media screen and (max-width: 395px){
+	.b-mobile-call{
+		margin-right: 19px;
+	}
+}
+
 @media screen and (max-width: 380px){
 
 	/*.b-small-logo-cont {
@@ -892,12 +898,6 @@ h3.b-title{
 	    width: 118px;
 	    height: 33px;
 	}*/
-	.b-mobile-call{
-		margin-right: 18px;
-	}
-	.icon-burger-menu:before{
-		margin-right: 8px;
-	}
 
 	.b-footer .b-block{
 		max-width: calc(100% - 44px);
@@ -905,6 +905,17 @@ h3.b-title{
 
 	.b-footer .b-footer-column{
 		margin-right: 20px;
+	}
+
+}
+
+@media screen and (max-width: 372px){
+
+	.b-mobile-call{
+		margin-right: 18px;
+	}
+	.icon-burger-menu:before{
+		margin-right: 8px;
 	}
 
 }

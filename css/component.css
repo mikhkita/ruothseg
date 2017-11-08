@@ -130,8 +130,8 @@ html, body, .perspective {
 }
 
 .outer-nav.vertical a {
-	display: block;
-	color: #484848;
+	display: inline-block;
+	border: 2px solid transparent;
 }
 
 .outer-nav.horizontal a {
@@ -140,7 +140,7 @@ html, body, .perspective {
 
 .outer-nav a:hover,
 .outer-nav a:active{
-	background: rgba(255,255,255,0.7);
+	/*background: rgba(255,255,255,0.7);*/
 	display: inline-block;
 }
 

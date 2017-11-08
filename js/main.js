@@ -535,6 +535,14 @@ $(document).ready(function(){
         }
     });
 
+    $(document).on("touchstart", ".outer-nav a", function(event) {
+        $(this).addClass("nav-touch");
+    });
+
+    $(document).on("touchend", ".outer-nav a", function(event) {
+        $(this).removeClass("nav-touch");
+    });
+
     /*$('.b-header').parallax({
         imageSrc: $('.b-header').attr("data-img"),
         speed: 0.5,
