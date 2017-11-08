@@ -60,12 +60,12 @@ $(document).ready(function(){
                 //console.log(resizeHeight);
                 if(topHeight === 0){
                     paddingBottom = 0;
-                    paddings = myHeight/1.5 - resizeHeight/1.5 + 100 > 40 ? myHeight/1.5 - resizeHeight/1.5 + 100 : 40;
+                    paddings = myHeight/3 - resizeHeight/3 + 85 > 40 ? myHeight/3 - resizeHeight/3 + 85 : 40;
                     $('.b-header-block').css({
                         "padding": paddings,
                         "height": "100%",
                     });
-                    $('.b-header-content').css("margin-bottom", paddings);
+                    $('.b-header-content').css("margin-bottom", paddings/1.2);
                     $('.b-main-header').css("margin-bottom", topHeight);
                 }
 
