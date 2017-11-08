@@ -82,6 +82,11 @@ input.error{
 
 /*---------------------------*/
 
+.b-header-block{
+	padding-left: 6%;
+	padding-right: 6%;
+}
+
 .b-main-header{
 
 }
@@ -226,10 +231,6 @@ div.b-footer-column:last-child{
 		.b-header-buttons .position-buttons .b-btn{
 		    min-width: 280px;
 		}
-
-	.b-header-block{
-		padding: 35px 40px 40px 40px;
-	}
 
 	.b-main-header{
 		margin-bottom: 0;

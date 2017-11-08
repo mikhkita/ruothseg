@@ -16,7 +16,8 @@ $(document).ready(function(){
         $('.header-back').css("height", "");
         $('.b-header-block').css({
             "top": "",
-            "padding": "",
+            "padding-top": "",
+            "padding-bottom": "",
             "height": "",
         });
         $('.b-header-content').css("margin-bottom", "");
@@ -62,7 +63,8 @@ $(document).ready(function(){
                     paddingBottom = 0;
                     paddings = myHeight/3 - resizeHeight/3 + 85 > 40 ? myHeight/3 - resizeHeight/3 + 85 : 40;
                     $('.b-header-block').css({
-                        "padding": paddings,
+                        "padding-top": paddings,
+                        "padding-bottom": paddings,
                         "height": "100%",
                     });
                     $('.b-header-content').css("margin-bottom", paddings/1.2);
@@ -85,7 +87,8 @@ $(document).ready(function(){
                 $('.b-header-block').css("top", 0);
                 $('.header-back').css("height", minHeight);
                 $('.b-header-block').css({
-                    "padding": 40,
+                    "padding-top": 40,
+                    "padding-bottom": 40,
                     "height": "100%",
                 });
                 $('.b-header-content').css("margin-bottom", 25);
