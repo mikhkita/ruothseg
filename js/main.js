@@ -4,7 +4,10 @@ $(document).ready(function(){
     isTablet = false,
     isSmallTablet = false,
     isMobile = false,
+    rotation = 0,
+    prevHeight = 10000,
     isRetina = retina();
+
     var resizeHeight = 744,
         minHeight = 600;
 
@@ -45,6 +48,16 @@ $(document).ready(function(){
         }else{
             isMobile = true;
         }
+
+        /*if($(".b-main-header").length && isMobile){
+            if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0 || !isMobile ){
+                $(".b-main-header, .header-back, .b-header-block").css({
+                    "height" : myHeight - $(".b-main-header").height();
+                });
+            }
+            prevHeight = myHeight;
+            rotation = myWidth/myHeight;
+        }*/
 
         //сжатие отступов в хедере
         if($(".b-main-header").length && !isMobile){
@@ -287,10 +300,6 @@ $(document).ready(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
         });
     }
-
-    /*$("[data-fancybox]").fancybox({
-        arrows : true, //Отображает кнопки навигации по краям экрана
-    });*/
 
     $('.b-tour-slider').slick({
         slidesToShow: 5,
@@ -539,8 +548,13 @@ $(document).ready(function(){
         $(this).addClass("nav-touch");
     });
 
-    $(document).on("touchend", ".outer-nav a", function(event) {
+    $(document).on("touchend touchmove", ".outer-nav a", function(event) {
         $(this).removeClass("nav-touch");
+    });
+
+    $("[data-fancybox]").fancybox({
+        arrows : true,
+        infobar : false,
     });
 
     /*$('.b-header').parallax({
