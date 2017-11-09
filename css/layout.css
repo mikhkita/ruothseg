@@ -273,7 +273,6 @@ h1.b-title{
 	text-align: center;
 	font-size: 36px;
 	font-family: "RobotoBold", Arial;
-	padding-bottom: 89px;
 	line-height: 40px;
 	color: #744d4d;
 }
@@ -315,8 +314,8 @@ h3.b-title{
 		display: inline-block;
 	}
 
-		.position-buttons:first-child{
-			margin-right: 24px;
+		.position-buttons:nth-child(2){
+			margin-left: 24px;
 		}
 
 .hide{
@@ -562,8 +561,8 @@ h3.b-title{
 			font-family: 'RobotoBold';
 		}
 
-			.b-header-buttons .position-buttons:first-child{
-				margin-right: 30px;
+			.b-header-buttons .position-buttons:nth-child(2){
+				margin-left: 30px;
 			}
 
 .b-block-advantages{
@@ -1543,6 +1542,7 @@ h3.b-title{
 /*-------------Header-------------*/
 
 .b-header{
+	background-image: url('../i/header-back.jpg');
 	background-position: 50% 0;
     background-repeat: no-repeat;
     height: 270px;
