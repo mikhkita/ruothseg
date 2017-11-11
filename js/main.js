@@ -123,7 +123,7 @@ $(document).ready(function(){
                     "height" : 500
                 });
             }
-            
+
             $('.b-header-block').css({
                 "padding-top": "",
                 "padding-bottom": "",
@@ -556,6 +556,44 @@ $(document).ready(function(){
     $(document).on("touchend touchmove", ".outer-nav a", function(event) {
         $(this).removeClass("nav-touch");
     });
+
+    //увеличить количество
+    $('.add-count').on('click', function(){
+        $input = $('.persons-count');
+        var count = parseInt($input.val()) + 1;
+        count = count > 99 || isNaN(count) === true ? 99 : count;
+        $input.val(count);
+        $input.change();
+    });
+
+    //уменьшить количество
+    $('.reduce-count').on('click', function(){
+        $input = $('.persons-count');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 || isNaN(count) === true ? 1 : count;
+        $input.val(count);
+        $input.change();
+    });
+
+    $('.persons-count').on('change input', function(){
+        if($(this).val() != ""){
+            var discount = 0;
+            var price = parseInt($('.b-popup-tour-form').attr("data-price"));
+            var persons = parseInt($('.persons-count').val());
+            if(parseInt($(this).val()) >= 4){
+                discount = persons * price * 0.05;
+                $('.b-btn-discount').removeClass("hide");
+            }else{
+                $('.b-btn-discount').addClass("hide");
+            }
+            var res = price * persons - discount;
+            $('.total-cost').text(res + ' руб.');
+        }else{
+            $('.total-cost').text('0 руб.');
+        }
+    });
+
+    $('.persons-count').change();
 
     $("[data-fancybox]").fancybox({
         arrows : true,

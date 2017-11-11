@@ -606,26 +606,31 @@
 		<div class="b-popup" id="b-popup-tour">
 			<a href="#" class="b-popup-close" title="Закрыть"></a>
 			<h3 class="b-title">Бронирование тура</h3>
-			<form class="b-popup-tour-form" method="post" action="">
+			<form class="b-popup-tour-form" method="post" action="" data-price="5000">
 				<div class="input-string">
 					<span class="required">Ваше имя:&nbsp;</span>
 					<input type="text" name="name" placeholder="Афанасий" required>
 				</div>
 				<div class="input-string">
 					<span class="required">Ваш телефон:&nbsp;</span>
-					<input type="text" name="name" placeholder="+7 (999) 999 99-99" required>
+					<input type="text" name="phone" placeholder="+7 (999) 999 99-99" oninput="this.value = this.value.replace(/\D/g, '')" required>
 				</div>
 				<div class="input-string">
 					<span class="required">Количество человек:&nbsp;</span>
-					<input type="text" name="name" placeholder="4" required>
+					<div class="input-persons">
+						<div class="icon-arrow-left reduce-count"></div>
+						<input type="text" class="persons-count" name="persons" maxlength="2" oninput="this.value = this.value.replace(/\D/g, '')" required value="1">
+						<div class="icon-arrow-right add-count"></div>
+					</div>
 				</div>
 				<div class="input-string">
 					<span>Ваш e-mail:</span>
-					<input type="text" name="name" placeholder="info@geshtour.ru">
+					<input type="text" name="mail" placeholder="info@geshtour.ru">
 				</div>
 				<div class="input-string total-cost-block">
 					<span>Общая стоимость:</span>
-					<span class="total-cost">20435 руб.<a class="b-btn-discount">скидка 5%</a></span>
+					<span class="total-cost"></span>
+					<a class="b-btn-discount">скидка 5%</a>
 				</div>
 			</form>
 			<div class="position-buttons">
@@ -644,7 +649,7 @@
 				</div>
 				<div class="input-string">
 					<span class="required">Ваш телефон:&nbsp;</span>
-					<input type="text" name="name" placeholder="+7 (999) 999 99-99" required>
+					<input type="text" name="phone" placeholder="+7 (999) 999 99-99" oninput="this.value = this.value.replace(/\D/g, '')" required>
 				</div>
 			</form>
 			<div class="position-buttons">
