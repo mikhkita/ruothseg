@@ -127,10 +127,10 @@ input.error,textarea.error{
 	margin-left: -500px;
 }
 input::-webkit-input-placeholder {
-	color: #777;
+	color: #c3c3c3;
 }
 input:-moz-placeholder {
-	color: #777;
+	color: #c3c3c3;
 }
 [class^="icon-"]:before, 
 [class*=" icon-"]:before  {
@@ -265,8 +265,17 @@ input:-moz-placeholder {
 	    top: -3px;
 	}
 
-.b-1{
-	
+.b-btn-discount{
+	display: inline-block;
+	font-family: 'RobotoLight';
+	float: right;
+	color: #FFF;
+	font-size: 12px;
+	line-height: 22px;
+	border-radius: 100px;
+	background-color: #ff6666;
+	padding: 2px 14px 3px 14px;
+	margin-top: 2px;
 }
 
 h1.b-title{
@@ -486,9 +495,9 @@ h3.b-title{
 				    width: 0;
 				    background: #744d4d;
 				    transition: width 150ms ease-out;
-				    -webkit-transition: all 150ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: all 150ms ease-out; /** Firefox **/
-				    -o-transition: all 150ms ease-out; /** Opera **/
+				    -webkit-transition: width 150ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: width 150ms ease-out; /** Firefox **/
+				    -o-transition: width 150ms ease-out; /** Opera **/
 				    left: 0;
 				    bottom: 0;
 				}
@@ -689,10 +698,10 @@ h3.b-title{
 					left: 0;
 					width: 100%;
 					height: 100%;
-					transition: all 300ms ease-out;
-				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-out; /** Firefox **/
-				    -o-transition: all 300ms ease-out; /** Opera **/
+					transition: transform 300ms ease-out;
+				    -webkit-transition: transform 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: transform 300ms ease-out; /** Firefox **/
+				    -o-transition: transform 300ms ease-out; /** Opera **/
 				}
 
 					.tour-date{
@@ -811,14 +820,14 @@ h3.b-title{
 					position: absolute;
 					top: 0;
 					left: 0;
-					background-color:rgba(0,0,0,.4);
+					background-color: rgba(0,0,0,.4);
 				    height: 100%;
 					width: 100%;
 					opacity: 0;
-					transition: all 300ms ease-out;
-				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-out; /** Firefox **/
-				    -o-transition: all 300ms ease-out; /** Opera **/
+					transition: opacity 300ms ease-out;
+				    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: opacity 300ms ease-out; /** Firefox **/
+				    -o-transition: opacity 300ms ease-out; /** Opera **/
 				}
 
 				.tour-right h3{
@@ -828,10 +837,10 @@ h3.b-title{
 					font-size: 18px;
 					color: #FFF;
 					margin-bottom: 28px;
-					transition: all 300ms ease-out;
-				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-out; /** Firefox **/
-				    -o-transition: all 300ms ease-out; /** Opera **/
+					transition: transform 300ms ease-out, opacity 300ms ease-out;
+				    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Firefox **/
+				    -o-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Opera **/
 				    transition-delay: 200ms;
 				}
 
@@ -839,10 +848,10 @@ h3.b-title{
 					text-align: center;
 					opacity: 0;
 					margin-bottom: 23px;
-					transition: all 300ms ease-out;
-				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-out; /** Firefox **/
-				    -o-transition: all 300ms ease-out; /** Opera **/
+					transition: opacity 300ms ease-out;
+				    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: opacity 300ms ease-out; /** Firefox **/
+				    -o-transition: opacity 300ms ease-out; /** Opera **/
 				    transition-delay: 200ms;
 				}
 
@@ -869,10 +878,10 @@ h3.b-title{
 				.tour-right .position-buttons{
 					margin: 0;
 					opacity: 0;
-					transition: all 300ms ease-out;
-				    -webkit-transition: all 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: all 300ms ease-out; /** Firefox **/
-				    -o-transition: all 300ms ease-out; /** Opera **/
+					transition: transform 300ms ease-out, opacity 300ms ease-out;
+				    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Chrome & Safari **/
+				    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Firefox **/
+				    -o-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Opera **/
 				    transition-delay: 200ms;
 				}
 
@@ -1217,39 +1226,29 @@ h3.b-title{
 			.icon-vk:before{
 				content: "\e90b";
 			  	font-size: 14px;
-			  	color: #FFF;
 			  	line-height: 42px;
 			}
-				.b-social a.icon-vk:hover:before{
-					color: #946262;
-				}
 
 			.icon-instagram:before{
 				content: "\e909";
 			  	font-size: 20px;
-			  	color: #FFF;
 			  	line-height: 40px;
 			}
-				.b-social a.icon-instagram:hover:before{
-					color: #946262;
-				}
 
 			.icon-facebook:before{
 				content: "\e908";
 			  	font-size: 20px;
-			  	color: #FFF;
 			  	line-height: 40px;
 			}
-				.b-social a.icon-facebook:hover:before{
-					color: #946262;
-				}
 
 			.icon-telegram:before{
 				content: "\e90a";
 			  	font-size: 18px;
-			  	color: #FFF;
 			  	line-height: 40px;
 			}
+				.b-social a.icon-vk:hover:before,
+				.b-social a.icon-instagram:hover:before,
+				.b-social a.icon-facebook:hover:before,
 				.b-social a.icon-telegram:hover:before{
 					color: #946262;
 				}
@@ -1284,6 +1283,12 @@ h3.b-title{
 			right: 0;
 			top: 0;
 			z-index: 2;
+			color: #FFF;
+			-webkit-transition: color 150ms ease-out;
+			-moz-transition: color 150ms ease-out;
+			-ms-transition: color 150ms ease-out;
+			-o-transition: color 150ms ease-out;
+			transition: color 150ms ease-out;
 		}
 
 		.b-social a:after{
@@ -1291,7 +1296,7 @@ h3.b-title{
 			position: absolute;
 			left: 5px;
 			top: 5px;
-			content: "/s";
+			content: "s";
 			display: block;
 			width: 30px;
 			height: 30px;
@@ -1299,11 +1304,11 @@ h3.b-title{
 			background-color: #FFF;
 			text-align: center;
 			font-size: 0px;
-			-webkit-transition: all 200ms ease-out;
-			-moz-transition: all 200ms ease-out;
-			-ms-transition: all 200ms ease-out;
-			-o-transition: all 200ms ease-out;
-			transition: all 200ms ease-out;
+			-webkit-transition: opacity 150ms ease-out, transform 150ms ease-out;
+			-moz-transition: opacity 150ms ease-out, transform 150ms ease-out;
+			-ms-transition: opacity 150ms ease-out, transform 150ms ease-out;
+			-o-transition: opacity 150ms ease-out, transform 150ms ease-out;
+			transition: opacity 150ms ease-out, transform 150ms ease-out;
 			-webkit-transform: scale(1);
 			   -moz-transform: scale(1);
 			    -ms-transform: scale(1);
@@ -1655,11 +1660,11 @@ h3.b-title{
 		    white-space: nowrap;
 		    text-align: center;
 		    opacity: 1;
-			-webkit-transition: all 300ms ease-out;
-		    -moz-transition: all 300ms ease-out;
-		    -ms-transition: all 300ms ease-out;
-		    -o-transition: all 300ms ease-out;
-		    transition: all 300ms ease-out;
+			-webkit-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+		    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+		    -ms-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+		    -o-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+		    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
 			-webkit-transform: scale(1);
 			   -moz-transform: scale(1);
 			    -ms-transform: scale(1);
@@ -2076,6 +2081,105 @@ h3.b-title{
 	border-radius: 100px;
     border: 2px solid #744d4d;
 }
+
+/*------Popup------*/
+
+.b-popup{
+	position: relative;
+	background-color: #FFF;
+	text-align: left;
+	padding: 65px 80px;
+	max-width: 550px;
+	border: 1px solid #979797;
+}
+
+	.b-popup-close{
+		position: absolute;
+	    right: 5px;
+	    top: 8px;
+	    width: 46px;
+	    height: 46px;
+	}
+
+	.b-popup-close:before{
+	    /*content: "\e905";*/
+	    color: #744d4d;
+	    font-size: 20px;
+	    left: 32px;
+	    top: 32px;
+	}
+
+	.b-popup h3{
+		color: #603b3c;
+		margin-bottom: 35px;
+	}
+
+	.b-popup-tour-form{
+		margin-bottom: 36px;
+	}
+
+		.input-string{
+			width: 100%;
+		}
+
+			.input-string span{
+				display: inline-block;
+				width: 48%;
+				font-size: 16px;
+			}
+
+			.input-string span.required:after{
+				content: "*";
+				color: #ff6666;
+			}
+
+			.input-string input{
+				display: inline-block;
+				width: 50%;
+				border: none;
+				color: #393939;
+				background-color: transparent;
+				font-size: 16px;
+			    vertical-align: top;
+			    line-height: 24px;
+			    margin-top: 4px;
+			    margin-bottom: 22px;
+			    border-bottom: 2px solid #c3c3c3;
+			    padding-bottom: 6px;
+			}
+
+		.total-cost-block span{
+			display: inline-block;
+			font-family: 'RobotoBold';
+			font-size: 16px;
+			color: #603b3c;
+		}
+			.input-string span.total-cost{
+				width: 50%;
+				font-size: 20px;
+			}
+
+	.b-popup .personal-info{
+		font-size: 14px;
+		line-height: 22px;
+		color: #808080;
+	}
+
+		.b-popup .personal-info a{
+			color: #808080;
+			border-bottom: 1px solid #979797;
+		}
+
+	.b-popup .b-btn{
+		text-align: center;
+		margin-bottom: 16px;
+	}
+
+	.b-popup-tour-call{
+		margin-bottom: 10px;
+	}
+
+/*-----------------*/
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	.b-logo{

@@ -123,6 +123,11 @@ $(document).ready(function(){
                     "height" : 500
                 });
             }
+            
+            $('.b-header-block').css({
+                "padding-top": "",
+                "padding-bottom": "",
+            });
         }
 
         if(isMobile){

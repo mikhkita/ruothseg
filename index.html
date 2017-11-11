@@ -38,7 +38,7 @@
 							<div class="burger-menu icon-burger-menu">Меню</div>
 						</a>
 						<div class="phone"><span class="icon-phone">+7 (903) 951-31-01</span></div>
-						<a href="#" class="request-call dashed">Заказать звонок</a>
+						<a href="#b-popup-call" class="request-call dashed fancy">Заказать звонок</a>
 					</div>
 					<div class="b-table">
 						<div class="b-table-cell">
@@ -71,7 +71,7 @@
 							</div>
 							<div class="b-center-block b-header-buttons">
 								<div class="position-buttons">
-									<a href="#" class="b-btn b-btn-brown-header">Забронировать тур</a>
+									<a href="#b-popup-tour" class="b-btn b-btn-brown-header fancy">Забронировать тур</a>
 								</div>
 								<div class="position-buttons">
 									<a href="#" class="b-btn b-btn-white-header">Еду в первый раз</a>
@@ -110,13 +110,13 @@
 							<a href="#" onclick="return false;" class="b-btn-call icon-phone"></a>
 							<div class="call-bubble bubble-hide">
 								<div class="phone"><span class="icon-phone">+7 (903) 951-31-01</span></div>
-								<a href="#" class="request-call dashed">Заказать звонок</a>
+								<a href="#b-popup-call" class="request-call dashed fancy">Заказать звонок</a>
 							</div>
 						</div>
 
 						<div class="b-top-contacts right">
 							<div class="phone"><span class="icon-phone">+7 (903) 951-31-01</span></div>
-							<a href="#" class="request-call dashed">Заказать звонок</a>
+							<a href="#b-popup-call" class="request-call dashed fancy">Заказать звонок</a>
 						</div>
 
 					</div>
@@ -340,7 +340,7 @@
 					<h2 class="b-title b-title-second"><b>GESH&nbsp;TOUR</b> - это туры для <b>всех!</b></h2>
 					<div class="b-center-block">
 						<div class="position-buttons">
-							<a href="#" class="b-btn b-btn-orange">Забронировать тур</a>
+							<a href="#b-popup-tour" class="b-btn b-btn-orange fancy">Забронировать тур</a>
 						</div>
 						<div class="position-buttons">
 							<a href="#" class="b-btn b-btn-blue">Еду в первый раз</a>
@@ -602,6 +602,57 @@
 			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
 			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
 		</div>
+
+		<div class="b-popup" id="b-popup-tour">
+			<a href="#" class="b-popup-close" title="Закрыть"></a>
+			<h3 class="b-title">Бронирование тура</h3>
+			<form class="b-popup-tour-form" method="post" action="">
+				<div class="input-string">
+					<span class="required">Ваше имя:&nbsp;</span>
+					<input type="text" name="name" placeholder="Афанасий" required>
+				</div>
+				<div class="input-string">
+					<span class="required">Ваш телефон:&nbsp;</span>
+					<input type="text" name="name" placeholder="+7 (999) 999 99-99" required>
+				</div>
+				<div class="input-string">
+					<span class="required">Количество человек:&nbsp;</span>
+					<input type="text" name="name" placeholder="4" required>
+				</div>
+				<div class="input-string">
+					<span>Ваш e-mail:</span>
+					<input type="text" name="name" placeholder="info@geshtour.ru">
+				</div>
+				<div class="input-string total-cost-block">
+					<span>Общая стоимость:</span>
+					<span class="total-cost">20435 руб.<a class="b-btn-discount">скидка 5%</a></span>
+				</div>
+			</form>
+			<div class="position-buttons">
+				<a href="#" class="b-btn b-btn-brown ajax" onclick="$('#b-popup-tour').submit(); return false;">Забронировать тур</a>
+			</div>
+			<p class="personal-info">Отправляя запрос, Вы подтверждаете <a href="#">согласие на обработку персональных данных</a></p>
+		</div>
+
+		<div class="b-popup" id="b-popup-call">
+			<a href="#" class="b-popup-close" title="Закрыть"></a>
+			<h3 class="b-title">Обратный звонок</h3>
+			<form class="b-popup-tour-call" method="post" action="">
+				<div class="input-string">
+					<span class="required">Ваше имя:&nbsp;</span>
+					<input type="text" name="name" placeholder="Афанасий" required>
+				</div>
+				<div class="input-string">
+					<span class="required">Ваш телефон:&nbsp;</span>
+					<input type="text" name="name" placeholder="+7 (999) 999 99-99" required>
+				</div>
+			</form>
+			<div class="position-buttons">
+				<a href="#" class="b-btn b-btn-brown ajax" onclick="$('#b-popup-call').submit(); return false;">Заказать звонок</a>
+			</div>
+			<p class="personal-info">Отправляя запрос, Вы подтверждаете <a href="#">согласие на обработку персональных данных</a></p>
+		</div>
+
 		<div id="popup-video-header">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
 		</div>
