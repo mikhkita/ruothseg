@@ -1596,7 +1596,7 @@ h3.b-title{
 	}
 
 	.b-header-wrap{
-		padding-top: 123px;
+		padding-top: 130px;
 	}
 
 	.b-small-logo-cont{
@@ -2156,6 +2156,7 @@ h3.b-title{
 			.input-persons{
 				display: inline-block;
 				position: relative;
+				width: 50%;
 			}
 
 			.input-persons input{

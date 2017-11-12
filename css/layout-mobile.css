@@ -85,13 +85,7 @@ input.error{
 }
 
 h1.b-title{
-	/*text-align: center;
-	font-size: 36px;
-	font-family: "RobotoBold", Arial;
-	padding-top: 14px;
-	padding-bottom: 89px;
-	line-height: 14px;
-	color: #744d4d;*/
+	font-size: 30px;
 }
 
 h2.b-title{
@@ -662,6 +656,10 @@ h3.b-title{
 		font-size: 47px;
 	}
 
+.b-top{
+	top: 16px;
+}
+
 .b-top.b-top-fixed{
 	padding-bottom: 9px;
 }
@@ -690,6 +688,18 @@ h3.b-title{
 .b-half-button{
 	margin-top: -57px;
 }
+
+.b-popup{
+	padding: 35px 45px;
+}
+
+	.b-popup h3{
+		margin-bottom: 20px;
+	}
+
+	.b-popup-tour-form{
+		margin-bottom: 25px;
+	}
 
 @media screen and (max-width: 665px){
 	.b-review {
@@ -868,6 +878,10 @@ h3.b-title{
 	.position-buttons:nth-child(2) {
 	    margin-left: 0;
 	}
+
+	.b-popup{
+		width: calc(100% - 40px);
+	}
 }
 
 @media screen and (max-width: 550px){
@@ -914,9 +928,25 @@ h3.b-title{
 		margin-right: 24px;
 	}*/
 
+	.input-string input,
+	.input-string span,
+	.input-persons{
+		width: 100%;
+	}
+
+	.total-cost-block span{
+		width: auto;
+	}
+
 }
 
 @media screen and (max-width: 475px){
+
+	.b-header{
+		background-image: url('../i/header-back-mobile-v.jpg');
+		background-position: 27% -10px;
+		background-size: 520px;
+	}
 	.b-footer .b-footer-column{
 		width: auto;
 	}
@@ -928,6 +958,10 @@ h3.b-title{
 	.b-header{
 		background-position: 50% 0%;
     	background-size: 500px;
+	}
+
+	.b-popup{
+		padding: 22px 30px;
 	}
 }
 
