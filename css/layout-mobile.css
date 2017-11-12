@@ -238,6 +238,10 @@ h3.b-title{
 		text-transform: none;
 	}
 
+	.b-header-wrap{
+		padding-top: 130px;
+	}
+
 .b-block-advantages{
 
 }
@@ -299,8 +303,8 @@ h3.b-title{
 
 }
 
-	.tour-list{
-		margin-bottom: 16px;
+	.b-content .tour-list{
+		margin-bottom: 0;
 	}
 
 	/*.tour-item {
@@ -310,7 +314,6 @@ h3.b-title{
 
 	.tour-item {
 	    position: relative;
-	    display: inline-block;
 	    width: calc(100%/2 - 12px);
 	    height: 242px;
 	    margin-bottom: 15px;
@@ -402,6 +405,10 @@ h3.b-title{
 			.orgs-mask{
 				display: none;
 			}
+			
+	.b-content.b-tour-content .b-block {
+	    padding: 27px 0px 26px;
+	}
 
 .b-block-book-it{
 
@@ -721,6 +728,7 @@ h3.b-title{
 	.tour-item {
 	    margin: 0 auto;
 	    width: 100%;
+	    display: block;
 	    margin-bottom: 24px;
 	}
 

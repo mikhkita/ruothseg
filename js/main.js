@@ -597,7 +597,7 @@ $(document).ready(function(){
 
     $("[data-fancybox]").fancybox({
         arrows : true,
-        infobar : false,
+        //infobar : false,
     });
 
     /*$('.b-header').parallax({
