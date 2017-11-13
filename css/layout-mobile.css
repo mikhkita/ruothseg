@@ -134,6 +134,7 @@ h3.b-title{
 .b-header, .header-back, .b-header-block{
 	background-image: url('../i/header-back-mobile.jpg');
 	background-position: 50% 40%;
+	background-size: cover;
 }
 
 .b-header, .header-back, .b-header-block{
@@ -662,10 +663,6 @@ h3.b-title{
 	.b-rewiews-arrows.icon-arrow-right:before{
 		font-size: 47px;
 	}
-
-.b-top{
-	top: 16px;
-}
 
 .b-top.b-top-fixed{
 	padding-bottom: 9px;

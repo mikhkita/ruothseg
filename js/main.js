@@ -386,7 +386,7 @@ $(document).ready(function(){
             // Как далеко вниз прокрутили страницу
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
-            if (scrollTop > $hMain && isMobile) {
+            if (scrollTop > $hMain) {
                 $('.b-top').removeClass("b-top-hide");
             }else{     
                 $('.b-top').addClass("b-top-hide");
@@ -670,6 +670,8 @@ $(document).ready(function(){
         //скопировать инфу в popup
         $("#b-popup-review").find(".b-review").remove();
         $(this).parents(".b-review").clone().prependTo("#b-popup-review");
+        //удалить копии фотографий Fancybox
+        $('#b-popup-review').find(".fancy-gallary").attr("data-fancybox", "");
     });
 
     $("[data-fancybox]").fancybox({

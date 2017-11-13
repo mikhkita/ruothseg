@@ -7,7 +7,11 @@
 			<div class="b-review-right clearfix">
 				<h3 class="b-title">Анастасия Сергеевна</h3>
 				<div class="icon-foto-mini">
-					<a href="#" class="foto-with-tour dashed">Фотографии с тура</a>
+					<a href="i/foto-1.jpg" data-fancybox="gallery-7" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+					<div style="display: none;">
+					   	<a class="fancy-gallary" data-fancybox="gallery-7" href="i/foto-2.jpg"></a>
+					    <a class="fancy-gallary" data-fancybox="gallery-7" href="i/foto-3.jpg"></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -24,7 +28,11 @@
 			<div class="b-review-right clearfix">
 				<h3 class="b-title">Валентин Псковитин</h3>
 				<div class="icon-foto-mini">
-					<a href="#" class="foto-with-tour dashed">Фотографии с тура</a>
+					<a href="i/foto-1.jpg" data-fancybox="gallery-8" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+					<div style="display: none;">
+					   	<a class="fancy-gallary" data-fancybox="gallery-8" href="i/foto-2.jpg"></a>
+					    <a class="fancy-gallary" data-fancybox="gallery-8" href="i/foto-3.jpg"></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -41,7 +49,11 @@
 			<div class="b-review-right clearfix">
 				<h3 class="b-title">Ирина Ануфриева</h3>
 				<div class="icon-foto-mini">
-					<a href="#" class="foto-with-tour dashed">Фотографии с тура</a>
+					<a href="i/foto-1.jpg" data-fancybox="gallery-9" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+					<div style="display: none;">
+					   	<a class="fancy-gallary" data-fancybox="gallery-9" href="i/foto-2.jpg"></a>
+					    <a class="fancy-gallary" data-fancybox="gallery-9" href="i/foto-3.jpg"></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -58,7 +70,11 @@
 			<div class="b-review-right clearfix">
 				<h3 class="b-title">Анастасия Сергеевна</h3>
 				<div class="icon-foto-mini">
-					<a href="#" class="foto-with-tour dashed">Фотографии с тура</a>
+					<a href="i/foto-1.jpg" data-fancybox="gallery-10" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+					<div style="display: none;">
+					   	<a class="fancy-gallary" data-fancybox="gallery-10" href="i/foto-2.jpg"></a>
+					    <a class="fancy-gallary" data-fancybox="gallery-10" href="i/foto-3.jpg"></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -75,7 +91,11 @@
 			<div class="b-review-right clearfix">
 				<h3 class="b-title">Валентин Псковитин</h3>
 				<div class="icon-foto-mini">
-					<a href="#" class="foto-with-tour dashed">Фотографии с тура</a>
+					<a href="i/foto-1.jpg" data-fancybox="gallery-11" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+					<div style="display: none;">
+					   	<a class="fancy-gallary" data-fancybox="gallery-11" href="i/foto-2.jpg"></a>
+					    <a class="fancy-gallary" data-fancybox="gallery-11" href="i/foto-3.jpg"></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -92,7 +112,11 @@
 			<div class="b-review-right clearfix">
 				<h3 class="b-title">Ирина Ануфриева</h3>
 				<div class="icon-foto-mini">
-					<a href="#" class="foto-with-tour dashed">Фотографии с тура</a>
+					<a href="i/foto-1.jpg" data-fancybox="gallery-12" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+					<div style="display: none;">
+					   	<a class="fancy-gallary" data-fancybox="gallery-12" href="i/foto-2.jpg"></a>
+					    <a class="fancy-gallary" data-fancybox="gallery-12" href="i/foto-3.jpg"></a>
+					</div>
 				</div>
 			</div>
 		</div>

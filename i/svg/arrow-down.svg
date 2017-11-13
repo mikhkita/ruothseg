@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Попапы" transform="translate(-987.000000, -468.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="Бронирование-тура" transform="translate(529.000000, 233.000000)">
+                <g id="Group" transform="translate(80.000000, 120.000000)">
+                    <g id="input/passive" transform="translate(0.000000, 106.000000)">
+                        <g id="right-arrow" transform="translate(385.000000, 13.500000) scale(-1, 1) translate(-385.000000, -13.500000) translate(377.500000, 8.500000)">
+                            <path d="M10.7974684,4.24683544 L4.90506329,-1.64556962 C4.6835443,-1.86708861 4.37341772,-2 4.10759494,-2 C3.84177215,-2 3.57594937,-1.86708861 3.35443038,-1.64556962 C2.91139241,-1.20253165 2.91139241,-0.582278481 3.35443038,-0.139240506 L8.49367089,5 L3.35443038,10.1392405 C2.91139241,10.5822785 2.91139241,11.2025316 3.35443038,11.6455696 C3.79746835,12.0886076 4.46202532,12.0886076 4.90506329,11.6455696 L10.7974684,5.75316456 C11.0189873,5.53164557 11.1075949,5.26582278 11.1075949,5 C11.1075949,4.68987342 11.0189873,4.46835443 10.7974684,4.24683544 Z" id="Shape" transform="translate(7.064873, 4.988924) rotate(90.000000) translate(-7.064873, -4.988924) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
