@@ -508,8 +508,63 @@ $(document).ready(function(){
                 $html.find(".b-review").eq(0).addClass("scroll-to");
 
                 console.log($(".b-reviews").find(".b-btn-show-more"));
-                $(".b-reviews").find(".b-btn-show-more").remove();
+                $(".b-reviews").find(".b-btn-show-more").parents(".b-center-block").remove();
                 $(".b-reviews").append($html.html());
+
+                readMoreShow();
+
+                $(".fancy").each(function(){
+                    var $popup = $($(this).attr("href")),
+                        $this = $(this);
+                    $this.fancybox({
+                        padding : 0,
+                        content : $popup,
+                        helpers: {
+                            overlay: {
+                                locked: true 
+                            }
+                        },
+                        beforeShow: function(){
+                            $(".fancybox-wrap").addClass("beforeShow");
+                            $popup.find(".custom-field").remove();
+                            if( $this.attr("data-value") ){
+                                var name = getNextField($popup.find("form"));
+                                $popup.find("form").append("<input type='hidden' class='custom-field' name='"+name+"' value='"+$this.attr("data-value")+"'/><input type='hidden' class='custom-field' name='"+name+"-name' value='"+$this.attr("data-name")+"'/>");
+                            }
+                            if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
+                                customHandlers[$this.attr("data-beforeShow")]($this);
+                            }
+                        },
+                        afterShow: function(){
+                            $(".fancybox-wrap").removeClass("beforeShow");
+                            $(".fancybox-wrap").addClass("afterShow");
+                            if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
+                                customHandlers[$this.attr("data-afterShow")]($this);
+                            }
+                            $popup.find("input[type='text'],input[type='number'],textarea").eq(0).focus();
+                        },
+                        beforeClose: function(){
+                            $(".fancybox-wrap").removeClass("afterShow");
+                            $(".fancybox-wrap").addClass("beforeClose");
+                            if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
+                                customHandlers[$this.attr("data-beforeClose")]($this);
+                            }
+                        },
+                        afterClose: function(){
+                            $(".fancybox-wrap").removeClass("beforeClose");
+                            $(".fancybox-wrap").addClass("afterClose");
+                            if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
+                                customHandlers[$this.attr("data-afterClose")]($this);
+                            }
+                        }
+                    });
+                });
+
+                $('.b-btn-read-more').on('click', function(){
+                    //скопировать инфу в popup
+                    $("#b-popup-review").find(".b-review").remove();
+                    $(this).parents(".b-review").clone().prependTo("#b-popup-review");
+                });
 
                 $("body, html").animate({
                     scrollTop : $(".b-review.scroll-to").offset().top - 86 - 16
@@ -578,7 +633,7 @@ $(document).ready(function(){
     $('.persons-count').on('change input', function(){
         if($(this).val() != ""){
             var discount = 0;
-            var price = parseInt($('.b-popup-tour-form').attr("data-price"));
+            var price = parseInt($('#b-popup-tour-form').attr("data-price"));
             var persons = parseInt($('.persons-count').val());
             if(parseInt($(this).val()) >= 4){
                 discount = persons * price * 0.05;
@@ -587,6 +642,7 @@ $(document).ready(function(){
                 $('.b-btn-discount').addClass("hide");
             }
             var res = price * persons - discount;
+            res = String(res).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
             $('.total-cost').text(res + ' руб.');
         }else{
             $('.total-cost').text('0 руб.');
@@ -594,6 +650,27 @@ $(document).ready(function(){
     });
 
     $('.persons-count').change();
+
+    //скрывать кнопку "Читать полностью"
+    if($('.b-reviews').length){
+        readMoreShow();
+    }
+
+    function readMoreShow(){
+        $('.b-review').each(function() {
+            var wrapHeight = $(this).find(".b-review-wrap").height();
+            var textHeight = $(this).find(".b-review-text").height();
+            if(wrapHeight < textHeight){
+                $(this).find(".b-btn-read-more").removeClass("hide");
+            }
+        });
+    }
+
+    $('.b-btn-read-more').on('click', function(){
+        //скопировать инфу в popup
+        $("#b-popup-review").find(".b-review").remove();
+        $(this).parents(".b-review").clone().prependTo("#b-popup-review");
+    });
 
     $("[data-fancybox]").fancybox({
         arrows : true,

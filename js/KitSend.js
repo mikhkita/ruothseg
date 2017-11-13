@@ -72,7 +72,7 @@ $(document).ready(function(){
 	whenScroll();
 
 	$(".fancy").each(function(){
-		var $popup = $($(this).attr("data-block")),
+		var $popup = $($(this).attr("href")),
 			$this = $(this);
 		$this.fancybox({
 			padding : 0,
@@ -82,6 +82,9 @@ $(document).ready(function(){
 	            	locked: true 
 	         	}
 	      	},
+	      	/*tpl: {
+	            closeBtn : '<a title="Закрыть" class="fancybox-close" style="display:none;" href="javascript:;"></a>'
+	        },*/
 			beforeShow: function(){
 				$(".fancybox-wrap").addClass("beforeShow");
 				$popup.find(".custom-field").remove();

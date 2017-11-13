@@ -604,9 +604,8 @@
 		</div>
 
 		<div class="b-popup" id="b-popup-tour">
-			<a href="#" class="b-popup-close" title="Закрыть"></a>
 			<h3 class="b-title">Бронирование тура</h3>
-			<form class="b-popup-tour-form" method="post" action="" data-price="5000">
+			<form id="b-popup-tour-form" method="post" action="kitsend.php" data-price="5000">
 				<div class="input-string">
 					<span class="required">Ваше имя:&nbsp;</span>
 					<input type="text" name="name" placeholder="Афанасий" required>
@@ -632,17 +631,17 @@
 					<span class="total-cost"></span>
 					<a class="b-btn-discount">скидка 5%</a>
 				</div>
+				<div class="position-buttons">
+					<a href="#" class="b-btn b-btn-brown ajax" onclick="$('#b-popup-tour-form').submit(); return false;">Забронировать тур</a>
+				</div>
 			</form>
-			<div class="position-buttons">
-				<a href="#" class="b-btn b-btn-brown ajax" onclick="$('#b-popup-tour').submit(); return false;">Забронировать тур</a>
-			</div>
+			
 			<p class="personal-info">Отправляя запрос, Вы подтверждаете <a href="#">согласие на обработку персональных данных</a></p>
 		</div>
 
 		<div class="b-popup" id="b-popup-call">
-			<a href="#" class="b-popup-close" title="Закрыть"></a>
 			<h3 class="b-title">Обратный звонок</h3>
-			<form class="b-popup-tour-call" method="post" action="">
+			<form id="b-popup-call-form" method="post" action="kitsend.php">
 				<div class="input-string">
 					<span class="required">Ваше имя:&nbsp;</span>
 					<input type="text" name="name" placeholder="Афанасий" required>
@@ -651,12 +650,15 @@
 					<span class="required">Ваш телефон:&nbsp;</span>
 					<input type="text" name="phone" placeholder="+7 (999) 999 99-99" oninput="this.value = this.value.replace(/\D/g, '')" required>
 				</div>
+				<div class="position-buttons">
+					<a href="#" class="b-btn b-btn-brown ajax" onclick="$('#b-popup-call-form').submit(); return false;">Заказать звонок</a>
+				</div>
 			</form>
-			<div class="position-buttons">
-				<a href="#" class="b-btn b-btn-brown ajax" onclick="$('#b-popup-call').submit(); return false;">Заказать звонок</a>
-			</div>
+			
 			<p class="personal-info">Отправляя запрос, Вы подтверждаете <a href="#">согласие на обработку персональных данных</a></p>
 		</div>
+
+		<!--<a href="#" onclick="$.fancybox.close(); return false;" class="button button-blue">Закрыть</a>-->
 
 		<div id="popup-video-header">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>

@@ -131,7 +131,7 @@ h3.b-title{
 	padding: 27px 0px 50px;
 }
 
-.b-header{
+.b-header, .header-back, .b-header-block{
 	background-image: url('../i/header-back-mobile.jpg');
 	background-position: 50% 40%;
 }
@@ -708,6 +708,10 @@ h3.b-title{
 		margin-bottom: 25px;
 	}
 
+#b-popup-review{
+	width: calc(100% - 40px);
+}
+
 @media screen and (max-width: 665px){
 	.b-review {
 	    width: calc(100% - 17px);
@@ -955,6 +959,10 @@ h3.b-title{
 		background-position: 27% -10px;
 		background-size: 520px;
 	}
+	.header-back, .b-header-block{
+		background-position: 58% 0;
+	}
+
 	.b-footer .b-footer-column{
 		width: auto;
 	}
@@ -968,9 +976,23 @@ h3.b-title{
     	background-size: 500px;
 	}
 
-	.b-popup{
+	.b-popup, #b-popup-review{
 		padding: 22px 30px;
 	}
+
+		.b-popup .b-review-header{
+			text-align: center;
+		}
+
+			.b-popup .b-review .b-img-cont{
+				float: none;
+			}
+
+			.b-popup .b-review .b-review-right{
+				width: 100%;
+				padding: 0 0 10px 0;
+			}
+
 }
 
 @media screen and (max-width: 395px){

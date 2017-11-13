@@ -74,8 +74,7 @@ label.error{
 	display: none !important;
 }
 input.error,textarea.error{
-	border: 1px solid #F00 !important;
-	box-shadow: 0 0px 0px 1px #F00;
+	border-bottom: 2px solid #F00 !important;
 }
 .ps-lines{
 
@@ -135,7 +134,8 @@ input:-moz-placeholder {
 [class^="icon-"]:before, 
 [class*=" icon-"]:before,
 .input-persons:before,
-.input-persons:after{
+.input-persons:after,
+.fancybox-close-small:after{
 	font-family: 'icomoon' !important;
 	speak: none;
 	font-style: normal;
@@ -490,6 +490,8 @@ h3.b-title{
 					.b-main-menu li a{
 						position: relative;
 						font-size: 22px;
+						/*display: block;*/
+						/*line-height: 31px;*/
 					}
 
 				.b-main-menu li a:before{
@@ -1909,6 +1911,7 @@ h3.b-title{
 	width: calc(100%/3 - 17px);
 	margin-right: 20px;
 	margin-bottom: 41px;
+	vertical-align: top;
 }
 
 .b-review:nth-child(3n){
@@ -1941,12 +1944,15 @@ h3.b-title{
 		font-size: 16px;
 	}
 
-	.b-review p{
+	.b-review-wrap{
 		max-height: 130px;
+		overflow: hidden;
+		margin-bottom: 8px;
+	}
+
+	.b-review .b-review-text{
 		font-size: 16px;
 	    line-height: 26px;
-	    margin-bottom: 8px;
-	    overflow: hidden;
 	}
 
 	.b-review .icon-foto-mini:before{
@@ -2098,20 +2104,28 @@ h3.b-title{
 	border: 1px solid #979797;
 }
 
-	.b-popup-close{
+	.fancybox-close-small{
 		position: absolute;
-	    right: 5px;
-	    top: 8px;
-	    width: 46px;
-	    height: 46px;
+	    right: 15px;
+	    top: 15px;
 	}
 
-	.b-popup-close:before{
-	    /*content: "\e905";*/
+	.fancybox-close-small:after{
+		content: "\e911";
+		position: absolute;
+		left: 8px;
+    	top: 10px;
 	    color: #744d4d;
+	    opacity: 0.7;
 	    font-size: 20px;
-	    left: 32px;
-	    top: 32px;
+	    width: auto;
+	    height: auto;
+	}
+
+	.fancybox-close-small:hover:after {
+		opacity: 1;
+	    color: #744d4d;
+	    background-color: transparent;
 	}
 
 	.b-popup h3{
@@ -2119,8 +2133,8 @@ h3.b-title{
 		margin-bottom: 26px;
 	}
 
-	.b-popup-tour-form{
-		margin-bottom: 36px;
+	#b-popup-tour-form{
+
 	}
 
 		.input-string{
@@ -2225,9 +2239,38 @@ h3.b-title{
 		margin-bottom: 16px;
 	}
 
-	.b-popup-tour-call{
-		margin-bottom: 10px;
+	#b-popup-call-form .b-btn{
+		margin-top: 16px;
 	}
+
+	#b-popup-tour-form .b-btn{
+		margin-top: 34px;
+	}
+
+	#b-popup-call-form{
+
+	}
+
+	#b-popup-review{
+		padding: 50px;
+		overflow-x: hidden;
+		max-width: 750px;
+	}
+
+		#b-popup-review .b-review{
+			display: block;
+		    margin-right: 0;
+		    margin-bottom: 25px;
+			width: 100%;
+		}
+
+			#b-popup-review .b-review-wrap{
+				max-height: 99999px;
+			}
+
+			#b-popup-review .b-btn-read-more{
+				display: none;
+			}
 
 /*-----------------*/
 
