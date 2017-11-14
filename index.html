@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
+	<link rel="stylesheet" href="css/chosen.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
 	<link rel="stylesheet" href="css/slick-theme.css" type="text/css">
@@ -54,7 +55,7 @@
 										<li><a href="photo.html">Фото с туров</a></li>
 									</ul>
 								</div>
-								<a href="#popup-video-header" class="fancy">
+								<a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 									<div class="b-header-video">
 										<div class="video-circle">
 											<div class="video-play"></div>
@@ -71,7 +72,7 @@
 							</div>
 							<div class="b-center-block b-header-buttons">
 								<div class="position-buttons">
-									<a href="#b-popup-tour" class="b-btn b-btn-brown-header fancy">Забронировать тур</a>
+									<a href="#b-popup-tour" class="b-btn b-btn-brown-header fancy b-btn-tour">Забронировать тур</a>
 								</div>
 								<div class="position-buttons">
 									<a href="#" class="b-btn b-btn-white-header">Еду в первый раз</a>
@@ -167,7 +168,7 @@
 				<div class="b-block">
 					<h2 class="b-title">Ближайшие туры <b>GESH&nbsp;TOUR</b></h2>
 					<div class="tour-list">
-						<div data-href="#link1" class="tour-item">
+						<div data-href="#link1" class="tour-item" data-id="1">
 							<div class="tour-right" style="background-image: url('i/tour-1.jpg');">
 								<div class="image-blur" style="background-image: url('i/tour-1.jpg');"></div>
 								<div class="orgs-mask orgs-padding">
@@ -184,7 +185,7 @@
 									</div>
 									<div class="b-center-block">
 										<div class="position-buttons">
-											<a href="#" class="b-btn b-btn-transparent">Забронировать тур</a>
+											<a href="#b-popup-tour" class="b-btn b-btn-transparent b-btn-tour-item fancy">Забронировать тур</a>
 										</div>
 									</div>
 									<div class="orgs-item"></div>
@@ -204,7 +205,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-href="#link2" class="tour-item">
+						<div data-href="#link2" class="tour-item" data-id="2">
 							<div class="tour-right" style="background-image: url('i/tour-2.jpg');">
 								<div class="image-blur" style="background-image: url('i/tour-2.jpg');"></div>
 								<div class="orgs-mask orgs-padding">
@@ -221,7 +222,7 @@
 									</div>
 									<div class="b-center-block">
 										<div class="position-buttons">
-											<a href="#" class="b-btn b-btn-transparent">Забронировать тур</a>
+											<a href="#b-popup-tour" class="b-btn b-btn-transparent b-btn-tour-item fancy">Забронировать тур</a>
 										</div>
 									</div>
 									<div class="orgs-item"></div>
@@ -231,17 +232,17 @@
 								<div class="tour-left-content">
 									<p class="time-start">Выезд в 20:00</p>
 									<div class="tour-date">
-										<p class="date-start">23.10</p>
+										<p class="date-start">24.10</p>
 										<div class="tour-dash"></div>
-										<p class="date-finish">26.10</p>
+										<p class="date-finish">27.10</p>
 									</div>
-									<p class="weekday-or-weekend">Выходной тур</p>
+									<p class="weekday-or-weekend">Будний тур</p>
 									<p class="time-finish">Обратно в 17:00</p>
 									<div class="tour-orgs"></div>
 								</div>
 							</div>
 						</div>
-						<div data-href="#link3" class="tour-item">
+						<div data-href="#link3" class="tour-item" data-id="3">
 							<div class="tour-right" style="background-image: url('i/tour-3.jpg');">
 								<div class="image-blur" style="background-image: url('i/tour-3.jpg');"></div>
 								<div class="orgs-mask orgs-padding">
@@ -258,7 +259,7 @@
 									</div>
 									<div class="b-center-block">
 										<div class="position-buttons">
-											<a href="#" class="b-btn b-btn-transparent">Забронировать тур</a>
+											<a href="#b-popup-tour" class="b-btn b-btn-transparent b-btn-tour-item fancy">Забронировать тур</a>
 										</div>
 									</div>
 									<div class="orgs-item"></div>
@@ -268,9 +269,9 @@
 								<div class="tour-left-content">
 									<p class="time-start">Выезд в 20:00</p>
 									<div class="tour-date">
-										<p class="date-start">23.10</p>
+										<p class="date-start">25.10</p>
 										<div class="tour-dash"></div>
-										<p class="date-finish">26.10</p>
+										<p class="date-finish">28.10</p>
 									</div>
 									<p class="weekday-or-weekend">Выходной тур</p>
 									<p class="time-finish">Обратно в 17:00</p>
@@ -278,7 +279,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-href="#link4" class="tour-item">
+						<div data-href="#link4" class="tour-item" data-id="4">
 							<div class="tour-right" style="background-image: url('i/tour-4.jpg');">
 								<div class="image-blur" style="background-image: url('i/tour-4.jpg');"></div>
 								<div class="orgs-mask orgs-padding">
@@ -295,7 +296,7 @@
 									</div>
 									<div class="b-center-block">
 										<div class="position-buttons">
-											<a href="#" class="b-btn b-btn-transparent">Забронировать тур</a>
+											<a href="#b-popup-tour" class="b-btn b-btn-transparent b-btn-tour-item fancy">Забронировать тур</a>
 										</div>
 									</div>
 									<div class="orgs-item"></div>
@@ -305,11 +306,11 @@
 								<div class="tour-left-content">
 									<p class="time-start">Выезд в 20:00</p>
 									<div class="tour-date">
-										<p class="date-start">23.10</p>
+										<p class="date-start">26.10</p>
 										<div class="tour-dash"></div>
-										<p class="date-finish">26.10</p>
+										<p class="date-finish">29.10</p>
 									</div>
-									<p class="weekday-or-weekend">Будний тур</p>
+									<p class="weekday-or-weekend">Выходной тур</p>
 									<p class="time-finish">Обратно в 17:00</p>
 									<div class="tour-orgs"></div>
 								</div>
@@ -356,7 +357,7 @@
 				<div class="video-item">
 					<div class="video-back" style="background-image: url('i/video-back.jpg');"></div>
 					<div class="b-block b-block-click">
-						<a href="#popup-video-1" class="fancy">
+						<a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 							<div class="b-block-video-cont">
 								<div class="video-circle">
 									<div class="video-play"></div>
@@ -369,7 +370,7 @@
 				<div class="video-item">
 					<div class="video-back" style="background-image: url('i/video-back.jpg');"></div>
 					<div class="b-block b-block-click">
-						<a href="#popup-video-2" class="fancy">
+						<a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 							<div class="b-block-video-cont">
 								<div class="video-circle">
 									<div class="video-play"></div>
@@ -382,7 +383,7 @@
 				<div class="video-item">
 					<div class="video-back" style="background-image: url('i/video-back.jpg');"></div>
 					<div class="b-block b-block-click">
-						<a href="#popup-video-3" class="fancy">
+						<a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 							<div class="b-block-video-cont">
 								<div class="video-circle">
 									<div class="video-play"></div>
@@ -395,7 +396,7 @@
 				<div class="video-item">
 					<div class="video-back" style="background-image: url('i/video-back.jpg');"></div>
 					<div class="b-block b-block-click">
-						<a href="#popup-video-4" class="fancy">
+						<a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 							<div class="b-block-video-cont">
 								<div class="video-circle">
 									<div class="video-play"></div>
@@ -607,6 +608,16 @@
 			<h3 class="b-title">Бронирование тура</h3>
 			<form id="b-popup-tour-form" method="post" action="kitsend.php" data-price="5000">
 				<div class="input-string">
+					<span class="required">Тур:&nbsp;</span>
+					<select name="tour" class="select-tour" required>
+						<option value="">Выберите тур</option>
+						<option value="1" data-price="4400">23.10-26.10 Будний</option>
+						<option value="2" data-price="5250">24.10-27.10 Будний</option>
+						<option value="3" data-price="6150">25.10-28.10 Выходной</option>
+						<option value="4" data-price="6550">26.10-29.10 Выходной</option>
+					</select>
+				</div>
+				<div class="input-string">
 					<span class="required">Ваше имя:&nbsp;</span>
 					<input type="text" name="name" placeholder="Афанасий" required>
 				</div>
@@ -660,22 +671,22 @@
 
 		<!--<a href="#" onclick="$.fancybox.close(); return false;" class="button button-blue">Закрыть</a>-->
 
-		<div id="popup-video-header">
+		<!--<div id="popup-video-header" class="b-popup-video">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
 		</div>
 
-		<div id="popup-video-1">
+		<div id="popup-video-1" class="b-popup-video">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
 		</div>
-		<div id="popup-video-2">
+		<div id="popup-video-2" class="b-popup-video">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
 		</div>
-		<div id="popup-video-3">
+		<div id="popup-video-3" class="b-popup-video">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
 		</div>
-		<div id="popup-video-4">
+		<div id="popup-video-4" class="b-popup-video">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/1HWdLbTi_zs" frameborder="0" allowfullscreen></iframe>
-		</div>
+		</div>-->
 	</div>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
@@ -698,6 +709,7 @@
 	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/typed.min.js"></script>
 	<script type="text/javascript" src="js/fastclick.js"></script>
+	<script type="text/javascript" src="js/chosen.jquery.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>

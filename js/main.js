@@ -564,6 +564,14 @@ $(document).ready(function(){
                     //скопировать инфу в popup
                     $("#b-popup-review").find(".b-review").remove();
                     $(this).parents(".b-review").clone().prependTo("#b-popup-review");
+                    //удалить копии фотографий Fancybox
+                    $gallery = $('#b-popup-review').find(".fancy-gallary");
+                    var galleryName = $gallery.eq(0).attr("data-fancybox");
+                    $gallery.attr("href", "#").removeAttr("data-fancybox");
+                    $('#b-popup-review .foto-with-tour.fancy-gallary').on('click', function(e){
+                        e.preventDefault();
+                        $('.foto-with-tour[data-fancybox="'+galleryName+'"]').click();
+                    });
                 });
 
                 $("body, html").animate({
@@ -630,12 +638,12 @@ $(document).ready(function(){
         $input.change();
     });
 
-    $('.persons-count').on('change input', function(){
-        if($(this).val() != ""){
+    $('.persons-count, .b-popup .select-tour').on('change input', function(){
+        if($('.persons-count').val() != "" && $('.b-popup .select-tour').val() != ""){
             var discount = 0;
-            var price = parseInt($('#b-popup-tour-form').attr("data-price"));
+            var price = parseInt($(".b-popup .select-tour option:selected").attr("data-price"));
             var persons = parseInt($('.persons-count').val());
-            if(parseInt($(this).val()) >= 4){
+            if(parseInt($('.persons-count').val()) >= 4){
                 discount = persons * price * 0.05;
                 $('.b-btn-discount').removeClass("hide");
             }else{
@@ -646,6 +654,7 @@ $(document).ready(function(){
             $('.total-cost').text(res + ' руб.');
         }else{
             $('.total-cost').text('0 руб.');
+            $('.b-btn-discount').addClass("hide");
         }
     });
 
@@ -671,13 +680,64 @@ $(document).ready(function(){
         $("#b-popup-review").find(".b-review").remove();
         $(this).parents(".b-review").clone().prependTo("#b-popup-review");
         //удалить копии фотографий Fancybox
-        $('#b-popup-review').find(".fancy-gallary").attr("data-fancybox", "");
+        $gallery = $('#b-popup-review').find(".fancy-gallary");
+        var galleryName = $gallery.eq(0).attr("data-fancybox");
+        $gallery.attr("href", "#").removeAttr("data-fancybox");
+        $('#b-popup-review .foto-with-tour.fancy-gallary').on('click', function(e){
+            e.preventDefault();
+            $('.foto-with-tour[data-fancybox="'+galleryName+'"]').click();
+        });
     });
+
+    /*$('.select-tour').chosen();
+
+    $(".b-btn-tour").click(function(){
+        var $this = $(this);
+        setTimeout(function(){
+            //$(".b-popup .sert").val( $this.parents(".b-sert-form").find(".sert").val() );
+            $(".select-tour").trigger("chosen:updated");
+        },100);
+    });*/
+
+    $('.select-tour').chosen({
+        width: '50%',
+        disable_search_threshold: 10000
+    });
+
+    /*$(".b-btn-tour").click(function(){
+        //var $this = $(this);
+        setTimeout(function(){
+            //$(".b-popup .select-tour").val( $this.parents(".b-sert-form").find(".sert").val() );
+            $(".b-popup .select-tour").trigger("chosen:updated");
+        },100);
+    })*/
 
     $("[data-fancybox]").fancybox({
         arrows : true,
-        //infobar : false,
+        animationEffect : "zoom",
+        transitionEffect : "zoom-in-out",
+        buttons : [
+            'slideShow',
+            'fullScreen',
+            'thumbs',
+            'download',
+        ],
     });
+
+    //клик по кнопке "Забронировать тур" в конкретном туре
+    $('.b-btn-tour-item').on('click', function(){
+        var tourID = $(this).parents(".tour-item").attr("data-id");
+        $(".b-popup .select-tour option[value=" + tourID + "]").prop('selected', true).trigger("chosen:updated");
+        $('.persons-count').change();
+    });
+
+    //клик по кнопке "Забронировать тур" в хедере
+    $('.b-btn-tour').on('click', function(){
+        $(".b-popup .select-tour option[value='']").prop('selected', true).trigger("chosen:updated");
+        $('.persons-count').change();
+    });
+
+
 
     /*$('.b-header').parallax({
         imageSrc: $('.b-header').attr("data-img"),

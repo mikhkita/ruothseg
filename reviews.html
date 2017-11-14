@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
+	<link rel="stylesheet" href="css/chosen.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
 	<link rel="stylesheet" href="css/slick-theme.css" type="text/css">
@@ -84,7 +85,7 @@
 
 	<div class="b-content b-reviews-content">
 		<div class="b-block">
-			<div class="b-half-button"><a href="#" class="b-btn b-btn-brown-header">Забронировать тур</a></div>
+			<div class="b-half-button"><a href="#b-popup-tour" class="b-btn b-btn-brown-header b-btn-tour fancy">Забронировать тур</a></div>
 			<div class="b-reviews">
 				<div class="b-review">
 					<div class="b-review-header clearfix">
@@ -115,7 +116,7 @@
 						<div class="b-review-right clearfix">
 							<h3 class="b-title">Валентин Псковитин</h3>
 							<div class="icon-foto-mini">
-								<a href="i/foto-1.jpg" data-fancybox="gallery-2" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+								<a href="i/foto-2.jpg" data-fancybox="gallery-2" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
 								<div style="display: none;">
 								   	<a class="fancy-gallary" data-fancybox="gallery-2" href="i/foto-2.jpg"></a>
 								    <a class="fancy-gallary" data-fancybox="gallery-2" href="i/foto-3.jpg"></a>
@@ -136,7 +137,7 @@
 						<div class="b-review-right clearfix">
 							<h3 class="b-title">Ирина Ануфриева</h3>
 							<div class="icon-foto-mini">
-								<a href="i/foto-1.jpg" data-fancybox="gallery-3" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+								<a href="i/foto-3.jpg" data-fancybox="gallery-3" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
 								<div style="display: none;">
 								   	<a class="fancy-gallary" data-fancybox="gallery-3" href="i/foto-2.jpg"></a>
 								    <a class="fancy-gallary" data-fancybox="gallery-3" href="i/foto-3.jpg"></a>
@@ -157,7 +158,7 @@
 						<div class="b-review-right clearfix">
 							<h3 class="b-title">Изабэлла Петрова</h3>
 							<div class="icon-foto-mini">
-								<a href="i/foto-1.jpg" data-fancybox="gallery-4" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+								<a href="i/foto-4.jpg" data-fancybox="gallery-4" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
 								<div style="display: none;">
 								   	<a class="fancy-gallary" data-fancybox="gallery-4" href="i/foto-2.jpg"></a>
 								    <a class="fancy-gallary" data-fancybox="gallery-4" href="i/foto-3.jpg"></a>
@@ -178,7 +179,7 @@
 						<div class="b-review-right clearfix">
 							<h3 class="b-title">Анжелика Петросян</h3>
 							<div class="icon-foto-mini">
-								<a href="i/foto-1.jpg" data-fancybox="gallery-5" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+								<a href="i/foto-5.jpg" data-fancybox="gallery-5" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
 								<div style="display: none;">
 								   	<a class="fancy-gallary" data-fancybox="gallery-5" href="i/foto-2.jpg"></a>
 								    <a class="fancy-gallary" data-fancybox="gallery-5" href="i/foto-3.jpg"></a>
@@ -199,7 +200,7 @@
 						<div class="b-review-right clearfix">
 							<h3 class="b-title">Корпетрика Варум</h3>
 							<div class="icon-foto-mini">
-								<a href="i/foto-1.jpg" data-fancybox="gallery-6" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
+								<a href="i/foto-6.jpg" data-fancybox="gallery-6" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
 								<div style="display: none;">
 								   	<a class="fancy-gallary" data-fancybox="gallery-6" href="i/foto-2.jpg"></a>
 								    <a class="fancy-gallary" data-fancybox="gallery-6" href="i/foto-3.jpg"></a>
@@ -346,6 +347,71 @@
 			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
 		</div>
 
+		<div class="b-popup" id="b-popup-tour">
+			<h3 class="b-title">Бронирование тура</h3>
+			<form id="b-popup-tour-form" method="post" action="kitsend.php" data-price="5000">
+				<div class="input-string">
+					<span class="required">Тур:&nbsp;</span>
+					<select name="tour" class="select-tour" required>
+						<option value="">Выберите тур</option>
+						<option value="1" data-price="4400">23.10-26.10 Будний</option>
+						<option value="2" data-price="5250">24.10-27.10 Будний</option>
+						<option value="3" data-price="6150">25.10-28.10 Выходной</option>
+						<option value="4" data-price="6550">26.10-29.10 Выходной</option>
+					</select>
+				</div>
+				<div class="input-string">
+					<span class="required">Ваше имя:&nbsp;</span>
+					<input type="text" name="name" placeholder="Афанасий" required>
+				</div>
+				<div class="input-string">
+					<span class="required">Ваш телефон:&nbsp;</span>
+					<input type="text" name="phone" placeholder="+7 (999) 999 99-99" oninput="this.value = this.value.replace(/\D/g, '')" required>
+				</div>
+				<div class="input-string">
+					<span class="required">Количество человек:&nbsp;</span>
+					<div class="input-persons">
+						<div class="icon-arrow-left reduce-count"></div>
+						<input type="text" class="persons-count" name="persons" maxlength="2" oninput="this.value = this.value.replace(/\D/g, '')" required value="1">
+						<div class="icon-arrow-right add-count"></div>
+					</div>
+				</div>
+				<div class="input-string">
+					<span>Ваш e-mail:</span>
+					<input type="text" name="mail" placeholder="info@geshtour.ru">
+				</div>
+				<div class="input-string total-cost-block">
+					<span>Общая стоимость:</span>
+					<span class="total-cost"></span>
+					<a class="b-btn-discount">скидка 5%</a>
+				</div>
+				<div class="position-buttons">
+					<a href="#" class="b-btn b-btn-brown ajax" onclick="$('#b-popup-tour-form').submit(); return false;">Забронировать тур</a>
+				</div>
+			</form>
+			
+			<p class="personal-info">Отправляя запрос, Вы подтверждаете <a href="#">согласие на обработку персональных данных</a></p>
+		</div>
+
+		<div class="b-popup" id="b-popup-call">
+			<h3 class="b-title">Обратный звонок</h3>
+			<form id="b-popup-call-form" method="post" action="kitsend.php">
+				<div class="input-string">
+					<span class="required">Ваше имя:&nbsp;</span>
+					<input type="text" name="name" placeholder="Афанасий" required>
+				</div>
+				<div class="input-string">
+					<span class="required">Ваш телефон:&nbsp;</span>
+					<input type="text" name="phone" placeholder="+7 (999) 999 99-99" oninput="this.value = this.value.replace(/\D/g, '')" required>
+				</div>
+				<div class="position-buttons">
+					<a href="#" class="b-btn b-btn-brown ajax" onclick="$('#b-popup-call-form').submit(); return false;">Заказать звонок</a>
+				</div>
+			</form>
+			
+			<p class="personal-info">Отправляя запрос, Вы подтверждаете <a href="#">согласие на обработку персональных данных</a></p>
+		</div>
+
 		<div class="b-popup" id="b-popup-review">
 			<!--<h3 class="b-title"></h3>-->
 			
@@ -373,6 +439,7 @@
 	<script type="text/javascript" src="js/classie.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/fastclick.js"></script>
+	<script type="text/javascript" src="js/chosen.jquery.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
