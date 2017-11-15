@@ -184,6 +184,69 @@ $(document).ready(function(){
         }
 
         $('.call-bubble').addClass("bubble-hide");
+
+        //выравнивание фото на странице "Проезд"
+        if($('.passage-grid-cont').length){
+            if(!isMobile){
+
+                if($('.passage-slider').hasClass("slick-initialized")){
+                    $('.passage-slider').slick('unslick');
+                }
+
+                //веруть столбцы (если были удалены до этого)
+                if($('.passage-grid-cont .passage-grid-column').length === 0){
+                    var columns = [2, 3, 3];
+                    columns.forEach(function(item, i, arr) {
+                        $(':not(.passage-grid-column)>.passage-grid:lt('+item+')').wrapAll('<div class="passage-grid-column">');
+                    });
+                }
+
+                //расчёт высоты у фото
+                $('.passage-grid').each(function(){
+                    $(this).css("height", $(this).attr("data-ratio") * $(this).width());
+                });
+
+                //высота первого столбца
+                var heightColumn = $('.passage-grid-column:first').height(),
+                    margin = parseInt($('.passage-grid').css("margin-bottom").replace(/\D/g, ''));
+
+                //выравнивание последнего фото в каждом столбце
+                $('.passage-grid-column:not(:eq(0))').each(function(){
+                    var heightTop = 0;
+                    //найти высоту без последнего фото
+                    $(this).children('.passage-grid:not(:last)').each(function(){
+                        heightTop += $(this).height() + margin;
+                    });
+
+                    $(this).children(".passage-grid:last").css("height", heightColumn - heightTop);
+                });
+            }else{
+                //удалить столбцы (если они есть на странице)
+                if($('.passage-grid-cont .passage-grid-column').length){
+                    $items = $(".passage-grid");
+                    $('.passage-grid-cont').prepend($items);
+                    $('.passage-grid-column').remove();
+
+                    $('.passage-grid').each(function(){
+                        $(this).css("height", $(this).attr("data-ratio") * $(this).width());
+                    });
+                }
+
+                if(!$('.passage-slider').hasClass("slick-initialized")){
+                    $('.passage-slider').not('.slick-initialized').slick({
+                        dots: false,
+                        arrows: false,
+                        infinite: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        speed: 600,
+                        //autoplay: true,
+                        autoplaySpeed: 3000,
+                        adaptiveHeight: true,
+                    }).addClass("slider-on");
+                }
+            }
+        }
     }
 
     $(window).resize(resize);
@@ -718,8 +781,6 @@ $(document).ready(function(){
         $(".b-popup .select-tour option[value='']").prop('selected', true).trigger("chosen:updated");
         $('.persons-count').change();
     });
-
-
 
     /*$('.b-header').parallax({
         imageSrc: $('.b-header').attr("data-img"),

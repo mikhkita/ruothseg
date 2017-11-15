@@ -332,6 +332,14 @@ div.b-footer-column:last-child{
 	    margin-right: 0;
 	}
 
+	.passage-grid-column .passage-grid{
+		margin-bottom: 16px;
+	}
+
+	.passage-grid-column{
+		margin-right: 12px;
+	}
+
 }
 
 /*@media screen and (max-width: 767px){
