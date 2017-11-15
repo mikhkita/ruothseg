@@ -411,7 +411,7 @@ $(document).ready(function(){
         });
     }
 
-    if($('.passage-grid').length){
+    /*if($('.passage-grid').length){
         $('.passage-grid').isotope({
             //percentPosition: true,
             itemSelector: '.grid-item',
@@ -419,7 +419,7 @@ $(document).ready(function(){
                 columnWidth: '.grid-item'
             }
         });
-    }
+    }*/
 
     var fotoCount = 10,
         fotoLoaded = 0;
@@ -650,7 +650,7 @@ $(document).ready(function(){
                 $('.b-btn-discount').addClass("hide");
             }
             var res = price * persons - discount;
-            res = String(res).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+            res = String(res.toFixed(0)).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
             $('.total-cost').text(res + ' руб.');
         }else{
             $('.total-cost').text('0 руб.');
@@ -689,28 +689,10 @@ $(document).ready(function(){
         });
     });
 
-    /*$('.select-tour').chosen();
-
-    $(".b-btn-tour").click(function(){
-        var $this = $(this);
-        setTimeout(function(){
-            //$(".b-popup .sert").val( $this.parents(".b-sert-form").find(".sert").val() );
-            $(".select-tour").trigger("chosen:updated");
-        },100);
-    });*/
-
     $('.select-tour').chosen({
         width: '50%',
         disable_search_threshold: 10000
     });
-
-    /*$(".b-btn-tour").click(function(){
-        //var $this = $(this);
-        setTimeout(function(){
-            //$(".b-popup .select-tour").val( $this.parents(".b-sert-form").find(".sert").val() );
-            $(".b-popup .select-tour").trigger("chosen:updated");
-        },100);
-    })*/
 
     $("[data-fancybox]").fancybox({
         arrows : true,
