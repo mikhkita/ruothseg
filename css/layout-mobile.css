@@ -583,7 +583,7 @@ h3.b-title{
 			margin-bottom: 10px;
 		}
 
-		.b-footer-down p{
+		.b-footer-down .b-footer-down-text{
 			width: 47%;
 		}
 
@@ -814,7 +814,7 @@ h3.b-title{
 		padding-top: 40px;
 	}
 
-	.b-footer-down p{
+	.b-footer-down .b-footer-down-text{
 		width: 100%;
 	}
 
