@@ -1418,9 +1418,17 @@ h3.b-title{
 				}
 
 		.b-footer .b-footer-address{
-			text-align: right;
+			text-align: left;
 			line-height: 26px;
 		}
+
+	.b-footer-column .phone{
+		display: inline;
+	}
+
+	.b-footer-column .icon-phone{
+		margin-bottom: 14px;
+	}
 
 	.social-item{
 		margin-right: 15px;
@@ -1497,7 +1505,7 @@ h3.b-title{
 		position: relative;
 	}
 
-	.b-footer-down p, .develop-block{
+	.b-footer-down .b-footer-down-text, .develop-block{
 		display: inline-block;
 	}
 
@@ -2258,7 +2266,18 @@ h3.b-title{
 		margin-right: 0;
 	}
 
+	.passage-grid-column .passage-grid{
+		margin-bottom: 22px;
+	}
+
+	.passage-grid-column .passage-grid:last-child{
+		margin-bottom: 0;
+	}
+
 .passage-grid{
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
 	height: 300px;
 }
