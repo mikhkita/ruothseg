@@ -336,6 +336,15 @@ div.b-footer-column:last-child{
 		margin-right: 12px;
 	}
 
+	.b-foto-block{
+		margin-left: -8px;
+	}
+
+	.grid-item{
+		width: calc(100%/3 - 16px);
+		margin: 8px;
+	}
+
 }
 
 /*@media screen and (max-width: 767px){

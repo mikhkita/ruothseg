@@ -534,7 +534,8 @@ h3.b-title{
 	/*------------*/
 
 .grid-item{
-	width: 100%;
+	width: calc(100%/2 - 16px);
+	margin: 8px;
 }
 
 .b-header-buttons{
@@ -991,6 +992,12 @@ h3.b-title{
 				width: 100%;
 				padding: 0 0 10px 0;
 			}
+
+	.grid-item {
+	    width: 100%;
+	    margin: 0px;
+	    margin-bottom: 12px;
+	}
 
 }
 
