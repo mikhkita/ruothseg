@@ -181,18 +181,14 @@ div.b-footer-column:last-child{
 	margin-right: 0;
 }
 
-.grid-item{
-	width: 50%;
-}
-
 @media screen and (max-width: 1095px){
 
 	.b-top .burger-menu{
 		display: block;
 	}
 
-	.b-btn-call{
-		display: block;
+	.b-mobile-call{
+		display: inline-block;
 	}
 
 	.b-menu-cont{
