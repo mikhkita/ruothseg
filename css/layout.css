@@ -793,7 +793,7 @@ h3.b-title{
 				}
 
 				.orgs-padding{
-					padding: 14px 57px;
+					padding: 14px 18px;
 				}
 
 				.b-content .orgs-padding{
@@ -853,6 +853,8 @@ h3.b-title{
 				}
 
 				.orgs-block{
+					height: 80px;
+					overflow: hidden;
 					text-align: center;
 					opacity: 0;
 					margin-bottom: 23px;
@@ -865,11 +867,11 @@ h3.b-title{
 
 					.orgs-item{
 						display: inline-block;
-						width: 105px;
+						width: 90px;
 					}
 						.orgs-item-img{
-							margin: 0 auto;
 							width: 50px;
+							margin: 0 auto;
 						    display: block;
 						    height: 50px;
 						    border-radius: 100px;
@@ -1802,14 +1804,21 @@ h3.b-title{
 			text-transform: uppercase;
 		}
 
+	.bubble-wrap{
+		position: relative;
+		display: inline-block;
+	}
+
 	.b-mobile-call{
 		position: relative;
 		display: inline-block;
 		margin-right: 26px;
     	margin-top: 13px;
+    	float: right;
+    	text-align: center;
 	}
 
-	.b-btn-call{
+	.b-mobile-call{
 		display: none;
 	}
 
@@ -2215,14 +2224,24 @@ h3.b-title{
 }
 
 	.grid-item{
-		width: 33%;
+		float: left;
+		width: calc(100%/3 - 24px);
 		display: inline-block;
+		margin: 12px;
+	}
+
+	.grid-item img{
+		float: left;
+		display: block;
+		width: 100%;
+		height: auto;
 	}
 
 .b-foto-block{
+	margin-left: -10px;
 	position: relative;
 	min-height: 400px;
-	width: 100%;
+	width: calc(100% + 20px);
 }
 
 .preload-block{

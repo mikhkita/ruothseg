@@ -240,7 +240,7 @@ $(document).ready(function(){
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         speed: 600,
-                        //autoplay: true,
+                        autoplay: true,
                         autoplaySpeed: 3000,
                         adaptiveHeight: true,
                     }).addClass("slider-on");
@@ -305,7 +305,7 @@ $(document).ready(function(){
         nextArrow: '<div class="b-block"><div class="icon-arrow-right b-video-arrows" aria-hidden="true"></div></div>',
         prevArrow: '<div class="b-block"><div class="icon-arrow-left b-video-arrows" aria-hidden="true"></div></div>',
         speed: 800,
-        //autoplay: true,
+        autoplay: true,
         autoplaySpeed: 3000,
         adaptiveHeight: true,
         responsive: [
@@ -331,7 +331,7 @@ $(document).ready(function(){
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 600,
-        //autoplay: true,
+        autoplay: true,
         autoplaySpeed: 3000,
         adaptiveHeight: true,
         responsive: [
@@ -513,6 +513,7 @@ $(document).ready(function(){
     var delay = 1;
     function showStartFoto(){
         $grid = $('.foto-grid').isotope({
+            percentPosition: true,
             itemSelector: '.grid-item.loaded',
             masonry: {
                 columnWidth: '.grid-item'
