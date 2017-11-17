@@ -1214,11 +1214,18 @@ h3.b-title{
 			    overflow: hidden;
 			}
 
-			.video-list .video-item.slick-active .video-back{
+			.video-list .video-item.slick-active .video-back.move-right{
 				animation: move-right 20s ease-in-out infinite;
 				-moz-animation: move-right 20s ease-in-out infinite;
 				-webkit-animation: move-right 20s ease-in-out infinite;
 			 	-o-animation: move-right 20s ease-in-out infinite;
+			}
+
+			.video-list .video-item.slick-active .video-back.zoom-in{
+				animation: zoom-in 20s ease-in-out infinite;
+				-moz-animation: zoom-in 20s ease-in-out infinite;
+				-webkit-animation: zoom-in 20s ease-in-out infinite;
+			 	-o-animation: zoom-in 20s ease-in-out infinite;
 			}
 
 			.video-item .b-title{
