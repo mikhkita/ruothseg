@@ -1147,62 +1147,6 @@ h3.b-title{
 				}
 			}
 
-			@-webkit-keyframes zoom-out {
-				0% {
-					-webkit-transform: scale(1.1);
-				}
-				50%{
-					-webkit-transform: scale(1);
-				}
-				100%{
-					-webkit-transform: scale(1.1);
-				}
-			}
-			@-moz-keyframes zoom-out {
-				0% {
-					-moz-transform: scale(1.1);
-				}
-				50%{
-					-moz-transform: scale(1);
-				}
-				100%{
-					-moz-transform: scale(1.1);
-				}
-			}
-			@-ms-keyframes zoom-out {
-				0% {
-					-ms-transform: scale(1.1);
-				}
-				50%{
-					-ms-transform: scale(1);
-				}
-				100%{
-					-ms-transform: scale(1.1);
-				}
-			}
-			@-o-keyframes zoom-out {
-				0% {
-					-o-transform: scale(1.1);
-				}
-				50%{
-					-o-transform: scale(1);
-				}
-				100%{
-					-o-transform: scale(1.1);
-				}
-			}
-			@keyframes zoom-out {
-				0% {
-					transform: scale(1.1);
-				}
-				50%{
-					transform: scale(1);
-				}
-				100%{
-					transform: scale(1.1);
-				}
-			}
-
 			.video-list .video-item .video-back{
 				height: 650px;
 				width: 110%;
@@ -1214,11 +1158,18 @@ h3.b-title{
 			    overflow: hidden;
 			}
 
-			.video-list .video-item.slick-active .video-back{
+			.video-list .video-item.slick-active .video-back.move-right{
 				animation: move-right 20s ease-in-out infinite;
 				-moz-animation: move-right 20s ease-in-out infinite;
 				-webkit-animation: move-right 20s ease-in-out infinite;
 			 	-o-animation: move-right 20s ease-in-out infinite;
+			}
+
+			.video-list .video-item.slick-active .video-back.zoom-in{
+				animation: zoom-in 20s ease-in-out infinite;
+				-moz-animation: zoom-in 20s ease-in-out infinite;
+				-webkit-animation: zoom-in 20s ease-in-out infinite;
+			 	-o-animation: zoom-in 20s ease-in-out infinite;
 			}
 
 			.video-item .b-title{
@@ -1441,6 +1392,10 @@ h3.b-title{
 		.b-footer .b-footer-address{
 			text-align: right;
 			line-height: 26px;
+		}
+
+		.b-footer .b-footer-address p{
+			text-align: right;
 		}
 
 	.b-footer-column .phone{
@@ -1740,7 +1695,7 @@ h3.b-title{
 /*-------------Header-------------*/
 
 .b-header{
-	background-image: url('../i/header-back.jpg');
+	background-image: url('../i/header-main-back-blur.jpg');
 	background-position: 50% 0;
     background-repeat: no-repeat;
     height: 270px;

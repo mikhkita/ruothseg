@@ -487,28 +487,54 @@ $(document).ready(function(){
     var fotoCount = 10,
         fotoLoaded = 0;
     //загрузить первые *fotoCount* элементов
-    $('.foto-grid .grid-item').slice(0, fotoCount).each(function(){
-        if( isRetina || isMobile || isSmallTablet ){
-            src = $(this).children().attr("data-retina-image");
-        }else{
-            src = $(this).children().attr("data-image");
-        }
-        var img = new Image();
-        img.src = src;
-        img.child = $(this).children();
-        img.onload = function(){
-            this.child.attr("src", this.src);
-            this.child.parent().addClass("loaded");
-            fotoLoaded++;
-            if(fotoLoaded >= fotoCount){
-                //показать первые *fotoCount* элементов
-                showStartFoto();
-                //Грузить остальные
-                showNextFoto();
+    var fotoInPage = $('.foto-grid .grid-item').length;
+    if($('.foto-grid .grid-item').length <= fotoCount){
+        $('.foto-grid .grid-item').each(function(){
+            console.log("*");
+            if( isRetina || isMobile || isSmallTablet ){
+                src = $(this).children().attr("data-retina-image");
+            }else{
+                src = $(this).children().attr("data-image");
             }
-        }
+            var img = new Image();
+            img.src = src;
+            img.child = $(this).children();
+            img.onload = function(){
+                this.child.attr("src", this.src);
+                this.child.parent().addClass("loaded");
+                fotoLoaded++;
+                if(fotoLoaded === fotoInPage){
+                    //показать первые *fotoCount* элементов
+                    showStartFoto();
+                    $('.preload-block').removeClass("preload-block-static").addClass('foto-hide');
+                }
+            }
 
-    });
+        });
+    }else{
+        $('.foto-grid .grid-item').slice(0, fotoCount).each(function(){
+            if( isRetina || isMobile || isSmallTablet ){
+                src = $(this).children().attr("data-retina-image");
+            }else{
+                src = $(this).children().attr("data-image");
+            }
+            var img = new Image();
+            img.src = src;
+            img.child = $(this).children();
+            img.onload = function(){
+                this.child.attr("src", this.src);
+                this.child.parent().addClass("loaded");
+                fotoLoaded++;
+                if(fotoLoaded >= fotoCount){
+                    //показать первые *fotoCount* элементов
+                    showStartFoto();
+                    //Грузить остальные
+                    showNextFoto();
+                }
+            }
+
+        });
+    }
 
     var delay = 1;
     function showStartFoto(){
