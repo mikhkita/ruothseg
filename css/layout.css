@@ -1443,6 +1443,10 @@ h3.b-title{
 			line-height: 26px;
 		}
 
+		.b-footer .b-footer-address p{
+			text-align: right;
+		}
+
 	.b-footer-column .phone{
 		display: inline;
 	}
