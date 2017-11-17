@@ -440,6 +440,10 @@ h3.b-title{
 		    margin-bottom: 6px;
 		}
 
+			.icon-phone div{
+				display: inline-block;
+			}
+
 		.icon-phone:before{
 			content: "\e907";
 		  	font-size: 22px;
@@ -1435,7 +1439,7 @@ h3.b-title{
 				}
 
 		.b-footer .b-footer-address{
-			text-align: left;
+			text-align: right;
 			line-height: 26px;
 		}
 
