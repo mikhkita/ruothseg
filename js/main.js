@@ -334,8 +334,8 @@ $(document).ready(function(){
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 600,
-        autoplay: true,
-        autoplaySpeed: 3000,
+        //autoplay: true,
+        //autoplaySpeed: 3000,
         adaptiveHeight: true,
         responsive: [
             {
