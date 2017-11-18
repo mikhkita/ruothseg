@@ -297,6 +297,9 @@ $(document).ready(function(){
         });
     }
 
+    if( typeof autosize == "function" )
+        autosize(document.querySelectorAll('textarea'));
+
     new FastClick(document.body);
 
     $('.video-slider').slick({
@@ -436,7 +439,7 @@ $(document).ready(function(){
     function moveLine($el){
         $(".b-menu-cont .b-line").addClass("show").css({
             "left" : $el.position().left + parseInt($el.css("padding-left").replace(/\D+/g,"")),
-            "width" : $el.width()
+            "width" : $el.children().width()
         });
     }
 
@@ -488,9 +491,8 @@ $(document).ready(function(){
         fotoLoaded = 0;
     //загрузить первые *fotoCount* элементов
     var fotoInPage = $('.foto-grid .grid-item').length;
-    if($('.foto-grid .grid-item').length <= fotoCount){
+    if(fotoInPage <= fotoCount){
         $('.foto-grid .grid-item').each(function(){
-            console.log("*");
             if( isRetina || isMobile || isSmallTablet ){
                 src = $(this).children().attr("data-retina-image");
             }else{

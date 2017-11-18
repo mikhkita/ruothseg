@@ -366,7 +366,6 @@ h3.b-title{
 }
 
 .header-back{
-	max-width: 1960px;
 	margin: 0 auto;
 	background-image: url(../i/header-main-back.jpg);
 	background-attachment: fixed;
@@ -1696,7 +1695,7 @@ h3.b-title{
 
 .b-header{
 	background-image: url('../i/header-main-back-blur.jpg');
-	background-position: 50% 0;
+	background-position: 17% -325px;
     background-repeat: no-repeat;
     height: 270px;
     background-attachment: fixed;
@@ -2343,6 +2342,7 @@ h3.b-title{
 	    font-size: 20px;
 	    width: auto;
 	    height: auto;
+	    background-color: transparent;
 	}
 
 	.fancybox-close-small:hover:after {
@@ -2376,13 +2376,16 @@ h3.b-title{
 			}
 
 			.input-string input,
-			.input-string select{
+			.input-string select,
+			.b-popup textarea{
 				display: inline-block;
+				float: right;
 				width: 50%;
 				border: none;
 				color: #393939;
 				background-color: transparent;
 				font-size: 16px;
+				font-family: 'RobotoRegular';
 			    vertical-align: top;
 			    line-height: 24px;
 			    margin-top: 4px;
@@ -2391,8 +2394,15 @@ h3.b-title{
 			    padding-bottom: 5px;
 			}
 
+			.b-popup textarea{
+				float: left;
+				width: 100%;
+				resize: none;
+			}
+
 			.chosen-container{
 				width: 50%;
+				float: right;
 				border: none;
 				color: #393939;
 				background-color: transparent;
@@ -2439,6 +2449,7 @@ h3.b-title{
 			}
 
 			.input-persons{
+				float: right;
 				display: inline-block;
 				position: relative;
 				width: 50%;
@@ -2506,7 +2517,7 @@ h3.b-title{
 		}
 
 		.b-popup .personal-info a:hover{
-			border-bottom: 0;
+			border-bottom: 1px solid transparent;
 		}
 
 	.b-popup .b-btn{
@@ -2546,6 +2557,23 @@ h3.b-title{
 			#b-popup-review .b-btn-read-more{
 				display: none;
 			}
+
+#b-popup-write h3{
+	margin-bottom: 16px;
+}
+
+#b-popup-write p:first-of-type{
+	line-height: 26px;
+	font-size: 14px;
+}
+
+#b-popup-write form{
+	margin-top: 20px;
+}
+
+#b-popup-write textarea{
+	margin-bottom: 35px;
+}
 
 .b-popup-video{
 	padding: 40px;

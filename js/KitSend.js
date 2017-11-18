@@ -117,6 +117,8 @@ $(document).ready(function(){
 				if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
 					customHandlers[$this.attr("data-afterClose")]($this);
 				}
+				$popup.find("label.error").remove();
+				$popup.find(".error").removeClass("error");
 			}
 		});
 	});
