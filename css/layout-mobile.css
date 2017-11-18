@@ -121,7 +121,7 @@ h3.b-title{
 	max-width: calc(100% - 48px);
 }
 
-.b-content .b-btn-brown-header{
+.b-header .b-btn-brown-header{
 	padding: 18px 0;
 }
 
@@ -408,7 +408,7 @@ h3.b-title{
 			}
 			
 	.b-content.b-tour-content .b-block {
-	    padding: 27px 0px 26px;
+	    padding: 58px 0px 26px;
 	}
 
 .b-block-book-it{
@@ -691,7 +691,7 @@ h3.b-title{
 }
 
 .b-half-button{
-	margin-top: -57px;
+	margin-top: 41px;
 }
 
 .b-popup{
