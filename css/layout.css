@@ -2182,11 +2182,29 @@ h3.b-title{
 		margin: 12px;
 	}
 
+	.grid-item:hover img{
+		-webkit-transform: scale(1.07);
+		   -moz-transform: scale(1.07);
+		    -ms-transform: scale(1.07);
+		   	 -o-transform: scale(1.07);
+				transform: scale(1.07);
+	}
+
 	.grid-item img{
 		float: left;
 		display: block;
 		width: 100%;
 		height: auto;
+		-webkit-transition: transform 150ms ease-out;
+		-moz-transition: transform 150ms ease-out;
+		-ms-transition: transform 150ms ease-out;
+		-o-transition: transform 150ms ease-out;
+		transition: transform 150ms ease-out;
+		-webkit-transform: scale(1);
+		   -moz-transform: scale(1);
+		    -ms-transform: scale(1);
+		   	 -o-transform: scale(1);
+				transform: scale(1);
 	}
 
 .b-foto-block{
@@ -2219,20 +2237,22 @@ h3.b-title{
 	height: auto;
 }
 
-.foto-hidden{
+.grid-hidden{
 	display: none;
 }
 
 .foto-hide{
 	opacity: 0;
+	visibility: hidden;
 }
 
 .foto-show{
 	opacity: 1;
-	transition: opacity 700ms ease-out;
-    -webkit-transition: opacity 700ms ease-out; /** Chrome & Safari **/
-    -moz-transition: opacity 700ms ease-out; /** Firefox **/
-    -o-transition: opacity 700ms ease-out; /** Opera **/
+	visibility: visible;
+	transition: opacity 700ms ease-out, visibility 700ms ease-out;
+    -webkit-transition: opacity 700ms ease-out, visibility 700ms ease-out; /** Chrome & Safari **/
+    -moz-transition: opacity 700ms ease-out, visibility 700ms ease-out; /** Firefox **/
+    -o-transition: opacity 700ms ease-out, visibility 700ms ease-out; /** Opera **/
 }
 
 .outer-nav.vertical a.nav-touch{

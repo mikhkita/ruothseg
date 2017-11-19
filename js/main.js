@@ -493,11 +493,7 @@ $(document).ready(function(){
     var fotoInPage = $('.foto-grid .grid-item').length;
     if(fotoInPage <= fotoCount){
         $('.foto-grid .grid-item').each(function(){
-            if( isRetina || isMobile || isSmallTablet ){
-                src = $(this).children().attr("data-retina-image");
-            }else{
-                src = $(this).children().attr("data-image");
-            }
+            src = $(this).children().attr("src");
             var img = new Image();
             img.src = src;
             img.child = $(this).children();
@@ -515,11 +511,7 @@ $(document).ready(function(){
         });
     }else{
         $('.foto-grid .grid-item').slice(0, fotoCount).each(function(){
-            if( isRetina || isMobile || isSmallTablet ){
-                src = $(this).children().attr("data-retina-image");
-            }else{
-                src = $(this).children().attr("data-image");
-            }
+            src = $(this).children().attr("src");
             var img = new Image();
             img.src = src;
             img.child = $(this).children();
@@ -540,6 +532,7 @@ $(document).ready(function(){
 
     var delay = 1;
     function showStartFoto(){
+        $('.foto-grid').removeClass("grid-hidden");
         $grid = $('.foto-grid').isotope({
             percentPosition: true,
             itemSelector: '.grid-item.loaded',
@@ -563,11 +556,7 @@ $(document).ready(function(){
     function showNextFoto(){
         setTimeout(function(){
             $('.grid-item.foto-hide').each(function(){
-            if( isRetina || isMobile || isSmallTablet ){
-                src = $(this).children().attr("data-retina-image");
-            }else{
-                src = $(this).children().attr("data-image");
-            }
+            src = $(this).children().attr("src");
             var img = new Image();
             img.src = src;
             img.child = $(this).children();
