@@ -2282,6 +2282,7 @@ h3.b-title{
 
 .passage-grid{
 	background-position: 50% 50%;
+	display: block;
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
