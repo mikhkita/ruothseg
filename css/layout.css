@@ -2265,7 +2265,7 @@ h3.b-title{
 .passage-grid-column{
 	margin-right: 18px;
 	display: inline-block;
-	width: calc(100%/3 - 16px);
+	width: calc(100%/3 - 21px);
 }
 
 	.passage-grid-column:last-child{
@@ -2286,6 +2286,31 @@ h3.b-title{
 	background-size: cover;
 	width: 100%;
 }
+
+/*
+.passage-grid-column{
+	margin-right: 18px;
+	display: inline-block;
+	width: calc(100%/3 - 16px);
+}
+
+	.passage-grid-column:last-child{
+		margin-right: 0;
+	}
+
+	.passage-grid-column .passage-grid{
+		margin-bottom: 22px;
+	}
+
+	.passage-grid-column .passage-grid:last-child{
+		margin-bottom: 0;
+	}
+
+.passage-grid{
+	width: 100%;
+	display: block;
+}
+*/
 
 /*------Popup------*/
 
