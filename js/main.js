@@ -362,13 +362,25 @@ $(document).ready(function(){
                 $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active");
             },10 );
         }
+        //deleteGallery();
+    });
+
+    $('.review-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
         deleteGallery();
     });
 
     //Удалить галереи в копиях элементов
     function deleteGallery(){
-        $('.slick-cloned').each(function(){
+        /*$('.slick-cloned').each(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
+        });*/
+        $('.slick-slide').each(function(){
+            $(this).find(".fancy-gallary").attr("data-fancybox", "");
+        });
+        $('.slick-active').each(function(){
+            console.log("++++",$(this));
+            var gallary = $(this).find(".fancy-gallary").attr("data-gallery");
+            $(this).find(".fancy-gallary").attr("data-fancybox", gallary);
         });
     }
 
