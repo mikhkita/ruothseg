@@ -98,7 +98,7 @@ h2.b-title{
 h3.b-title{
 	font-size: 20px;
 	margin-bottom: 5px;
-	line-height: 26px;
+	line-height: 32px;
 }
 
 .b-wide-block {
@@ -727,17 +727,18 @@ h3.b-title{
 }
 
 .b-hotel-text {
-    padding: 35px;
+    padding: 24px;
     width: 100%;
 }
 
 .b-hotel-text p {
     font-size: 18px;
+    line-height: 30px;
 }
 
 .b-hotel h3 {
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .b-residence .advantages-list li {
@@ -748,7 +749,7 @@ h3.b-title{
 	.b-residence .advantages-list li:nth-last-of-type(-n+2){
 	    margin-bottom: 0;
 	}
-
+	
 @media screen and (max-width: 665px){
 	.b-review {
 	    width: calc(100% - 17px);
@@ -934,11 +935,11 @@ h3.b-title{
 
 	.b-residence .advantages-list li {
 	    width: 100%;
-	    margin-bottom: 25px;
+	    margin-bottom: 32px;
 	}
 
 	.b-residence .advantages-list li:nth-last-of-type(-n+2){
-	    margin-bottom: 25px;
+	    margin-bottom: 32px;
 	}
 
 	.b-residence .advantages-list li:last-child{
@@ -950,7 +951,7 @@ h3.b-title{
 		}
 
 	.b-residence .advantage-item{
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
 }
 
