@@ -236,14 +236,6 @@ div.b-footer-column:last-child{
 	    margin-bottom: 0;
 	}
 
-		.b-residence .advantages-list li p {
-		    width: 78%;
-		}
-
-		.b-residence div.icon-bar + p {
-		    width: 72%;
-		}
-
 	.b-footer .b-footer-column:nth-child(2){
 	    display: none;
 	}

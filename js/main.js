@@ -443,6 +443,29 @@ $(document).ready(function(){
         }
     });
 
+    $('.team-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows hide" aria-hidden="true"></div></div>',
+        infinite: true,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        speed: 600,
+        //autoplay: true,
+        //autoplaySpeed: 3000,
+        responsive: [
+            {
+              breakpoint: 900,
+              settings: {
+                //slidesToShow: 1,
+                //slidesToScroll: 1
+              }
+            }
+        ]
+    });
+
     var menuTimer = null;
     $(".b-menu-cont .b-menu > li > a").hover(function(){
         clearTimeout(menuTimer);

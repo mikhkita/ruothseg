@@ -604,15 +604,13 @@ h3.b-title{
 			width: 33.3%;
 			margin-bottom: 46px;
 			line-height: 32px;
+			text-align: center;
 		}
 
 		.advantages-list li:nth-last-child(-n+3){
 			margin-bottom: 0;
 		}
-			.advantages-list li p{
-				width: 80%;
-				margin: 0 auto;
-				text-align: center;
+			.advantages-list li .advantage-text{
 				font-size: 22px;
 				color: #4a4a4a;
 			}
@@ -1288,7 +1286,6 @@ h3.b-title{
 				.b-img-cont.b-img-red{
 					background-image: linear-gradient(135deg, #ffa9a9 0%, #dd2424 100%);
 				}
-
 
 			.b-img{
 			    background-size: cover;
@@ -2179,8 +2176,9 @@ h3.b-title{
 		}
 
 		.b-tour li a{
+			width: 100%;
 			display: inline-block;
-			color: #393939;;
+			color: #393939;
 			font-family: 'RobotoRegular';
 			font-size: 20px;
 			border: 2px solid transparent;
@@ -2382,14 +2380,11 @@ h3.b-title{
 		margin-bottom: 0;
 	}
 
-		.b-residence .advantages-list li p{
-			width: 88%;
+		.b-residence .advantages-list li .advantage-text{
+			margin: 0 auto;
+			width: 90%;
 			font-size: 20px;
 			line-height: 32px;
-		}
-
-		.b-residence div.icon-bar + p{
-			width: 80%;
 		}
 
 .b-hotel-foto{
@@ -2439,6 +2434,36 @@ h3.b-title{
 			margin-bottom: 23px;
 			width: calc(32% - 24px);
 			height: 241px;
+		}
+
+/*-------О нас-------*/
+
+.b-about{
+
+}
+	.b-team-list{
+		text-align: center;
+	}
+		.b-team-list li{
+			display: inline-block;
+			margin: 0 15px;
+		}
+
+		.b-team-img-cont{
+			padding: 6px;
+		    border-radius: 100px;
+		    width: 99px;
+		    height: 99px;
+	    	display: inline-block;
+		}
+
+		.b-team-img-cont .b-img{
+		    width: 87px;
+		    height: 87px;
+		}
+
+		.b-team-list li.active .b-img-brown{
+			background-image: linear-gradient(157deg, #ac8484 0%, #744d4d 100%);
 		}
 
 /*------Popup------*/

@@ -749,14 +749,6 @@ h3.b-title{
 	    margin-bottom: 0;
 	}
 
-		.b-residence .advantages-list li p {
-		    width: 78%;
-		}
-
-		.b-residence div.icon-bar + p {
-		    width: 72%;
-		}
-
 @media screen and (max-width: 665px){
 	.b-review {
 	    width: calc(100% - 17px);
