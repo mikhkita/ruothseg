@@ -163,10 +163,23 @@ $(document).ready(function(){
 
                 $this.replaceWith($tag);
             });
+            if(!$('.b-hotel-foto-list').hasClass("slick-initialized")){
+                $('.b-hotel-foto-list').not('.slick-initialized').slick({
+                    dots: false,
+                    arrows: false,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    speed: 600,
+                }).addClass("slider-on");
+            }
 
         }else{
             if($('.advantages-slider').hasClass("slick-initialized")){
                 $('.advantages-slider').slick('unslick');
+            }
+            if($('.b-hotel-foto-list').hasClass("slick-initialized")){
+                $('.b-hotel-foto-list').slick('unslick');
             }
             $('a.tour-item').each(function() {
                 $this = $(this);

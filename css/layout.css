@@ -354,6 +354,15 @@ h3.b-title{
 	text-align: center;
 }
 
+.b-table{
+	display: table;
+}
+
+.b-table-cell{
+	display: table-cell;
+	vertical-align: middle;
+}
+
 /*-------------Главная-------------*/
 
 .b-main-header{
@@ -640,6 +649,9 @@ h3.b-title{
 		}
 	.icon-lift{
 		background-image: linear-gradient(135deg, #1bedff 0%, #2a5da9 100%, #2e3192 100%);
+	}
+	.b-residence .icon-lift{
+		background-image: linear-gradient(135deg, #d4ed23 0%, #34a53d 100%);
 	}	
 		.icon-lift:before{
 			content: "\e905";
@@ -669,6 +681,33 @@ h3.b-title{
 			content: "\e900";
 	  		font-size: 76px;
 	  		margin: 32px 32px;
+		}
+
+	.icon-bar{
+		background-image: linear-gradient(135deg, #ffeb2b 0%, #fb872b 100%);
+	}
+		.icon-bar:before{
+			content: "\e913";
+	  		font-size: 80px;
+	  		margin: 30px 31px;
+		}
+
+	.icon-games{
+		background-image: linear-gradient(159deg, #ffbd39 0%, #fc4d3f 100%);
+	}
+		.icon-games:before{
+			content: "\e915";
+	  		font-size: 80px;
+	  		margin: 30px 30px;
+		}
+
+	.icon-fun{
+		background-image: linear-gradient(135deg, #1bedff 0%, #2a5da9 100%, #2e3192 100%);
+	}
+		.icon-fun:before{
+			content: "\e914";
+	  		font-size: 81px;
+	  		margin: 30px 30px;
 		}
 
 .b-block-tours{
@@ -1090,7 +1129,7 @@ h3.b-title{
 					-webkit-transform: scale(1);
 				}
 				50%{
-					-webkit-transform: scale(1.1);
+					-webkit-transform: scale(1.2);
 				}
 				100%{
 					-webkit-transform: scale(1);
@@ -1101,7 +1140,7 @@ h3.b-title{
 					-moz-transform: scale(1);
 				}
 				50%{
-					-moz-transform: scale(1.1);
+					-moz-transform: scale(1.2);
 				}
 				100%{
 					-moz-transform: scale(1);
@@ -1112,7 +1151,7 @@ h3.b-title{
 					-ms-transform: scale(1);
 				}
 				50%{
-					-ms-transform: scale(1.1);
+					-ms-transform: scale(1.2);
 				}
 				100%{
 					-ms-transform: scale(1);
@@ -1123,7 +1162,7 @@ h3.b-title{
 					-o-transform: scale(1);
 				}
 				50%{
-					-o-transform: scale(1.1);
+					-o-transform: scale(1.2);
 				}
 				100%{
 					-o-transform: scale(1);
@@ -1134,7 +1173,7 @@ h3.b-title{
 					transform: scale(1);
 				}
 				50%{
-					transform: scale(1.1);
+					transform: scale(1.2);
 				}
 				100%{
 					transform: scale(1);
@@ -1867,7 +1906,7 @@ h3.b-title{
 	box-sizing: content-box;
 }
 
-	.b-content .b-block {
+	.b-content > .b-block {
 	    padding: 80px 0px 74px;
 	}
 
@@ -2308,6 +2347,99 @@ h3.b-title{
 	display: block;
 }
 */
+
+/*-------Проживание-------*/
+
+.b-hotel{
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+	margin-bottom: 56px;
+}
+
+	.b-hotel h3{
+		font-size: 28px;
+	}
+
+	.b-hotel img{
+		width: 100%;
+	}
+
+	.b-hotel-text{
+		padding: 0 45px;
+		width: 67.5%;
+	}
+
+		.b-hotel-text p{
+			font-size: 20px;
+			line-height: 32px;
+		}
+
+.b-residence .advantages-list{
+	width: 100%;
+}
+
+	.b-residence .advantages-list li{
+		width: 25%;
+		margin-bottom: 0;
+	}
+
+		.b-residence .advantages-list li p{
+			width: 88%;
+			font-size: 20px;
+			line-height: 32px;
+		}
+
+		.b-residence div.icon-bar + p{
+			width: 80%;
+		}
+
+.b-hotel-foto{
+	background-color: #f7f7f7;
+}
+
+	.b-hotel-foto-list{
+		margin-bottom: 17px;
+	}
+
+		.b-hotel-foto-list .b-hotel-foto-item{
+			display: inline-block;
+			float: left;
+			background-position: 50% 50%;
+	    	background-repeat: no-repeat;
+	    	background-size: cover;
+		}
+
+			.b-hotel-foto-list .b-hotel-foto-item a{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+
+		.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+4){
+			float: right;
+			margin-bottom: 23px;
+			width: 68%;
+			height: 506px;
+		}
+
+		.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+2),
+		.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+3){
+			float: right;
+		}
+
+		.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+1){
+			margin-bottom: 23px;
+			width: 68%;
+			height: 506px;
+		}
+
+		.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+2),
+		.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+3),
+		.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+5),
+		.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+6){
+			margin-bottom: 23px;
+			width: calc(32% - 24px);
+			height: 241px;
+		}
 
 /*------Popup------*/
 

@@ -301,7 +301,7 @@
 		<div class="b-popup" id="b-popup-tour">
 			<h3 class="b-title">Бронирование тура</h3>
 			<form id="b-popup-tour-form" method="post" action="kitsend.php" data-price="5000">
-				<div class="input-string">
+				<div class="input-string clearfix">
 					<span class="required">Тур:&nbsp;</span>
 					<select name="tour" class="select-tour" required>
 						<option value="">Выберите тур</option>
@@ -311,15 +311,15 @@
 						<option value="4" data-price="6550">26.10-29.10 Выходной</option>
 					</select>
 				</div>
-				<div class="input-string">
+				<div class="input-string clearfix">
 					<span class="required">Ваше имя:&nbsp;</span>
 					<input type="text" name="name" placeholder="Афанасий" required>
 				</div>
-				<div class="input-string">
+				<div class="input-string clearfix">
 					<span class="required">Ваш телефон:&nbsp;</span>
 					<input type="text" name="phone" placeholder="+7 (999) 999 99-99" oninput="this.value = this.value.replace(/\D/g, '')" required>
 				</div>
-				<div class="input-string">
+				<div class="input-string clearfix">
 					<span class="required">Количество человек:&nbsp;</span>
 					<div class="input-persons">
 						<div class="icon-arrow-left reduce-count"></div>
@@ -327,11 +327,11 @@
 						<div class="icon-arrow-right add-count"></div>
 					</div>
 				</div>
-				<div class="input-string">
+				<div class="input-string clearfix">
 					<span>Ваш e-mail:</span>
 					<input type="text" name="mail" placeholder="info@geshtour.ru">
 				</div>
-				<div class="input-string total-cost-block">
+				<div class="input-string clearfix total-cost-block">
 					<span>Общая стоимость:</span>
 					<span class="total-cost"></span>
 					<a class="b-btn-discount">скидка 5%</a>
@@ -347,11 +347,11 @@
 		<div class="b-popup" id="b-popup-call">
 			<h3 class="b-title">Обратный звонок</h3>
 			<form id="b-popup-call-form" method="post" action="kitsend.php">
-				<div class="input-string">
+				<div class="input-string clearfix">
 					<span class="required">Ваше имя:&nbsp;</span>
 					<input type="text" name="name" placeholder="Афанасий" required>
 				</div>
-				<div class="input-string">
+				<div class="input-string clearfix">
 					<span class="required">Ваш телефон:&nbsp;</span>
 					<input type="text" name="phone" placeholder="+7 (999) 999 99-99" oninput="this.value = this.value.replace(/\D/g, '')" required>
 				</div>

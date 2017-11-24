@@ -127,7 +127,7 @@ h3.b-title{
 
 /*---------------------------*/
 
-.b-content .b-block{
+.b-content > .b-block{
 	padding: 58px 0px 50px;
 }
 
@@ -155,14 +155,14 @@ h3.b-title{
 		width: 100%;
 	}
 
-	.b-table{
+	.b-header-table{
 		display: table;
 		height: calc(100% - 14px);
 		padding: 15px 0;
 		margin: 0 auto;
 	}
 
-	.b-table-cell{
+	.b-header-table-cell{
 		display: table-cell;
 	    vertical-align: middle;
 	}
@@ -247,7 +247,7 @@ h3.b-title{
 
 }
 
-	.advantages-list{
+	.b-content-main .advantages-list{
 		margin-left: -24px;
 		width: calc(100% + 48px);
 	}
@@ -714,6 +714,49 @@ h3.b-title{
 	font-size: 22px;
 }
 
+.b-hotel-foto-list .b-hotel-foto-item a{
+	display: none;
+}
+
+.b-hotel-foto-list .b-hotel-foto-item{
+	height: calc((100vw - 50px) * 0.6657) !important;
+}
+
+.b-residence .b-table, .b-residence .b-table-cell{
+	display: block;
+}
+
+.b-hotel-text {
+    padding: 35px;
+    width: 100%;
+}
+
+.b-hotel-text p {
+    font-size: 18px;
+}
+
+.b-hotel h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.b-residence .advantages-list li {
+	    width: 50%;
+	    margin-bottom: 25px;
+	}
+
+	.b-residence .advantages-list li:nth-last-of-type(-n+2){
+	    margin-bottom: 0;
+	}
+
+		.b-residence .advantages-list li p {
+		    width: 78%;
+		}
+
+		.b-residence div.icon-bar + p {
+		    width: 72%;
+		}
+
 @media screen and (max-width: 665px){
 	.b-review {
 	    width: calc(100% - 17px);
@@ -895,6 +938,27 @@ h3.b-title{
 
 	.b-popup{
 		width: calc(100% - 40px);
+	}
+
+	.b-residence .advantages-list li {
+	    width: 100%;
+	    margin-bottom: 25px;
+	}
+
+	.b-residence .advantages-list li:nth-last-of-type(-n+2){
+	    margin-bottom: 25px;
+	}
+
+	.b-residence .advantages-list li:last-child{
+	    margin-bottom: 0;
+	}
+
+		.b-residence .advantages-list li p {
+		    width: 90%;
+		}
+
+	.b-residence .advantage-item{
+		margin-bottom: 10px;
 	}
 }
 

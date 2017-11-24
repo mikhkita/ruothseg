@@ -181,6 +181,21 @@ div.b-footer-column:last-child{
 	margin-right: 0;
 }
 
+.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+4){
+	height: calc((68vw - 48px) * 0.6657);
+}
+
+.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+1){
+	height: calc((68vw - 48px) * 0.6657);
+}
+
+.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+2),
+.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+3),
+.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+5),
+.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+6){
+	height: calc((68vw - 48px) * 0.6657 / 2 - 12px);
+}
+
 @media screen and (max-width: 1095px){
 
 	.b-top .burger-menu{
@@ -201,6 +216,34 @@ div.b-footer-column:last-child{
 }
 
 @media screen and (max-width: 1024px){
+
+	.b-hotel h3 {
+	    font-size: 22px;
+	    margin-bottom: 5px;
+	}
+
+		.b-hotel-text p {
+		    font-size: 16px;
+		    line-height: 26px;
+		}
+
+	.b-residence .advantages-list li {
+	    width: 50%;
+	    margin-bottom: 25px;
+	}
+
+	.b-residence .advantages-list li:nth-last-of-type(-n+2){
+	    margin-bottom: 0;
+	}
+
+		.b-residence .advantages-list li p {
+		    width: 78%;
+		}
+
+		.b-residence div.icon-bar + p {
+		    width: 72%;
+		}
+
 	.b-footer .b-footer-column:nth-child(2){
 	    display: none;
 	}
@@ -345,6 +388,9 @@ div.b-footer-column:last-child{
 		margin: 8px;
 	}
 
+	.b-hotel-text {
+	    padding: 0 20px 0 30px;
+	}
 }
 
 /*@media screen and (max-width: 767px){
