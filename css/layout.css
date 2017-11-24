@@ -2384,13 +2384,13 @@ h3.b-title{
 		margin-bottom: 0;
 	}
 
-		.b-residence .advantages-list li .p{
+		.b-residence .advantages-list li p{
 			width: 88%;
 			font-size: 20px;
 			line-height: 32px;
 		}
 
-		.b-residence div.icon-bar + .p{
+		.b-residence div.icon-bar + p{
 			width: 80%;
 		}
 
