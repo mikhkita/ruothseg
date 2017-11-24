@@ -2779,6 +2779,13 @@ h3.b-title{
     	top: 5px;
 	}
 
+#b-popup-success .b-btn,
+#b-popup-error .b-btn{
+	min-width: 120px;
+	margin-top: 25px;
+	margin-bottom: 0;
+}
+
 /*------------------------*/
 
 /*--------fancybox-arrows--------*/
