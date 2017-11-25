@@ -424,35 +424,59 @@ $(document).ready(function(){
         ]
     });
 
-    $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    $('.team-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: false,
+        nextArrow: '<div class="b-block-team"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block-team"><div class="icon-arrow-left b-team-arrows hide" aria-hidden="true"></div></div>',
+        //infinite: true,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        speed: 600,
+        //autoplay: true,
+        //autoplaySpeed: 3000,
+        responsive: [
+            {
+              breakpoint: 900,
+              settings: {
+                //slidesToShow: 1,
+                //slidesToScroll: 1
+              }
+            }
+        ]
+    });
+
+    $('.b-tour-slider, .team-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
         console.log(slick.slideCount, currentSlide);
         //если виден первый элемент, то скрыть левую стрелку
         if(currentSlide === 0){
             console.log("<-");
-            $('.icon-arrow-left').addClass("hide");
+            $('.b-block-tour .icon-arrow-left, .b-block-team .icon-arrow-left').addClass("hide");
         }else{
-            $('.icon-arrow-left').removeClass("hide");
+            $('.b-block-tour .icon-arrow-left, .b-block-team .icon-arrow-left').removeClass("hide");
         }
         //если виден последний элемент, то скрыть правую стрелку
         if(slick.slideCount - currentSlide === $('.slick-slide.slick-active').length){
             console.log("->hide");
-            $('.icon-arrow-right').addClass("hide");
+            $('.b-block-tour .icon-arrow-right, .b-block-team .icon-arrow-right').addClass("hide");
         }else{
             console.log("->show");
-            $('.icon-arrow-right').removeClass("hide");
+            $('.b-block-tour .icon-arrow-right, .b-block-team .icon-arrow-right').removeClass("hide");
         }
     });
 
-    $('.team-slider').slick({
+    $('.team-detail-slider').slick({
         dots: false,
         arrows: true,
-        infinite: true,
-        nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
-        prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows hide" aria-hidden="true"></div></div>',
-        infinite: true,
-        slidesToShow: 7,
+        nextArrow: '<div class="b-block"><div class="icon-arrow-right b-video-arrows" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block"><div class="icon-arrow-left b-video-arrows" aria-hidden="true"></div></div>',
+        //infinite: true,
+        slidesToShow: 1,
         slidesToScroll: 1,
         speed: 600,
+        centerMode: true,
+        variableWidth: true,
         //autoplay: true,
         //autoplaySpeed: 3000,
         responsive: [
