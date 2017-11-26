@@ -401,7 +401,7 @@ $(document).ready(function(){
         slidesToShow: 5,
         slidesToScroll: 1,
         dots: false,
-        infinite: false,
+        infinite: true,
         arrows: true,
         speed: 600,
         nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
@@ -427,19 +427,24 @@ $(document).ready(function(){
     $('.team-slider').slick({
         dots: false,
         arrows: true,
-        infinite: false,
+        infinite: true,
         nextArrow: '<div class="b-block-team"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
-        prevArrow: '<div class="b-block-team"><div class="icon-arrow-left b-team-arrows hide" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block-team"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
         //infinite: true,
         slidesToShow: 7,
         slidesToScroll: 1,
+        swipe: false,
         speed: 600,
+        centerMode: true,
+        variableWidth: true,
+        asNavFor: '.team-detail-slider',
         //autoplay: true,
         //autoplaySpeed: 3000,
         responsive: [
             {
-              breakpoint: 900,
+              breakpoint: 767,
               settings: {
+                swipe: true,
                 //slidesToShow: 1,
                 //slidesToScroll: 1
               }
@@ -447,36 +452,37 @@ $(document).ready(function(){
         ]
     });
 
-    $('.b-tour-slider, .team-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        console.log(slick.slideCount, currentSlide);
+    $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        console.log($('.slick-slide.slick-active').length);
         //если виден первый элемент, то скрыть левую стрелку
         if(currentSlide === 0){
             console.log("<-");
-            $('.b-block-tour .icon-arrow-left, .b-block-team .icon-arrow-left').addClass("hide");
+            $('.b-block-tour .icon-arrow-left').addClass("hide");
         }else{
-            $('.b-block-tour .icon-arrow-left, .b-block-team .icon-arrow-left').removeClass("hide");
+            $('.b-block-tour .icon-arrow-left').removeClass("hide");
         }
         //если виден последний элемент, то скрыть правую стрелку
-        if(slick.slideCount - currentSlide === $('.slick-slide.slick-active').length){
+        if(slick.slideCount - currentSlide === $(this).find(".slick-slide.slick-active").length){
             console.log("->hide");
-            $('.b-block-tour .icon-arrow-right, .b-block-team .icon-arrow-right').addClass("hide");
+            $('.b-block-tour .icon-arrow-right').addClass("hide");
         }else{
             console.log("->show");
-            $('.b-block-tour .icon-arrow-right, .b-block-team .icon-arrow-right').removeClass("hide");
+            $('.b-block-tour .icon-arrow-right').removeClass("hide");
         }
     });
 
     $('.team-detail-slider').slick({
         dots: false,
         arrows: true,
-        nextArrow: '<div class="b-block"><div class="icon-arrow-right b-video-arrows" aria-hidden="true"></div></div>',
-        prevArrow: '<div class="b-block"><div class="icon-arrow-left b-video-arrows" aria-hidden="true"></div></div>',
-        //infinite: true,
+        nextArrow: '<div class="b-block"><div class="icon-arrow-right b-arrows-team-detail" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block"><div class="icon-arrow-left b-arrows-team-detail" aria-hidden="true"></div></div>',
+        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         speed: 600,
         centerMode: true,
         variableWidth: true,
+        asNavFor: '.team-slider',
         //autoplay: true,
         //autoplaySpeed: 3000,
         responsive: [
@@ -488,6 +494,42 @@ $(document).ready(function(){
               }
             }
         ]
+    });
+
+    $('.b-team-list .slick-slide').on('click', function(){
+        var index = $(this).attr("data-slick-index");
+        $(".team-slider").slick('slickGoTo', index, false);
+    });
+
+    $(".icon-arrow-left.b-arrows-team-detail").hover(function(){
+        $('.slick-center').prev().children(".b-team-detail-item").addClass("hover");
+    }, function(){
+        $('.slick-center').prev().children(".b-team-detail-item").removeClass("hover");
+    }).click(function(){
+        $('.slick-center').prev().children(".b-team-detail-item").removeClass("hover");
+    });
+
+    $(".icon-arrow-right.b-arrows-team-detail").hover(function(){
+        $('.slick-center').next().children(".b-team-detail-item").addClass("hover");
+    }, function(){
+        $('.slick-center').next().children(".b-team-detail-item").removeClass("hover");
+    }).click(function(){
+        $('.slick-center').next().children(".b-team-detail-item").removeClass("hover");
+    });
+
+    $("body").on("mousemove", ".slick-center", function(e){
+        var offset = $(this).offset();
+        var relativeX = (e.pageX - offset.left);
+        var relativeY = (e.pageY - offset.top);
+        if(relativeX > $(this).width() / 2){
+            $(this).find(".b-team-detail-info").css("left", 0);
+        }else{
+            $(this).find(".b-team-detail-info").css("left", "50%");
+        }
+    });
+
+    $("body").on("mouseleave", ".slick-center", function(){
+        $(this).find(".b-team-detail-info").css("left", 0);
     });
 
     var menuTimer = null;
