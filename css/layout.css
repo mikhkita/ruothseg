@@ -1627,7 +1627,7 @@ h3.b-title{
 	.b-tour-arrows.icon-arrow-right:before,
 	.b-team-arrows.icon-arrow-right:before{
 		display: inline-block;
-		padding-top: 13px;
+		padding-top: 12px;
 		padding-left: 4px;
 		content: "\e90f";
 		font-size: 14px;
@@ -2461,18 +2461,35 @@ h3.b-title{
 			height: 241px;
 		}
 
+.b-hotel-foto-list .slick-dots li button:before,
+.passage-grid-cont .slick-dots li button:before{
+    font-size: 14px;
+    color: #744d4d;
+    opacity: 0.5;
+}
+
+.b-hotel-foto-list .slick-dots li.slick-active button:before,
+.passage-grid-cont .slick-dots li.slick-active button:before{
+	color: #744d4d;
+    opacity: 1;
+}
+
 /*-------О нас-------*/
 
-.b-about{
+.b-content.b-content-about > .b-block {
+    padding: 60px 0px 70px;
+}
 
+.b-about{
+	padding: 80px 0 40px 0;
 }
 	.b-team-list, .b-block-team{
-		width: 870px;
+		width: 848px;
 		margin: 0 auto;
 	}
 		.b-team-list li{
 			display: inline-block;
-			margin: 0 15px;
+			margin: 0 12px;
 		}
 
 			.b-team-list li .b-img{
@@ -2484,7 +2501,6 @@ h3.b-title{
 		    border-radius: 100px;
 		    width: 99px;
 		    height: 99px;
-	    	display: inline-block;
 		}
 
 		.b-team-img-cont .b-img{
@@ -2527,13 +2543,13 @@ h3.b-title{
 }
 
 .b-team-arrows.icon-arrow-left{
-    top: 29px;
-    left: -56px;
+    top: 27px;
+    left: -68px;
 }
 
 .b-team-arrows.icon-arrow-right{
-    top: -79px;
-    right: -56px;
+    top: -72px;
+    right: -53px;
 }
 
 .b-team-detail .slick-slide{

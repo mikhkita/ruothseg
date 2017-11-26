@@ -714,12 +714,21 @@ h3.b-title{
 	font-size: 22px;
 }
 
+.b-hotel-foto-list{
+	margin-left: -24px;
+	margin-right: -24px;
+}
+
 .b-hotel-foto-list .b-hotel-foto-item a{
 	display: none;
 }
 
 .b-hotel-foto-list .b-hotel-foto-item{
 	height: calc((100vw - 50px) * 0.6657) !important;
+}
+
+.b-hotel-foto .b-hotel-foto-list{
+	margin-bottom: 50px;
 }
 
 .b-residence .b-table, .b-residence .b-table-cell{

@@ -165,13 +165,13 @@ $(document).ready(function(){
             });
             if(!$('.b-hotel-foto-list').hasClass("slick-initialized")){
                 $('.b-hotel-foto-list').not('.slick-initialized').slick({
-                    dots: false,
+                    dots: true,
                     arrows: false,
                     infinite: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     speed: 600,
-                }).addClass("slider-on");
+                });
             }
 
         }else{
@@ -180,6 +180,7 @@ $(document).ready(function(){
             }
             if($('.b-hotel-foto-list').hasClass("slick-initialized")){
                 $('.b-hotel-foto-list').slick('unslick');
+                $("[data-fancybox]").fancybox();
             }
             $('a.tour-item').each(function() {
                 $this = $(this);
@@ -247,7 +248,7 @@ $(document).ready(function(){
 
                 if(!$('.passage-slider').hasClass("slick-initialized")){
                     $('.passage-slider').not('.slick-initialized').slick({
-                        dots: false,
+                        dots: true,
                         arrows: false,
                         infinite: true,
                         slidesToShow: 1,
@@ -256,7 +257,7 @@ $(document).ready(function(){
                         autoplay: true,
                         autoplaySpeed: 3000,
                         adaptiveHeight: true,
-                    }).addClass("slider-on");
+                    });
                 }
             }
         }
