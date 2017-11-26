@@ -1602,7 +1602,6 @@ h3.b-title{
     z-index: 1;
     border: 2px solid transparent;
 }
-
 	.b-tour-arrows.icon-arrow-left:before,
 	.b-team-arrows.icon-arrow-left:before{
 		display: inline-block;
@@ -2529,6 +2528,7 @@ h3.b-title{
 
 .b-team-arrows.icon-arrow-left{
     top: 29px;
+    left: -56px;
 }
 
 .b-team-arrows.icon-arrow-right{
@@ -2546,22 +2546,19 @@ h3.b-title{
 }
 
 	.b-team-detail-item{
+		opacity: 0.3;
 		position: relative;
 		height: 637px;
-		-webkit-transition: opacity 150ms ease-out, transform 300ms ease-out;
-		   -moz-transition: opacity 150ms ease-out, transform 300ms ease-out;
-		    -ms-transition: opacity 150ms ease-out, transform 300ms ease-out;
-		   	 -o-transition: opacity 150ms ease-out, transform 300ms ease-out;
-				transition: opacity 150ms ease-out, transform 300ms ease-out;
+		-webkit-transition: opacity 300ms ease-out, transform 300ms ease-out;
+		   -moz-transition: opacity 300ms ease-out, transform 300ms ease-out;
+		    -ms-transition: opacity 300ms ease-out, transform 300ms ease-out;
+		   	 -o-transition: opacity 300ms ease-out, transform 300ms ease-out;
+				transition: opacity 300ms ease-out, transform 300ms ease-out;
 	}
 
-		.b-team-detail-left:hover + .b-team-detail-info{
-			left: 50%;
-		}
-
-		.b-team-detail-right:hover + .b-team-detail-info{
-			left: 0;
-		}
+	.slick-center .b-team-detail-item{
+		opacity: 1;
+	}
 
 
 		.b-team-detail-info{
@@ -2610,7 +2607,7 @@ h3.b-title{
 		}
 	    
 		.b-team-detail-item.hover{
-			opacity: 0.4 !important;
+			opacity: 0.15 !important;
 		}
 
 /*------Popup------*/
