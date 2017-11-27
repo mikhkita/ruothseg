@@ -349,8 +349,6 @@ $(document).ready(function(){
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 600,
-        //autoplay: true,
-        //autoplaySpeed: 3000,
         adaptiveHeight: true,
         responsive: [
             {
@@ -377,11 +375,13 @@ $(document).ready(function(){
                 $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active");
             },10 );
         }
-        //deleteGallery();
+        setTimeout(function(){
+            deleteGallery();
+        },10 );
     });
 
     $('.review-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        deleteGallery();
+        //deleteGallery();
     });
 
     //Удалить галереи в копиях элементов
@@ -389,10 +389,10 @@ $(document).ready(function(){
         /*$('.slick-cloned').each(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
         });*/
-        $('.slick-slide').each(function(){
+        $('.review-slider .slick-slide').each(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
         });
-        $('.slick-active').each(function(){
+        $('.review-slider .slick-active').each(function(){
             console.log("++++",$(this));
             var gallary = $(this).find(".fancy-gallary").attr("data-gallery");
             $(this).find(".fancy-gallary").attr("data-fancybox", gallary);
@@ -426,35 +426,6 @@ $(document).ready(function(){
         ]
     });
 
-    $('.team-slider').slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        nextArrow: '<div class="b-block-team"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
-        prevArrow: '<div class="b-block-team"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
-        //infinite: true,
-        slidesToShow: 7,
-        slidesToScroll: 1,
-        swipe: false,
-        speed: 600,
-        centerMode: true,
-        variableWidth: true,
-        focusOnSelect: true,
-        asNavFor: '.team-detail-slider',
-        //autoplay: true,
-        //autoplaySpeed: 3000,
-        responsive: [
-            {
-              breakpoint: 767,
-              settings: {
-                swipe: true,
-                //slidesToShow: 1,
-                //slidesToScroll: 1
-              }
-            }
-        ]
-    });
-
     $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
         console.log($('.slick-slide.slick-active').length);
         //если виден первый элемент, то скрыть левую стрелку
@@ -474,6 +445,74 @@ $(document).ready(function(){
         }
     });
 
+    var teamID = 0;
+    $('.team-slider li').each(function(){
+        $(this).attr("data-slick-id", teamID);
+        teamID++;
+    });
+
+    $('.team-slider').on('init', function(slick){
+        $('.team-slider li.slick-active').addClass("slick-active-new");
+        $('.team-slider li.slick-current').addClass("slick-current-new");
+    });
+
+    $('.team-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        nextArrow: '<div class="b-block-team"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block-team"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        swipe: false,
+        speed: 600,
+        centerMode: true,
+        variableWidth: true,
+        focusOnSelect: true,
+        asNavFor: '.team-detail-slider',
+        responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                swipe: true,
+                //slidesToShow: 1,
+                //slidesToScroll: 1
+              }
+            }
+        ]
+    });
+
+    $('.team-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        setTimeout(function(){
+            $('.team-slider li:not(.slick-current)').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-slider').find("[data-slick-id='"+dataID+"']").removeClass("slick-current-new");
+            });
+            $('.team-slider .slick-current').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-slider').find("[data-slick-id='"+dataID+"']").addClass("slick-current-new");
+            });
+            $('.team-slider li:not(.slick-active)').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-slider').find("[data-slick-id='"+dataID+"']").removeClass("slick-active-new");
+            });
+            $('.team-slider li.slick-active').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-slider').find("[data-slick-id='"+dataID+"']").addClass("slick-active-new");
+            });
+        },10);
+    });
+
+    var detailID = 0;
+    $('.team-detail-slider .b-team-wrap').each(function(){
+        $(this).attr("data-slick-id", detailID);
+        detailID++;
+    });
+
+    $('.team-detail-slider').on('init', function(slick){
+        $('.team-detail-slider .slick-center').addClass("slick-center-new");
+    });
+
     $('.team-detail-slider').slick({
         dots: false,
         arrows: true,
@@ -487,8 +526,6 @@ $(document).ready(function(){
         variableWidth: true,
         focusOnSelect: true,
         asNavFor: '.team-slider',
-        //autoplay: true,
-        //autoplaySpeed: 3000,
         responsive: [
             {
               breakpoint: 900,
@@ -498,6 +535,19 @@ $(document).ready(function(){
               }
             }
         ]
+    });
+
+    $('.team-detail-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        setTimeout(function(){
+            $('.team-detail-slider .slick-slide:not(.slick-center)').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-detail-slider').find("[data-slick-id='"+dataID+"']").removeClass("slick-center-new");
+            });
+            $('.team-detail-slider .slick-center').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-detail-slider').find("[data-slick-id='"+dataID+"']").addClass("slick-center-new");
+            });
+        },10);
     });
 
     $('.b-team-detail .slick-slide').hover(
