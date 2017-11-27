@@ -2896,6 +2896,15 @@ h3.b-title{
 						color: #393939;
 					}
 
+					.chosen-container-single.chosen-with-drop .chosen-single div:before{
+						-webkit-transform: rotate(180deg);
+						   -moz-transform: rotate(180deg);
+						    -ms-transform: rotate(180deg);
+						   	 -o-transform: rotate(180deg);
+								transform: rotate(180deg);
+					}
+
+
 			.chosen-container .chosen-results li{
 				font-size: 14px;
 			}
@@ -2915,15 +2924,11 @@ h3.b-title{
 
 			.chosen-container .chosen-drop {
 			    position: absolute;
-			    top: 43px;
-			    z-index: 1010;
-			    width: 260px;
-			    padding: 8px 0;
+			    top: 40px;
+			    width: 220px;
+			    padding: 8px 0 0 0;
 			    border: 1px solid #aaa;
 			    background-color: #FFF;
-			    -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
-			    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
-			    clip: rect(0, 0, 0, 0);
 			}
 
 			.chosen-container .chosen-drop:before{
@@ -2933,7 +2938,7 @@ h3.b-title{
 			    font-size: 0px;
 			    width: 0px;
 			    height: 0px;
-			    left: 50px;
+			    left: 35px;
 			    top: -18px;
 			    border-top: 2px solid transparent;
 			    border-right: 16px solid transparent;
@@ -2947,17 +2952,18 @@ h3.b-title{
 			    font-size: 0px;
 			    width: 0px;
 			    height: 0px;
-			    left: 50px;
+			    left: 35px;
 			    top: -19px;
 			    border-top: 2px solid transparent;
 			    border-right: 16px solid transparent;
-			    border-bottom: 16px solid #ececec;
+			    border-bottom: 16px solid #707070;
 			    border-left: 16px solid transparent;
 			}
 
 			.chosen-container .chosen-results {
 			    margin: 0;
 			    padding: 0;
+			    min-height: 245px;
 			}
 
 			.chosen-container .chosen-results li.highlighted {
@@ -2968,9 +2974,10 @@ h3.b-title{
 			}
 
 			.chosen-container .chosen-results li{
-				padding: 10px 6px;
+				padding: 10px 14px;
 			}
 
+		
 			/*.call-bubble{
 				z-index: 5;
 				position: absolute;
