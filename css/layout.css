@@ -2977,56 +2977,6 @@ h3.b-title{
 				padding: 10px 14px;
 			}
 
-		
-			/*.call-bubble{
-				z-index: 5;
-				position: absolute;
-				left: -98px;
-	   			top: 58px;
-			    background-color: #FFF;
-			    padding: 12px 24px;
-			    white-space: nowrap;
-			    text-align: center;
-			    opacity: 1;
-				-webkit-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
-			    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
-			    -ms-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
-			    -o-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
-			    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
-				-webkit-transform: translateY(0px);
-			    -moz-transform: translateY(0px);
-			    -ms-transform: translateY(0px);
-			    -o-transform: translateY(0px);
-			    transform: translateY(0px);
-				transform-origin: 50% 0;
-			}
-
-			.call-bubble.bubble-hide{
-				visibility: hidden;
-				opacity: 0;
-				-webkit-transform: translateY(20px);
-			    -moz-transform: translateY(20px);
-			    -ms-transform: translateY(20px);
-			    -o-transform: translateY(20px);
-			    transform: translateY(20px);
-			}
-
-				.call-bubble:before{
-					position: absolute;
-					content: "s";
-				    font-size: 0px;
-				    width: 0px;
-				    height: 0px;
-				    left: 100px;
-				    top: -14px;
-				    border-top: 2px solid transparent;
-				    border-right: 16px solid transparent;
-				    border-bottom: 16px solid #FFF;
-				    border-left: 16px solid transparent;
-				}*/
-
-			/*chosen-with-drop chosen-container-active*/
-
 			.input-persons{
 				float: right;
 				display: inline-block;
