@@ -300,7 +300,7 @@ h2.b-title{
 	padding-top: 55px;
 	margin-bottom: 50px;
 	line-height: 48px;
-	/*color: #574141;*/
+	color: #574141;
 }
 
 h3.b-title{
@@ -315,6 +315,7 @@ h3.b-title{
 .b-title b{
 	font-family: 'RobotoBold';
 	font-weight: normal;
+	text-transform: uppercase;
 }
 
 .b-wide-block{
@@ -612,6 +613,7 @@ h3.b-title{
 			.advantages-list li .advantage-text{
 				font-size: 22px;
 				color: #4a4a4a;
+				text-align: center;
 			}
 
 		.advantage-item{
@@ -1650,7 +1652,9 @@ h3.b-title{
 .b-video-arrows.icon-arrow-left:hover:before,
 .b-video-arrows.icon-arrow-right:hover:before,
 .b-arrows-team-detail.icon-arrow-left:hover:before,
-.b-arrows-team-detail.icon-arrow-right:hover:before{
+.b-arrows-team-detail.icon-arrow-right:hover:before,
+.b-arrows-team-detail.icon-arrow-left.hover-arrow:before,
+.b-arrows-team-detail.icon-arrow-right.hover-arrow:before{
 	color: rgba(255,255,255,1);
 }
 
@@ -2345,6 +2349,10 @@ h3.b-title{
 	width: 100%;
 }
 
+.b-passage-bottom{
+	background-color: #f7f7f7;
+}
+
 /*
 .passage-grid-column{
 	margin-right: 18px;
@@ -2428,7 +2436,8 @@ h3.b-title{
 	    	background-size: cover;
 		}
 
-			.b-hotel-foto-list .b-hotel-foto-item a{
+			.b-hotel-foto-list .b-hotel-foto-item a,
+			.passage-grid-cont .passage-grid a{
 				display: block;
 				width: 100%;
 				height: 100%;
@@ -2512,7 +2521,7 @@ h3.b-title{
 			background-image: linear-gradient(157deg, #ac8484 0%, #744d4d 100%);
 		}
 
-/*.b-team-list li{
+.b-team-list li{
 	opacity: 0;
 	visibility: hidden;
 	-webkit-transform: scale(0);
@@ -2534,7 +2543,7 @@ h3.b-title{
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
-}*/
+}
 
 .b-block-team{
 	position: relative;
@@ -2561,8 +2570,18 @@ h3.b-title{
 	background-color: #000;
 }
 
-	.b-team-detail-item{
+	/*.slick-slide:not(.slick-center) .b-team-detail-item:hover{
+		cursor: pointer;
 		opacity: 0.3;
+	}*/
+
+	.b-team-detail-item.hover-slide{
+		cursor: pointer;
+		opacity: 0.3;
+	}
+
+	.b-team-detail-item{
+		opacity: 0.7;
 		position: relative;
 		height: 637px;
 		-webkit-transition: opacity 300ms ease-out, transform 300ms ease-out;
@@ -2623,7 +2642,7 @@ h3.b-title{
 		}
 	    
 		.b-team-detail-item.hover{
-			opacity: 0.15 !important;
+			opacity: 0.3 !important;
 		}
 
 /*------Popup------*/

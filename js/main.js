@@ -205,6 +205,7 @@ $(document).ready(function(){
 
                 if($('.passage-slider').hasClass("slick-initialized")){
                     $('.passage-slider').slick('unslick');
+                    $("[data-fancybox]").fancybox();
                 }
 
                 //веруть столбцы (если были удалены до этого)
@@ -497,6 +498,22 @@ $(document).ready(function(){
               }
             }
         ]
+    });
+
+    $('.b-team-detail .slick-slide').hover(
+        function(){
+            if($(this).prev().hasClass("slick-center")){
+                $(this).find(".b-team-detail-item").addClass("hover-slide");
+                $(".icon-arrow-right").addClass("hover-arrow");
+            }
+            if($(this).next().hasClass("slick-center")){
+                $(this).find(".b-team-detail-item").addClass("hover-slide");
+                $(".icon-arrow-left").addClass("hover-arrow");
+            }
+        },
+        function(){
+            $(this).find(".b-team-detail-item").removeClass("hover-slide");
+            $(".icon-arrow-right, .icon-arrow-left").removeClass("hover-arrow");
     });
 
     $(".icon-arrow-left.b-arrows-team-detail").hover(function(){

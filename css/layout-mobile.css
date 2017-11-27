@@ -714,12 +714,14 @@ h3.b-title{
 	font-size: 22px;
 }
 
-.b-hotel-foto-list{
+.b-hotel-foto-list,
+.passage-grid-cont{
 	margin-left: -24px;
 	margin-right: -24px;
 }
 
-.b-hotel-foto-list .b-hotel-foto-item a{
+.b-hotel-foto-list .b-hotel-foto-item a,
+.passage-grid-cont .passage-grid a{
 	display: none;
 }
 
@@ -758,6 +760,14 @@ h3.b-title{
 	.b-residence .advantages-list li:nth-last-of-type(-n+2){
 	    margin-bottom: 0;
 	}
+
+.passage-grid-cont .slick-dots{
+	bottom: -45px;
+}
+
+.passage-grid-cont.slick-dotted.slick-slider{
+	margin-bottom: 45px;
+}
 	
 @media screen and (max-width: 665px){
 	.b-review {
