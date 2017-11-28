@@ -366,15 +366,15 @@ $(document).ready(function(){
     $('.review-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         if(slick.options.slidesToShow === 2){
             setTimeout(function(){
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").next().removeClass("slick-active");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").next().addClass("slick-active");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").next().removeClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").next().addClass("slick-active slick-active-copy");
             },10 );
         }else{
             setTimeout(function(){
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active slick-active-copy");
             },10 );
         }
         setTimeout(function(){
@@ -394,7 +394,7 @@ $(document).ready(function(){
         $('.review-slider .slick-slide').each(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
         });
-        $('.review-slider .slick-active').each(function(){
+        $('.review-slider .slick-active:not(.slick-active-copy)').each(function(){
             console.log("++++",$(this));
             var gallary = $(this).find(".fancy-gallary").attr("data-gallery");
             $(this).find(".fancy-gallary").attr("data-fancybox", gallary);

@@ -818,6 +818,7 @@ h3.b-title{
     padding-top: 25px;
     font-size: 16px;
     line-height: 26px;
+    max-height: 185px;
 }
 
 .b-team-wrap{
@@ -832,7 +833,7 @@ h3.b-title{
     top: -337px;
 }
 
-.slick-center .b-team-detail-right{
+.b-team-detail .slick-center .b-team-detail-right{
 	-webkit-transition: opacity 1s ease-in-out;
 	-moz-transition: opacity 1s ease-in-out;
 	-ms-transition: opacity 1s ease-in-out;
@@ -915,7 +916,7 @@ h3.b-title{
 	}
 }
 
-.slick-center .b-team-detail-right{
+.b-team-detail .slick-center .b-team-detail-right{
 	-webkit-animation-name: imageFadeInOut;
 	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: infinite;
@@ -1234,6 +1235,7 @@ h3.b-title{
 	    padding-top: 5px;
 	    font-size: 14px;
 	    line-height: 24px;
+	    max-height: 125px;
 	}
 
 	.b-team-detail-info {

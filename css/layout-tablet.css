@@ -220,6 +220,7 @@ div.b-footer-column:last-child{
     padding-top: 65px;
     font-size: 16px;
     line-height: 26px;
+    max-height: 246px;
 }
 
 .b-team-wrap{
