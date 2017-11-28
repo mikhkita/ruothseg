@@ -2831,6 +2831,9 @@ h3.b-title{
 		.input-string{
 			width: 100%;
 		}
+		input[name = MAIL]{
+			display: none;
+		}
 
 			.input-string span{
 				display: inline-block;
