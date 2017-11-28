@@ -2375,7 +2375,24 @@ h3.b-title{
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
+	-webkit-transition: transform 150ms ease-out;
+    	-moz-transition: transform 150ms ease-out;
+		-ms-transition: transform 150ms ease-out;
+		-o-transition: transform 150ms ease-out;
+		transition: transform 150ms ease-out;
+		-webkit-transform: scale(1);
+		   -moz-transform: scale(1);
+		    -ms-transform: scale(1);
+		   	 -o-transform: scale(1);
+				transform: scale(1);
 }
+.passage-grid:hover {
+		-webkit-transform: scale(1.07);
+		   -moz-transform: scale(1.07);
+		    -ms-transform: scale(1.07);
+		   	 -o-transform: scale(1.07);
+				transform: scale(1.07);
+	}
 
 .b-passage-bottom{
 	background-color: #f7f7f7;
