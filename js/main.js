@@ -152,7 +152,7 @@ $(document).ready(function(){
                           }
                         }
                     ]
-                }).addClass("slider-on");
+                });
             }
             $('div.tour-item').each(function() {
                 $this = $(this);
@@ -179,6 +179,9 @@ $(document).ready(function(){
         }else{
             if($('.advantages-slider').hasClass("slick-initialized")){
                 $('.advantages-slider').slick('unslick');
+                setTimeout(function(){
+                    $('.advantages-slider').slick('unslick');
+                },100);
             }
             if($('.b-hotel-foto-list').hasClass("slick-initialized")){
                 $('.b-hotel-foto-list').slick('unslick');
