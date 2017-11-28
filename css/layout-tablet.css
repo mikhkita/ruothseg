@@ -196,6 +196,44 @@ div.b-footer-column:last-child{
 	height: calc((68vw - 48px) * 0.6657 / 2 - 12px);
 }
 
+.b-team-detail .slick-slide {
+    height: 470px;
+}
+
+.b-team-detail-item {
+    width: 650px;
+    height: 470px;
+}
+
+.b-team-detail-info{
+	padding: 0 30px;
+}
+
+.b-team-detail-info h3 {
+    padding-top: 160px;
+    margin-bottom: 0;
+    color: #FFF;
+    font-size: 30px;
+}
+
+.b-team-detail-info .b-team-detail-text {
+    padding-top: 65px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.b-team-wrap{
+	margin: 0 14px;
+}
+
+.b-arrows-team-detail.icon-arrow-right{
+    top: -275px;
+}
+
+.b-arrows-team-detail.icon-arrow-left{
+    top: 197px;
+}
+
 @media screen and (max-width: 1095px){
 
 	.b-top .burger-menu{
@@ -212,6 +250,14 @@ div.b-footer-column:last-child{
 
 	.b-top .b-top-contacts{
 		display: none;
+	}
+
+	.b-block-team{
+		width: 590px;
+	}
+
+	.b-team-arrows.icon-arrow-right{
+	    right: -67px;
 	}
 }
 
@@ -383,42 +429,12 @@ div.b-footer-column:last-child{
 	.b-hotel-text {
 	    padding: 0 20px 0 30px;
 	}
+
+	.b-team-list{
+		width: calc(100% - 48px);
+	}
+
+	.b-team-detail-item {
+	    width: 590px;
+	}
 }
-
-/*@media screen and (max-width: 767px){
-
-	.advantages-list li{
-		float: none;
-		width: calc(50% - 10px);
-	}
-
-	.advantages-list li:nth-last-child(-n+3){
-		margin-bottom: 46px;
-	}
-
-	.advantages-list li:nth-last-child(-n+2) {
-	    margin-bottom: 0;
-	}
-
-	.tour-item {
-		display: block;
-	    width: calc(100% - 12px);
-	}
-
-	.b-footer-column:nth-child(3),
-	.b-footer-column:nth-child(4){
-	    display: none;
-	}
-
-	.b-redder-logo{
-		top: auto;
-		bottom: 7px;
-    	right: 0;
-	}
-
-	.develop-block{
-		float: none !important;
-		display: block;
-	}
-
-}*/

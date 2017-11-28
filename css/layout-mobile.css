@@ -768,10 +768,189 @@ h3.b-title{
 .passage-grid-cont.slick-dotted.slick-slider{
 	margin-bottom: 45px;
 }
-	
+
+.b-block-team{
+	width: 75%;
+}
+
+.b-team-list{
+	width: calc(100% - 48px);
+}
+
+.b-team-arrows.icon-arrow-right{
+    right: -67px;
+}
+
+.b-content .b-block-team-slider.b-block{
+	padding: 65px 0px 40px;
+}
+
+.b-team-detail .slick-slide {
+    height: 600px;
+}
+
+.b-team-detail-item {
+    width: 450px;
+    height: 600px;
+}
+
+.b-team-detail-info{
+	top: auto;
+	bottom: 0;
+	width: 100%;
+	height: 50%;
+	padding: 0 30px;
+}
+
+.b-team-detail-left, .b-team-detail-right{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.b-team-detail-info h3 {
+    padding-top: 35px;
+    font-size: 26px;
+}
+
+.b-team-detail-info .b-team-detail-text {
+    padding-top: 25px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.b-team-wrap{
+	margin: 0 14px;
+}
+
+.b-arrows-team-detail.icon-arrow-left {
+    top: 262px;
+}
+
+.b-arrows-team-detail.icon-arrow-right {
+    top: -337px;
+}
+
+.slick-center .b-team-detail-right{
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+@-webkit-keyframes imageFadeInOut {
+	0% {
+		opacity:1;
+	}
+	40% {
+		opacity:1;
+	}
+	60% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+	}
+}
+
+@-moz-keyframes imageFadeInOut {
+	0% {
+		opacity:1;
+	}
+	40% {
+		opacity:1;
+	}
+	60% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+	}
+}
+
+@-ms-keyframes imageFadeInOut {
+	0% {
+		opacity:1;
+	}
+	40% {
+		opacity:1;
+	}
+	60% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+	}
+}
+
+@-o-keyframes imageFadeInOut {
+	0% {
+		opacity:1;
+	}
+	40% {
+		opacity:1;
+	}
+	60% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+	}
+}
+
+@keyframes imageFadeInOut {
+	0% {
+		opacity:1;
+	}
+	40% {
+		opacity:1;
+	}
+	60% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+	}
+}
+
+.slick-center .b-team-detail-right{
+	-webkit-animation-name: imageFadeInOut;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-direction: alternate;
+	-moz-animation-name: imageFadeInOut;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-duration: 5s;
+	-moz-animation-direction: alternate;
+	-ms-animation-name: imageFadeInOut;
+	-ms-animation-timing-function: ease-in-out;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-duration: 5s;
+	-ms-animation-direction: alternate;
+	-o-animation-name: imageFadeInOut;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-iteration-count: infinite;
+	-o-animation-duration: 5s;
+	-o-animation-direction: alternate;
+	animation-name: imageFadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alternate;
+}
+
 @media screen and (max-width: 665px){
 	.b-review {
 	    width: calc(100% - 17px);
+	}
+
+	.b-arrows-team-detail.icon-arrow-left,
+	.b-arrows-team-detail.icon-arrow-right{
+	    display: none;
 	}
 }
 
@@ -1030,6 +1209,37 @@ h3.b-title{
 		width: auto;
 	}
 
+	.b-block-team{
+		width: calc(100% - 80px);
+	}
+
+	.b-team-list{
+	}
+
+	.b-team-detail .slick-slide {
+	    height: 420px;
+	}
+
+	.b-team-detail-item {
+	    width: 300px;
+	    height: 420px;
+	}
+
+	.b-team-detail-info h3 {
+	    padding-top: 18px;
+	    font-size: 22px;
+	}
+
+	.b-team-detail-info .b-team-detail-text {
+	    padding-top: 5px;
+	    font-size: 14px;
+	    line-height: 24px;
+	}
+
+	.b-team-detail-info {
+	    padding: 0 25px;
+	}
+
 }
 
 @media screen and (max-width: 475px){
@@ -1079,6 +1289,28 @@ h3.b-title{
 	    margin-bottom: 12px;
 	}
 
+	.b-team-img-cont {
+	    width: 80px;
+	    height: 80px;
+	}
+
+	.b-team-img-cont .b-img {
+	    width: 68px;
+	    height: 68px;
+	}
+
+	.b-team-list li {
+	    margin: 0px 8px;
+	}
+
+	.b-team-arrows.icon-arrow-left {
+	    top: 21px;
+	}
+
+	.b-team-arrows.icon-arrow-right {
+	    top: -60px;
+	}
+
 }
 
 @media screen and (max-width: 410px){
@@ -1102,6 +1334,14 @@ h3.b-title{
 		float: none;
 		display: block;
 		margin: 0 auto;
+	}
+
+	.b-team-list li {
+	    margin: 0px 5px;
+	}
+
+	.b-team-wrap {
+	    margin: 0 8px;
 	}
 }
 
