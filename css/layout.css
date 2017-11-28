@@ -2375,24 +2375,7 @@ h3.b-title{
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	-webkit-transition: transform 150ms ease-out;
-    	-moz-transition: transform 150ms ease-out;
-		-ms-transition: transform 150ms ease-out;
-		-o-transition: transform 150ms ease-out;
-		transition: transform 150ms ease-out;
-		-webkit-transform: scale(1);
-		   -moz-transform: scale(1);
-		    -ms-transform: scale(1);
-		   	 -o-transform: scale(1);
-				transform: scale(1);
 }
-.passage-grid:hover {
-		-webkit-transform: scale(1.07);
-		   -moz-transform: scale(1.07);
-		    -ms-transform: scale(1.07);
-		   	 -o-transform: scale(1.07);
-				transform: scale(1.07);
-	}
 
 .b-passage-bottom{
 	background-color: #f7f7f7;
@@ -2681,8 +2664,10 @@ h3.b-title{
 			color: #FFF;
 			font-size: 22px;
 			line-height: 34px;
-			overflow: hidden;
-			max-height: 320px;
+			padding: 0 60px 0 48px;
+		    position: absolute;
+		    left: 0;
+		    bottom: 40px;
 		}
 
 		.b-team-detail-left, .b-team-detail-right{
@@ -2833,9 +2818,6 @@ h3.b-title{
 
 		.input-string{
 			width: 100%;
-		}
-		input[name = MAIL]{
-			display: none;
 		}
 
 			.input-string span{

@@ -799,7 +799,7 @@ h3.b-title{
 	bottom: 0;
 	width: 100%;
 	height: 50%;
-	padding: 0 30px;
+	padding: 0 35px;
 }
 
 .b-team-detail-left, .b-team-detail-right{
@@ -818,7 +818,8 @@ h3.b-title{
     padding-top: 25px;
     font-size: 16px;
     line-height: 26px;
-    max-height: 185px;
+    padding: 0px 35px;
+    bottom: 30px;
 }
 
 .b-team-wrap{
@@ -1235,7 +1236,9 @@ h3.b-title{
 	    padding-top: 5px;
 	    font-size: 14px;
 	    line-height: 24px;
-	    max-height: 125px;
+	    padding: 0px 25px;
+	    bottom: 16px;
+   
 	}
 
 	.b-team-detail-info {

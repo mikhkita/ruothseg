@@ -206,7 +206,7 @@ div.b-footer-column:last-child{
 }
 
 .b-team-detail-info{
-	padding: 0 30px;
+	padding: 0 35px;
 }
 
 .b-team-detail-info h3 {
@@ -220,7 +220,8 @@ div.b-footer-column:last-child{
     padding-top: 65px;
     font-size: 16px;
     line-height: 26px;
-    max-height: 246px;
+    padding: 0px 35px;
+    bottom: 30px;
 }
 
 .b-team-wrap{
