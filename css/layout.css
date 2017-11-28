@@ -2607,17 +2607,13 @@ h3.b-title{
 	background-color: #000;
 }
 
-	/*.slick-slide:not(.slick-center) .b-team-detail-item:hover{
-		cursor: pointer;
-		opacity: 0.3;
-	}*/
-
 	.b-team-detail-item.hover-slide{
 		cursor: pointer;
 		opacity: 0.3;
 	}
 
 	.b-team-detail-item{
+		width: 900px;
 		opacity: 0.7;
 		position: relative;
 		height: 637px;
@@ -2639,10 +2635,11 @@ h3.b-title{
 		    position: absolute;
 			top: 0;
 			left: 0;
-			width: 450px;
+			width: 50%;
 			height: 100%;
 			background-color: rgba(0,0,0,0.7);
 			text-align: left;
+			z-index: 5;
 			padding: 0 60px 0 48px;
 			transition: opacity 750ms cubic-bezier(.18,1,.18,1), visibility 750ms cubic-bezier(.18,1,.18,1), left 750ms cubic-bezier(.18,1,.18,1);
 		    -webkit-transition: opacity 750ms cubic-bezier(.18,1,.18,1), visibility 750ms cubic-bezier(.18,1,.18,1), left 750ms cubic-bezier(.18,1,.18,1);
@@ -2669,7 +2666,7 @@ h3.b-title{
 		}
 
 		.b-team-detail-left, .b-team-detail-right{
-			width: 450px;
+			width: 50%;
 			height: 100%;
 			display: inline-block;
 			float: left;

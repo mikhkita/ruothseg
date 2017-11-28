@@ -174,6 +174,8 @@ $(document).ready(function(){
                 });
             }
 
+            $('.b-team-detail .slick-slide').find(".b-team-detail-info").css("left", 0);
+
         }else{
             if($('.advantages-slider').hasClass("slick-initialized")){
                 $('.advantages-slider').slick('unslick');
@@ -472,11 +474,18 @@ $(document).ready(function(){
         asNavFor: '.team-detail-slider',
         responsive: [
             {
-              breakpoint: 767,
+              breakpoint: 1096,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 768,
               settings: {
                 swipe: true,
-                //slidesToShow: 1,
-                //slidesToScroll: 1
+                slidesToShow: 3,
+                slidesToScroll: 1
               }
             }
         ]
@@ -583,13 +592,15 @@ $(document).ready(function(){
     });
 
     $("body").on("mousemove", ".b-team-detail .slick-center", function(e){
-        var offset = $(this).offset();
-        var relativeX = (e.pageX - offset.left);
-        var relativeY = (e.pageY - offset.top);
-        if(relativeX > $(this).width() / 2){
-            $('.slick-slide').find(".b-team-detail-info").css("left", 0);
-        }else{
-            $('.slick-slide').find(".b-team-detail-info").css("left", "50%");
+        if(!isMobile){
+            var offset = $(this).offset();
+            var relativeX = (e.pageX - offset.left);
+            var relativeY = (e.pageY - offset.top);
+            if(relativeX > $(this).width() / 2){
+                $('.b-team-detail .slick-slide').find(".b-team-detail-info").css("left", 0);
+            }else{
+                $('.b-team-detail .slick-slide').find(".b-team-detail-info").css("left", "50%");
+            }
         }
     });
 
