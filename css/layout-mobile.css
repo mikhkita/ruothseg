@@ -1016,13 +1016,13 @@ input, textarea, select{
 	/*Arrows*/
 
 	.b-video-arrows.icon-arrow-left {
-	    left: 0;
+	    left: -28px;
 	    top: 130px;
 	}
 
 	.b-video-arrows.icon-arrow-right {
-	    right: 0;
-	    top: -133px;
+	    right: -28px;
+	    top: -132px;
 	}
 
 	.b-rewiews-arrows.icon-arrow-left {
@@ -1248,6 +1248,10 @@ input, textarea, select{
 
 	.b-team-detail-info {
 	    padding: 0 25px;
+	}
+
+	.b-block-video .b-block-click{
+		width: 255px;
 	}
 
 }
