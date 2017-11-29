@@ -2830,7 +2830,9 @@ h3.b-title{
 				content: "*";
 				color: #ff6666;
 			}
-
+			[name = "MAIL"]{
+				display: none;
+			}
 			.input-string input,
 			.input-string select,
 			.b-popup textarea{
@@ -2965,7 +2967,7 @@ h3.b-title{
 			.chosen-container .chosen-results {
 			    margin: 0;
 			    padding: 0;
-			    min-height: 245px;
+			    max-height: 245px;
 			}
 
 			.chosen-container .chosen-results li.highlighted {
