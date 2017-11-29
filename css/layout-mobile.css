@@ -125,6 +125,10 @@ h3.b-title{
 	padding: 18px 0;
 }
 
+input, textarea, select{
+	border-radius: 0px !important;
+}
+
 /*---------------------------*/
 
 .b-content > .b-block{
@@ -1191,7 +1195,8 @@ h3.b-title{
 		margin-right: 10px;
 	}
 
-	.b-footer .b-footer-address{
+	.b-footer .b-footer-address,
+	.b-footer p, .b-footer span{
 		font-size: 14px;
 	}
 
