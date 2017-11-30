@@ -958,7 +958,7 @@ input, textarea, select{
 }
 
 .b-about-text{
-	padding-bottom: 30px;
+	padding-bottom: 25px;
 }
 
 @media screen and (max-width: 665px){
@@ -1355,6 +1355,10 @@ input, textarea, select{
 	.b-popup .personal-info,
 	.b-popup .personal-info a{
 		font-size: 12px;
+	}
+
+	.b-popup-center{
+		text-align: center;
 	}
 
 }
