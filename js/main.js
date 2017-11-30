@@ -607,11 +607,11 @@ $(document).ready(function(){
 
     $('.b-team-detail .slick-slide').hover(
         function(){
-            if($(this).prev().hasClass("slick-center")){
+            if($(this).prev().hasClass("slick-center") && $(this).prev().hasClass("slick-active")){
                 $(this).find(".b-team-detail-item").addClass("hover-slide");
                 $(".icon-arrow-right").addClass("hover-arrow");
             }
-            if($(this).next().hasClass("slick-center")){
+            if($(this).next().hasClass("slick-center") && $(this).next().hasClass("slick-active")){
                 $(this).find(".b-team-detail-item").addClass("hover-slide");
                 $(".icon-arrow-left").addClass("hover-arrow");
             }
