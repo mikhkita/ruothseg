@@ -72,7 +72,8 @@ input.error{
 	max-width: 100%;
 }
 
-.b-top.b-top-fixed .b-block{
+.b-top.b-top-fixed .b-block,
+.b-top.b-top-hide .b-block{
 	max-width: calc(100% - 48px);
 }
 
@@ -210,18 +211,18 @@ div.b-footer-column:last-child{
 }
 
 .b-team-detail-info h3 {
-    padding-top: 160px;
-    margin-bottom: 0;
     color: #FFF;
     font-size: 30px;
 }
 
 .b-team-detail-info .b-team-detail-text {
-    padding-top: 65px;
     font-size: 16px;
     line-height: 26px;
-    padding: 0px 35px;
+}
+
+.b-team-info-cont {
     bottom: 30px;
+    padding: 0 30px;
 }
 
 .b-team-wrap{
@@ -237,6 +238,10 @@ div.b-footer-column:last-child{
 }
 
 @media screen and (max-width: 1095px){
+
+	.b-top{
+		padding-top: 10px;
+	}
 
 	.b-top .burger-menu{
 		display: block;
@@ -261,6 +266,10 @@ div.b-footer-column:last-child{
 	.b-team-arrows.icon-arrow-right{
 	    right: -67px;
 	}
+
+	.review-list{
+		padding: 0 15px;
+	}
 }
 
 @media screen and (max-width: 1024px){
@@ -282,6 +291,10 @@ div.b-footer-column:last-child{
 
 	.b-residence .advantages-list li:nth-last-of-type(-n+2){
 	    margin-bottom: 0;
+	}
+
+	.b-footer{
+		background-position: 70% 50%;
 	}
 
 	.b-footer .b-footer-column:nth-child(2){
@@ -318,6 +331,10 @@ div.b-footer-column:last-child{
 	.advantages-list li p{
 		width: 90%;
 	}
+
+		.advantages-list li .advantage-text{
+			font-size: 20px;
+		}
 
 	.orgs-padding {
 	    padding: 4px 10px;

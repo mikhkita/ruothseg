@@ -50,7 +50,8 @@ $(document).ready(function(){
         }
 
         /*if($(".b-main-header").length && isMobile){
-            if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0 || !isMobile ){
+            //если высота уменьшилась
+            if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
                 $(".b-main-header, .header-back, .b-header-block").css({
                     "height" : myHeight - $(".b-main-header").height();
                 });
@@ -407,6 +408,10 @@ $(document).ready(function(){
         });
     }
 
+    $('.b-tour-slider').on('init', function(event, slick){
+        $(this).removeClass("hide");
+    });
+
     $('.b-tour-slider').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -645,14 +650,16 @@ $(document).ready(function(){
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
             if (scrollTop > $hMain) {
-                $('.b-top').removeClass("b-top-hide");
+                console.log("+");
+                $('.b-top').removeClass("b-top-hide").addClass("b-top-fixed");
             }else{     
-                $('.b-top').addClass("b-top-hide");
+                console.log("-");
+                $('.b-top').addClass("b-top-hide").removeClass("b-top-fixed");
             }
         });
     }
 
-    if($('.b-menu-cont .b-menu').length){
+    if($('.b-content').length){
         checkMenu();
         var $window = $(window),
             $target = $(".b-top"),
@@ -661,7 +668,7 @@ $(document).ready(function(){
             // Как далеко вниз прокрутили страницу
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
-            if (scrollTop > $h) {
+            if (scrollTop > $h + 18) {
                 $target.addClass("b-top-fixed");
             }else{     
                 $target.removeClass("b-top-fixed");
