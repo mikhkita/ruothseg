@@ -421,17 +421,36 @@ $(document).ready(function(){
 
     $('.b-tour-slider').on('init', function(event, slick){
         $(this).removeClass("hide");
+
+        console.log(slick.slideCount, slick.currentSlide);
+        if(slick.currentSlide <= Math.floor(slick.options.slidesToShow/2)){
+            console.log("<-");
+            $('.b-block-tour .icon-arrow-left').addClass("hide");
+        }else{
+            $('.b-block-tour .icon-arrow-left').removeClass("hide");
+        }
+        //если виден последний элемент, то скрыть правую стрелку
+        if(slick.slideCount - slick.currentSlide <= Math.floor(slick.options.slidesToShow/2) + 1){
+            console.log("->hide");
+            $('.b-block-tour .icon-arrow-right').addClass("hide");
+        }else{
+            console.log("->show");
+            $('.b-block-tour .icon-arrow-right').removeClass("hide");
+        }
     });
 
     $('.b-tour-slider').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
         dots: false,
-        infinite: true,
+        infinite: false,
         arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        swipe: false,
         speed: 600,
         nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
-        prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows hide" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows" aria-hidden="true"></div></div>',
         responsive: [
             {
               breakpoint: 900,
@@ -450,17 +469,23 @@ $(document).ready(function(){
         ]
     });
 
+    $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")), true);
+
     $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        console.log($('.slick-slide.slick-active').length);
+        console.log(slick.slideCount, currentSlide, Math.floor(slick.options.slidesToShow/2));
+        var border = Math.floor(slick.options.slidesToShow/2);
+        if(slick.options.slidesToShow === 2){
+            border -= 1;
+        }
         //если виден первый элемент, то скрыть левую стрелку
-        if(currentSlide === 0){
+        if(currentSlide <= border){
             console.log("<-");
             $('.b-block-tour .icon-arrow-left').addClass("hide");
         }else{
             $('.b-block-tour .icon-arrow-left').removeClass("hide");
         }
         //если виден последний элемент, то скрыть правую стрелку
-        if(slick.slideCount - currentSlide === $(this).find(".slick-slide.slick-active").length){
+        if(slick.slideCount - currentSlide <= border + 1){
             console.log("->hide");
             $('.b-block-tour .icon-arrow-right').addClass("hide");
         }else{
