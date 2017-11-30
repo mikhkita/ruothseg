@@ -953,6 +953,14 @@ input, textarea, select{
 	animation-direction: alternate;
 }
 
+.b-passage-bottom .b-about-text{
+	text-align: left;
+}
+
+.b-about-text{
+	padding-bottom: 30px;
+}
+
 @media screen and (max-width: 665px){
 	.b-review {
 	    width: calc(100% - 17px);
@@ -1261,6 +1269,11 @@ input, textarea, select{
 
 	.b-block-about-text.b-block {
 	    padding: 50px 0px 50px;
+	}
+
+	.b-team-info-cont {
+	    bottom: 25px;
+	    padding: 0 30px;
 	}
 
 }

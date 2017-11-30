@@ -2333,7 +2333,8 @@ h3.b-title{
     -o-transition: opacity 700ms ease-out, visibility 700ms ease-out; /** Opera **/
 }
 
-.outer-nav.vertical a.nav-touch{
+.outer-nav.vertical a.nav-touch,
+.outer-nav.vertical a.active-mobile{
 	border-radius: 100px;
     border: 2px solid #744d4d;
     color: #744d4d;
