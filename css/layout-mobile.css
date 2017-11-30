@@ -1272,8 +1272,16 @@ input, textarea, select{
 	}
 
 	.b-team-info-cont {
-	    bottom: 25px;
+	    bottom: 20px;
 	    padding: 0 30px;
+	}
+
+	.img-mobile{
+		display: block;
+	}
+
+	.img-desktop{
+		display: none;
 	}
 
 }

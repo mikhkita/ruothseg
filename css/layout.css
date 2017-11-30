@@ -3154,6 +3154,10 @@ h3.b-title{
 
 /*------------------------*/
 
+.img-mobile{
+	display: none;
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	.b-logo{
 	    background-image: url(../i/logo@2x.png);
