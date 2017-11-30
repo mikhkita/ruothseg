@@ -157,12 +157,15 @@ $(document).ready(function(){
             $('div.tour-item').each(function() {
                 $this = $(this);
                 $tag = $('<a></a>');
-                $tag.addClass("tour-item");
+                $tag.addClass("tour-item fancy");
                 $tag.attr("href", $this.attr("data-href"));
                 $tag.append($this.html());
 
                 $this.replaceWith($tag);
             });
+
+            fancyBind($('.tour-item.fancy'));
+
             if(!$('.b-hotel-foto-list').hasClass("slick-initialized")){
                 $('.b-hotel-foto-list').not('.slick-initialized').slick({
                     dots: true,
@@ -783,52 +786,7 @@ $(document).ready(function(){
 
                 readMoreShow();
 
-                $(".fancy").each(function(){
-                    var $popup = $($(this).attr("href")),
-                        $this = $(this);
-                    $this.fancybox({
-                        padding : 0,
-                        content : $popup,
-                        helpers: {
-                            overlay: {
-                                locked: true 
-                            }
-                        },
-                        beforeShow: function(){
-                            $(".fancybox-wrap").addClass("beforeShow");
-                            $popup.find(".custom-field").remove();
-                            if( $this.attr("data-value") ){
-                                var name = getNextField($popup.find("form"));
-                                $popup.find("form").append("<input type='hidden' class='custom-field' name='"+name+"' value='"+$this.attr("data-value")+"'/><input type='hidden' class='custom-field' name='"+name+"-name' value='"+$this.attr("data-name")+"'/>");
-                            }
-                            if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
-                                customHandlers[$this.attr("data-beforeShow")]($this);
-                            }
-                        },
-                        afterShow: function(){
-                            $(".fancybox-wrap").removeClass("beforeShow");
-                            $(".fancybox-wrap").addClass("afterShow");
-                            if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
-                                customHandlers[$this.attr("data-afterShow")]($this);
-                            }
-                            $popup.find("input[type='text'],input[type='number'],textarea").eq(0).focus();
-                        },
-                        beforeClose: function(){
-                            $(".fancybox-wrap").removeClass("afterShow");
-                            $(".fancybox-wrap").addClass("beforeClose");
-                            if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
-                                customHandlers[$this.attr("data-beforeClose")]($this);
-                            }
-                        },
-                        afterClose: function(){
-                            $(".fancybox-wrap").removeClass("beforeClose");
-                            $(".fancybox-wrap").addClass("afterClose");
-                            if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
-                                customHandlers[$this.attr("data-afterClose")]($this);
-                            }
-                        }
-                    });
-                });
+                fancyBind($('.fancy'));
 
                 $('.b-btn-read-more').on('click', function(){
                     //скопировать инфу в popup
@@ -988,6 +946,55 @@ $(document).ready(function(){
         $(".b-popup .select-tour option[value='']").prop('selected', true).trigger("chosen:updated");
         $('.persons-count').change();
     });
+
+    function fancyBind($selector){
+        $selector.each(function(){
+            var $popup = $($(this).attr("href")),
+                $this = $(this);
+            $this.fancybox({
+                padding : 0,
+                content : $popup,
+                helpers: {
+                    overlay: {
+                        locked: true 
+                    }
+                },
+                beforeShow: function(){
+                    $(".fancybox-wrap").addClass("beforeShow");
+                    $popup.find(".custom-field").remove();
+                    if( $this.attr("data-value") ){
+                        var name = getNextField($popup.find("form"));
+                        $popup.find("form").append("<input type='hidden' class='custom-field' name='"+name+"' value='"+$this.attr("data-value")+"'/><input type='hidden' class='custom-field' name='"+name+"-name' value='"+$this.attr("data-name")+"'/>");
+                    }
+                    if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
+                        customHandlers[$this.attr("data-beforeShow")]($this);
+                    }
+                },
+                afterShow: function(){
+                    $(".fancybox-wrap").removeClass("beforeShow");
+                    $(".fancybox-wrap").addClass("afterShow");
+                    if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
+                        customHandlers[$this.attr("data-afterShow")]($this);
+                    }
+                    $popup.find("input[type='text'],input[type='number'],textarea").eq(0).focus();
+                },
+                beforeClose: function(){
+                    $(".fancybox-wrap").removeClass("afterShow");
+                    $(".fancybox-wrap").addClass("beforeClose");
+                    if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
+                        customHandlers[$this.attr("data-beforeClose")]($this);
+                    }
+                },
+                afterClose: function(){
+                    $(".fancybox-wrap").removeClass("beforeClose");
+                    $(".fancybox-wrap").addClass("afterClose");
+                    if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
+                        customHandlers[$this.attr("data-afterClose")]($this);
+                    }
+                }
+            });
+        });
+    }
 
     /*$('.b-header').parallax({
         imageSrc: $('.b-header').attr("data-img"),
