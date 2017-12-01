@@ -115,7 +115,7 @@ $(document).ready(function(){
 
             //если высота увеличилась (плашка свернулась)
             //console.log(myHeight, prevHeight);
-            if(myHeight-prevHeight <= 0){
+            if(Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
                 console.log("resize");
                 if(myHeight > 680){
                     $(".b-main-header, .header-back, .b-header-block").css({
