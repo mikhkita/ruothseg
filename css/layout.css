@@ -218,9 +218,18 @@ input:-moz-placeholder {
 .b-header .b-btn-brown-header{
 	padding: 21px 0;
 	background-color: transparent;
+	background-color: rgb(115, 77, 76);
+	background-image: -webkit-linear-gradient(67deg, #ac8484 0%, #744d4d 100%);
+	background-image: -o-linear-gradient(67deg, #ac8484 0%, #744d4d 100%);
 	background-image: linear-gradient(157deg, #ac8484 0%, #744d4d 100%);
 	color: #FFF;
 }
+	.b-header .b-btn-brown-header:hover{
+		background-color: rgb(87,65,65);
+		background-image: -webkit-linear-gradient(67deg, #ac8484 0%, #5a3939 100%);
+		background-image: -o-linear-gradient(67deg, #ac8484 0%, #5a3939 100%);
+		background-image: linear-gradient(157deg, #ac8484 0%, #5a3939 100%);
+	}
 
 .b-btn-white-header{
 	background-color: rgba(255,255,255,0.8);
@@ -235,24 +244,38 @@ input:-moz-placeholder {
 	}
 
 .b-btn-orange{
+	background-image: -webkit-linear-gradient(69deg, #ffbd39 0%, #fc4d3f 100%);
+	background-image: -o-linear-gradient(69deg, #ffbd39 0%, #fc4d3f 100%);
 	background-image: linear-gradient(159deg, #ffbd39 0%, #fc4d3f 100%);
 }
 	.b-btn-orange:hover{
-		
+		background-image: -webkit-linear-gradient(69deg, #ffbd39 0%, #e82c1d 100%);
+		background-image: -o-linear-gradient(69deg, #ffbd39 0%, #e82c1d 100%);
+		background-image: linear-gradient(159deg, #ffbd39 0%, #e82c1d 100%);
 	}
 
 .b-btn-blue{
-	background-image: linear-gradient(128deg, #1bedff 0%, #2a5da9 100%, #2e3192 100%);
+	background-image: -webkit-linear-gradient(38deg, #1bedff 0%, #2a5da9 100%);
+	background-image: -o-linear-gradient(38deg, #1bedff 0%, #2a5da9 100%);
+	background-image: linear-gradient(128deg, #1bedff 0%, #2a5da9 100%);
 }
 	.b-btn-blue:hover{
-		
+		background-image: -webkit-linear-gradient(38deg, #10e5f7 0%, #124796 100%);
+		background-image: -o-linear-gradient(38deg, #10e5f7 0%, #124796 100%);
+		background-image: linear-gradient(128deg, #10e5f7 0%, #124796 100%);
 	}
 
 .b-btn-brown{
 	background-color: rgb(115, 77, 76);
+	background-image: -webkit-linear-gradient(67deg, #ac8484 0%, #744d4d 100%);
+	background-image: -o-linear-gradient(67deg, #ac8484 0%, #744d4d 100%);
+	background-image: linear-gradient(157deg, #ac8484 0%, #744d4d 100%);
 }
 	.b-btn-brown:hover{
 		background-color: rgb(87,65,65);
+		background-image: -webkit-linear-gradient(67deg, #ac8484 0%, #5a3939 100%);
+		background-image: -o-linear-gradient(67deg, #ac8484 0%, #5a3939 100%);
+		background-image: linear-gradient(157deg, #ac8484 0%, #5a3939 100%);
 	}
 
 .b-btn-transparent{
@@ -2874,8 +2897,10 @@ h3.b-title{
 	}
 
 	.b-popup h3{
-		/*color: #603b3c;*/
-		margin-bottom: 26px;
+		color: #603b3c;
+		margin-bottom: 32px;
+		font-size: 36px;
+		font-family: "RobotoRegular", Arial;
 	}
 
 	#b-popup-tour-form{
