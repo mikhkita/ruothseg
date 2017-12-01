@@ -472,7 +472,7 @@ input, textarea, select{
 		.b-block-video-cont .video-play {
 		    border: 16px solid transparent;
 		    border-left: 26px solid #FFF;
-		    margin: 21px 0 0 25px;
+		    margin: 25px 0 0 31px;
 		}
 
 .b-block-reviews{
@@ -1026,7 +1026,7 @@ input, textarea, select{
 		.b-block-video-cont .video-play {
 		    border: 12px solid transparent;
 		    border-left: 20px solid #FFF;
-		    margin: 16px 0 0 20px;
+		    margin: 19px 0 0 23px;
 		}
 	
 	.b-reviews-content .b-btn-show-more{

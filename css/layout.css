@@ -584,7 +584,7 @@ h3.b-title{
 					margin: 0 auto;
 					width: 91px;
 					height: 91px;
-					box-shadow: inset 0px 0px 0px 5px #744d4d;
+					box-shadow: inset 0px 0px 0px 5px #744d4d; 
 					padding: 5px;
 					box-sizing: content-box;
 					border-radius: 50%;
@@ -611,18 +611,19 @@ h3.b-title{
 				}
 				.b-block-video-cont .video-circle{
 					margin: 0 auto;
-					width: 130px;
-					height: 130px;
+					width: 120px;
+					box-shadow: none;
+					height: 120px;
 					border: 5px solid #FFF;
 					border-radius: 50%;
 				}
 				.b-block-video-cont .video-play{
 					display: block;
-				    width: 0;
-				    height: 0;
-				    border: 27px solid transparent;
-				    border-left: 45px solid #FFF;
-				    margin: 34px 0 0 41px;
+					width: 0;
+					height: 0;
+					border: 27px solid transparent;
+					border-left: 45px solid #FFF;
+					margin: 34px 0 0 44px;
 				}
 
 				.b-header-video p{
