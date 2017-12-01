@@ -436,6 +436,7 @@ $(document).ready(function(){
         swipe: false,
         speed: 600,
         centerMode: true,
+        focusOnSelect: true,
         variableWidth: true,
         asNavFor: '.team-detail-slider',
         //autoplay: true,
@@ -483,6 +484,7 @@ $(document).ready(function(){
         centerMode: true,
         variableWidth: true,
         asNavFor: '.team-slider',
+        focusOnSelect: true,
         //autoplay: true,
         //autoplaySpeed: 3000,
         responsive: [
@@ -496,10 +498,10 @@ $(document).ready(function(){
         ]
     });
 
-    $('.b-team-list .slick-slide').on('click', function(){
-        var index = $(this).attr("data-slick-index");
-        $(".team-slider").slick('slickGoTo', index, false);
-    });
+    // $('.b-team-list .slick-slide').on('click', function(){
+    //     var index = $(this).attr("data-slick-index");
+    //     $(".team-slider").slick('slickGoTo', index, false);
+    // });
 
     $(".icon-arrow-left.b-arrows-team-detail").hover(function(){
         $('.slick-center').prev().children(".b-team-detail-item").addClass("hover");
