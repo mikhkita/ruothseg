@@ -2038,10 +2038,13 @@ h3.b-title{
 	}
 
 .b-content, .b-content-main{
-	overflow-x: hidden;
 	background-color: #FFF;
 	/*padding-bottom: 20px;*/
 	box-sizing: content-box;
+}
+
+.b-content-main{
+	overflow-x: hidden;
 }
 
 	.b-content > .b-block {

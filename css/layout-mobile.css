@@ -236,7 +236,7 @@ input, textarea, select{
 		}
 
 	.request-call {
-	    font-size: 14px;
+	    font-size: 16px;
 	    letter-spacing: 0;
 	}
 
@@ -513,7 +513,7 @@ input, textarea, select{
 			}
 
 			.review-item-text{
-				font-size: 14px;
+				font-size: 16px;
 			}
 
 			.icon-foto-mini{
@@ -522,7 +522,7 @@ input, textarea, select{
 
 			.icon-foto-mini:before {
 			    padding-top: 8px;
-			    font-size: 14px;
+			    font-size: 16px;
 			    margin-right: 6px;
 			}
 
@@ -532,10 +532,6 @@ input, textarea, select{
 		width: calc(100%/2 - 17px);
 		margin-right: 18px;
 	}
-
-		.b-review p{
-			font-size: 14px;
-		}
 
 	.b-review:nth-child(3n){
 		margin-right: 18px;
@@ -582,11 +578,11 @@ input, textarea, select{
 		}
 
 		.b-footer .b-footer-column ul li a{
-			font-size: 14px;
+			font-size: 16px;
 		}
 
 		.b-footer .b-footer-column{
-		    margin-right: 42px;
+		    margin-right: 38px;
 		}
 
 		div.b-footer-column:last-child{
@@ -1187,7 +1183,7 @@ input, textarea, select{
 		margin: 0 12px;
 	}
 		.b-tour li a{
-			font-size: 14px;
+			font-size: 16px;
 			padding: 3px 0 4px 0;
 		}
 
@@ -1215,7 +1211,7 @@ input, textarea, select{
 
 	.b-footer .b-footer-address,
 	.b-footer p, .b-footer span{
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 	/*.b-footer .b-footer-column.b-footer-logo-cont{
@@ -1293,13 +1289,6 @@ input, textarea, select{
 		display: none;
 	}
 
-}
-
-@media screen and (max-width: 500px){
-	.b-footer{
-		background-position: 62% 50%;
-	}
-
 	.b-footer-down .b-footer-down-text {
 	    width: 100%;
 	}
@@ -1317,7 +1306,12 @@ input, textarea, select{
 	    right: auto;
 	}
 
-	.b
+}
+
+@media screen and (max-width: 500px){
+	.b-footer{
+		background-position: 62% 50%;
+	}
 }
 
 @media screen and (max-width: 475px){
