@@ -7,7 +7,7 @@ body {
 body {
 	min-width: 345px;
 	text-align: center;
-	font-size: 14px;
+	font-size: 16px;
     line-height: 26px;
 	font-family: 'RobotoRegular', Arial;
 	overflow-x: hidden;
@@ -812,7 +812,7 @@ input, textarea, select{
 	top: auto;
 	bottom: 0;
 	width: 100%;
-	height: 50%;
+	height: 50.5%;
 	padding: 0 35px;
 }
 
@@ -1241,22 +1241,29 @@ input, textarea, select{
 	}
 
 	.b-team-detail .slick-slide {
-	    height: 420px;
+	    height: 445px;
 	}
 
 	.b-team-detail-item {
-	    width: 310px;
-	    height: 420px;
+	    width: 324px;
+	    height: 445px;
 	}
 
 	.b-team-detail-info h3 {
+		padding-top: 0;
 	    font-size: 22px;
 	}
 
+	.b-team-info-cont {
+	    top: 20px;
+	}
+
 	.b-team-detail-info .b-team-detail-text {
-	    padding-top: 5px;
-	    font-size: 14px;
+	    padding-top: 3px;
+	    font-size: 16px;
 	    line-height: 24px;
+	    max-height: 144px;
+	    overflow: hidden;
    
 	}
 
@@ -1266,10 +1273,6 @@ input, textarea, select{
 
 	.b-block-video .b-block-click{
 		width: 255px;
-	}
-
-	.b-block-about-text{
-		font-size: 14px;
 	}
 
 	.b-block-about-text.b-block {

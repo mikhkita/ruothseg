@@ -49,17 +49,6 @@ $(document).ready(function(){
             isMobile = true;
         }
 
-        /*if($(".b-main-header").length && isMobile){
-            //если высота уменьшилась
-            if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
-                $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : myHeight - $(".b-main-header").height();
-                });
-            }
-            prevHeight = myHeight;
-            rotation = myWidth/myHeight;
-        }*/
-
         //сжатие отступов в хедере
         if($(".b-main-header").length && !isMobile){
             console.log(myHeight);
@@ -87,16 +76,8 @@ $(document).ready(function(){
 
                 var blockHeight = myHeight > minHeight ? resizeHeight - topHeight : minHeight;
                 $('.header-back').css("height", myHeight - paddingBottom);
-                /*$('.header-back').addClass("compress-header");
-                $('.b-header-block').addClass("compress-header");
-                $('.b-header-content').addClass("compress-header");*/
             }else if(myHeight > resizeHeight){
-                
                 //resetHeader();
-
-                /*$('.header-back').removeClass("compress-header");
-                $('.b-header-block').removeClass("compress-header");
-                $('.b-header-content').removeClass("compress-header");*/
             }else if(myHeight < minHeight){
                 $('.b-header-block').css("top", 0);
                 $('.header-back').css("height", minHeight);
@@ -110,7 +91,28 @@ $(document).ready(function(){
             }
         }
 
+        /*if($(".b-main-header").length && isMobile){
+            //если высота уменьшилась
+            if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
+                $(".b-main-header, .header-back, .b-header-block").css({
+                    "height" : myHeight - $(".b-main-header").height();
+                });
+            }
+            prevHeight = myHeight;
+            rotation = myWidth/myHeight;
+        }*/
+
         if($(".b-main-header").length && isMobile){
+
+            //если высота уменьшилась
+            /*if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
+                $(".b-main-header, .header-back, .b-header-block").css({
+                    "height" : myHeight - $(".b-main-header").height();
+                });
+            }
+            prevHeight = myHeight;
+            rotation = myWidth/myHeight;*/
+
             if(myHeight > 680){
                 $(".b-main-header, .header-back, .b-header-block").css({
                     "height" : 680
