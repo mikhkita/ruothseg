@@ -1,5 +1,31 @@
 @charset "utf-8";
 
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 5px 0 rgba(115, 77, 76, 0.4);
+  }
+  40% {
+      -webkit-box-shadow: 0 0 10px 30px rgba(115, 77, 76, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 5px 0 rgba(115, 77, 76, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 5px 0 rgba(115, 77, 76, 0.4);
+    box-shadow: 0 0 5px 0 rgba(115, 77, 76, 0.4);
+  }
+  40% {
+      -moz-box-shadow: 0 0 10px 30px rgba(115, 77, 76, 0);
+      box-shadow: 0 0 10px 30px rgba(115, 77, 76, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 5px 0 rgba(115, 77, 76, 0);
+      box-shadow: 0 0 5px 0 rgba(115, 77, 76, 0);
+  }
+}
+
 @font-face {
 	font-family: 'icomoon';
 	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),  
@@ -166,21 +192,26 @@ input:-moz-placeholder {
 	font-size: 16px;
 	color: #FFF;
 	border-radius: 100px;
-    display: inline-block;
-    line-height: 21px;
-    min-width: 200px;
-    box-sizing: content-box;
-    padding: 16px 25px 19px 25px;
+	display: inline-block;
+	letter-spacing: 0.3px;
+	line-height: 21px;
+	min-width: 210px;
+	box-sizing: content-box;
+	padding: 17px 25px 20px 25px;
 }
 
 .b-btn-brown-header{
-	background-color: rgba(87,65,65,0.7);
+	background-color: rgb(115, 77, 76);
 	min-width: 300px;
 	font-size: 18px;
-	padding: 20px 0;
+	padding: 20px 0 21px;
 	letter-spacing: 0.5px;
+	/*-webkit-animation: pulse 3s infinite;
+	animation: pulse 3s infinite;*/
 }
 	.b-main-header .b-btn-brown-header:hover{
+		/*-webkit-animation: none;
+		animation: none;*/
 		background-color: rgb(87,65,65);
 	}
 
@@ -218,10 +249,10 @@ input:-moz-placeholder {
 	}
 
 .b-btn-brown{
-	background-image: linear-gradient(157deg, #ac8484 0%, #744d4d 100%);
+	background-color: rgb(115, 77, 76);
 }
 	.b-btn-brown:hover{
-		
+		background-color: rgb(87,65,65);
 	}
 
 .b-btn-transparent{
@@ -553,44 +584,69 @@ h3.b-title{
 					margin: 0 auto;
 					width: 91px;
 					height: 91px;
-					border: 5px solid #744d4d;
+					box-shadow: inset 0px 0px 0px 5px #744d4d; 
+					padding: 5px;
+					box-sizing: content-box;
 					border-radius: 50%;
+					-webkit-transition: -webkit-transform 100ms ease-out;
+					-moz-transition: transform 100ms ease-out;
+					-ms-transition: -ms-transform 100ms ease-out;
+					-o-transition: -o-transform 100ms ease-out;
+					transition: transform 100ms ease-out;
 				}
+					.b-header-video:hover .video-circle{
+						-webkit-transform: scale(1.1);
+						   -moz-transform: scale(1.1);
+						    -ms-transform: scale(1.1);
+						   	 -o-transform: scale(1.1);
+								transform: scale(1.1);
+					}
 				.video-play{
 					display: block;
-				    width: 0;
-				    height: 0;
-				    border: 16px solid transparent;
-				    border-left: 28px solid #744d4d;
-				    margin: 24px 0 0 31px;
+					width: 0;
+					height: 0;
+					border: 16px solid transparent;
+					border-left: 28px solid #744d4d;
+					margin: 29px 0 0 36px;
 				}
 				.b-block-video-cont .video-circle{
 					margin: 0 auto;
-					width: 130px;
-					height: 130px;
+					width: 120px;
+					box-shadow: none;
+					height: 120px;
 					border: 5px solid #FFF;
 					border-radius: 50%;
 				}
 				.b-block-video-cont .video-play{
 					display: block;
-				    width: 0;
-				    height: 0;
-				    border: 27px solid transparent;
-				    border-left: 45px solid #FFF;
-				    margin: 34px 0 0 41px;
+					width: 0;
+					height: 0;
+					border: 27px solid transparent;
+					border-left: 45px solid #FFF;
+					margin: 34px 0 0 44px;
 				}
 
 				.b-header-video p{
 					text-align: center;
-					line-height: 24px;
+					line-height: 28px;
 					margin-top: 19px;
 				}
+					.b-header-video p span{
+						border-bottom: 2px dashed #744d4d;
+						-webkit-transition: border-bottom 100ms ease-out;
+						   -moz-transition: border-bottom 100ms ease-out;
+						    -ms-transition: border-bottom 100ms ease-out;
+						   	 -o-transition: border-bottom 100ms ease-out;
+								transition: border-bottom 100ms ease-out;
+					}
+					.b-header-video:hover p span{
+						border-bottom: 2px dashed transparent;
+					}
 
 		.b-header-buttons{
-			text-transform: uppercase;
+			text-transform: uppercase; 
 			font-family: 'RobotoBold';
 		}
-
 			.b-header-buttons .position-buttons:nth-child(2){
 				margin-left: 30px;
 			}

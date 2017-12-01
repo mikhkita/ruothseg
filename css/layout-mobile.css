@@ -78,7 +78,7 @@ input.error{
 }
 
 .b-btn-brown-header{
-	background-image: linear-gradient(157deg, #ac8484 0%, #744d4d 100%);
+	
 }
 .b-btn-white-header{
 	background-color: #ffffff;
@@ -192,9 +192,9 @@ input, textarea, select{
 	.b-logo {
 	    background-position: 50% 0;
 	    background-repeat: no-repeat;
-	    background-size: 100px;
-	    width: 100px;
-	    height: 168px;
+	    background-size: 130px;
+	    width: 130px;
+	    height: 245px;
 	    margin: 0 auto;
 	}
 	.b-logo-text{
@@ -472,7 +472,7 @@ input, textarea, select{
 		.b-block-video-cont .video-play {
 		    border: 16px solid transparent;
 		    border-left: 26px solid #FFF;
-		    margin: 21px 0 0 25px;
+		    margin: 25px 0 0 31px;
 		}
 
 .b-block-reviews{
@@ -1022,7 +1022,7 @@ input, textarea, select{
 		.b-block-video-cont .video-play {
 		    border: 12px solid transparent;
 		    border-left: 20px solid #FFF;
-		    margin: 16px 0 0 20px;
+		    margin: 19px 0 0 23px;
 		}
 	
 	.b-reviews-content .b-btn-show-more{
