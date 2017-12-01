@@ -115,17 +115,18 @@ $(document).ready(function(){
 
             //если высота уменьшилась (плашка свернулась)
             if( Math.abs(myWidth/myHeight-rotation) < 0.5 || myHeight-prevHeight < 0){
+                console.log("resize");
                 if(myHeight > 680){
                     $(".b-main-header, .header-back, .b-header-block").css({
                         "height" : 680
                     });
-                }else if(myHeight <= 680 && myHeight >= 500){
+                }else if(myHeight <= 680 && myHeight >= 300){
                     $(".b-main-header, .header-back, .b-header-block").css({
                         "height" : myHeight
                     });
-                }else if(myHeight < 500){
+                }else if(myHeight < 300){
                     $(".b-main-header, .header-back, .b-header-block").css({
-                        "height" : 500
+                        "height" : 300
                     });
                 }
             }
