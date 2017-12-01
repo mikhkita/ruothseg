@@ -2813,6 +2813,9 @@ h3.b-title{
     -o-animation: fadeUp 500ms ease-out forwards;
     animation: fadeUp 500ms ease-out forwards;
 }
+	.b-popup.b-thanks{
+		max-width: 575px;
+	}
 
 	@-webkit-keyframes fadeUp {
 		100% {
