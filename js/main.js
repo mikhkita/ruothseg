@@ -564,7 +564,6 @@ $(document).ready(function(){
         swipe: false,
         speed: 600,
         centerMode: true,
-        focusOnSelect: true,
         variableWidth: true,
         focusOnSelect: true,
         asNavFor: '.team-detail-slider',

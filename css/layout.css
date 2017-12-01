@@ -2303,7 +2303,8 @@ h3.b-title{
 }
 
 .b-tour.hide{
-	display: none;
+	display: block;
+	opacity: 0;
 }
 
 .b-block-tour{
@@ -2318,7 +2319,7 @@ h3.b-title{
 		border: 2px solid transparent;
 		border-radius: 100px;
 	}
-		.b-tour li.active{
+		.b-tour li.active a{
 			border-radius: 100px;
 			border: 2px solid #744d4d;
 			color: #744d4d;
@@ -2328,7 +2329,7 @@ h3.b-title{
 				color: #744d4d;
 			}
 
-		.b-tour li:hover{
+		.b-tour li a:hover{
 			border-radius: 100px;
 			border: 2px solid #744d4d;
 		}
