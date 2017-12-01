@@ -2903,8 +2903,9 @@ h3.b-title{
 	.b-popup h3{
 		color: #603b3c;
 		margin-bottom: 32px;
-		font-size: 36px;
+		font-size: 32px;
 		font-family: "RobotoRegular", Arial;
+		line-height: 42px;
 	}
 
 	#b-popup-tour-form{
