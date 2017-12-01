@@ -1225,6 +1225,10 @@ input, textarea, select{
 	.input-persons{
 		width: 100% !important;
 	}
+	.input-persons{
+	    max-width: 168px;
+		float: left;
+	}
 
 	.total-cost-block span{
 		width: auto;
