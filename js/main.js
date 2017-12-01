@@ -104,7 +104,7 @@ $(document).ready(function(){
 
         if($(".b-main-header").length && isMobile){
 
-            //если высота уменьшилась
+            //если высота уменьшилась (плашка свернулась)
             /*if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
                 $(".b-main-header, .header-back, .b-header-block").css({
                     "height" : myHeight - $(".b-main-header").height();
@@ -113,19 +113,24 @@ $(document).ready(function(){
             prevHeight = myHeight;
             rotation = myWidth/myHeight;*/
 
-            if(myHeight > 680){
-                $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : 680
-                });
-            }else if(myHeight <= 680 && myHeight >= 500){
-                $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : myHeight
-                });
-            }else if(myHeight < 500){
-                $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : 500
-                });
+            //если высота уменьшилась (плашка свернулась)
+            if( Math.abs(myWidth/myHeight-rotation) < 0.5 || myHeight-prevHeight < 0){
+                if(myHeight > 680){
+                    $(".b-main-header, .header-back, .b-header-block").css({
+                        "height" : 680
+                    });
+                }else if(myHeight <= 680 && myHeight >= 500){
+                    $(".b-main-header, .header-back, .b-header-block").css({
+                        "height" : myHeight
+                    });
+                }else if(myHeight < 500){
+                    $(".b-main-header, .header-back, .b-header-block").css({
+                        "height" : 500
+                    });
+                }
             }
+            prevHeight = myHeight;
+            rotation = myWidth/myHeight;
 
             $('.b-header-block').css({
                 "padding-top": "",
