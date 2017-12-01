@@ -318,6 +318,10 @@ input, textarea, select{
 		margin-bottom: 0;
 	}
 
+	.tour-list{
+		margin-bottom: 10px;
+	}
+
 	/*.tour-item {
 	    display: block;
 	    width: 100%;
@@ -488,7 +492,7 @@ input, textarea, select{
 		.b-img-cont, .b-review .b-img-cont{
 			width: 92px;
 			height: 92px;
-			margin-bottom: 10px;
+			margin-bottom: 0;
 		}
 
 		.b-img, .b-review .b-img{
@@ -497,7 +501,7 @@ input, textarea, select{
 		}
 
 		.b-review-right{
-			padding: 14px 0 0 10px;
+			padding-left: 10px;
 		}
 
 		.b-review h3.b-title{
@@ -961,9 +965,13 @@ input, textarea, select{
 	padding-bottom: 25px;
 }
 
-@media screen and (max-width: 665px){
+@media screen and (max-width: 675px){
 	.b-review {
 	    width: calc(100% - 17px);
+	}
+
+	.b-review-header{
+		margin-bottom: 16px;
 	}
 
 	.b-arrows-team-detail.icon-arrow-left,
@@ -975,7 +983,7 @@ input, textarea, select{
 @media screen and (max-width: 660px){
 
 	.tour-list{
-		margin-bottom: 4px;
+		margin-bottom: 32px;
 	}
 
 	.tour-left-content{
@@ -1050,8 +1058,8 @@ input, textarea, select{
 	/*------*/
 
 	.b-footer .b-footer-column{
-		width: calc(100%/2 - 6px);
-		margin-right: 0;
+		width: auto;
+		margin-right: 25px;
 	}
 
 	.b-footer .icon-phone{
@@ -1060,19 +1068,16 @@ input, textarea, select{
 
 	.b-redder-logo{
 		top: auto;
-		left: 0;
 		bottom: 30px;
-		right: auto;
+		right: 0;
 	}
 
 	.develop-block{
-		float: none !important;
 		display: block;
-		padding-top: 40px;
 	}
 
 	.b-footer-down .b-footer-down-text{
-		width: 100%;
+		width: 48%;
 	}
 
 	div.b-footer-column:nth-child(3),
@@ -1284,6 +1289,31 @@ input, textarea, select{
 		display: none;
 	}
 
+}
+
+@media screen and (max-width: 500px){
+	.b-footer{
+		background-position: 62% 50%;
+	}
+
+	.b-footer-down .b-footer-down-text {
+	    width: 100%;
+	}
+
+	.develop-block {
+	    float: none !important;
+	    display: block;
+	    padding-top: 40px;
+	}
+
+	.b-redder-logo {
+	    top: auto;
+	    left: 0;
+	    bottom: 30px;
+	    right: auto;
+	}
+
+	.b
 }
 
 @media screen and (max-width: 475px){

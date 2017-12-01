@@ -412,7 +412,7 @@ div.b-footer-column:last-child{
 		.b-review .b-img-cont{
 			width: 92px;
 			height: 92px;
-			margin-bottom: 10px;
+			margin-bottom: 0;
 		}
 
 		.b-review .b-img{
@@ -421,7 +421,7 @@ div.b-footer-column:last-child{
 		}
 
 		.b-review-right{
-			padding: 14px 0 0 16px;
+			padding-left: 16px;
 		}
 
 	.b-footer-column:nth-child(4){
@@ -455,5 +455,9 @@ div.b-footer-column:last-child{
 
 	.b-team-detail-item {
 	    width: 590px;
+	}
+
+	.b-review-header{
+		margin-bottom: 16px;
 	}
 }
