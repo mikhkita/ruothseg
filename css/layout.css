@@ -718,56 +718,73 @@ h3.b-title{
 		color: #FFF;
 	}
 
-	.icon-orgs{
+	.advantage-icon{
+		border-radius: 100px;
+	}
+
+	.gradient-green{
 		background-image: linear-gradient(135deg, #d4ed23 0%, #34a53d 100%);
+	}
+
+	.icon-orgs{
+		padding: 28px 35px;
 	}	
 		.icon-orgs:before{
 			content: "\e906";
 	  		font-size: 80px;
-	  		margin: 30px 35px;
 		}
-	.icon-eqiup{
+	.gradient-orange{
 		background-image: linear-gradient(135deg, #ffbd39 0%, #fc4d3f 100%);
+	}
+	.icon-eqiup{
+		padding: 28px 33px;
 	}	
 		.icon-eqiup:before{
 			content: "\e902";
 	  		font-size: 80px;
-	  		margin: 32px 33px;
 		}
-	.icon-lift{
+	.gradient-blue{
 		background-image: linear-gradient(135deg, #1bedff 0%, #2a5da9 100%, #2e3192 100%);
 	}
+	.icon-lift{
+		padding: 28px 31px;
+	}
 	.b-residence .icon-lift{
-		background-image: linear-gradient(135deg, #d4ed23 0%, #34a53d 100%);
+		padding: 28px 31px;
 	}	
 		.icon-lift:before{
 			content: "\e905";
 	  		font-size: 80px;
-	  		margin: 30px 31px;
 		}
-	.icon-bus{
+	.gradient-purple{
 		background-image: linear-gradient(135deg, #c5c3ff 0%, #4b49c6 100%);
+	}
+	.icon-bus{
+		padding: 27px 31px;
 	}	
 		.icon-bus:before{
 			content: "\e901";
 	  		font-size: 82px;
-	  		margin: 30px 31px;
 		}
-	.icon-foto{
+	.gradient-lilac{
 		background-image: linear-gradient(135deg, #ffcffe 0%, #c021bd 100%);
+	}
+	.icon-foto{
+		padding: 35px 30px;
 	}	
 		.icon-foto:before{
 			content: "\e903";
 	  		font-size: 64px;
-	  		margin: 38px 30px;
 		}
-	.icon-boy{
+	.gradient-yellow{
 		background-image: linear-gradient(135deg, #ffeb2b 0%, #fb872b 100%);
+	}
+	.icon-boy{
+		padding: 30px 32px;
 	}	
 		.icon-boy:before{
 			content: "\e900";
 	  		font-size: 76px;
-	  		margin: 32px 32px;
 		}
 
 	.icon-bar{
