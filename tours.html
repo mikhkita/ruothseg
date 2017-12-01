@@ -58,11 +58,13 @@
 					<a href="#" class="showMenu">
 						<div class="burger-menu icon-burger-menu">Меню</div>
 					</a>
-					<div class="b-mobile-call right">
-						<a href="#" onclick="return false;" class="b-btn-call icon-phone"></a>
-						<div class="call-bubble bubble-hide">
-							<div class="phone"><a href="tel:+79039513101" class="icon-phone">+7 (903) 951-31-01</a></div>
-							<a href="#b-popup-call" class="request-call dashed fancy">Заказать звонок</a>
+					<div class="b-mobile-call">
+						<div class="bubble-wrap">
+							<a href="#" onclick="return false;" class="b-btn-call icon-phone"></a>
+							<div class="call-bubble bubble-hide">
+								<div class="phone"><a href="tel:+79039513101" class="icon-phone">+7 (903) 951-31-01</a></div>
+								<a href="#b-popup-call" class="request-call dashed fancy">Заказать звонок</a>
+							</div>
 						</div>
 					</div>
 
@@ -88,14 +90,14 @@
 
 	<div class="b-content b-tour-content">
 		<div class="b-block">
-			<ul class="b-tour b-tour-slider b-tour-month">
-				<li class="active">
+			<ul class="b-tour b-tour-slider b-tour-month hide">
+				<li>
 					<a href="#">Ноябрь</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="#">Декабрь</a>
 				</li>
-				<li >
+				<li>
 					<a href="#">Январь</a>
 				</li>
 				<li>
@@ -113,7 +115,7 @@
 			</ul>
 
 			<div class="tour-list">
-				<div data-href="#link1" class="tour-item" data-id="1">
+				<div data-href="#b-popup-tour" class="tour-item" data-id="1">
 					<div class="tour-right" style="background-image: url('i/tour-1.jpg');">
 						<div class="image-blur" style="background-image: url('i/tour-1.jpg');"></div>
 						<div class="orgs-mask orgs-padding">
@@ -151,7 +153,7 @@
 						</div>
 					</div>
 				</div>
-				<div data-href="#link2" class="tour-item" data-id="2">
+				<div data-href="#b-popup-tour" class="tour-item" data-id="2">
 					<div class="tour-right" style="background-image: url('i/tour-2.jpg');">
 						<div class="image-blur" style="background-image: url('i/tour-2.jpg');"></div>
 						<div class="orgs-mask orgs-padding">
@@ -189,7 +191,7 @@
 						</div>
 					</div>
 				</div>
-				<div data-href="#link3" class="tour-item" data-id="3">
+				<div data-href="#b-popup-tour" class="tour-item" data-id="3">
 					<div class="tour-right" style="background-image: url('i/tour-3.jpg');">
 						<div class="image-blur" style="background-image: url('i/tour-3.jpg');"></div>
 						<div class="orgs-mask orgs-padding">
@@ -227,7 +229,7 @@
 						</div>
 					</div>
 				</div>
-				<div data-href="#link4" class="tour-item" data-id="4">
+				<div data-href="#b-popup-tour" class="tour-item" data-id="4">
 					<div class="tour-right" style="background-image: url('i/tour-4.jpg');">
 						<div class="image-blur" style="background-image: url('i/tour-4.jpg');"></div>
 						<div class="orgs-mask orgs-padding">
@@ -265,7 +267,7 @@
 						</div>
 					</div>
 				</div>
-				<div data-href="#link1" class="tour-item" data-id="5">
+				<div data-href="#b-popup-tour" class="tour-item" data-id="5">
 					<div class="tour-right" style="background-image: url('i/tour-1.jpg');">
 						<div class="image-blur" style="background-image: url('i/tour-1.jpg');"></div>
 						<div class="orgs-mask orgs-padding">
@@ -303,7 +305,7 @@
 						</div>
 					</div>
 				</div>
-				<div data-href="#link2" class="tour-item" data-id="6">
+				<div data-href="#b-popup-tour" class="tour-item" data-id="6">
 					<div class="tour-right" style="background-image: url('i/tour-2.jpg');">
 						<div class="image-blur" style="background-image: url('i/tour-2.jpg');"></div>
 						<div class="orgs-mask orgs-padding">
@@ -341,7 +343,7 @@
 						</div>
 					</div>
 				</div>
-				<div data-href="#link3" class="tour-item" data-id="7">
+				<div data-href="#b-popup-tour" class="tour-item" data-id="7">
 					<div class="tour-right" style="background-image: url('i/tour-3.jpg');">
 						<div class="image-blur" style="background-image: url('i/tour-3.jpg');"></div>
 						<div class="orgs-mask orgs-padding">
@@ -379,7 +381,7 @@
 						</div>
 					</div>
 				</div>
-				<div data-href="#link4" class="tour-item" data-id="8">
+				<div data-href="#b-popup-tour" class="tour-item" data-id="8">
 					<div class="tour-right" style="background-image: url('i/tour-4.jpg');">
 						<div class="image-blur" style="background-image: url('i/tour-4.jpg');"></div>
 						<div class="orgs-mask orgs-padding">
@@ -633,6 +635,7 @@
 	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/fastclick.js"></script>
 	<script type="text/javascript" src="js/chosen.jquery.js"></script>
+	<script type="text/javascript" src="js/autosize.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>

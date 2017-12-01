@@ -57,17 +57,19 @@
 					<a href="#" class="showMenu">
 						<div class="burger-menu icon-burger-menu">Меню</div>
 					</a>
-					<div class="b-mobile-call right">
-						<a href="#" onclick="return false;" class="b-btn-call icon-phone"></a>
-						<div class="call-bubble bubble-hide">
-							<div class="phone"><a href="tel:+79039513101" class="icon-phone">+7 (903) 951-31-01</a></div>
-							<a href="#" class="request-call dashed">Заказать звонок</a>
+					<div class="b-mobile-call">
+						<div class="bubble-wrap">
+							<a href="#" onclick="return false;" class="b-btn-call icon-phone"></a>
+							<div class="call-bubble bubble-hide">
+								<div class="phone"><a href="tel:+79039513101" class="icon-phone">+7 (903) 951-31-01</a></div>
+								<a href="#b-popup-call" class="request-call dashed fancy">Заказать звонок</a>
+							</div>
 						</div>
 					</div>
 
 					<div class="b-top-contacts right">
 						<div class="phone"><a href="tel:+79039513101" class="icon-phone">+7 (903) 951-31-01</a></div>
-						<a href="#" class="request-call dashed">Заказать звонок</a>
+						<a href="#b-popup-call" class="request-call dashed fancy">Заказать звонок</a>
 					</div>
 				</div>
 			</div>
@@ -115,13 +117,6 @@
 						</div>
 						<div class="b-review-right clearfix">
 							<h3 class="b-title">Валентин Псковитин</h3>
-							<div class="icon-foto-mini">
-								<a href="i/foto-2.jpg" data-fancybox="gallery-2" class="fancy-gallary foto-with-tour dashed">Фотографии с тура</a>
-								<div style="display: none;">
-								   	<a class="fancy-gallary" data-fancybox="gallery-2" href="i/foto-2.jpg"></a>
-								    <a class="fancy-gallary" data-fancybox="gallery-2" href="i/foto-3.jpg"></a>
-								</div>
-							</div>
 						</div>
 					</div>
 					<div class="b-review-wrap">
@@ -414,8 +409,9 @@
 
 		<div class="b-popup" id="b-popup-review">
 			<!--<h3 class="b-title"></h3>-->
-			
-			<a href="#" class="b-btn b-btn-brown" onclick="$.fancybox.close(); return false;">Вернуться к отзывам</a>
+			<div class="b-popup-center">
+				<a href="#" class="b-btn b-btn-brown" onclick="$.fancybox.close(); return false;">Вернуться к отзывам</a>
+			</div>
 		</div>
 
 		<div class="b-popup" id="b-popup-write">

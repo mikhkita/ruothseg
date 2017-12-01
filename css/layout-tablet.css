@@ -72,7 +72,8 @@ input.error{
 	max-width: 100%;
 }
 
-.b-top.b-top-fixed .b-block{
+.b-top.b-top-fixed .b-block,
+.b-top.b-top-hide .b-block{
 	max-width: calc(100% - 48px);
 }
 
@@ -196,7 +197,51 @@ div.b-footer-column:last-child{
 	height: calc((68vw - 48px) * 0.6657 / 2 - 12px);
 }
 
+.b-team-detail .slick-slide {
+    height: 470px;
+}
+
+.b-team-detail-item {
+    width: 650px;
+    height: 470px;
+}
+
+.b-team-detail-info{
+	padding: 0 35px;
+}
+
+.b-team-detail-info h3 {
+    color: #FFF;
+    font-size: 30px;
+}
+
+.b-team-detail-info .b-team-detail-text {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.b-team-info-cont {
+    bottom: 30px;
+    padding: 0 30px;
+}
+
+.b-team-wrap{
+	margin: 0 14px;
+}
+
+.b-arrows-team-detail.icon-arrow-right{
+    top: -275px;
+}
+
+.b-arrows-team-detail.icon-arrow-left{
+    top: 197px;
+}
+
 @media screen and (max-width: 1095px){
+
+	.b-top{
+		padding-top: 10px;
+	}
 
 	.b-top .burger-menu{
 		display: block;
@@ -212,6 +257,18 @@ div.b-footer-column:last-child{
 
 	.b-top .b-top-contacts{
 		display: none;
+	}
+
+	.b-block-team{
+		width: 590px;
+	}
+
+	.b-team-arrows.icon-arrow-right{
+	    right: -67px;
+	}
+
+	.review-list{
+		padding: 0 15px;
 	}
 }
 
@@ -234,6 +291,10 @@ div.b-footer-column:last-child{
 
 	.b-residence .advantages-list li:nth-last-of-type(-n+2){
 	    margin-bottom: 0;
+	}
+
+	.b-footer{
+		background-position: 70% 50%;
 	}
 
 	.b-footer .b-footer-column:nth-child(2){
@@ -270,6 +331,10 @@ div.b-footer-column:last-child{
 	.advantages-list li p{
 		width: 90%;
 	}
+
+		.advantages-list li .advantage-text{
+			font-size: 20px;
+		}
 
 	.orgs-padding {
 	    padding: 4px 10px;
@@ -347,7 +412,7 @@ div.b-footer-column:last-child{
 		.b-review .b-img-cont{
 			width: 92px;
 			height: 92px;
-			margin-bottom: 10px;
+			margin-bottom: 0;
 		}
 
 		.b-review .b-img{
@@ -356,7 +421,7 @@ div.b-footer-column:last-child{
 		}
 
 		.b-review-right{
-			padding: 14px 0 0 16px;
+			padding-left: 16px;
 		}
 
 	.b-footer-column:nth-child(4){
@@ -383,42 +448,16 @@ div.b-footer-column:last-child{
 	.b-hotel-text {
 	    padding: 0 20px 0 30px;
 	}
+
+	.b-team-list{
+		width: calc(100% - 48px);
+	}
+
+	.b-team-detail-item {
+	    width: 590px;
+	}
+
+	.b-review-header{
+		margin-bottom: 16px;
+	}
 }
-
-/*@media screen and (max-width: 767px){
-
-	.advantages-list li{
-		float: none;
-		width: calc(50% - 10px);
-	}
-
-	.advantages-list li:nth-last-child(-n+3){
-		margin-bottom: 46px;
-	}
-
-	.advantages-list li:nth-last-child(-n+2) {
-	    margin-bottom: 0;
-	}
-
-	.tour-item {
-		display: block;
-	    width: calc(100% - 12px);
-	}
-
-	.b-footer-column:nth-child(3),
-	.b-footer-column:nth-child(4){
-	    display: none;
-	}
-
-	.b-redder-logo{
-		top: auto;
-		bottom: 7px;
-    	right: 0;
-	}
-
-	.develop-block{
-		float: none !important;
-		display: block;
-	}
-
-}*/

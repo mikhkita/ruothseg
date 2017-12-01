@@ -49,16 +49,6 @@ $(document).ready(function(){
             isMobile = true;
         }
 
-        /*if($(".b-main-header").length && isMobile){
-            if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0 || !isMobile ){
-                $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : myHeight - $(".b-main-header").height();
-                });
-            }
-            prevHeight = myHeight;
-            rotation = myWidth/myHeight;
-        }*/
-
         //сжатие отступов в хедере
         if($(".b-main-header").length && !isMobile){
             console.log(myHeight);
@@ -86,16 +76,8 @@ $(document).ready(function(){
 
                 var blockHeight = myHeight > minHeight ? resizeHeight - topHeight : minHeight;
                 $('.header-back').css("height", myHeight - paddingBottom);
-                /*$('.header-back').addClass("compress-header");
-                $('.b-header-block').addClass("compress-header");
-                $('.b-header-content').addClass("compress-header");*/
             }else if(myHeight > resizeHeight){
-                
                 //resetHeader();
-
-                /*$('.header-back').removeClass("compress-header");
-                $('.b-header-block').removeClass("compress-header");
-                $('.b-header-content').removeClass("compress-header");*/
             }else if(myHeight < minHeight){
                 $('.b-header-block').css("top", 0);
                 $('.header-back').css("height", minHeight);
@@ -109,20 +91,46 @@ $(document).ready(function(){
             }
         }
 
-        if($(".b-main-header").length && isMobile){
-            if(myHeight > 680){
+        /*if($(".b-main-header").length && isMobile){
+            //если высота уменьшилась
+            if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
                 $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : 680
-                });
-            }else if(myHeight <= 680 && myHeight >= 500){
-                $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : myHeight
-                });
-            }else if(myHeight < 500){
-                $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : 500
+                    "height" : myHeight - $(".b-main-header").height();
                 });
             }
+            prevHeight = myHeight;
+            rotation = myWidth/myHeight;
+        }*/
+
+        if($(".b-main-header").length && isMobile){
+
+            //если высота уменьшилась (плашка свернулась)
+            /*if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
+                $(".b-main-header, .header-back, .b-header-block").css({
+                    "height" : myHeight - $(".b-main-header").height();
+                });
+            }
+            prevHeight = myHeight;
+            rotation = myWidth/myHeight;*/
+
+            //если высота уменьшилась (плашка свернулась)
+            if( Math.abs(myWidth/myHeight-rotation) < 0.5 || myHeight-prevHeight < 0){
+                if(myHeight > 680){
+                    $(".b-main-header, .header-back, .b-header-block").css({
+                        "height" : 680
+                    });
+                }else if(myHeight <= 680 && myHeight >= 500){
+                    $(".b-main-header, .header-back, .b-header-block").css({
+                        "height" : myHeight
+                    });
+                }else if(myHeight < 500){
+                    $(".b-main-header, .header-back, .b-header-block").css({
+                        "height" : 500
+                    });
+                }
+            }
+            prevHeight = myHeight;
+            rotation = myWidth/myHeight;
 
             $('.b-header-block').css({
                 "padding-top": "",
@@ -152,34 +160,45 @@ $(document).ready(function(){
                           }
                         }
                     ]
-                }).addClass("slider-on");
+                });
             }
             $('div.tour-item').each(function() {
                 $this = $(this);
                 $tag = $('<a></a>');
-                $tag.addClass("tour-item");
+                $tag.addClass("tour-item fancy");
                 $tag.attr("href", $this.attr("data-href"));
                 $tag.append($this.html());
 
                 $this.replaceWith($tag);
             });
+
+            fancyBind($('.tour-item.fancy'));
+
             if(!$('.b-hotel-foto-list').hasClass("slick-initialized")){
                 $('.b-hotel-foto-list').not('.slick-initialized').slick({
-                    dots: false,
+                    dots: true,
                     arrows: false,
                     infinite: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
                     speed: 600,
-                }).addClass("slider-on");
+                });
             }
+
+            $('.b-team-detail .slick-slide').find(".b-team-detail-info").css("left", 0);
 
         }else{
             if($('.advantages-slider').hasClass("slick-initialized")){
                 $('.advantages-slider').slick('unslick');
+                setTimeout(function(){
+                    $('.advantages-slider').slick('unslick');
+                },100);
             }
             if($('.b-hotel-foto-list').hasClass("slick-initialized")){
                 $('.b-hotel-foto-list').slick('unslick');
+                $("[data-fancybox]").fancybox();
             }
             $('a.tour-item').each(function() {
                 $this = $(this);
@@ -204,6 +223,7 @@ $(document).ready(function(){
 
                 if($('.passage-slider').hasClass("slick-initialized")){
                     $('.passage-slider').slick('unslick');
+                    $("[data-fancybox]").fancybox();
                 }
 
                 //веруть столбцы (если были удалены до этого)
@@ -247,16 +267,16 @@ $(document).ready(function(){
 
                 if(!$('.passage-slider').hasClass("slick-initialized")){
                     $('.passage-slider').not('.slick-initialized').slick({
-                        dots: false,
+                        dots: true,
                         arrows: false,
                         infinite: true,
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         speed: 600,
-                        autoplay: true,
-                        autoplaySpeed: 3000,
+                        //autoplay: true,
+                        //autoplaySpeed: 3000,
                         adaptiveHeight: true,
-                    }).addClass("slider-on");
+                    });
                 }
             }
         }
@@ -347,8 +367,6 @@ $(document).ready(function(){
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 600,
-        //autoplay: true,
-        //autoplaySpeed: 3000,
         adaptiveHeight: true,
         responsive: [
             {
@@ -357,6 +375,15 @@ $(document).ready(function(){
                 slidesToShow: 1,
                 slidesToScroll: 1
               }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+              }
             }
         ]
     });
@@ -364,22 +391,24 @@ $(document).ready(function(){
     $('.review-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         if(slick.options.slidesToShow === 2){
             setTimeout(function(){
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").next().removeClass("slick-active");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").next().addClass("slick-active");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").next().removeClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").next().addClass("slick-active slick-active-copy");
             },10 );
         }else{
             setTimeout(function(){
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active slick-active-copy");
             },10 );
         }
-        //deleteGallery();
+        setTimeout(function(){
+            deleteGallery();
+        },10 );
     });
 
     $('.review-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        deleteGallery();
+        //deleteGallery();
     });
 
     //Удалить галереи в копиях элементов
@@ -387,25 +416,48 @@ $(document).ready(function(){
         /*$('.slick-cloned').each(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
         });*/
-        $('.slick-slide').each(function(){
+        $('.review-slider .slick-slide').each(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
         });
-        $('.slick-active').each(function(){
+        $('.review-slider .slick-active:not(.slick-active-copy)').each(function(){
             console.log("++++",$(this));
             var gallary = $(this).find(".fancy-gallary").attr("data-gallery");
             $(this).find(".fancy-gallary").attr("data-fancybox", gallary);
         });
     }
 
+    $('.b-tour-slider').on('init', function(event, slick){
+        $(this).removeClass("hide");
+
+        console.log(slick.slideCount, slick.currentSlide);
+        if(slick.currentSlide <= Math.floor(slick.options.slidesToShow/2)){
+            console.log("<-");
+            $('.b-block-tour .icon-arrow-left').addClass("hide");
+        }else{
+            $('.b-block-tour .icon-arrow-left').removeClass("hide");
+        }
+        //если виден последний элемент, то скрыть правую стрелку
+        if(slick.slideCount - slick.currentSlide <= Math.floor(slick.options.slidesToShow/2) + 1){
+            console.log("->hide");
+            $('.b-block-tour .icon-arrow-right').addClass("hide");
+        }else{
+            console.log("->show");
+            $('.b-block-tour .icon-arrow-right').removeClass("hide");
+        }
+    });
+
     $('.b-tour-slider').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
         dots: false,
-        infinite: true,
+        infinite: false,
         arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        swipe: false,
         speed: 600,
         nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
-        prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows hide" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows" aria-hidden="true"></div></div>',
         responsive: [
             {
               breakpoint: 900,
@@ -424,13 +476,48 @@ $(document).ready(function(){
         ]
     });
 
+    $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")), true);
+
+    $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        console.log(slick.slideCount, currentSlide, Math.floor(slick.options.slidesToShow/2));
+        var border = Math.floor(slick.options.slidesToShow/2);
+        if(slick.options.slidesToShow === 2){
+            border -= 1;
+        }
+        //если виден первый элемент, то скрыть левую стрелку
+        if(currentSlide <= border){
+            console.log("<-");
+            $('.b-block-tour .icon-arrow-left').addClass("hide");
+        }else{
+            $('.b-block-tour .icon-arrow-left').removeClass("hide");
+        }
+        //если виден последний элемент, то скрыть правую стрелку
+        if(slick.slideCount - currentSlide <= border + 1){
+            console.log("->hide");
+            $('.b-block-tour .icon-arrow-right').addClass("hide");
+        }else{
+            console.log("->show");
+            $('.b-block-tour .icon-arrow-right').removeClass("hide");
+        }
+    });
+
+    var teamID = 0;
+    $('.team-slider li').each(function(){
+        $(this).attr("data-slick-id", teamID);
+        teamID++;
+    });
+
+    $('.team-slider').on('init', function(slick){
+        $('.team-slider li.slick-active').addClass("slick-active-new");
+        $('.team-slider li.slick-current').addClass("slick-current-new");
+    });
+
     $('.team-slider').slick({
         dots: false,
         arrows: true,
         infinite: true,
         nextArrow: '<div class="b-block-team"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
         prevArrow: '<div class="b-block-team"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
-        //infinite: true,
         slidesToShow: 7,
         slidesToScroll: 1,
         swipe: false,
@@ -438,38 +525,55 @@ $(document).ready(function(){
         centerMode: true,
         focusOnSelect: true,
         variableWidth: true,
+        focusOnSelect: true,
         asNavFor: '.team-detail-slider',
-        //autoplay: true,
-        //autoplaySpeed: 3000,
         responsive: [
             {
-              breakpoint: 767,
+              breakpoint: 1096,
               settings: {
-                swipe: true,
-                //slidesToShow: 1,
-                //slidesToScroll: 1
+                slidesToShow: 5,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
               }
             }
         ]
     });
 
-    $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        console.log($('.slick-slide.slick-active').length);
-        //если виден первый элемент, то скрыть левую стрелку
-        if(currentSlide === 0){
-            console.log("<-");
-            $('.b-block-tour .icon-arrow-left').addClass("hide");
-        }else{
-            $('.b-block-tour .icon-arrow-left').removeClass("hide");
-        }
-        //если виден последний элемент, то скрыть правую стрелку
-        if(slick.slideCount - currentSlide === $(this).find(".slick-slide.slick-active").length){
-            console.log("->hide");
-            $('.b-block-tour .icon-arrow-right').addClass("hide");
-        }else{
-            console.log("->show");
-            $('.b-block-tour .icon-arrow-right').removeClass("hide");
-        }
+    $('.team-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        setTimeout(function(){
+            $('.team-slider li:not(.slick-current)').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-slider').find("[data-slick-id='"+dataID+"']").removeClass("slick-current-new");
+            });
+            $('.team-slider .slick-current').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-slider').find("[data-slick-id='"+dataID+"']").addClass("slick-current-new");
+            });
+            $('.team-slider li:not(.slick-active)').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-slider').find("[data-slick-id='"+dataID+"']").removeClass("slick-active-new");
+            });
+            $('.team-slider li.slick-active').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-slider').find("[data-slick-id='"+dataID+"']").addClass("slick-active-new");
+            });
+        },10);
+    });
+
+    var detailID = 0;
+    $('.team-detail-slider .b-team-wrap').each(function(){
+        $(this).attr("data-slick-id", detailID);
+        detailID++;
+    });
+
+    $('.team-detail-slider').on('init', function(slick){
+        $('.team-detail-slider .slick-center').addClass("slick-center-new");
     });
 
     $('.team-detail-slider').slick({
@@ -483,10 +587,8 @@ $(document).ready(function(){
         speed: 600,
         centerMode: true,
         variableWidth: true,
-        asNavFor: '.team-slider',
         focusOnSelect: true,
-        //autoplay: true,
-        //autoplaySpeed: 3000,
+        asNavFor: '.team-slider',
         responsive: [
             {
               breakpoint: 900,
@@ -498,10 +600,34 @@ $(document).ready(function(){
         ]
     });
 
-    // $('.b-team-list .slick-slide').on('click', function(){
-    //     var index = $(this).attr("data-slick-index");
-    //     $(".team-slider").slick('slickGoTo', index, false);
-    // });
+    $('.team-detail-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        setTimeout(function(){
+            $('.team-detail-slider .slick-slide:not(.slick-center)').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-detail-slider').find("[data-slick-id='"+dataID+"']").removeClass("slick-center-new");
+            });
+            $('.team-detail-slider .slick-center').each(function(){
+                var dataID = $(this).attr("data-slick-id");
+                $('.team-detail-slider').find("[data-slick-id='"+dataID+"']").addClass("slick-center-new");
+            });
+        },10);
+    });
+
+    $('.b-team-detail .slick-slide').hover(
+        function(){
+            if($(this).prev().hasClass("slick-center") && $(this).prev().hasClass("slick-active")){
+                $(this).find(".b-team-detail-item").addClass("hover-slide");
+                $(".icon-arrow-right").addClass("hover-arrow");
+            }
+            if($(this).next().hasClass("slick-center") && $(this).next().hasClass("slick-active")){
+                $(this).find(".b-team-detail-item").addClass("hover-slide");
+                $(".icon-arrow-left").addClass("hover-arrow");
+            }
+        },
+        function(){
+            $(this).find(".b-team-detail-item").removeClass("hover-slide");
+            $(".icon-arrow-right, .icon-arrow-left").removeClass("hover-arrow");
+    });
 
     $(".icon-arrow-left.b-arrows-team-detail").hover(function(){
         $('.slick-center').prev().children(".b-team-detail-item").addClass("hover");
@@ -519,19 +645,17 @@ $(document).ready(function(){
         $('.slick-center').next().children(".b-team-detail-item").removeClass("hover");
     });
 
-    $("body").on("mousemove", ".slick-center", function(e){
-        var offset = $(this).offset();
-        var relativeX = (e.pageX - offset.left);
-        var relativeY = (e.pageY - offset.top);
-        if(relativeX > $(this).width() / 2){
-            $(this).find(".b-team-detail-info").css("left", 0);
-        }else{
-            $(this).find(".b-team-detail-info").css("left", "50%");
+    $("body").on("mousemove", ".b-team-detail .slick-center", function(e){
+        if(!isMobile){
+            var offset = $(this).offset();
+            var relativeX = (e.pageX - offset.left);
+            var relativeY = (e.pageY - offset.top);
+            if(relativeX > $(this).width() / 2){
+                $('.b-team-detail .slick-slide').find(".b-team-detail-info").css("left", 0);
+            }else{
+                $('.b-team-detail .slick-slide').find(".b-team-detail-info").css("left", "50%");
+            }
         }
-    });
-
-    $("body").on("mouseleave", ".slick-center", function(){
-        $(this).find(".b-team-detail-info").css("left", 0);
     });
 
     var menuTimer = null;
@@ -569,14 +693,16 @@ $(document).ready(function(){
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
             if (scrollTop > $hMain) {
-                $('.b-top').removeClass("b-top-hide");
+                console.log("+");
+                $('.b-top').removeClass("b-top-hide").addClass("b-top-fixed");
             }else{     
-                $('.b-top').addClass("b-top-hide");
+                console.log("-");
+                $('.b-top').addClass("b-top-hide").removeClass("b-top-fixed");
             }
         });
     }
 
-    if($('.b-menu-cont .b-menu').length){
+    if($('.b-content').length){
         checkMenu();
         var $window = $(window),
             $target = $(".b-top"),
@@ -585,7 +711,7 @@ $(document).ready(function(){
             // Как далеко вниз прокрутили страницу
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
-            if (scrollTop > $h) {
+            if (scrollTop > $h + 18) {
                 $target.addClass("b-top-fixed");
             }else{     
                 $target.removeClass("b-top-fixed");
@@ -710,52 +836,7 @@ $(document).ready(function(){
 
                 readMoreShow();
 
-                $(".fancy").each(function(){
-                    var $popup = $($(this).attr("href")),
-                        $this = $(this);
-                    $this.fancybox({
-                        padding : 0,
-                        content : $popup,
-                        helpers: {
-                            overlay: {
-                                locked: true 
-                            }
-                        },
-                        beforeShow: function(){
-                            $(".fancybox-wrap").addClass("beforeShow");
-                            $popup.find(".custom-field").remove();
-                            if( $this.attr("data-value") ){
-                                var name = getNextField($popup.find("form"));
-                                $popup.find("form").append("<input type='hidden' class='custom-field' name='"+name+"' value='"+$this.attr("data-value")+"'/><input type='hidden' class='custom-field' name='"+name+"-name' value='"+$this.attr("data-name")+"'/>");
-                            }
-                            if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
-                                customHandlers[$this.attr("data-beforeShow")]($this);
-                            }
-                        },
-                        afterShow: function(){
-                            $(".fancybox-wrap").removeClass("beforeShow");
-                            $(".fancybox-wrap").addClass("afterShow");
-                            if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
-                                customHandlers[$this.attr("data-afterShow")]($this);
-                            }
-                            $popup.find("input[type='text'],input[type='number'],textarea").eq(0).focus();
-                        },
-                        beforeClose: function(){
-                            $(".fancybox-wrap").removeClass("afterShow");
-                            $(".fancybox-wrap").addClass("beforeClose");
-                            if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
-                                customHandlers[$this.attr("data-beforeClose")]($this);
-                            }
-                        },
-                        afterClose: function(){
-                            $(".fancybox-wrap").removeClass("beforeClose");
-                            $(".fancybox-wrap").addClass("afterClose");
-                            if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
-                                customHandlers[$this.attr("data-afterClose")]($this);
-                            }
-                        }
-                    });
-                });
+                fancyBind($('.fancy'));
 
                 $('.b-btn-read-more').on('click', function(){
                     //скопировать инфу в popup
@@ -915,6 +996,55 @@ $(document).ready(function(){
         $(".b-popup .select-tour option[value='']").prop('selected', true).trigger("chosen:updated");
         $('.persons-count').change();
     });
+
+    function fancyBind($selector){
+        $selector.each(function(){
+            var $popup = $($(this).attr("href")),
+                $this = $(this);
+            $this.fancybox({
+                padding : 0,
+                content : $popup,
+                helpers: {
+                    overlay: {
+                        locked: true 
+                    }
+                },
+                beforeShow: function(){
+                    $(".fancybox-wrap").addClass("beforeShow");
+                    $popup.find(".custom-field").remove();
+                    if( $this.attr("data-value") ){
+                        var name = getNextField($popup.find("form"));
+                        $popup.find("form").append("<input type='hidden' class='custom-field' name='"+name+"' value='"+$this.attr("data-value")+"'/><input type='hidden' class='custom-field' name='"+name+"-name' value='"+$this.attr("data-name")+"'/>");
+                    }
+                    if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
+                        customHandlers[$this.attr("data-beforeShow")]($this);
+                    }
+                },
+                afterShow: function(){
+                    $(".fancybox-wrap").removeClass("beforeShow");
+                    $(".fancybox-wrap").addClass("afterShow");
+                    if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
+                        customHandlers[$this.attr("data-afterShow")]($this);
+                    }
+                    $popup.find("input[type='text'],input[type='number'],textarea").eq(0).focus();
+                },
+                beforeClose: function(){
+                    $(".fancybox-wrap").removeClass("afterShow");
+                    $(".fancybox-wrap").addClass("beforeClose");
+                    if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
+                        customHandlers[$this.attr("data-beforeClose")]($this);
+                    }
+                },
+                afterClose: function(){
+                    $(".fancybox-wrap").removeClass("beforeClose");
+                    $(".fancybox-wrap").addClass("afterClose");
+                    if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
+                        customHandlers[$this.attr("data-afterClose")]($this);
+                    }
+                }
+            });
+        });
+    }
 
     /*$('.b-header').parallax({
         imageSrc: $('.b-header').attr("data-img"),
