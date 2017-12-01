@@ -120,13 +120,13 @@ $(document).ready(function(){
                     $(".b-main-header, .header-back, .b-header-block").css({
                         "height" : 680
                     });
-                }else if(myHeight <= 680 && myHeight >= 300){
+                }else if(myHeight <= 680 && myHeight >= 500){
                     $(".b-main-header, .header-back, .b-header-block").css({
                         "height" : myHeight
                     });
-                }else if(myHeight < 300){
+                }else if(myHeight < 500){
                     $(".b-main-header, .header-back, .b-header-block").css({
-                        "height" : 300
+                        "height" : 500
                     });
                 }
             }
