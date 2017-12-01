@@ -710,6 +710,7 @@ h3.b-title{
 			border-radius: 50%;
 			margin: 0 auto;
 			margin-bottom: 20px;
+			overflow: hidden;
 		}
 
 	.b-block-advantages [class^="icon-"]:before, 
@@ -788,30 +789,27 @@ h3.b-title{
 		}
 
 	.icon-bar{
-		background-image: linear-gradient(135deg, #ffeb2b 0%, #fb872b 100%);
+		padding: 28px 31px;
 	}
 		.icon-bar:before{
 			content: "\e913";
 	  		font-size: 80px;
-	  		margin: 30px 31px;
 		}
 
 	.icon-games{
-		background-image: linear-gradient(159deg, #ffbd39 0%, #fc4d3f 100%);
+		padding: 28px 30px;
 	}
 		.icon-games:before{
 			content: "\e915";
 	  		font-size: 80px;
-	  		margin: 30px 30px;
 		}
 
 	.icon-fun{
-		background-image: linear-gradient(135deg, #1bedff 0%, #2a5da9 100%, #2e3192 100%);
+		padding: 28px 30px;
 	}
 		.icon-fun:before{
 			content: "\e914";
 	  		font-size: 81px;
-	  		margin: 30px 30px;
 		}
 
 .b-block-tours{
