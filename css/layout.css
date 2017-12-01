@@ -364,6 +364,11 @@ h3.b-title{
 	vertical-align: middle;
 }
 
+.effect-moveleft .container,
+.wrapper{
+	overflow-x: hidden;
+}
+
 /*-------------Главная-------------*/
 
 .b-main-header{
@@ -1954,6 +1959,7 @@ h3.b-title{
 	}
 
 .b-content, .b-content-main{
+	overflow-x: hidden;
 	background-color: #FFF;
 	/*padding-bottom: 20px;*/
 	box-sizing: content-box;
