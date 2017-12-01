@@ -429,21 +429,54 @@ $(document).ready(function(){
     $('.b-tour-slider').on('init', function(event, slick){
         $(this).removeClass("hide");
 
-        console.log(slick.slideCount, slick.currentSlide);
-        if(slick.currentSlide <= Math.floor(slick.options.slidesToShow/2)){
-            console.log("<-");
-            $('.b-block-tour .icon-arrow-left').addClass("hide");
-        }else{
-            $('.b-block-tour .icon-arrow-left').removeClass("hide");
-        }
-        //если виден последний элемент, то скрыть правую стрелку
-        if(slick.slideCount - slick.currentSlide <= Math.floor(slick.options.slidesToShow/2) + 1){
-            console.log("->hide");
-            $('.b-block-tour .icon-arrow-right').addClass("hide");
-        }else{
-            console.log("->show");
-            $('.b-block-tour .icon-arrow-right').removeClass("hide");
-        }
+        setTimeout(function(){
+
+            $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")), true);
+
+            var border = Math.floor(slick.options.slidesToShow/2);
+            //console.log(slick.currentSlide, slick.slideCount, border);
+
+            if(slick.currentSlide >= border && slick.currentSlide < slick.slideCount - border){
+                $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")), true);
+                if(slick.options.slidesToShow === 2 && slick.currentSlide !== 0){
+                    $('.b-tour-slider').slick('slickNext');
+                }
+            }else if(slick.currentSlide >= border - 1 && slick.currentSlide < slick.slideCount - (border - 1)){
+                if(slick.currentSlide > border - 1){
+                    $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")) - 1, true);
+                }else{
+                    $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")) + 1, true);
+                }
+                if(slick.options.slidesToShow === 2 && slick.currentSlide !== 1){
+                    $('.b-tour-slider').slick('slickNext');
+                }
+            }else{
+                if(slick.currentSlide > border - 2){
+                    $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")) - 2, true);
+                }else{
+                    $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")) + 2, true);
+                }
+                if(slick.options.slidesToShow === 2 && slick.currentSlide !== 2){
+                    $('.b-tour-slider').slick('slickNext');
+                }
+            }
+
+            if(slick.currentSlide <= border){
+                console.log("<-hide");
+                $('.b-block-tour .icon-arrow-left').addClass("hide");
+            }else{
+                console.log("<-show");
+                $('.b-block-tour .icon-arrow-left').removeClass("hide");
+            }
+            //если виден последний элемент, то скрыть правую стрелку
+            if(slick.slideCount - slick.currentSlide <= border + 1){
+                console.log("->hide");
+                $('.b-block-tour .icon-arrow-right').addClass("hide");
+            }else{
+                console.log("->show");
+                $('.b-block-tour .icon-arrow-right').removeClass("hide");
+            }
+        },10);
     });
 
     $('.b-tour-slider').slick({
@@ -476,21 +509,29 @@ $(document).ready(function(){
         ]
     });
 
-    $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")), true);
-
     $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        console.log(slick.slideCount, currentSlide, Math.floor(slick.options.slidesToShow/2));
+
         var border = Math.floor(slick.options.slidesToShow/2);
-        if(slick.options.slidesToShow === 2){
-            border -= 1;
+        console.log(currentSlide, slick.slideCount, border);
+
+        if(slick.options.slidesToShow === 2 && currentSlide === 0){
+            $('.b-block-tour .icon-arrow-left').addClass("hide");
+            return;
         }
+    
         //если виден первый элемент, то скрыть левую стрелку
         if(currentSlide <= border){
-            console.log("<-");
+            console.log("<-hide");
             $('.b-block-tour .icon-arrow-left').addClass("hide");
         }else{
+            console.log("<-show");
             $('.b-block-tour .icon-arrow-left').removeClass("hide");
         }
+
+        if(slick.options.slidesToShow === 2){
+            border--;
+        }
+
         //если виден последний элемент, то скрыть правую стрелку
         if(slick.slideCount - currentSlide <= border + 1){
             console.log("->hide");
