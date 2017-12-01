@@ -4,11 +4,11 @@
 	.fadeLeft,
 	.fadeIn,
 	.fadeDown{
-		-webkit-transition: all 800ms ease-out;
-		   -moz-transition: all 800ms ease-out;
-		    -ms-transition: all 800ms ease-out;
-		   	 -o-transition: all 800ms ease-out;
-				transition: all 800ms ease-out;
+		-webkit-transition: all 500ms ease-out;
+		   -moz-transition: all 500ms ease-out;
+		    -ms-transition: all 500ms ease-out;
+		   	 -o-transition: all 500ms ease-out;
+				transition: all 500ms ease-out;
 	}
 	.fadeInScale{
 		-webkit-transition: -webkit-transform 500ms ease-out, opacity 500ms ease-out;
