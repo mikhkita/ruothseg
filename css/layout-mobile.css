@@ -68,6 +68,10 @@ label.error{
 	
 }
 
+.b-btn{
+	padding: 17px 25px 19px 25px;
+}
+
 .b-btn-brown-header, .b-btn-white-header{
 	font-size: 16px;
 	min-width: 250px;
