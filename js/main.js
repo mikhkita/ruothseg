@@ -778,7 +778,7 @@ $(document).ready(function(){
             // Как далеко вниз прокрутили страницу
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
-            if (scrollTop > $h + 18) {
+            if (scrollTop > $h) {
                 $target.addClass("b-top-fixed");
             }else{     
                 $target.removeClass("b-top-fixed");
