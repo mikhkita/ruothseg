@@ -1866,6 +1866,10 @@ h3.b-title{
 	    -webkit-transform: translate(0,-30px);
 	    -o-transform: translate(0,-30px);
 	    -moz-transform: translate(0,-30px);
+	    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
+	    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
+	    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
+	    -o-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	}
 
 	.b-top{
