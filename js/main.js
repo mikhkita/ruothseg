@@ -350,6 +350,9 @@ $(document).ready(function(){
     });
 
     $('.review-slider').on('init', function(event, slick){
+        $('.review-slider .slick-active').each(function(){
+            $(this).addClass("slick-active-copy");
+        });
         deleteGallery();
     });
 
@@ -376,8 +379,6 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 3000,
               }
             }
         ]
@@ -386,22 +387,19 @@ $(document).ready(function(){
     $('.review-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         if(slick.options.slidesToShow === 2){
             setTimeout(function(){
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active slick-active-copy");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").next().removeClass("slick-active slick-active-copy");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active slick-active-copy");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").next().addClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").next().removeClass("slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").next().addClass("slick-active-copy");
+                deleteGallery();
             },10 );
         }else{
             setTimeout(function(){
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active slick-active-copy");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active-copy");
+                deleteGallery();
             },10 );
         }
-        deleteGallery();
-    });
-
-    $('.review-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        //deleteGallery();
     });
 
     //Удалить галереи в копиях элементов
@@ -409,9 +407,9 @@ $(document).ready(function(){
         /*$('.slick-cloned').each(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
         });*/
-        /*$('.review-slider .slick-slide').each(function(){
+        $('.review-slider .slick-slide').each(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
-        });*/
+        });
         $('.review-slider .slick-active').each(function(){
             console.log("++++",$(this));
             var gallary = $(this).find(".fancy-gallary").attr("data-gallery");
@@ -751,21 +749,20 @@ $(document).ready(function(){
     }
 
     if($('.b-content-main').length){
-        var $window = $(window);
-
+        var $window = $(window),
+            $targetMain = $(".b-content-main"),
+            $hMain = $targetMain.offset().top;
         $window.on('scroll', function() {
-            var $targetMain = $(".b-content-main"),
-                $hMain = $targetMain.offset().top;
             // Как далеко вниз прокрутили страницу
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
-            if (scrollTop > $hMain) {
-                console.log("+");
+            if (scrollTop > $hMain){
                 $('.b-top').removeClass("b-top-hide").addClass("b-top-fixed");
-            }else{     
-                console.log("-");
+            }else{
                 $('.b-top').addClass("b-top-hide").removeClass("b-top-fixed");
             }
+            $targetMain = $(".b-content-main"),
+            $hMain = $targetMain.offset().top;
         });
     }
 

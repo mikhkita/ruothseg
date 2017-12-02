@@ -1833,7 +1833,7 @@ h3.b-title{
     transform-origin: 20% -18px;
 }
 
-.slick-active .review-item-text {
+.slick-active-copy .review-item-text {
     opacity: 1;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -1858,18 +1858,14 @@ h3.b-title{
 		left: 0;
 		opacity: 0;
 		visibility: hidden;
-		transform: translate(0,-20px);
-	    -webkit-transform: translate(0,-20px);
-	    -o-transform: translate(0,-20px);
-	    -moz-transform: translate(0,-20px);
 		transform: translate(0,-30px);
 	    -webkit-transform: translate(0,-30px);
 	    -o-transform: translate(0,-30px);
 	    -moz-transform: translate(0,-30px);
-	    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
-	    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
-	    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
-	    -o-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
+	    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+	    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+	    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+	    -o-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
 	}
 
 	.b-top{
@@ -1879,10 +1875,6 @@ h3.b-title{
 		padding-top: 14px;
 	    padding-bottom: 3px;
 	    background-color: rgba(255,255,255,0);
-	    /*transform: translate(0,-20px);
-	    -webkit-transform: translate(0,-20px);
-	    -o-transform: translate(0,-20px);
-	    -moz-transform: translate(0,-20px);*/
 	}
 
 	.b-top-fixed {
@@ -1893,10 +1885,6 @@ h3.b-title{
 	    width: 100%;
 	    top: 0px;
 	    left: 0px;
-	    /*transform: translate(0);
-	    -webkit-transform: translate(0);
-	    -o-transform: translate(0);
-	    -moz-transform: translate(0);*/
 	    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
