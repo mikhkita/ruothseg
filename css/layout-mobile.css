@@ -26,9 +26,6 @@ h1,h2,h3,h4,h5,h6{
 label.error{
 	display: none !important;
 }
-input.error{
-	border-bottom: 1px solid #ff8686 !important;
-}
 .ps-lines{
 
 }
@@ -813,7 +810,7 @@ input, textarea, select{
 	top: auto;
 	bottom: 0;
 	width: 100%;
-	height: 50.5%;
+	height: 50.7%;
 	padding: 0 35px;
 }
 
@@ -825,14 +822,19 @@ input, textarea, select{
 }
 
 .b-team-detail-info h3 {
-    padding-top: 35px;
+    padding-top: 0px;
     font-size: 26px;
 }
 
+.b-team-info-cont{
+	bottom: auto;
+	top: 35px;
+}
+
 .b-team-detail-info .b-team-detail-text {
-    padding-top: 25px;
-    font-size: 16px;
-    line-height: 26px;
+    padding-top: 12px;
+    font-size: 18px;
+    line-height: 30px;
 }
 
 .b-team-wrap{
@@ -964,6 +966,21 @@ input, textarea, select{
 
 .b-about-text{
 	padding-bottom: 25px;
+}
+
+.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+2),
+.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+3),
+.b-hotel-foto-list .b-hotel-foto-item:nth-child(6n+4){
+	float: left;
+}
+
+.fancybox-content{
+	width: 100%;
+}
+
+.fancybox-buttons .fancybox-button--close {
+    top: 0;
+    right: 0;
 }
 
 @media screen and (max-width: 675px){

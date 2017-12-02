@@ -91,30 +91,8 @@ $(document).ready(function(){
             }
         }
 
-        /*if($(".b-main-header").length && isMobile){
-            //если высота уменьшилась
-            if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
-                $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : myHeight - $(".b-main-header").height();
-                });
-            }
-            prevHeight = myHeight;
-            rotation = myWidth/myHeight;
-        }*/
-
         if($(".b-main-header").length && isMobile){
 
-            //если высота уменьшилась (плашка свернулась)
-            /*if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
-                $(".b-main-header, .header-back, .b-header-block").css({
-                    "height" : myHeight - $(".b-main-header").height();
-                });
-            }
-            prevHeight = myHeight;
-            rotation = myWidth/myHeight;*/
-
-            //если высота увеличилась (плашка свернулась)
-            //console.log(myHeight, prevHeight);
             if(Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
                 console.log("resize");
                 if(myHeight > 680){
@@ -287,6 +265,21 @@ $(document).ready(function(){
     $(window).resize(resize);
     resize();
 
+    if(isRetina){
+        $("*[data-retina]").each(function(){
+            var $this = $(this),
+                img = new Image(),
+                src = $this.attr("data-retina");
+
+            img.onload = function(){
+                $this.css({
+                    "background-image" : "url('"+src+"')"
+                });
+            };
+            img.src = src;
+        });
+    }
+
     $.fn.placeholder = function() {
         if(typeof document.createElement("input").placeholder == 'undefined') {
             $('[placeholder]').focus(function() {
@@ -357,6 +350,9 @@ $(document).ready(function(){
     });
 
     $('.review-slider').on('init', function(event, slick){
+        $('.review-slider .slick-active').each(function(){
+            $(this).addClass("slick-active-copy");
+        });
         deleteGallery();
     });
 
@@ -383,8 +379,6 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 3000,
               }
             }
         ]
@@ -393,24 +387,19 @@ $(document).ready(function(){
     $('.review-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         if(slick.options.slidesToShow === 2){
             setTimeout(function(){
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active slick-active-copy");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").next().removeClass("slick-active slick-active-copy");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active slick-active-copy");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").next().addClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").next().removeClass("slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").next().addClass("slick-active-copy");
+                deleteGallery();
             },10 );
         }else{
             setTimeout(function(){
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active slick-active-copy");
-                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+currentSlide+"']").attr("data-id")+"']").removeClass("slick-active-copy");
+                $(".review-item[data-id='"+$(".review-item[data-slick-index='"+nextSlide+"']").attr("data-id")+"']").addClass("slick-active-copy");
+                deleteGallery();
             },10 );
         }
-        setTimeout(function(){
-            deleteGallery();
-        },10 );
-    });
-
-    $('.review-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        //deleteGallery();
     });
 
     //Удалить галереи в копиях элементов
@@ -421,7 +410,7 @@ $(document).ready(function(){
         $('.review-slider .slick-slide').each(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
         });
-        $('.review-slider .slick-active:not(.slick-active-copy)').each(function(){
+        $('.review-slider .slick-active').each(function(){
             console.log("++++",$(this));
             var gallary = $(this).find(".fancy-gallary").attr("data-gallery");
             $(this).find(".fancy-gallary").attr("data-fancybox", gallary);
@@ -555,37 +544,71 @@ $(document).ready(function(){
         $('.team-slider li.slick-current').addClass("slick-current-new");
     });
 
-    $('.team-slider').slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        nextArrow: '<div class="b-block-team"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
-        prevArrow: '<div class="b-block-team"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
-        slidesToShow: 7,
-        slidesToScroll: 1,
-        swipe: false,
-        speed: 600,
-        centerMode: true,
-        variableWidth: true,
-        focusOnSelect: true,
-        asNavFor: '.team-detail-slider',
-        responsive: [
-            {
-              breakpoint: 1096,
-              settings: {
-                slidesToShow: 5,
-                slidesToScroll: 1
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1
-              }
-            }
-        ]
-    });
+    if($('.b-team-list li').length < 9){
+        $('.team-slider').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            nextArrow: '<div class="b-block-team b-block-five-slides"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
+            prevArrow: '<div class="b-block-team b-block-five-slides"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            swipe: false,
+            speed: 600,
+            centerMode: true,
+            variableWidth: true,
+            focusOnSelect: true,
+            asNavFor: '.team-detail-slider',
+            responsive: [
+                {
+                  breakpoint: 1096,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                  }
+                }
+            ]
+        });
+    }else{
+        $('.team-slider').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            nextArrow: '<div class="b-block-team"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
+            prevArrow: '<div class="b-block-team"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            swipe: false,
+            speed: 600,
+            centerMode: true,
+            variableWidth: true,
+            focusOnSelect: true,
+            asNavFor: '.team-detail-slider',
+            responsive: [
+                {
+                  breakpoint: 1096,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                  }
+                }
+            ]
+        });
+    }
 
     $('.team-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         setTimeout(function(){
@@ -726,21 +749,20 @@ $(document).ready(function(){
     }
 
     if($('.b-content-main').length){
-        var $window = $(window);
-
+        var $window = $(window),
+            $targetMain = $(".b-content-main"),
+            $hMain = $targetMain.offset().top;
         $window.on('scroll', function() {
-            var $targetMain = $(".b-content-main"),
-                $hMain = $targetMain.offset().top;
             // Как далеко вниз прокрутили страницу
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
-            if (scrollTop > $hMain) {
-                console.log("+");
+            if (scrollTop > $hMain){
                 $('.b-top').removeClass("b-top-hide").addClass("b-top-fixed");
-            }else{     
-                console.log("-");
+            }else{
                 $('.b-top').addClass("b-top-hide").removeClass("b-top-fixed");
             }
+            $targetMain = $(".b-content-main"),
+            $hMain = $targetMain.offset().top;
         });
     }
 
@@ -753,7 +775,7 @@ $(document).ready(function(){
             // Как далеко вниз прокрутили страницу
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
-            if (scrollTop > $h + 18) {
+            if (scrollTop > $h) {
                 $target.addClass("b-top-fixed");
             }else{     
                 $target.removeClass("b-top-fixed");
@@ -1012,6 +1034,10 @@ $(document).ready(function(){
     $('.select-tour').chosen({
         width: '50%',
         disable_search_threshold: 10000
+    });
+
+    $('.chosen-container').on('click', function(){
+        $('.chosen-container').children('.chosen-single').removeClass("error");
     });
 
     $("[data-fancybox]").fancybox({

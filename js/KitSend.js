@@ -46,6 +46,7 @@ $(document).ready(function(){
 	var rePhone = /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
 		tePhone = '+7 (999) 999-99-99';
 
+	$.validator.setDefaults({ ignore: ":hidden:not(select)" }) //for all select
 	$.validator.addMethod('customPhone', function (value) {
 		return rePhone.test(value);
 	});
@@ -82,9 +83,9 @@ $(document).ready(function(){
 	            	locked: true 
 	         	}
 	      	},
-	      	/*tpl: {
-	            closeBtn : '<a title="Закрыть" class="fancybox-close" style="display:none;" href="javascript:;"></a>'
-	        },*/
+	      	/*btnTpl : {
+	      		close: '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">',
+	      	},*/
 			beforeShow: function(){
 				$(".fancybox-wrap").addClass("beforeShow");
 				$popup.find(".custom-field").remove();
@@ -155,7 +156,11 @@ $(document).ready(function(){
 	});
 
 	$(".ajax").parents("form").submit(function(){
+		if($('select.error').siblings('.chosen-container').length){
+			$('select.error').siblings('.chosen-container').children('.chosen-single').addClass("error");
+		}
   		if( $(this).find("input.error,select.error,textarea.error").length == 0 ){
+
   			var $this = $(this),
   				$thanks = $($this.attr("data-block"));
 

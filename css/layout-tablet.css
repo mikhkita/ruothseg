@@ -26,9 +26,6 @@ h1,h2,h3,h4,h5,h6{
 label.error{
 	display: none !important;
 }
-input.error{
-	border-bottom: 1px solid #ff8686 !important;
-}
 .ps-lines{
 
 }
@@ -69,6 +66,7 @@ input.error{
 }
 
 .b-top .b-block{
+	text-align: center;
 	max-width: 100%;
 }
 
@@ -101,7 +99,16 @@ input.error{
 	}
 
 	.b-small-logo-cont{
-		margin-right: 12px;
+		float: left;
+		margin-right: 0px;
+	}
+
+	.b-menu-cont{
+		padding-top: 8px;
+	}
+
+	.b-menu-cont .b-line{
+		top: 36px;
 	}
 
 .b-block-advantages{
@@ -257,6 +264,14 @@ div.b-footer-column:last-child{
 
 	.b-top .b-top-contacts{
 		display: none;
+	}
+
+	.b-top .b-block{
+		text-align: left;
+	}
+
+	.b-small-logo-cont {
+	    float: none;
 	}
 
 	.b-block-team{
