@@ -471,6 +471,11 @@ h3.b-title{
 	    margin-top: -10px;
 	    margin-bottom: 30px;
 	}
+
+		h1.b-logo-text span{
+			display: none;
+		}
+
 		.burger-menu{
 			display: none;
 		}
@@ -597,11 +602,13 @@ h3.b-title{
 				    height: 295px;
 				}
 				.b-logo-text{
+					font-family: 'RobotoBold';
 					font-size: 14px;
 					letter-spacing: 0.39px;
 					line-height: 18px;
 					margin-top: 17px;
 					text-align: center;
+					text-transform: uppercase;
 				}
 			.b-header-video{
 				float: right;
