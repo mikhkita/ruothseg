@@ -103,7 +103,7 @@ h1,h2,h3,h4,h5,h6{
 label.error{
 	display: none !important;
 }
-input.error,textarea.error{
+input.error,textarea.error,.chosen-container .chosen-single.error{
 	border-bottom: 2px solid #F00 !important;
 }
 .ps-lines{
@@ -3350,6 +3350,19 @@ h3.b-title{
 @media screen and (max-width: 1152px){
 	
 }
+
+@media screen and (min-width: 900px){
+
+	.b-block-team.b-block-five-slides{
+		width: 590px;
+	}
+
+	.b-block-five-slides .b-team-arrows.icon-arrow-right{
+		right: -68px;
+	}
+
+}
+
 @media screen and (min-width: 768px){
 	.video-list .video-item.slick-active .video-back.move-right{
 		animation: move-right 20s ease-in-out infinite;
