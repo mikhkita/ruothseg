@@ -2649,15 +2649,37 @@ h3.b-title{
 		    border-radius: 100px;
 		    width: 99px;
 		    height: 99px;
+		    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
+		    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
+ 			-webkit-transition: background-color 150ms ease-out;
+ 			   -moz-transition: background-color 150ms ease-out;
+ 			    -ms-transition: background-color 150ms ease-out;
+ 			   	 -o-transition: background-color 150ms ease-out;
+ 					transition: background-color 150ms ease-out;
 		}
 
 		.b-team-img-cont .b-img{
 		    width: 87px;
 		    height: 87px;
+		    -webkit-transition: -webkit-transform 300ms ease-out, -webkit-box-shadow 150ms ease-out;
+		       -moz-transition: transform 300ms ease-out, box-shadow 150ms ease-out;
+		        -ms-transition: -ms-transform 300ms ease-out, box-shadow 150ms ease-out;
+		       	 -o-transition: -o-transform 300ms ease-out, box-shadow 150ms ease-out;
+		    		transition: transform 300ms ease-out, box-shadow 150ms ease-out;
 		}
+			.slick-current-new .b-team-img-cont .b-img{
+				transform: scale(1.24);
+				-webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
+		    	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
+			}
 
-		.b-team-list .slick-current-new .b-img-brown{
-			background-image: linear-gradient(157deg, #ac8484 0%, #744d4d 100%);
+		.b-team-list .b-img-brown:hover{
+			background-color: #886060;
+			-webkit-transition: background-color 0ms ease-out;
+ 			   -moz-transition: background-color 0ms ease-out;
+ 			    -ms-transition: background-color 0ms ease-out;
+ 			   	 -o-transition: background-color 0ms ease-out;
+ 					transition: background-color 0ms ease-out;
 		}
 
 .b-team-list li{
