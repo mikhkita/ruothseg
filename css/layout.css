@@ -2728,11 +2728,11 @@ h3.b-title{
 		opacity: 0.7;
 		position: relative;
 		height: 637px;
-		-webkit-transition: opacity 300ms ease-out, transform 300ms ease-out;
+		/*-webkit-transition: opacity 300ms ease-out, transform 300ms ease-out;
 		   -moz-transition: opacity 300ms ease-out, transform 300ms ease-out;
 		    -ms-transition: opacity 300ms ease-out, transform 300ms ease-out;
 		   	 -o-transition: opacity 300ms ease-out, transform 300ms ease-out;
-				transition: opacity 300ms ease-out, transform 300ms ease-out;
+				transition: opacity 300ms ease-out, transform 300ms ease-out;*/
 	}
 
 	.slick-center-opacity .b-team-detail-item{
