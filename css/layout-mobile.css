@@ -559,7 +559,7 @@ input, textarea, select{
 	}
 
 .b-tour, .b-block-tour{
-    width: 400px;
+    width: 412px;
 }
 
 .b-footer{
@@ -983,6 +983,10 @@ input, textarea, select{
     right: 0;
 }
 
+.b-tour-arrows.icon-arrow-right, .b-team-arrows.icon-arrow-right{
+	top: -45px;
+}
+
 @media screen and (max-width: 675px){
 	.b-review {
 	    width: calc(100% - 17px);
@@ -1201,15 +1205,16 @@ input, textarea, select{
 	}
 
 	.b-tour li{
-		margin: 0 12px;
+		margin: 0 6px;
+		min-width: 105px;
 	}
 		.b-tour li a{
 			font-size: 16px;
-			padding: 3px 0 4px 0;
+			padding: 6px 0 7px 0;
 		}
 
 	.b-tour-arrows.icon-arrow-left{
-		top: 0;
+		top: 4px;
 		left: -48px;
 	}
 
@@ -1422,6 +1427,11 @@ input, textarea, select{
 
 	.b-popup-center{
 		text-align: center;
+	}
+
+	.b-foto-block{
+		margin-left: 0;
+		width: 100%;
 	}
 
 }

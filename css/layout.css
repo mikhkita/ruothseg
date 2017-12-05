@@ -2318,6 +2318,10 @@ h3.b-title{
 	text-align: center;
 }
 
+.b-tour.full-width{
+	width: 100%;
+}
+
 .b-tour.hide{
 	display: block;
 	opacity: 0;

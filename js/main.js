@@ -452,6 +452,7 @@ $(document).ready(function(){
                 }
             }
 
+            //если виден первый элемент, то скрыть левую стрелку
             if(slick.currentSlide <= border){
                 console.log("<-hide");
                 $('.b-block-tour .icon-arrow-left').addClass("hide");
@@ -459,6 +460,11 @@ $(document).ready(function(){
                 console.log("<-show");
                 $('.b-block-tour .icon-arrow-left').removeClass("hide");
             }
+
+            if(slick.options.slidesToShow === 2){
+                border--;
+            }
+
             //если виден последний элемент, то скрыть правую стрелку
             if(slick.slideCount - slick.currentSlide <= border + 1){
                 console.log("->hide");
@@ -471,6 +477,7 @@ $(document).ready(function(){
     });
 
     if($('.b-tour li').length > 5){
+        console.log("11111111");
         $('.b-tour-slider').slick({
             slidesToShow: 5,
             slidesToScroll: 1,
@@ -500,8 +507,49 @@ $(document).ready(function(){
                 }
             ]
         });
+    }else if($('.b-tour li').length > 3 && $('.b-tour li').length <= 5 && myWidth <= 900){
+        console.log("22222");
+        $('.b-tour-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: false,
+            infinite: false,
+            arrows: true,
+            centerMode: true,
+            centerPadding: '0px',
+            swipe: false,
+            speed: 600,
+            nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
+            prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows" aria-hidden="true"></div></div>',
+            responsive: [
+                {
+                  breakpoint: 551,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                  }
+                }
+            ]
+        });
+        
+    }else if($('.b-tour li').length === 3 && myWidth <= 550){
+        console.log("333333");
+        $('.b-tour-slider').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: false,
+            infinite: false,
+            arrows: true,
+            centerMode: true,
+            centerPadding: '0px',
+            swipe: false,
+            speed: 600,
+            nextArrow: '<div class="b-block-tour"><div class="icon-arrow-right b-tour-arrows" aria-hidden="true"></div></div>',
+            prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows" aria-hidden="true"></div></div>',
+        });
     }else{
-        $('.b-tour').removeClass("hide");
+        console.log("4444");
+        $('.b-tour').removeClass("hide").addClass("full-width");
     }
 
     $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
