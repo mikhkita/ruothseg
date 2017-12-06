@@ -117,10 +117,10 @@ html, body, .perspective {
 .outer-nav a {
 	display: inline-block;
 	white-space: nowrap;
-	padding: 12px 24px;
+	padding: 8px 18px 10px;
 	border-radius: 100px;
 	font-weight: 300;
-	margin: 0 0 8px 0;
+	margin: 6px 0px;
 	width: auto;
 	color: #fff;
 	-webkit-transition: color 0.3s;

@@ -246,7 +246,7 @@ input, textarea, select{
 	}
 
 	.b-header-wrap{
-		padding-top: 130px;
+		padding-top: 133px;
 	}
 
 .b-block-advantages{
@@ -279,8 +279,8 @@ input, textarea, select{
 			}
 
 		.advantages-list li .advantage-text{
-			font-size: 18px;
-			line-height: 26px;
+			font-size: 18px !important;
+			line-height: 28px !important;
 		}
 
 .b-advantages-arrows.icon-arrow-left {
@@ -392,7 +392,8 @@ input, textarea, select{
 					}
 
 					.weekday-or-weekend {
-						font-size: 16px;
+						font-size: 18px;
+						font-family: "RobotoRegular";
 					    position: static;
 					}
 
@@ -477,7 +478,7 @@ input, textarea, select{
 		}
 
 .b-block-reviews{
-
+	margin-top: -10px;
 }
 
 	.review-list{
@@ -491,14 +492,15 @@ input, textarea, select{
 		}
 
 		.b-img-cont, .b-review .b-img-cont{
-			width: 92px;
-			height: 92px;
+			width: 112px;
+			height: 112px;
 			margin-bottom: 0;
+			margin-top: 10px;
 		}
 
 		.b-img, .b-review .b-img{
-			width: 80px;
-			height: 80px;
+			width: 100px;
+			height: 100px;
 		}
 
 		.b-review-right{
@@ -702,7 +704,7 @@ input, textarea, select{
 }
 
 .b-half-button{
-	margin-top: 41px;
+	margin-top: 39px;
 }
 
 .b-popup{
@@ -755,13 +757,14 @@ input, textarea, select{
 }
 
 .b-hotel-text p {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 26px;
 }
 
 .b-hotel h3 {
-    font-size: 24px;
-    margin-bottom: 8px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 28px;
 }
 
 .b-residence .advantages-list li {
@@ -1069,12 +1072,12 @@ input, textarea, select{
 
 	.b-rewiews-arrows.icon-arrow-left {
 	    left: 24px;
-	    top: 54px;
+	    top: 130px;
 	}
 
 	.b-rewiews-arrows.icon-arrow-right {
 	    right: 24px;
-	    top: 54px;
+	    top: 130px;
 	}
 
 	/*------*/
