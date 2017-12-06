@@ -432,11 +432,12 @@ input, textarea, select{
 }
 
 	.b-block-book-it p{
-		font-size: 18px;
+		font-size: 24px;
+		font-family: "RobotoRegular";
 	}
 
 	.b-block-book-it .b-title-first {
-	    margin-bottom: 8px;
+	    margin-bottom: 0px;
 	}
 
 	.b-block-book-it .b-title-second {
@@ -1391,7 +1392,7 @@ input, textarea, select{
 	.grid-item {
 	    width: 100%;
 	    margin: 0px;
-	    margin-bottom: 12px;
+	    margin-bottom: 24px;
 	}
 
 	.b-team-img-cont {

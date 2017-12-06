@@ -373,7 +373,7 @@ h3.b-title{
 .b-title b{
 	font-family: 'RobotoBold';
 	font-weight: normal;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 .b-wide-block{
