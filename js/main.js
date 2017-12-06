@@ -613,6 +613,7 @@ $(document).ready(function(){
             variableWidth: true,
             focusOnSelect: true,
             asNavFor: '.team-detail-slider',
+            cssEase: 'cubic-bezier(.19,.46,.35,1)',
             responsive: [
                 {
                   breakpoint: 1096,
@@ -645,6 +646,7 @@ $(document).ready(function(){
             variableWidth: true,
             focusOnSelect: true,
             asNavFor: '.team-detail-slider',
+            cssEase: 'cubic-bezier(.19,.46,.35,1)',
             responsive: [
                 {
                   breakpoint: 1096,
