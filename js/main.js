@@ -598,73 +598,48 @@ $(document).ready(function(){
         $('.team-slider li.slick-current').addClass("slick-current-new");
     });
 
+    var teamSlides;
+    var blockClass;
     if($('.b-team-list li').length < 9){
-        $('.team-slider').slick({
-            dots: false,
-            arrows: true,
-            infinite: true,
-            nextArrow: '<div class="b-block-team b-block-five-slides"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
-            prevArrow: '<div class="b-block-team b-block-five-slides"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            swipe: false,
-            speed: 600,
-            centerMode: true,
-            variableWidth: true,
-            focusOnSelect: true,
-            asNavFor: '.team-detail-slider',
-            cssEase: 'cubic-bezier(.19,.46,.35,1)',
-            responsive: [
-                {
-                  breakpoint: 1096,
-                  settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1
-                  }
-                },
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                  }
-                }
-            ]
-        });
+        teamSlides = 5;
+        blockClass = "b-block-team b-block-five-slides";
     }else{
-        $('.team-slider').slick({
-            dots: false,
-            arrows: true,
-            infinite: true,
-            nextArrow: '<div class="b-block-team"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
-            prevArrow: '<div class="b-block-team"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
-            slidesToShow: 7,
-            slidesToScroll: 1,
-            swipe: false,
-            speed: 600,
-            centerMode: true,
-            variableWidth: true,
-            focusOnSelect: true,
-            asNavFor: '.team-detail-slider',
-            cssEase: 'cubic-bezier(.19,.46,.35,1)',
-            responsive: [
-                {
-                  breakpoint: 1096,
-                  settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1
-                  }
-                },
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                  }
-                }
-            ]
-        });
+        teamSlides = 7;
+        blockClass = "b-block-team";
     }
+
+    $('.team-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        nextArrow: '<div class="'+blockClass+'"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="'+blockClass+'"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
+        slidesToShow: teamSlides,
+        slidesToScroll: 1,
+        swipe: false,
+        speed: 600,
+        centerMode: true,
+        variableWidth: true,
+        focusOnSelect: true,
+        asNavFor: '.team-detail-slider',
+        cssEase: 'cubic-bezier(.19,.46,.35,1)',
+        responsive: [
+            {
+              breakpoint: 1096,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });   
 
     $('.team-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         setTimeout(function(){
