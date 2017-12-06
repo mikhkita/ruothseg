@@ -191,6 +191,10 @@ $(document).ready(function(){
             });
         }
 
+        if(!isMobile){
+            checkMenu();
+        }
+
         $('.call-bubble').addClass("bubble-hide");
 
         //выравнивание фото на странице "Проезд"
