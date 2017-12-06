@@ -393,6 +393,7 @@ input, textarea, select{
 
 					.weekday-or-weekend {
 						font-size: 18px;
+						font-family: "RobotoRegular";
 					    position: static;
 					}
 
@@ -477,7 +478,7 @@ input, textarea, select{
 		}
 
 .b-block-reviews{
-
+	margin-top: -10px;
 }
 
 	.review-list{
@@ -491,14 +492,15 @@ input, textarea, select{
 		}
 
 		.b-img-cont, .b-review .b-img-cont{
-			width: 92px;
-			height: 92px;
+			width: 112px;
+			height: 112px;
 			margin-bottom: 0;
+			margin-top: 10px;
 		}
 
 		.b-img, .b-review .b-img{
-			width: 80px;
-			height: 80px;
+			width: 100px;
+			height: 100px;
 		}
 
 		.b-review-right{
@@ -1069,12 +1071,12 @@ input, textarea, select{
 
 	.b-rewiews-arrows.icon-arrow-left {
 	    left: 24px;
-	    top: 54px;
+	    top: 130px;
 	}
 
 	.b-rewiews-arrows.icon-arrow-right {
 	    right: 24px;
-	    top: 54px;
+	    top: 130px;
 	}
 
 	/*------*/
