@@ -705,6 +705,7 @@ $(document).ready(function(){
         centerMode: true,
         variableWidth: true,
         focusOnSelect: true,
+        cssEase: 'cubic-bezier(.19,.46,.35,1)',
         asNavFor: '.team-slider',
         /*responsive: [
             {
@@ -996,9 +997,9 @@ $(document).ready(function(){
     if($('#typed-show').length){
         var typed = new Typed("#typed-show", {
             stringsElement: '#typed-strings',
-            typeSpeed: 50,
-            backSpeed: 50,
-            backDelay: 2500,
+            typeSpeed: 30,
+            backSpeed: 10,
+            backDelay: 1500,
             fadeOut: true,
             loop: true
         });

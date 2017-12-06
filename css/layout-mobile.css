@@ -246,7 +246,7 @@ input, textarea, select{
 	}
 
 	.b-header-wrap{
-		padding-top: 130px;
+		padding-top: 133px;
 	}
 
 .b-block-advantages{
@@ -279,8 +279,8 @@ input, textarea, select{
 			}
 
 		.advantages-list li .advantage-text{
-			font-size: 18px;
-			line-height: 26px;
+			font-size: 18px !important;
+			line-height: 28px !important;
 		}
 
 .b-advantages-arrows.icon-arrow-left {
@@ -704,7 +704,7 @@ input, textarea, select{
 }
 
 .b-half-button{
-	margin-top: 41px;
+	margin-top: 39px;
 }
 
 .b-popup{
@@ -757,13 +757,14 @@ input, textarea, select{
 }
 
 .b-hotel-text p {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 26px;
 }
 
 .b-hotel h3 {
-    font-size: 24px;
-    margin-bottom: 8px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 28px;
 }
 
 .b-residence .advantages-list li {
