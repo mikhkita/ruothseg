@@ -262,12 +262,14 @@ $(document).ready(function(){
         }
     }
 
+    $(window).on('load', function(){
+        if(!isMobile){
+            checkMenu();
+        }
+    });
+
     $(window).resize(resize);
     resize();
-
-    if(!isMobile){
-        checkMenu();
-    }
 
     if(isRetina && myWidth >= 550){
         $("*[data-retina]").each(function(){
