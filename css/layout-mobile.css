@@ -5,7 +5,7 @@ body {
 	position: relative;
 }
 body {
-	min-width: 345px;
+	min-width: 320px;
 	text-align: center;
 	font-size: 16px;
     line-height: 26px;
@@ -1211,7 +1211,7 @@ input, textarea, select{
 	.b-residence .icon-lift{
 		padding: 23px;
 	}	
-		.icon-lift:before{
+		.b-residence .icon-lift:before{
 	  		font-size: 65px;
 		}
 
@@ -1565,13 +1565,37 @@ input, textarea, select{
 
 }
 
-@media screen and (max-width: 372px){
+@media screen and (max-width: 360px){
 
-	/*.b-mobile-call{
-		margin-right: 18px;
+	.b-footer .icon-phone{
+		font-size: 16px;
+	}
+
+	.b-footer .b-footer-address{
+		font-size: 14px;
+	}
+	.b-footer .b-footer-column.b-footer-logo-cont{
+		margin-right: 15px; 
 	}
 	.icon-burger-menu:before{
-		margin-right: 8px;
-	}*/
-
+		margin-right: 0px;
+	}
+	.tour-date{
+	    margin-right: 0px;	
+	}
+	.b-popup .b-btn{
+		min-width: 182px;
+	}
+	.b-popup h3.b-title{
+		padding-right: 23px;
+	}
+	.b-mobile-call{
+		margin-right: 24px;
+	}
+	.burger-menu-text{
+		display: none;
+	}
+	.b-header-block .burger-menu{
+	    margin-top: 10px;
+	}
 }

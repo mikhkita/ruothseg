@@ -831,6 +831,20 @@ h3.b-title{
 	  		font-size: 81px;
 		}
 
+.b-block-text{
+	background-color: #f7f7f7;
+}
+	.b-block-text p{
+		line-height: 26px;
+	    font-size: 16px;
+	}
+	.b-block-text h3{
+		font-size: 26px;
+	    font-family: "RobotoBold", Arial;
+	    padding-top: 0px;
+	    margin-bottom: 15px;
+	    line-height: 32px;
+	}
 .b-block-tours{
 	background-color: #f7f7f7;
 }
@@ -1914,7 +1928,7 @@ h3.b-title{
 	}
 
 	.b-top-fixed {
-		min-width: 345px;
+		min-width: 320px;
 	    background-color: rgba(255,255,255,0.8);
 	    position: fixed;
 	    z-index: 90;
