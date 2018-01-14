@@ -191,7 +191,7 @@ $(document).ready(function(){
             });
         }
 
-        if($('.b-menu-cont .b-menu').length && !isMobile){
+        if(!isMobile){
             checkMenu();
         }
 
@@ -261,6 +261,12 @@ $(document).ready(function(){
             }
         }
     }
+
+    $(window).on('load', function(){
+        if(!isMobile){
+            checkMenu();
+        }
+    });
 
     $(window).resize(resize);
     resize();
@@ -477,7 +483,6 @@ $(document).ready(function(){
     });
 
     if($('.b-tour li').length > 5){
-        console.log("11111111");
         $('.b-tour-slider').slick({
             slidesToShow: 5,
             slidesToScroll: 1,
@@ -508,7 +513,6 @@ $(document).ready(function(){
             ]
         });
     }else if($('.b-tour li').length > 3 && $('.b-tour li').length <= 5 && myWidth <= 900){
-        console.log("22222");
         $('.b-tour-slider').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -533,7 +537,6 @@ $(document).ready(function(){
         });
         
     }else if($('.b-tour li').length === 3 && myWidth <= 550){
-        console.log("333333");
         $('.b-tour-slider').slick({
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -548,7 +551,6 @@ $(document).ready(function(){
             prevArrow: '<div class="b-block-tour"><div class="icon-arrow-left b-tour-arrows" aria-hidden="true"></div></div>',
         });
     }else{
-        console.log("4444");
         $('.b-tour').removeClass("hide").addClass("full-width");
     }
 
@@ -596,71 +598,48 @@ $(document).ready(function(){
         $('.team-slider li.slick-current').addClass("slick-current-new");
     });
 
+    var teamSlides;
+    var blockClass;
     if($('.b-team-list li').length < 9){
-        $('.team-slider').slick({
-            dots: false,
-            arrows: true,
-            infinite: true,
-            nextArrow: '<div class="b-block-team b-block-five-slides"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
-            prevArrow: '<div class="b-block-team b-block-five-slides"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            swipe: false,
-            speed: 600,
-            centerMode: true,
-            variableWidth: true,
-            focusOnSelect: true,
-            asNavFor: '.team-detail-slider',
-            responsive: [
-                {
-                  breakpoint: 1096,
-                  settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1
-                  }
-                },
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                  }
-                }
-            ]
-        });
+        teamSlides = 5;
+        blockClass = "b-block-team b-block-five-slides";
     }else{
-        $('.team-slider').slick({
-            dots: false,
-            arrows: true,
-            infinite: true,
-            nextArrow: '<div class="b-block-team"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
-            prevArrow: '<div class="b-block-team"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
-            slidesToShow: 7,
-            slidesToScroll: 1,
-            swipe: false,
-            speed: 600,
-            centerMode: true,
-            variableWidth: true,
-            focusOnSelect: true,
-            asNavFor: '.team-detail-slider',
-            responsive: [
-                {
-                  breakpoint: 1096,
-                  settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1
-                  }
-                },
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                  }
-                }
-            ]
-        });
+        teamSlides = 7;
+        blockClass = "b-block-team";
     }
+
+    $('.team-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        nextArrow: '<div class="'+blockClass+'"><div class="icon-arrow-right b-team-arrows" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="'+blockClass+'"><div class="icon-arrow-left b-team-arrows" aria-hidden="true"></div></div>',
+        slidesToShow: teamSlides,
+        slidesToScroll: 1,
+        swipe: false,
+        speed: 600,
+        centerMode: true,
+        variableWidth: true,
+        focusOnSelect: true,
+        asNavFor: '.team-detail-slider',
+        cssEase: 'cubic-bezier(.19,.46,.35,1)',
+        responsive: [
+            {
+              breakpoint: 1096,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });   
 
     $('.team-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         setTimeout(function(){
@@ -705,6 +684,7 @@ $(document).ready(function(){
         centerMode: true,
         variableWidth: true,
         focusOnSelect: true,
+        cssEase: 'cubic-bezier(.19,.46,.35,1)',
         asNavFor: '.team-slider',
         /*responsive: [
             {
@@ -795,6 +775,7 @@ $(document).ready(function(){
     });
 
     function checkMenu(){
+        console.log("++");
         if( $(".b-menu-cont .b-menu > li.active > a").length ){
             moveLine($(".b-menu-cont .b-menu > li.active"));
         }else{
@@ -996,9 +977,9 @@ $(document).ready(function(){
     if($('#typed-show').length){
         var typed = new Typed("#typed-show", {
             stringsElement: '#typed-strings',
-            typeSpeed: 50,
-            backSpeed: 50,
-            backDelay: 2500,
+            typeSpeed: 30,
+            backSpeed: 10,
+            backDelay: 1500,
             fadeOut: true,
             loop: true
         });
