@@ -567,6 +567,7 @@ input, textarea, select{
 
 .b-footer{
 	padding: 32px 0;
+	background-position: 59% 50%;
 }
 
 	.b-footer-up{
@@ -1390,7 +1391,7 @@ input, textarea, select{
 
 @media screen and (max-width: 500px){
 	.b-footer{
-		background-position: 62% 50%;
+		background-position: 60% 50%;
 	}
 }
 
@@ -1535,7 +1536,7 @@ input, textarea, select{
 	}
 
 	.b-footer{
-		background-position: 63% 50%;
+		background-position: 60% 50%;
 	}
 
 	.b-residence .advantage-item{
