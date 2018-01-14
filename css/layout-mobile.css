@@ -5,7 +5,7 @@ body {
 	position: relative;
 }
 body {
-	min-width: 345px;
+	min-width: 320px;
 	text-align: center;
 	font-size: 16px;
     line-height: 26px;
@@ -246,7 +246,7 @@ input, textarea, select{
 	}
 
 	.b-header-wrap{
-		padding-top: 130px;
+		padding-top: 133px;
 	}
 
 .b-block-advantages{
@@ -279,8 +279,8 @@ input, textarea, select{
 			}
 
 		.advantages-list li .advantage-text{
-			font-size: 18px;
-			line-height: 26px;
+			font-size: 18px !important;
+			line-height: 28px !important;
 		}
 
 .b-advantages-arrows.icon-arrow-left {
@@ -392,7 +392,8 @@ input, textarea, select{
 					}
 
 					.weekday-or-weekend {
-						font-size: 16px;
+						font-size: 18px;
+						font-family: "RobotoRegular";
 					    position: static;
 					}
 
@@ -431,11 +432,12 @@ input, textarea, select{
 }
 
 	.b-block-book-it p{
-		font-size: 18px;
+		font-size: 24px;
+		font-family: "RobotoRegular";
 	}
 
 	.b-block-book-it .b-title-first {
-	    margin-bottom: 8px;
+	    margin-bottom: 0px;
 	}
 
 	.b-block-book-it .b-title-second {
@@ -477,7 +479,7 @@ input, textarea, select{
 		}
 
 .b-block-reviews{
-
+	margin-top: -10px;
 }
 
 	.review-list{
@@ -491,14 +493,15 @@ input, textarea, select{
 		}
 
 		.b-img-cont, .b-review .b-img-cont{
-			width: 92px;
-			height: 92px;
+			width: 112px;
+			height: 112px;
 			margin-bottom: 0;
+			margin-top: 10px;
 		}
 
 		.b-img, .b-review .b-img{
-			width: 80px;
-			height: 80px;
+			width: 100px;
+			height: 100px;
 		}
 
 		.b-review-right{
@@ -702,7 +705,7 @@ input, textarea, select{
 }
 
 .b-half-button{
-	margin-top: 41px;
+	margin-top: 39px;
 }
 
 .b-popup{
@@ -755,13 +758,14 @@ input, textarea, select{
 }
 
 .b-hotel-text p {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 26px;
 }
 
 .b-hotel h3 {
-    font-size: 24px;
-    margin-bottom: 8px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 28px;
 }
 
 .b-residence .advantages-list li {
@@ -1069,12 +1073,12 @@ input, textarea, select{
 
 	.b-rewiews-arrows.icon-arrow-left {
 	    left: 24px;
-	    top: 54px;
+	    top: 130px;
 	}
 
 	.b-rewiews-arrows.icon-arrow-right {
 	    right: 24px;
-	    top: 54px;
+	    top: 130px;
 	}
 
 	/*------*/
@@ -1179,6 +1183,7 @@ input, textarea, select{
 	.b-residence .advantages-list li {
 	    width: 100%;
 	    margin-bottom: 32px;
+	    display: table;
 	}
 
 	.b-residence .advantages-list li:nth-last-of-type(-n+2){
@@ -1194,8 +1199,53 @@ input, textarea, select{
 		}
 
 	.b-residence .advantage-item{
-		margin-bottom: 20px;
+		width: 110px;
+    	height: 110px;
+		margin-bottom: 0;
 	}
+
+	.b-residence .advantages-list li{
+		margin-bottom: 24px;
+	}
+
+	.b-residence .icon-lift{
+		padding: 23px;
+	}	
+		.b-residence .icon-lift:before{
+	  		font-size: 65px;
+		}
+
+	.b-residence .icon-bar{
+		padding: 22px 24px;
+	}
+		.icon-bar:before{
+	  		font-size: 65px;
+		}
+
+	.b-residence .icon-games{
+		padding: 22px 23px;
+	}
+		.icon-games:before{
+	  		font-size: 65px;
+		}
+
+	.b-residence .icon-fun{
+		padding: 22px;
+	}
+		.icon-fun:before{
+			font-size: 65px;
+		}
+
+	.b-residence .advantages-list li .advantage-text {
+		display: table-cell;
+	    width: 60%;
+	    font-size: 18px;
+	    line-height: 28px;
+	    margin-left: 20px;
+	    text-align: left;
+	    vertical-align: middle;
+	}
+
 }
 
 @media screen and (max-width: 550px){
@@ -1388,7 +1438,7 @@ input, textarea, select{
 	.grid-item {
 	    width: 100%;
 	    margin: 0px;
-	    margin-bottom: 12px;
+	    margin-bottom: 24px;
 	}
 
 	.b-team-img-cont {
@@ -1487,6 +1537,10 @@ input, textarea, select{
 	.b-footer{
 		background-position: 63% 50%;
 	}
+
+	.b-residence .advantage-item{
+		float: left;
+	}
 }
 
 @media screen and (max-width: 380px){
@@ -1511,13 +1565,37 @@ input, textarea, select{
 
 }
 
-@media screen and (max-width: 372px){
+@media screen and (max-width: 360px){
 
-	/*.b-mobile-call{
-		margin-right: 18px;
+	.b-footer .icon-phone{
+		font-size: 16px;
+	}
+
+	.b-footer .b-footer-address{
+		font-size: 14px;
+	}
+	.b-footer .b-footer-column.b-footer-logo-cont{
+		margin-right: 15px; 
 	}
 	.icon-burger-menu:before{
-		margin-right: 8px;
-	}*/
-
+		margin-right: 0px;
+	}
+	.tour-date{
+	    margin-right: 0px;	
+	}
+	.b-popup .b-btn{
+		min-width: 182px;
+	}
+	.b-popup h3.b-title{
+		padding-right: 23px;
+	}
+	.b-mobile-call{
+		margin-right: 24px;
+	}
+	.burger-menu-text{
+		display: none;
+	}
+	.b-header-block .burger-menu{
+	    margin-top: 10px;
+	}
 }
