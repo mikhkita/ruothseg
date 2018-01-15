@@ -106,6 +106,9 @@ label.error{
 input.error,textarea.error,.chosen-container .chosen-single.error{
 	border-bottom: 2px solid #F00 !important;
 }
+.b-block-inner{
+	padding-top: 60px;
+}
 .ps-lines{
 
 }
@@ -2301,6 +2304,7 @@ h3.b-title{
 	.b-review h3.b-title{
 		font-size: 20px;
 		margin-bottom: 2px;
+		color: black;
 	}
 
 	.b-review .b-img-cont{
