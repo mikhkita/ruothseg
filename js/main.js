@@ -326,6 +326,7 @@ $(document).ready(function(){
 
     if(isMobile){
         //пропустить анимацию b-block-advantages на мобиле
+        new FastClick(document.body);
         $('.advantage-item').each(function(){
             $(this).addClass("fadeIn-show");
         });
@@ -334,7 +335,6 @@ $(document).ready(function(){
     if( typeof autosize == "function" )
         autosize(document.querySelectorAll('textarea'));
 
-    new FastClick(document.body);
 
     $('.video-slider').slick({
         dots: true,
