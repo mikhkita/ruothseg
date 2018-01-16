@@ -1126,7 +1126,7 @@ h3.b-title{
 				.weekday-or-weekend{
 					font-family: 'RobotoLight';
 					font-size: 22px;
-					padding-bottom: 10px;
+					padding: 0 8px 10px 8px;
 				}
 				.tour-dash{
 					width: 40px;
@@ -2577,18 +2577,21 @@ h3.b-title{
 		font-size: 26px;
 	}
 
-	.b-hotel img{
-		width: 100%;
+	.b-hotel-img{
+		width: 32%;
+		background-position: 50% 50%;
+		background-size: cover;
+    	background-repeat: no-repeat;
 	}
 
 	.b-hotel-text{
-		padding: 0 45px;
+		padding: 45px;
 		width: 67.5%;
 	}
 
 		.b-hotel-text p{
-			font-size: 18px;
-			line-height: 30px;
+			font-size: 20px;
+			line-height: 32px;
 		}
 
 .b-residence .advantages-list{
@@ -3135,7 +3138,7 @@ h3.b-title{
 			.chosen-container .chosen-drop {
 			    position: absolute;
 			    top: 40px;
-			    width: 220px;
+			    width: 248px;
 			    padding: 10px 0 10px 0;
 			    border: 0;
 			    background-color: #FFF;

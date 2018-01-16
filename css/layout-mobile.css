@@ -398,6 +398,7 @@ input, textarea, select{
 						font-size: 18px;
 						font-family: "RobotoRegular";
 					    position: static;
+					    padding: 0;
 					}
 
 			.tour-item:hover .tour-left-content {
@@ -756,6 +757,11 @@ input, textarea, select{
 	display: block;
 }
 
+.b-hotel-img{
+	height: 280px;
+    width: 100%;
+}
+
 .b-hotel-text {
     padding: 24px;
     width: 100%;
@@ -995,6 +1001,18 @@ input, textarea, select{
 	top: -45px;
 }
 
+.tour-item{
+	height: 256px;
+}
+.tour-left-content {
+	text-align: center;
+    padding: 8px 10px 14px 10px;
+}
+.tour-date{
+    margin-right: 0px;
+    display: block;
+}
+
 @media screen and (max-width: 675px){
 	.b-review {
 	    width: calc(100% - 17px);
@@ -1148,6 +1166,18 @@ input, textarea, select{
 			.mobile-column ul li a{
 				font-size: 14px;
 			}
+
+	.tour-item{
+		height: 230px;
+	}
+	.tour-left-content {
+		text-align: center;
+	    padding: 8px 10px 14px 10px;
+	}
+	.tour-date{
+	    margin-right: 15px;
+	    display: inline-block;
+	}
 }
 
 @media screen and (max-width: 620px){
@@ -1569,7 +1599,7 @@ input, textarea, select{
 
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 374px){
 
 	.b-footer .icon-phone{
 		font-size: 16px;
@@ -1585,7 +1615,8 @@ input, textarea, select{
 		margin-right: 0px;
 	}
 	.tour-date{
-	    margin-right: 0px;	
+	    margin-right: 0px;
+	    display: block;
 	}
 	.b-popup .b-btn{
 		min-width: 182px;
@@ -1601,5 +1632,13 @@ input, textarea, select{
 	}
 	.b-header-block .burger-menu{
 	    margin-top: 10px;
+	}
+
+	.tour-item{
+		height: 256px;
+	}
+
+	.tour-left-content {
+	    padding: 8px 10px 14px 10px;
 	}
 }
