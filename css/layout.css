@@ -3446,9 +3446,6 @@ h3.b-title{
 	.b-redder-logo{
 	    background-image: url(../i/logo-redder@2x.png);
 	}
-}	
-@media screen and (max-width: 1152px){
-	
 }
 
 @media screen and (min-width: 900px){
