@@ -1641,4 +1641,13 @@ input, textarea, select{
 	.tour-left-content {
 	    padding: 8px 10px 14px 10px;
 	}
+
+	.call-bubble {
+	    left: -144px;
+	}
+
+	.call-bubble:before,
+	.call-bubble:after{
+		left: 146px;
+	}
 }
