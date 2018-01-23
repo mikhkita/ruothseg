@@ -1901,8 +1901,8 @@ h3.b-title{
 	background-image: url('../i/header-main-back-blur.jpg');
 	background-position: 17% -325px;
     background-repeat: no-repeat;
-    height: 270px;
     background-attachment: fixed;
+    padding-bottom: 77px;
 }
 	
 	.b-top-hide{
@@ -2112,19 +2112,22 @@ h3.b-title{
 }
 
 	.b-content > .b-block {
-	    padding: 80px 0px 74px;
+	    padding: 49px 0px 74px;
 	}
 
 	.b-content.b-tour-content .b-block {
-	    padding: 80px 0px 33px;
+	    padding: 49px 0px 33px;
 	}
 
 	.b-half-button {
 	    text-align: center;
-	    margin-top: 45px;
+	    margin-top: -31px;
 	    z-index: 20;
 	    position: relative;
 	}
+		.b-half-button .b-block{
+			text-align: center;
+		}
 
 	.b-menu-cont{
 		display: inline-block;
@@ -2676,9 +2679,10 @@ h3.b-title{
 
 /*-------О нас-------*/
 
-.b-block-team-slider.b-block {
-    padding: 80px 0 40px 0;
+.b-block.b-block-team-slider {
+    padding: 49px 0 40px 0;
     overflow: hidden;
+    width: 1000px;
 }
 
 .b-block-about-text.b-block {

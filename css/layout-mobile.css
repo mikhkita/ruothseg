@@ -137,7 +137,7 @@ input, textarea, select{
 /*---------------------------*/
 
 .b-content > .b-block{
-	padding: 58px 0px 50px;
+	padding: 31px 0px 50px;
 }
 
 .b-header, .header-back, .b-header-block{
@@ -428,7 +428,7 @@ input, textarea, select{
 			}
 			
 	.b-content.b-tour-content .b-block {
-	    padding: 58px 0px 26px;
+	    padding: 31px 0px 26px;
 	}
 
 .b-block-book-it{
@@ -705,12 +705,12 @@ input, textarea, select{
 	margin-top: 2px;
 }
 
-.b-half-button, .b-tour{
+.b-tour{
 	margin-bottom: 32px;
 }
 
 .b-half-button{
-	margin-top: 39px;
+	margin-top: -28px;
 }
 
 .b-popup{
@@ -804,11 +804,11 @@ input, textarea, select{
 }
 
 .b-team-arrows.icon-arrow-right{
-    right: -67px;
+    right: -64px;
 }
 
 .b-content .b-block-team-slider.b-block{
-	padding: 65px 0px 40px;
+	padding: 37px 0px 40px;
 }
 
 .b-team-detail .slick-slide {
@@ -998,7 +998,7 @@ input, textarea, select{
 }
 
 .b-tour-arrows.icon-arrow-right, .b-team-arrows.icon-arrow-right{
-	top: -45px;
+	top: -72px;
 }
 
 .tour-item{
@@ -1432,8 +1432,9 @@ input, textarea, select{
 
 	.b-header{
 		background-image: url('../i/header-back-mobile-v.jpg');
-		background-position: 27% -10px;
-		background-size: 520px;
+		background-position: 50% 0%;
+    	background-size: 500px;
+		padding-bottom: 68px;
 	}
 	.header-back, .b-header-block{
 		background-position: 58% 0;
@@ -1445,11 +1446,6 @@ input, textarea, select{
 
 	.b-footer .b-footer-column.b-footer-logo-cont{
 		margin-right: 24px;
-	}
-
-	.b-header{
-		background-position: 50% 0%;
-    	background-size: 500px;
 	}
 
 	.b-popup, #b-popup-review{
@@ -1600,6 +1596,10 @@ input, textarea, select{
 }
 
 @media screen and (max-width: 374px){
+
+	.b-header{
+    	background-size: cover;
+	}
 
 	.b-footer .icon-phone{
 		font-size: 16px;
