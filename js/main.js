@@ -728,9 +728,10 @@ $(document).ready(function(){
 
     var hash = window.location.hash;
     if(!!hash && $('.team-slider').length){
-        var goSlide = parseInt(hash.substring(1)) - 1;
-        if(goSlide > 0 && goSlide <= $('.b-team-list li').length){
-            $('.team-slider').slick('slickGoTo', goSlide);
+        var orgID = parseInt(hash.substring(1));
+        if($('.team-slider li[data-id='+orgID+']').length){
+            var index = $('.team-slider li[data-id='+orgID+']:not(.slick-cloned)').index() + 1;
+            $('.team-slider').slick('slickGoTo', index);
         }
     }
 
