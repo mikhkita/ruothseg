@@ -1601,6 +1601,12 @@ input, textarea, select{
     	background-size: cover;
 	}
 
+	.b-logo {
+	    background-size: 105px;
+	    width: 105px;
+	    height: 198px;
+	}
+
 	.b-footer .icon-phone{
 		font-size: 16px;
 	}

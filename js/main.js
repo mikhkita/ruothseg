@@ -331,7 +331,6 @@ $(document).ready(function(){
     if( typeof autosize == "function" )
         autosize(document.querySelectorAll('textarea'));
 
-
     $('.video-slider').slick({
         dots: true,
         arrows: true,
@@ -727,6 +726,14 @@ $(document).ready(function(){
         $('.slick-center').next().children(".b-team-detail-item").removeClass("hover");
     });
 
+    var hash = window.location.hash;
+    if(!!hash && $('.team-slider').length){
+        var goSlide = parseInt(hash.substring(1)) - 1;
+        if(goSlide > 0 && goSlide <= $('.b-team-list li').length){
+            $('.team-slider').slick('slickGoTo', goSlide);
+        }
+    }
+
     $("body").on("mousemove", ".b-team-detail .slick-center", function(e){
         if(!isMobile){
             var offset = $(this).offset();
@@ -965,6 +972,16 @@ $(document).ready(function(){
         $(this).removeClass("nav-touch");
     });
 
+    $('#only-road').on('change', function(){
+        if($(this).prop("checked")){
+            $('.book-it-tour').addClass("hide");
+            $('.book-it-road').removeClass("hide");
+        }else{
+            $('.book-it-tour').removeClass("hide");
+            $('.book-it-road').addClass("hide");
+        }
+    });
+
     //увеличить количество
     $('.add-count').on('click', function(){
         $input = $('.persons-count');
@@ -1066,6 +1083,12 @@ $(document).ready(function(){
     $('.b-btn-tour').on('click', function(){
         $(".b-popup .select-tour option[value='']").prop('selected', true).trigger("chosen:updated");
         $('.persons-count').change();
+        $("#only-road").prop('checked', false);
+        $("#only-road").change();
+        if($(this).hasClass("b-btn-only-road")){
+            $("#only-road").prop('checked', true);
+            $("#only-road").change();
+        }
     });
 
     function fancyBind($selector){

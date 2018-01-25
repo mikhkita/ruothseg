@@ -188,18 +188,14 @@
 								<div class="orgs-mask orgs-padding">
 									<h3>Организаторы</h3>
 									<div class="orgs-block">
-										<div class="orgs-item">
+										<a href="about.html#1" class="orgs-item">
 											<div class="orgs-item-img" style="background-image: url('i/orgs-1.jpg');"></div>
 											<p class="orgs-item-name">Ярослав</p>
-										</div>
-										<div class="orgs-item">
+										</a>
+										<a href="about.html#2" class="orgs-item">
 											<div class="orgs-item-img" style="background-image: url('i/orgs-2.jpg');"></div>
 											<p class="orgs-item-name">Эльвира</p>
-										</div>
-										<div class="orgs-item">
-											<div class="orgs-item-img" style="background-image: url('i/orgs-1.jpg');"></div>
-											<p class="orgs-item-name">Ярослав</p>
-										</div>
+										</a>
 									</div>
 									<div class="b-center-block">
 										<div class="position-buttons">
@@ -229,10 +225,10 @@
 								<div class="orgs-mask orgs-padding">
 									<h3>Организаторы</h3>
 									<div class="orgs-block">
-										<div class="orgs-item">
+										<a href="about.html#1" class="orgs-item">
 											<div class="orgs-item-img" style="background-image: url('i/orgs-2.jpg');"></div>
 											<p class="orgs-item-name">Эльвира</p>
-										</div>
+										</a>
 									</div>
 									<div class="b-center-block">
 										<div class="position-buttons">
@@ -262,14 +258,14 @@
 								<div class="orgs-mask orgs-padding">
 									<h3>Организаторы</h3>
 									<div class="orgs-block">
-										<div class="orgs-item">
+										<a href="about.html#1" class="orgs-item">
 											<div class="orgs-item-img" style="background-image: url('i/orgs-1.jpg');"></div>
 											<p class="orgs-item-name">Ярослав</p>
-										</div>
-										<div class="orgs-item">
+										</a>
+										<a href="about.html#2" class="orgs-item">
 											<div class="orgs-item-img" style="background-image: url('i/orgs-2.jpg');"></div>
 											<p class="orgs-item-name">Эльвира</p>
-										</div>
+										</a>
 									</div>
 									<div class="b-center-block">
 										<div class="position-buttons">
@@ -299,14 +295,14 @@
 								<div class="orgs-mask orgs-padding">
 									<h3>Организаторы</h3>
 									<div class="orgs-block">
-										<div class="orgs-item">
+										<a href="about.html#1" class="orgs-item">
 											<div class="orgs-item-img" style="background-image: url('i/orgs-1.jpg');"></div>
 											<p class="orgs-item-name">Ярослав</p>
-										</div>
-										<div class="orgs-item">
+										</a>
+										<a href="about.html#2" class="orgs-item">
 											<div class="orgs-item-img" style="background-image: url('i/orgs-2.jpg');"></div>
 											<p class="orgs-item-name">Эльвира</p>
-										</div>
+										</a>
 									</div>
 									<div class="b-center-block">
 										<div class="position-buttons">
@@ -350,7 +346,9 @@
 						    <p>умеешь кататься или нет</p>
 						    <p>один ты или с компанией</p>
 					    </div>
-					    <p id="typed-show" style="white-space:pre;"></p>
+					    <div style="height: 33px;">
+						    <p id="typed-show" style="white-space:pre;"></p>
+						</div>
 					</div>
 					<h2 class="b-title b-title-second"><b>GESH&nbsp;TOUR</b> - это туры для <b>всех!</b></h2>
 					<div class="b-center-block">
@@ -624,7 +622,8 @@
 		</div>
 
 		<div class="b-popup" id="b-popup-tour">
-			<h3 class="b-title">Бронирование тура</h3>
+			<h3 class="b-title book-it-tour">Бронирование тура</h3>
+			<h3 class="b-title book-it-road hide">Бронирование проезда</h3>
 			<form id="b-popup-tour-form" method="post" action="kitsend.php" data-price="5000">
 				<div class="input-string clearfix">
 					<span class="required">Тур:&nbsp;</span>
@@ -639,6 +638,10 @@
 						<option value="7" data-price="6150">05.11-08.11 Выходной тур</option>
 						<option value="8" data-price="6550">06.11-09.11 Выходной тур</option>
 					</select>
+				</div>
+				<div class="clearfix">
+					<input id="only-road" type="checkbox" name="only-road">
+					<label for="only-road">только проезд</label>
 				</div>
 				<div class="input-string clearfix">
 					<span class="required">Ваше имя:&nbsp;</span>
