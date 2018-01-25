@@ -350,6 +350,14 @@ $(document).ready(function(){
         ]
     });
 
+    $('.b-video-arrows').hover(
+        function(){
+            $('.video-slider').slick('slickPause');
+        },
+        function(){
+            $('.video-slider').slick('slickPlay');
+    });
+
     $('.review-slider').on('init', function(event, slick){
         $('.review-slider .slick-active').each(function(){
             $(this).addClass("slick-active-copy");
@@ -1080,7 +1088,7 @@ $(document).ready(function(){
         $('.persons-count').change();
     });
 
-    //клик по кнопке "Забронировать тур" в хедере
+    //клик по кнопке "Забронировать тур" вне расписания
     $('.b-btn-tour').on('click', function(){
         $(".b-popup .select-tour option[value='']").prop('selected', true).trigger("chosen:updated");
         $('.persons-count').change();
