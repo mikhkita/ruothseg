@@ -1009,12 +1009,17 @@ $(document).ready(function(){
         $input.change();
     });
 
-    $('.persons-count, .b-popup .select-tour').on('change input', function(){
+    $('.persons-count, .b-popup .select-tour, #only-road').on('change input', function(){
         if($('.persons-count').val() != "" && $('.b-popup .select-tour').val() != ""){
             var discount = 0;
-            var price = parseInt($(".b-popup .select-tour option:selected").attr("data-price"));
+            var price = 0;
+            if($("#only-road").prop('checked')){
+                price = parseInt($(".b-popup .select-tour option:selected").attr("data-road"));
+            }else{
+                price = parseInt($(".b-popup .select-tour option:selected").attr("data-price"));
+            }
             var persons = parseInt($('.persons-count').val());
-            if(parseInt($('.persons-count').val()) >= 4){
+            if(parseInt($('.persons-count').val()) >= 4 && $(".b-popup .select-tour option:selected").attr("data-discount") !== "no"){
                 discount = persons * price * 0.05;
                 $('.b-btn-discount').removeClass("hide");
             }else{
