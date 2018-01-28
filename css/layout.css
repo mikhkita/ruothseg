@@ -2280,7 +2280,8 @@ input[type="checkbox"]:checked + label:after{
 	}
 
 		ul.b-breadcrumbs li {
-		    float: left;
+			vertical-align: top;
+		    display: inline-block;
 		}
 			ul.b-breadcrumbs li a, ul.b-breadcrumbs li span{
 				font-family: "RobotoRegular";
@@ -2299,7 +2300,7 @@ input[type="checkbox"]:checked + label:after{
 		    font-family: "RobotoRegular";
 		    color: #744d4d;
 		    margin-left: 8px;
-		    margin-right: 8px;
+		    margin-right: 4px;
 		}
 
 		ul.b-breadcrumbs li:last-child:after {
