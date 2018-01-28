@@ -1091,12 +1091,12 @@ $(document).ready(function(){
     //клик по кнопке "Забронировать тур" в конкретном туре
     $('.b-btn-tour-item').on('click', function(){
         var tourID = $(this).parents(".tour-item").attr("data-id");
-        $(".b-popup .select-tour option[value=" + tourID + "]").prop('selected', true).trigger("chosen:updated");
+        $(".b-popup .select-tour option[value='"+tourID+"']").prop('selected', true).trigger("chosen:updated");
         $('.persons-count').change();
     });
     $('a.tour-item').on('click', function(){
         var tourID = $(this).attr("data-id");
-        $(".b-popup .select-tour option[value=" + tourID + "]").prop('selected', true).trigger("chosen:updated");
+        $(".b-popup .select-tour option[value='"+tourID+"']").prop('selected', true).trigger("chosen:updated");
         $('.persons-count').change();
     });
 
