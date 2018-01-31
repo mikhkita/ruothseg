@@ -1575,7 +1575,8 @@ input[type="checkbox"]:checked + label:after{
 		}
 
 		.b-footer-up p{
-			line-height: 26px;
+			line-height: 31px;
+			font-size: 20px;
 		}
 
 		.b-footer-column{

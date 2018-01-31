@@ -956,9 +956,9 @@ $(document).ready(function(){
     if($('#typed-show').length){
         var typed = new Typed("#typed-show", {
             stringsElement: '#typed-strings',
-            typeSpeed: 30,
+            typeSpeed: 20,
             backSpeed: 10,
-            backDelay: 1500,
+            backDelay: 700,
             fadeOut: true,
             loop: true
         });
