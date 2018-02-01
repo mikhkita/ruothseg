@@ -676,10 +676,12 @@ input[type="checkbox"]:checked + label:after{
 				    height: 2px;
 				    width: 0;
 				    background: #744d4d;
+				    -webkit-transition: width 150ms ease-out;
+				    -moz-transition: width 150ms ease-out;
+				    -ms-transition: width 150ms ease-out;
+				    -o-transition: width 150ms ease-out;
 				    transition: width 150ms ease-out;
-				    -webkit-transition: width 150ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: width 150ms ease-out; /** Firefox **/
-				    -o-transition: width 150ms ease-out; /** Opera **/
+				    
 				    left: 0;
 				    bottom: 0;
 				}
@@ -966,10 +968,11 @@ input[type="checkbox"]:checked + label:after{
 					left: 0;
 					width: 100%;
 					height: 100%;
-					transition: transform 300ms ease-out;
-				    -webkit-transition: transform 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: transform 300ms ease-out; /** Firefox **/
-				    -o-transition: transform 300ms ease-out; /** Opera **/
+				    -webkit-transition: transform 300ms ease-out;
+				    -moz-transition: transform 300ms ease-out;
+				    -ms-transition: transform 300ms ease-out;
+				    -o-transition: transform 300ms ease-out;
+				    transition: transform 300ms ease-out;
 				}
 
 					.tour-date{
@@ -977,10 +980,11 @@ input[type="checkbox"]:checked + label:after{
 						top: 56px;
 						left: 0;
 						right: 0;
+					    -webkit-transition: opacity 300ms ease-out;
+					    -moz-transition: opacity 300ms ease-out;
+					    -ms-transition: opacity 300ms ease-out;
+					    -o-transition: opacity 300ms ease-out;
 						transition: opacity 300ms ease-out;
-					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 					.time-start{
@@ -989,10 +993,11 @@ input[type="checkbox"]:checked + label:after{
 						left: 0;
 						right: 0;
 						opacity: 0;
+						-webkit-transition: opacity 300ms ease-out;
+					    -moz-transition: opacity 300ms ease-out;
+					    -ms-transition: opacity 300ms ease-out;
+					    -o-transition: opacity 300ms ease-out;
 						transition: opacity 300ms ease-out;
-					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 					.time-finish{
@@ -1001,10 +1006,11 @@ input[type="checkbox"]:checked + label:after{
 						left: 0;
 						right: 0;
 						opacity: 0;
+						-webkit-transition: opacity 300ms ease-out;
+					    -moz-transition: opacity 300ms ease-out;
+					    -ms-transition: opacity 300ms ease-out;
+					    -o-transition: opacity 300ms ease-out;
 						transition: opacity 300ms ease-out;
-					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 					.weekday-or-weekend{
@@ -1013,17 +1019,19 @@ input[type="checkbox"]:checked + label:after{
 						left: 0;
 						right: 0;
 						opacity: 1;
+						-webkit-transition: opacity 300ms ease-out;
+					    -moz-transition: opacity 300ms ease-out;
+					    -ms-transition: opacity 300ms ease-out;
+					    -o-transition: opacity 300ms ease-out;
 						transition: opacity 300ms ease-out;
-					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 			.tour-item:hover .tour-left-content{
+			    -webkit-transform: translate(0,14px);
+			    -o-transform: translate(0,14px);
+			    -ms-transform: translate(0,14px);
+			    -moz-transform: translate(0,14px);
 			    transform: translate(0,14px);
-			    -webkit-transform: translate(0,14px); /** Chrome & Safari **/
-			    -o-transform: translate(0,14px); /** Opera **/
-			    -moz-transform: translate(0,14px); /** Firefox **/
 			}
 
 				.tour-item:hover .time-start,
@@ -1078,10 +1086,11 @@ input[type="checkbox"]:checked + label:after{
 					-webkit-filter: blur(5px);
 				    -moz-filter: blur(5px);
 				    filter: blur(5px);
+				    -webkit-transition: opacity 300ms ease-out;
+				    -moz-transition: opacity 300ms ease-out;
+				    -ms-transition: opacity 300ms ease-out;
+				    -o-transition: opacity 300ms ease-out;
 					transition: opacity 300ms ease-out;
-				    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-				    -o-transition: opacity 300ms ease-out; /** Opera **/
 				}
 
 				.orgs-mask{
@@ -1092,10 +1101,11 @@ input[type="checkbox"]:checked + label:after{
 				    height: 100%;
 					width: 100%;
 					opacity: 0;
+					-webkit-transition: opacity 300ms ease-out;
+				    -moz-transition: opacity 300ms ease-out;
+				    -ms-transition: opacity 300ms ease-out;
+				    -o-transition: opacity 300ms ease-out;
 					transition: opacity 300ms ease-out;
-				    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-				    -o-transition: opacity 300ms ease-out; /** Opera **/
 				}
 
 				.tour-right h3{
@@ -1105,10 +1115,12 @@ input[type="checkbox"]:checked + label:after{
 					font-size: 18px;
 					color: #FFF;
 					margin-bottom: 28px;
+				    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out;
+				    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out;
+				    -ms-transition: transform 300ms ease-out, opacity 300ms ease-out;
+				    -o-transition: transform 300ms ease-out, opacity 300ms ease-out;	    
 					transition: transform 300ms ease-out, opacity 300ms ease-out;
-				    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Firefox **/
-				    -o-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Opera **/
+
 				    transition-delay: 200ms;
 				}
 
@@ -1118,10 +1130,12 @@ input[type="checkbox"]:checked + label:after{
 					text-align: center;
 					opacity: 0;
 					margin-bottom: 23px;
+					-webkit-transition: opacity 300ms ease-out;
+				    -moz-transition: opacity 300ms ease-out;
+				    -ms-transition: opacity 300ms ease-out;
+				    -o-transition: opacity 300ms ease-out;
 					transition: opacity 300ms ease-out;
-				    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-				    -o-transition: opacity 300ms ease-out; /** Opera **/
+
 				    transition-delay: 200ms;
 				}
 
@@ -1148,10 +1162,12 @@ input[type="checkbox"]:checked + label:after{
 				.tour-right .position-buttons{
 					margin: 0;
 					opacity: 0;
-					transition: transform 300ms ease-out, opacity 300ms ease-out;
 				    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Chrome & Safari **/
 				    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Firefox **/
-				    -o-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Opera **/
+				    -ms-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Opera **/
+				    -o-transition: transform 300ms ease-out, opacity 300ms ease-out;
+					transition: transform 300ms ease-out, opacity 300ms ease-out;
+
 				    transition-delay: 200ms;
 				}
 
@@ -1442,7 +1458,7 @@ input[type="checkbox"]:checked + label:after{
 				}
 
 	.b-block-video .slick-dots {
-	    bottom: 41px;
+	    bottom: 36px;
 	    width: auto;
 	    left: 10px;
 	    right: 0;
@@ -1453,18 +1469,32 @@ input[type="checkbox"]:checked + label:after{
 	}
 
 	.b-block-video .slick-dots li {
-	    margin-right: 15px;
+	    margin-right: 13px;
 	}
 
-	.b-block-video .slick-dots li.slick-active button:before {
-	    opacity: 1;
-	    color: #fff;
+	.slick-dots li{
+		width: 24px;
+		height: 24px;
 	}
-
-	.b-block-video .slick-dots li button:before {
-	    font-size: 18px;
-	    color: #fff;
+	.slick-dots li button{
+		width: 24px;
+    	height: 24px;
+	}
+	.slick-dots li button:before {
+		content: '';
+		position: absolute;
+    	top: 4px;
+    	left: 4px;
+		width: 16px;
+		height: 16px;
+	    font-size: 0;
+	    background-color: #fff;
+	    border-radius: 100px;
 	    opacity: 0.7;
+	}
+	.slick-dots li.slick-active button:before {
+	    opacity: 1;
+	    background-color: #fff;
 	}
 
 .b-block-reviews{
@@ -1639,21 +1669,26 @@ input[type="checkbox"]:checked + label:after{
 			  	line-height: 40px;
 			}
 
-			.icon-facebook:before{
+			/*.icon-facebook:before{
 				content: "\e908";
 			  	font-size: 20px;
 			  	line-height: 40px;
-			}
+			}*/
 
 			.icon-telegram:before{
 				content: "\e90a";
 			  	font-size: 18px;
 			  	line-height: 40px;
 			}
+			.icon-twitter:before{
+				content: "\e916";
+			  	font-size: 18px;
+			  	line-height: 40px;
+			}
 				.b-social a.icon-vk:hover:before,
 				.b-social a.icon-instagram:hover:before,
-				.b-social a.icon-facebook:hover:before,
-				.b-social a.icon-telegram:hover:before{
+				.b-social a.icon-telegram:hover:before,
+				.b-social a.icon-twitter:hover:before{
 					color: #946262;
 				}
 
@@ -1996,14 +2031,16 @@ input[type="checkbox"]:checked + label:after{
 		left: 0;
 		opacity: 0;
 		visibility: hidden;
-		transform: translate(0,-30px);
 	    -webkit-transform: translate(0,-30px);
 	    -o-transform: translate(0,-30px);
+	    -ms-transform: translate(0,-30px);
 	    -moz-transform: translate(0,-30px);
-	    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+	    transform: translate(0,-30px);
 	    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
 	    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+	    -ms-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
 	    -o-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+	    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
 	}
 
 	.b-top{
@@ -2023,10 +2060,11 @@ input[type="checkbox"]:checked + label:after{
 	    width: 100%;
 	    top: 0px;
 	    left: 0px;
-	    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
+	    -ms-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	    -o-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
+		transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	}
 
 	.b-header-wrap{
@@ -2509,17 +2547,19 @@ input[type="checkbox"]:checked + label:after{
 
 .foto-grid{
 	position: relative;
+    -webkit-transition: transform 700ms ease-out;
+    -moz-transition: transform 700ms ease-out;
+    -ms-transition: transform 700ms ease-out;
+    -o-transition: transform 700ms ease-out;
 	transition: transform 700ms ease-out;
-    -webkit-transition: transform 700ms ease-out; /** Chrome & Safari **/
-    -moz-transition: transform 700ms ease-out; /** Firefox **/
-    -o-transition: transform 700ms ease-out; /** Opera **/
 }
 
 .foto-grid-transform{
+    -webkit-transform: translate(0);
+    -o-transform: translate(0);
+    -ms-transform: translate(0);
+    -moz-transform: translate(0);
 	transform: translate(0);
-    -webkit-transform: translate(0); /** Chrome & Safari **/
-    -o-transform: translate(0); /** Opera **/
-    -moz-transform: translate(0); /** Firefox **/
 }
 
 	.grid-item{
@@ -2583,10 +2623,11 @@ input[type="checkbox"]:checked + label:after{
 .foto-show{
 	opacity: 1;
 	visibility: visible;
+    -webkit-transition: opacity 700ms ease-out, visibility 700ms ease-out;
+    -moz-transition: opacity 700ms ease-out, visibility 700ms ease-out;
+    -ms-transition: opacity 700ms ease-out, visibility 700ms ease-out;
+    -o-transition: opacity 700ms ease-out, visibility 700ms ease-out;
 	transition: opacity 700ms ease-out, visibility 700ms ease-out;
-    -webkit-transition: opacity 700ms ease-out, visibility 700ms ease-out; /** Chrome & Safari **/
-    -moz-transition: opacity 700ms ease-out, visibility 700ms ease-out; /** Firefox **/
-    -o-transition: opacity 700ms ease-out, visibility 700ms ease-out; /** Opera **/
 }
 
 .outer-nav.vertical a.nav-touch,
@@ -2752,14 +2793,15 @@ input[type="checkbox"]:checked + label:after{
 
 .b-hotel-foto-list .slick-dots li button:before,
 .passage-grid-cont .slick-dots li button:before{
-    font-size: 14px;
-    color: #744d4d;
+	width: 12px;
+    height: 12px;
+    background-color: #744d4d;
     opacity: 0.5;
 }
 
 .b-hotel-foto-list .slick-dots li.slick-active button:before,
 .passage-grid-cont .slick-dots li.slick-active button:before{
-	color: #744d4d;
+	background-color: #744d4d;
     opacity: 1;
 }
 
@@ -2837,10 +2879,11 @@ input[type="checkbox"]:checked + label:after{
     -ms-transform: scale(0.2);
     -o-transform: scale(0.2);
     transform: scale(0.2);
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
     -webkit-transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
     -moz-transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+    -ms-transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
     -o-transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
 }
 
 .b-team-list .slick-active-new{
@@ -2920,10 +2963,11 @@ input[type="checkbox"]:checked + label:after{
 			    -ms-transform: scale(1.1);
 			   	 -o-transform: scale(1.1);
 					transform: scale(1.1);
-			transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
 		    -webkit-transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
 		    -moz-transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
-		    -o-transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
+		    -ms-transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
+			-o-transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
+		    transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
 		}
 
 		.slick-center-new .b-team-detail-info{
@@ -3552,17 +3596,19 @@ input[type="checkbox"]:checked + label:after{
 
 @media screen and (min-width: 768px){
 	.video-list .video-item.slick-active .video-back.move-right{
-		animation: move-right 20s ease-in-out infinite;
 		-moz-animation: move-right 20s ease-in-out infinite;
 		-webkit-animation: move-right 20s ease-in-out infinite;
+	 	-ms-animation: move-right 20s ease-in-out infinite;
 	 	-o-animation: move-right 20s ease-in-out infinite;
+		animation: move-right 20s ease-in-out infinite;
 	}
 
 	.video-list .video-item.slick-active .video-back.zoom-in{
-		animation: zoom-in 20s ease-in-out infinite;
 		-moz-animation: zoom-in 20s ease-in-out infinite;
 		-webkit-animation: zoom-in 20s ease-in-out infinite;
+	 	-ms-animation: zoom-in 20s ease-in-out infinite;
 	 	-o-animation: zoom-in 20s ease-in-out infinite;
+		animation: zoom-in 20s ease-in-out infinite;
 	}
 
 	.grid-item img{
