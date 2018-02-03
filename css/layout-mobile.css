@@ -1270,6 +1270,13 @@ input, textarea, select{
 			font-size: 65px;
 		}
 
+	.b-residence .icon-boy{
+		padding: 26px 27px;
+	}
+		.b-residence .icon-boy:before{
+	  		font-size: 58px;
+		}
+
 	.b-residence .advantages-list li .advantage-text {
 		display: table-cell;
 	    width: 60%;
