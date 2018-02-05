@@ -106,6 +106,9 @@ label.error{
 input.error,textarea.error,.chosen-container .chosen-single.error{
 	border-bottom: 2px solid #F00 !important;
 }
+.b-block-inner{
+	padding-top: 60px;
+}
 .ps-lines{
 
 }
@@ -437,6 +440,91 @@ h3.b-title{
 	overflow-x: hidden;
 }
 
+
+input[type="checkbox"]{
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	margin-bottom: 0;
+}
+input[type="checkbox"] + span + label,
+input[type="checkbox"] + label{
+	position: relative;
+	padding-left: 25px;
+	min-width: 31px;
+	letter-spacing: 0px;
+	font-size: 16px;
+	line-height: 16px;
+	cursor: pointer;
+	display: inline-block;
+	width: 50%;
+    float: right;
+	margin-bottom: 12px;
+
+}
+input[type="checkbox"] + label:hover{
+
+}
+input[type="checkbox"] + span + label:before,
+input[type="checkbox"] + label:before{
+	position: absolute;
+	content: "s";
+	font-size: 0px;
+	left: 0px;
+	top: 2px;
+	border-radius: 2px;
+    background: #f7f7f7;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #1b1b1b;
+}
+
+input[type="checkbox"] + label:hover:before{
+	border-color: #1b1b1b;
+}
+input[type="checkbox"] + span + label:after,
+input[type="checkbox"] + label:after{
+	position: absolute;
+	content: "s";
+	font-size: 0px;
+	width: 9px;
+	height: 9px;
+	left: 2px;
+	top: 4px;
+	background-color: #1b1b1b;
+	border-radius: 0;
+	display: none;
+}
+input[type="checkbox"] + label:hover:after{
+	
+}
+input[type="checkbox"]:checked + span + label,
+input[type="checkbox"]:checked + label{
+	color: #1b1b1b;
+}
+input[type="checkbox"]:checked + span + label:after,
+input[type="checkbox"]:checked + label:after{
+	content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 4px;
+    height: 7px;
+    background-color: transparent;
+    border-bottom: 2px solid #1b1b1b;
+    border-right: 2px solid #1b1b1b;
+    -webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+    z-index: 2;
+}
+input[type="checkbox"]:checked + span + label:after,
+input[type="checkbox"]:checked + label:after{
+	display: block;
+}
+
 /*-------------Главная-------------*/
 
 .b-main-header{
@@ -588,10 +676,12 @@ h3.b-title{
 				    height: 2px;
 				    width: 0;
 				    background: #744d4d;
+				    -webkit-transition: width 150ms ease-out;
+				    -moz-transition: width 150ms ease-out;
+				    -ms-transition: width 150ms ease-out;
+				    -o-transition: width 150ms ease-out;
 				    transition: width 150ms ease-out;
-				    -webkit-transition: width 150ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: width 150ms ease-out; /** Firefox **/
-				    -o-transition: width 150ms ease-out; /** Opera **/
+				    
 				    left: 0;
 				    bottom: 0;
 				}
@@ -878,10 +968,11 @@ h3.b-title{
 					left: 0;
 					width: 100%;
 					height: 100%;
-					transition: transform 300ms ease-out;
-				    -webkit-transition: transform 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: transform 300ms ease-out; /** Firefox **/
-				    -o-transition: transform 300ms ease-out; /** Opera **/
+				    -webkit-transition: transform 300ms ease-out;
+				    -moz-transition: transform 300ms ease-out;
+				    -ms-transition: transform 300ms ease-out;
+				    -o-transition: transform 300ms ease-out;
+				    transition: transform 300ms ease-out;
 				}
 
 					.tour-date{
@@ -889,10 +980,11 @@ h3.b-title{
 						top: 56px;
 						left: 0;
 						right: 0;
+					    -webkit-transition: opacity 300ms ease-out;
+					    -moz-transition: opacity 300ms ease-out;
+					    -ms-transition: opacity 300ms ease-out;
+					    -o-transition: opacity 300ms ease-out;
 						transition: opacity 300ms ease-out;
-					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 					.time-start{
@@ -901,10 +993,11 @@ h3.b-title{
 						left: 0;
 						right: 0;
 						opacity: 0;
+						-webkit-transition: opacity 300ms ease-out;
+					    -moz-transition: opacity 300ms ease-out;
+					    -ms-transition: opacity 300ms ease-out;
+					    -o-transition: opacity 300ms ease-out;
 						transition: opacity 300ms ease-out;
-					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 					.time-finish{
@@ -913,10 +1006,11 @@ h3.b-title{
 						left: 0;
 						right: 0;
 						opacity: 0;
+						-webkit-transition: opacity 300ms ease-out;
+					    -moz-transition: opacity 300ms ease-out;
+					    -ms-transition: opacity 300ms ease-out;
+					    -o-transition: opacity 300ms ease-out;
 						transition: opacity 300ms ease-out;
-					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 					.weekday-or-weekend{
@@ -925,17 +1019,19 @@ h3.b-title{
 						left: 0;
 						right: 0;
 						opacity: 1;
+						-webkit-transition: opacity 300ms ease-out;
+					    -moz-transition: opacity 300ms ease-out;
+					    -ms-transition: opacity 300ms ease-out;
+					    -o-transition: opacity 300ms ease-out;
 						transition: opacity 300ms ease-out;
-					    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-					    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-					    -o-transition: opacity 300ms ease-out; /** Opera **/
 					}
 
 			.tour-item:hover .tour-left-content{
+			    -webkit-transform: translate(0,14px);
+			    -o-transform: translate(0,14px);
+			    -ms-transform: translate(0,14px);
+			    -moz-transform: translate(0,14px);
 			    transform: translate(0,14px);
-			    -webkit-transform: translate(0,14px); /** Chrome & Safari **/
-			    -o-transform: translate(0,14px); /** Opera **/
-			    -moz-transform: translate(0,14px); /** Firefox **/
 			}
 
 				.tour-item:hover .time-start,
@@ -990,10 +1086,11 @@ h3.b-title{
 					-webkit-filter: blur(5px);
 				    -moz-filter: blur(5px);
 				    filter: blur(5px);
+				    -webkit-transition: opacity 300ms ease-out;
+				    -moz-transition: opacity 300ms ease-out;
+				    -ms-transition: opacity 300ms ease-out;
+				    -o-transition: opacity 300ms ease-out;
 					transition: opacity 300ms ease-out;
-				    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-				    -o-transition: opacity 300ms ease-out; /** Opera **/
 				}
 
 				.orgs-mask{
@@ -1004,10 +1101,11 @@ h3.b-title{
 				    height: 100%;
 					width: 100%;
 					opacity: 0;
+					-webkit-transition: opacity 300ms ease-out;
+				    -moz-transition: opacity 300ms ease-out;
+				    -ms-transition: opacity 300ms ease-out;
+				    -o-transition: opacity 300ms ease-out;
 					transition: opacity 300ms ease-out;
-				    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-				    -o-transition: opacity 300ms ease-out; /** Opera **/
 				}
 
 				.tour-right h3{
@@ -1017,10 +1115,12 @@ h3.b-title{
 					font-size: 18px;
 					color: #FFF;
 					margin-bottom: 28px;
+				    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out;
+				    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out;
+				    -ms-transition: transform 300ms ease-out, opacity 300ms ease-out;
+				    -o-transition: transform 300ms ease-out, opacity 300ms ease-out;	    
 					transition: transform 300ms ease-out, opacity 300ms ease-out;
-				    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Firefox **/
-				    -o-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Opera **/
+
 				    transition-delay: 200ms;
 				}
 
@@ -1030,10 +1130,12 @@ h3.b-title{
 					text-align: center;
 					opacity: 0;
 					margin-bottom: 23px;
+					-webkit-transition: opacity 300ms ease-out;
+				    -moz-transition: opacity 300ms ease-out;
+				    -ms-transition: opacity 300ms ease-out;
+				    -o-transition: opacity 300ms ease-out;
 					transition: opacity 300ms ease-out;
-				    -webkit-transition: opacity 300ms ease-out; /** Chrome & Safari **/
-				    -moz-transition: opacity 300ms ease-out; /** Firefox **/
-				    -o-transition: opacity 300ms ease-out; /** Opera **/
+
 				    transition-delay: 200ms;
 				}
 
@@ -1060,10 +1162,12 @@ h3.b-title{
 				.tour-right .position-buttons{
 					margin: 0;
 					opacity: 0;
-					transition: transform 300ms ease-out, opacity 300ms ease-out;
 				    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Chrome & Safari **/
 				    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Firefox **/
-				    -o-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Opera **/
+				    -ms-transition: transform 300ms ease-out, opacity 300ms ease-out; /** Opera **/
+				    -o-transition: transform 300ms ease-out, opacity 300ms ease-out;
+					transition: transform 300ms ease-out, opacity 300ms ease-out;
+
 				    transition-delay: 200ms;
 				}
 
@@ -1123,7 +1227,7 @@ h3.b-title{
 				.weekday-or-weekend{
 					font-family: 'RobotoLight';
 					font-size: 22px;
-					padding-bottom: 10px;
+					padding: 0 8px 10px 8px;
 				}
 				.tour-dash{
 					width: 40px;
@@ -1354,7 +1458,7 @@ h3.b-title{
 				}
 
 	.b-block-video .slick-dots {
-	    bottom: 41px;
+	    bottom: 36px;
 	    width: auto;
 	    left: 10px;
 	    right: 0;
@@ -1365,18 +1469,32 @@ h3.b-title{
 	}
 
 	.b-block-video .slick-dots li {
-	    margin-right: 15px;
+	    margin-right: 13px;
 	}
 
-	.b-block-video .slick-dots li.slick-active button:before {
-	    opacity: 1;
-	    color: #fff;
+	.slick-dots li{
+		width: 24px;
+		height: 24px;
 	}
-
-	.b-block-video .slick-dots li button:before {
-	    font-size: 18px;
-	    color: #fff;
+	.slick-dots li button{
+		width: 24px;
+    	height: 24px;
+	}
+	.slick-dots li button:before {
+		content: '';
+		position: absolute;
+    	top: 4px;
+    	left: 4px;
+		width: 16px;
+		height: 16px;
+	    font-size: 0;
+	    background-color: #fff;
+	    border-radius: 100px;
 	    opacity: 0.7;
+	}
+	.slick-dots li.slick-active button:before {
+	    opacity: 1;
+	    background-color: #fff;
 	}
 
 .b-block-reviews{
@@ -1487,7 +1605,8 @@ h3.b-title{
 		}
 
 		.b-footer-up p{
-			line-height: 26px;
+			line-height: 31px;
+			font-size: 20px;
 		}
 
 		.b-footer-column{
@@ -1551,21 +1670,26 @@ h3.b-title{
 			  	line-height: 40px;
 			}
 
-			.icon-facebook:before{
+			/*.icon-facebook:before{
 				content: "\e908";
 			  	font-size: 20px;
 			  	line-height: 40px;
-			}
+			}*/
 
 			.icon-telegram:before{
 				content: "\e90a";
 			  	font-size: 18px;
 			  	line-height: 40px;
 			}
+			.icon-twitter:before{
+				content: "\e916";
+			  	font-size: 18px;
+			  	line-height: 40px;
+			}
 				.b-social a.icon-vk:hover:before,
 				.b-social a.icon-instagram:hover:before,
-				.b-social a.icon-facebook:hover:before,
-				.b-social a.icon-telegram:hover:before{
+				.b-social a.icon-telegram:hover:before,
+				.b-social a.icon-twitter:hover:before{
 					color: #946262;
 				}
 
@@ -1857,7 +1981,7 @@ h3.b-title{
 }
 
 #typed-show{
-	display: inline-block;
+	display: inline;
 }
 
 .typed-cursor{
@@ -1898,8 +2022,8 @@ h3.b-title{
 	background-image: url('../i/header-main-back-blur.jpg');
 	background-position: 17% -325px;
     background-repeat: no-repeat;
-    height: 270px;
     background-attachment: fixed;
+    padding-bottom: 77px;
 }
 	
 	.b-top-hide{
@@ -1908,14 +2032,16 @@ h3.b-title{
 		left: 0;
 		opacity: 0;
 		visibility: hidden;
-		transform: translate(0,-30px);
 	    -webkit-transform: translate(0,-30px);
 	    -o-transform: translate(0,-30px);
+	    -ms-transform: translate(0,-30px);
 	    -moz-transform: translate(0,-30px);
-	    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+	    transform: translate(0,-30px);
 	    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
 	    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+	    -ms-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
 	    -o-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
+	    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out;
 	}
 
 	.b-top{
@@ -1935,10 +2061,11 @@ h3.b-title{
 	    width: 100%;
 	    top: 0px;
 	    left: 0px;
-	    transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	    -webkit-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	    -moz-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
+	    -ms-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	    -o-transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
+		transition: transform 300ms ease-out, opacity 300ms ease-out, visibility 300ms ease-out, background-color 300ms ease-out;
 	}
 
 	.b-header-wrap{
@@ -2109,19 +2236,22 @@ h3.b-title{
 }
 
 	.b-content > .b-block {
-	    padding: 80px 0px 74px;
+	    padding: 49px 0px 74px;
 	}
 
 	.b-content.b-tour-content .b-block {
-	    padding: 80px 0px 33px;
+	    padding: 49px 0px 33px;
 	}
 
 	.b-half-button {
 	    text-align: center;
-	    margin-top: 45px;
+	    margin-top: -31px;
 	    z-index: 20;
 	    position: relative;
 	}
+		.b-half-button .b-block{
+			text-align: center;
+		}
 
 	.b-menu-cont{
 		display: inline-block;
@@ -2189,7 +2319,8 @@ h3.b-title{
 	}
 
 		ul.b-breadcrumbs li {
-		    float: left;
+			vertical-align: top;
+		    display: inline-block;
 		}
 			ul.b-breadcrumbs li a, ul.b-breadcrumbs li span{
 				font-family: "RobotoRegular";
@@ -2208,7 +2339,7 @@ h3.b-title{
 		    font-family: "RobotoRegular";
 		    color: #744d4d;
 		    margin-left: 8px;
-		    margin-right: 8px;
+		    margin-right: 4px;
 		}
 
 		ul.b-breadcrumbs li:last-child:after {
@@ -2301,6 +2432,7 @@ h3.b-title{
 	.b-review h3.b-title{
 		font-size: 20px;
 		margin-bottom: 2px;
+		color: black;
 	}
 
 	.b-review .b-img-cont{
@@ -2416,17 +2548,19 @@ h3.b-title{
 
 .foto-grid{
 	position: relative;
+    -webkit-transition: transform 700ms ease-out;
+    -moz-transition: transform 700ms ease-out;
+    -ms-transition: transform 700ms ease-out;
+    -o-transition: transform 700ms ease-out;
 	transition: transform 700ms ease-out;
-    -webkit-transition: transform 700ms ease-out; /** Chrome & Safari **/
-    -moz-transition: transform 700ms ease-out; /** Firefox **/
-    -o-transition: transform 700ms ease-out; /** Opera **/
 }
 
 .foto-grid-transform{
+    -webkit-transform: translate(0);
+    -o-transform: translate(0);
+    -ms-transform: translate(0);
+    -moz-transform: translate(0);
 	transform: translate(0);
-    -webkit-transform: translate(0); /** Chrome & Safari **/
-    -o-transform: translate(0); /** Opera **/
-    -moz-transform: translate(0); /** Firefox **/
 }
 
 	.grid-item{
@@ -2490,10 +2624,11 @@ h3.b-title{
 .foto-show{
 	opacity: 1;
 	visibility: visible;
+    -webkit-transition: opacity 700ms ease-out, visibility 700ms ease-out;
+    -moz-transition: opacity 700ms ease-out, visibility 700ms ease-out;
+    -ms-transition: opacity 700ms ease-out, visibility 700ms ease-out;
+    -o-transition: opacity 700ms ease-out, visibility 700ms ease-out;
 	transition: opacity 700ms ease-out, visibility 700ms ease-out;
-    -webkit-transition: opacity 700ms ease-out, visibility 700ms ease-out; /** Chrome & Safari **/
-    -moz-transition: opacity 700ms ease-out, visibility 700ms ease-out; /** Firefox **/
-    -o-transition: opacity 700ms ease-out, visibility 700ms ease-out; /** Opera **/
 }
 
 .outer-nav.vertical a.nav-touch,
@@ -2573,18 +2708,21 @@ h3.b-title{
 		font-size: 26px;
 	}
 
-	.b-hotel img{
-		width: 100%;
+	.b-hotel-img{
+		width: 32%;
+		background-position: 50% 50%;
+		background-size: cover;
+    	background-repeat: no-repeat;
 	}
 
 	.b-hotel-text{
-		padding: 0 45px;
+		padding: 45px;
 		width: 67.5%;
 	}
 
 		.b-hotel-text p{
-			font-size: 18px;
-			line-height: 30px;
+			font-size: 20px;
+			line-height: 32px;
 		}
 
 .b-residence .advantages-list{
@@ -2656,22 +2794,24 @@ h3.b-title{
 
 .b-hotel-foto-list .slick-dots li button:before,
 .passage-grid-cont .slick-dots li button:before{
-    font-size: 14px;
-    color: #744d4d;
+	width: 12px;
+    height: 12px;
+    background-color: #744d4d;
     opacity: 0.5;
 }
 
 .b-hotel-foto-list .slick-dots li.slick-active button:before,
 .passage-grid-cont .slick-dots li.slick-active button:before{
-	color: #744d4d;
+	background-color: #744d4d;
     opacity: 1;
 }
 
 /*-------О нас-------*/
 
-.b-block-team-slider.b-block {
-    padding: 80px 0 40px 0;
+.b-block.b-block-team-slider {
+    padding: 49px 0 40px 0;
     overflow: hidden;
+    width: 1000px;
 }
 
 .b-block-about-text.b-block {
@@ -2740,10 +2880,11 @@ h3.b-title{
     -ms-transform: scale(0.2);
     -o-transform: scale(0.2);
     transform: scale(0.2);
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
     -webkit-transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
     -moz-transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+    -ms-transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
     -o-transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
 }
 
 .b-team-list .slick-active-new{
@@ -2823,10 +2964,11 @@ h3.b-title{
 			    -ms-transform: scale(1.1);
 			   	 -o-transform: scale(1.1);
 					transform: scale(1.1);
-			transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
 		    -webkit-transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
 		    -moz-transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
-		    -o-transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
+		    -ms-transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
+			-o-transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
+		    transition: opacity 500ms ease-out, visibility 500ms ease-out, left 750ms cubic-bezier(.18,1,.18,1), transform 500ms ease-out;
 		}
 
 		.slick-center-new .b-team-detail-info{
@@ -3131,7 +3273,7 @@ h3.b-title{
 			.chosen-container .chosen-drop {
 			    position: absolute;
 			    top: 40px;
-			    width: 220px;
+			    width: 248px;
 			    padding: 10px 0 10px 0;
 			    border: 0;
 			    background-color: #FFF;
@@ -3268,6 +3410,9 @@ h3.b-title{
 	}
 
 	#b-popup-tour-form .b-btn{
+		margin-top: 34px;
+	}
+	#b-popup-passage-form .b-btn{
 		margin-top: 34px;
 	}
 
@@ -3436,9 +3581,6 @@ h3.b-title{
 	.b-redder-logo{
 	    background-image: url(../i/logo-redder@2x.png);
 	}
-}	
-@media screen and (max-width: 1152px){
-	
 }
 
 @media screen and (min-width: 900px){
@@ -3455,17 +3597,19 @@ h3.b-title{
 
 @media screen and (min-width: 768px){
 	.video-list .video-item.slick-active .video-back.move-right{
-		animation: move-right 20s ease-in-out infinite;
 		-moz-animation: move-right 20s ease-in-out infinite;
 		-webkit-animation: move-right 20s ease-in-out infinite;
+	 	-ms-animation: move-right 20s ease-in-out infinite;
 	 	-o-animation: move-right 20s ease-in-out infinite;
+		animation: move-right 20s ease-in-out infinite;
 	}
 
 	.video-list .video-item.slick-active .video-back.zoom-in{
-		animation: zoom-in 20s ease-in-out infinite;
 		-moz-animation: zoom-in 20s ease-in-out infinite;
 		-webkit-animation: zoom-in 20s ease-in-out infinite;
+	 	-ms-animation: zoom-in 20s ease-in-out infinite;
 	 	-o-animation: zoom-in 20s ease-in-out infinite;
+		animation: zoom-in 20s ease-in-out infinite;
 	}
 
 	.grid-item img{
@@ -3482,6 +3626,25 @@ h3.b-title{
 	}
 
 	.grid-item:hover img{
+		-webkit-transform: scale(1.07);
+		   -moz-transform: scale(1.07);
+		    -ms-transform: scale(1.07);
+		   	 -o-transform: scale(1.07);
+				transform: scale(1.07);
+	}
+	.passage-grid{
+		-webkit-transition: transform 150ms ease-out;
+		-moz-transition: transform 150ms ease-out;
+		-ms-transition: transform 150ms ease-out;
+		-o-transition: transform 150ms ease-out;
+		transition: transform 150ms ease-out;
+		-webkit-transform: scale(1);
+		   -moz-transform: scale(1);
+		    -ms-transform: scale(1);
+		   	 -o-transform: scale(1);
+				transform: scale(1);
+	}
+	.passage-grid:hover{
 		-webkit-transform: scale(1.07);
 		   -moz-transform: scale(1.07);
 		    -ms-transform: scale(1.07);

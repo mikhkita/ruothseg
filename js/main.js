@@ -51,7 +51,6 @@ $(document).ready(function(){
 
         //сжатие отступов в хедере
         if($(".b-main-header").length && !isMobile){
-            console.log(myHeight);
 
             resetHeader();
 
@@ -60,8 +59,6 @@ $(document).ready(function(){
                 var topHeight = myHeight - resizeHeight + 60 > 30 ? myHeight - resizeHeight + 60 : 0;
                 $('.b-header-block').css("top", topHeight);
 
-                //console.log(myHeight);
-                //console.log(resizeHeight);
                 if(topHeight === 0){
                     paddingBottom = 0;
                     paddings = myHeight/3 - resizeHeight/3 + 85 > 40 ? myHeight/3 - resizeHeight/3 + 85 : 40;
@@ -94,7 +91,6 @@ $(document).ready(function(){
         if($(".b-main-header").length && isMobile){
 
             if(Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0){
-                console.log("resize");
                 if(myHeight > 680){
                     $(".b-main-header, .header-back, .b-header-block").css({
                         "height" : 680
@@ -147,6 +143,7 @@ $(document).ready(function(){
                 $tag = $('<a></a>');
                 $tag.addClass("tour-item fancy");
                 $tag.attr("href", $this.attr("data-href"));
+                $tag.attr("data-id", $this.attr("data-id"));
                 $tag.append($this.html());
 
                 $this.replaceWith($tag);
@@ -185,6 +182,7 @@ $(document).ready(function(){
                 $tag = $('<div></div>');
                 $tag.addClass("tour-item");
                 $tag.attr("data-href", $this.attr("href"));
+                $tag.attr("data-id", $this.attr("data-id"));
                 $tag.append($this.html());
 
                 $this.replaceWith($tag);
@@ -326,6 +324,7 @@ $(document).ready(function(){
 
     if(isMobile){
         //пропустить анимацию b-block-advantages на мобиле
+        new FastClick(document.body);
         $('.advantage-item').each(function(){
             $(this).addClass("fadeIn-show");
         });
@@ -333,8 +332,6 @@ $(document).ready(function(){
 
     if( typeof autosize == "function" )
         autosize(document.querySelectorAll('textarea'));
-
-    new FastClick(document.body);
 
     $('.video-slider').slick({
         dots: true,
@@ -353,6 +350,14 @@ $(document).ready(function(){
               }
             }
         ]
+    });
+
+    $('.b-video-arrows').hover(
+        function(){
+            $('.video-slider').slick('slickPause');
+        },
+        function(){
+            $('.video-slider').slick('slickPlay');
     });
 
     $('.review-slider').on('init', function(event, slick){
@@ -417,7 +422,6 @@ $(document).ready(function(){
             $(this).find(".fancy-gallary").attr("data-fancybox", "");
         });
         $('.review-slider .slick-active').each(function(){
-            console.log("++++",$(this));
             var gallary = $(this).find(".fancy-gallary").attr("data-gallery");
             $(this).find(".fancy-gallary").attr("data-fancybox", gallary);
         });
@@ -431,7 +435,6 @@ $(document).ready(function(){
             $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")), true);
 
             var border = Math.floor(slick.options.slidesToShow/2);
-            //console.log(slick.currentSlide, slick.slideCount, border);
 
             if(slick.currentSlide >= border && slick.currentSlide < slick.slideCount - border){
                 $('.b-tour-slider').slick('slickGoTo', parseInt($('.b-tour-slider li.active').attr("data-slick-index")), true);
@@ -460,10 +463,8 @@ $(document).ready(function(){
 
             //если виден первый элемент, то скрыть левую стрелку
             if(slick.currentSlide <= border){
-                console.log("<-hide");
                 $('.b-block-tour .icon-arrow-left').addClass("hide");
             }else{
-                console.log("<-show");
                 $('.b-block-tour .icon-arrow-left').removeClass("hide");
             }
 
@@ -473,10 +474,8 @@ $(document).ready(function(){
 
             //если виден последний элемент, то скрыть правую стрелку
             if(slick.slideCount - slick.currentSlide <= border + 1){
-                console.log("->hide");
                 $('.b-block-tour .icon-arrow-right').addClass("hide");
             }else{
-                console.log("->show");
                 $('.b-block-tour .icon-arrow-right').removeClass("hide");
             }
         },10);
@@ -557,7 +556,6 @@ $(document).ready(function(){
     $('.b-tour-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
 
         var border = Math.floor(slick.options.slidesToShow/2);
-        console.log(currentSlide, slick.slideCount, border);
 
         if(slick.options.slidesToShow === 2 && currentSlide === 0){
             $('.b-block-tour .icon-arrow-left').addClass("hide");
@@ -566,10 +564,8 @@ $(document).ready(function(){
     
         //если виден первый элемент, то скрыть левую стрелку
         if(currentSlide <= border){
-            console.log("<-hide");
             $('.b-block-tour .icon-arrow-left').addClass("hide");
         }else{
-            console.log("<-show");
             $('.b-block-tour .icon-arrow-left').removeClass("hide");
         }
 
@@ -579,10 +575,8 @@ $(document).ready(function(){
 
         //если виден последний элемент, то скрыть правую стрелку
         if(slick.slideCount - currentSlide <= border + 1){
-            console.log("->hide");
             $('.b-block-tour .icon-arrow-right').addClass("hide");
         }else{
-            console.log("->show");
             $('.b-block-tour .icon-arrow-right').removeClass("hide");
         }
     });
@@ -686,15 +680,6 @@ $(document).ready(function(){
         focusOnSelect: true,
         cssEase: 'cubic-bezier(.19,.46,.35,1)',
         asNavFor: '.team-slider',
-        /*responsive: [
-            {
-              breakpoint: 900,
-              settings: {
-                //slidesToShow: 1,
-                //slidesToScroll: 1
-              }
-            }
-        ]*/
     });
 
     $('.team-detail-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
@@ -751,6 +736,15 @@ $(document).ready(function(){
         $('.slick-center').next().children(".b-team-detail-item").removeClass("hover");
     });
 
+    var hash = window.location.hash;
+    if(!!hash && $('.team-slider').length){
+        var orgID = parseInt(hash.substring(1));
+        if($('.team-slider li[data-id='+orgID+']').length){
+            var index = $('.team-slider li[data-id='+orgID+']:not(.slick-cloned)').index() + 1;
+            $('.team-slider').slick('slickGoTo', index);
+        }
+    }
+
     $("body").on("mousemove", ".b-team-detail .slick-center", function(e){
         if(!isMobile){
             var offset = $(this).offset();
@@ -775,7 +769,6 @@ $(document).ready(function(){
     });
 
     function checkMenu(){
-        console.log("++");
         if( $(".b-menu-cont .b-menu > li.active > a").length ){
             moveLine($(".b-menu-cont .b-menu > li.active"));
         }else{
@@ -824,16 +817,6 @@ $(document).ready(function(){
             }
         });
     }
-
-    /*if($('.passage-grid').length){
-        $('.passage-grid').isotope({
-            //percentPosition: true,
-            itemSelector: '.grid-item',
-            masonry: {
-                columnWidth: '.grid-item'
-            }
-        });
-    }*/
 
     var fotoCount = 10,
         fotoLoaded = 0;
@@ -895,7 +878,6 @@ $(document).ready(function(){
             var el = this;
             setTimeout(function(){
                 $(el).removeClass('foto-hide').addClass('foto-show');
-                console.log("showStartFoto");
             }, 100 * delay);
             delay++;
         });
@@ -913,7 +895,6 @@ $(document).ready(function(){
                 this.child.parent().addClass("loaded");
                 fotoLoaded++;
                 this.child.parent().removeClass('foto-hide').addClass('foto-show');
-                console.log("showNextFoto");
                 $grid.isotope( 'appended', this.child.parent() );
                 if($('.grid-item.foto-hide').length === 0){
                     $('.preload-block').removeClass("preload-block-static").addClass('foto-hide');
@@ -926,7 +907,6 @@ $(document).ready(function(){
     }
 
      $("body").on("click", ".ajax-more", function(){
-        console.log("click");
         $.ajax({
             type: 'post',
             url: $(this).attr("href"),
@@ -936,7 +916,6 @@ $(document).ready(function(){
                 $(".scroll-to").removeClass("scroll-to");
                 $html.find(".b-review").eq(0).addClass("scroll-to");
 
-                console.log($(".b-reviews").find(".b-btn-show-more"));
                 $(".b-reviews").find(".b-btn-show-more").parents(".b-center-block").remove();
                 $(".b-reviews").append($html.html());
 
@@ -977,9 +956,9 @@ $(document).ready(function(){
     if($('#typed-show').length){
         var typed = new Typed("#typed-show", {
             stringsElement: '#typed-strings',
-            typeSpeed: 30,
+            typeSpeed: 20,
             backSpeed: 10,
-            backDelay: 1500,
+            backDelay: 700,
             fadeOut: true,
             loop: true
         });
@@ -1004,6 +983,16 @@ $(document).ready(function(){
         $(this).removeClass("nav-touch");
     });
 
+    $('#only-road').on('change', function(){
+        if($(this).prop("checked")){
+            $('.book-it-tour').addClass("hide");
+            $('.book-it-road').removeClass("hide");
+        }else{
+            $('.book-it-tour').removeClass("hide");
+            $('.book-it-road').addClass("hide");
+        }
+    });
+
     //увеличить количество
     $('.add-count').on('click', function(){
         $input = $('.persons-count');
@@ -1022,12 +1011,17 @@ $(document).ready(function(){
         $input.change();
     });
 
-    $('.persons-count, .b-popup .select-tour').on('change input', function(){
+    $('.persons-count, .b-popup .select-tour, #only-road').on('change input', function(){
         if($('.persons-count').val() != "" && $('.b-popup .select-tour').val() != ""){
             var discount = 0;
-            var price = parseInt($(".b-popup .select-tour option:selected").attr("data-price"));
+            var price = 0;
+            if($("#only-road").prop('checked')){
+                price = parseInt($(".b-popup .select-tour option:selected").attr("data-road"));
+            }else{
+                price = parseInt($(".b-popup .select-tour option:selected").attr("data-price"));
+            }
             var persons = parseInt($('.persons-count').val());
-            if(parseInt($('.persons-count').val()) >= 4){
+            if(parseInt($('.persons-count').val()) >= 4 && $(".b-popup .select-tour option:selected").attr("data-discount") !== "no"){
                 discount = persons * price * 0.05;
                 $('.b-btn-discount').removeClass("hide");
             }else{
@@ -1097,14 +1091,25 @@ $(document).ready(function(){
     //клик по кнопке "Забронировать тур" в конкретном туре
     $('.b-btn-tour-item').on('click', function(){
         var tourID = $(this).parents(".tour-item").attr("data-id");
-        $(".b-popup .select-tour option[value=" + tourID + "]").prop('selected', true).trigger("chosen:updated");
+        $(".b-popup .select-tour option[value='"+tourID+"']").prop('selected', true).trigger("chosen:updated");
+        $('.persons-count').change();
+    });
+    $('a.tour-item').on('click', function(){
+        var tourID = $(this).attr("data-id");
+        $(".b-popup .select-tour option[value='"+tourID+"']").prop('selected', true).trigger("chosen:updated");
         $('.persons-count').change();
     });
 
-    //клик по кнопке "Забронировать тур" в хедере
+    //клик по кнопке "Забронировать тур" вне расписания
     $('.b-btn-tour').on('click', function(){
         $(".b-popup .select-tour option[value='']").prop('selected', true).trigger("chosen:updated");
         $('.persons-count').change();
+        $("#only-road").prop('checked', false);
+        $("#only-road").change();
+        if($(this).hasClass("b-btn-only-road")){
+            $("#only-road").prop('checked', true);
+            $("#only-road").change();
+        }
     });
 
     function fancyBind($selector){
@@ -1155,30 +1160,6 @@ $(document).ready(function(){
             });
         });
     }
-
-    /*$('.b-header').parallax({
-        imageSrc: $('.b-header').attr("data-img"),
-        speed: 0.5,
-    });*/
-
-    /*if($('.b-header').length){
-         $('.wrapper').append($('.parallax-mirror'));
-    }*/
-
-    /*$(window).resize(function(){
-        console.log("234");
-        $('.b-header-block').parallax({
-            imageSrc: 'i/header-block.jpg',
-            speed: 0.5,
-        });
-    });*/
-
-    /*if($('.foto-grid').length){
-        $('.foto-grid').isotope({
-            itemSelector: '.grid-item',
-        }); 
-    }*/
-    
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {

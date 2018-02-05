@@ -12,10 +12,10 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
 	<link rel="stylesheet" href="css/chosen.css" type="text/css">
-	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
 	<link rel="stylesheet" href="css/slick-theme.css" type="text/css">
 	<link rel="stylesheet" href="css/component.css" type="text/css">
+	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
 	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1199px)" href="css/layout-tablet.css">
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css">
@@ -82,7 +82,11 @@
 					<h1 class="b-title">Проезд</h1>
 				</div>
 			</div>
-			<div class="b-half-button"><a href="#b-popup-tour" class="b-btn b-btn-brown-header b-btn-tour fancy">Забронировать тур</a></div>
+		</div>
+	</div>
+	<div class="b-half-button">
+		<div class="b-block">
+			<a href="#b-popup-tour" class="b-btn b-btn-brown-header b-btn-tour fancy">Забронировать тур</a>
 		</div>
 	</div>
 
@@ -149,10 +153,10 @@
 				<p class="b-about-text center-text">Мы предоставляем как полноценные туры в Шерегеш, так и отдельно проезд - обычный трансфер из Томска до горнолыжной деревни. Если Вы уже забронировали гостиницу и выбрали гору для катания, но Вам не на чем доехать - езжайте с нами!<br>Мы&nbsp;гарантируем веселую и незабываемую поездку на комфортабельном автобусе, во время которой Вы не будете скучать ни минуты!</p>
 				<div class="b-center-block">
 					<div class="position-buttons">
-						<a href="#" class="b-btn b-btn-brown">Забронировать проезд</a>
+						<a href="#b-popup-tour" class="b-btn b-btn-brown fancy b-btn-tour b-btn-only-road">Забронировать проезд</a>
 					</div>
 					<div class="position-buttons">
-						<a href="#" class="b-btn b-btn-brown">Забронировать тур</a>
+						<a href="#b-popup-tour" class="b-btn b-btn-brown fancy b-btn-tour">Забронировать тур</a>
 					</div>
 				</div>
 			</div>
@@ -281,7 +285,8 @@
 		</div>
 
 		<div class="b-popup" id="b-popup-tour">
-			<h3 class="b-title">Бронирование тура</h3>
+			<h3 class="b-title book-it-tour">Бронирование тура</h3>
+			<h3 class="b-title book-it-road hide">Бронирование проезда</h3>
 			<form id="b-popup-tour-form" method="post" action="kitsend.php" data-price="5000">
 				<div class="input-string clearfix">
 					<span class="required">Тур:&nbsp;</span>
@@ -292,6 +297,10 @@
 						<option value="3" data-price="6150">25.10-28.10 Выходной</option>
 						<option value="4" data-price="6550">26.10-29.10 Выходной</option>
 					</select>
+				</div>
+				<div class="clearfix">
+					<input id="only-road" type="checkbox" name="only-road">
+					<label for="only-road">только проезд</label>
 				</div>
 				<div class="input-string clearfix">
 					<span class="required">Ваше имя:&nbsp;</span>
