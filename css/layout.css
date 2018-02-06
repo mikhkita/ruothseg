@@ -189,7 +189,9 @@ input:-moz-placeholder {
 	font-family: 'RobotoRegular', Arial;
 	color: #393939;
 }
-
+.b-block-text .b-text{
+	text-align: center;
+}
 	.b-text ul li{
 
 	}
@@ -253,7 +255,9 @@ input:-moz-placeholder {
 	.b-btn-white-header:hover{
 		background-color: rgb(255,255,255);
 	}
-
+.b-vk-img{
+	display: none;
+}
 .b-btn-orange{
 	background-image: -webkit-linear-gradient(69deg, #ffbd39 0%, #fc4d3f 100%);
 	background-image: -o-linear-gradient(69deg, #ffbd39 0%, #fc4d3f 100%);
@@ -1050,7 +1054,7 @@ input[type="checkbox"]:checked + label:after{
 				display: inline-block;
 				height: 230px;
 				width: 58.8%;
-				background-position: 50% 50%;
+				background-position: 50% 10%;
     			background-size: cover;
 			}
 
@@ -1605,6 +1609,11 @@ input[type="checkbox"]:checked + label:after{
 		}
 
 		.b-footer-up p{
+			line-height: 26px;
+			font-size: 16px;
+		}
+
+		.b-footer-up .b-footer-text p{
 			line-height: 31px;
 			font-size: 20px;
 		}

@@ -350,7 +350,7 @@ input, textarea, select{
 		    display: inline-block;
 		    height: 180px;
 		    width: 100%;
-		    background-position: 50% 50%;
+		    background-position: 50% 10%;
 		    background-size: cover;
 		}
 			.tour-left-content{
